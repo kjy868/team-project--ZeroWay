@@ -86,7 +86,11 @@ video {
     border: 0;
     font-size: 100%;
     font: inherit;
+<<<<<<< HEAD
+    vertical-align: baseline;
+=======
     vertical-align: baseline
+>>>>>>> main
 }
 
 article,
@@ -100,21 +104,37 @@ hgroup,
 menu,
 nav,
 section {
+<<<<<<< HEAD
+    display: block;
+}
+
+body {
+    line-height: 1;
+=======
     display: block
 }
 
 body {
     line-height: 1
+>>>>>>> main
 }
 
 ol,
 ul {
+<<<<<<< HEAD
+    list-style: none;
+=======
     list-style: none
+>>>>>>> main
 }
 
 blockquote,
 q {
+<<<<<<< HEAD
+    quotes: none;
+=======
     quotes: none
+>>>>>>> main
 }
 
 blockquote:before,
@@ -122,10 +142,18 @@ blockquote:after,
 q:before,
 q:after {
     content: '';
+<<<<<<< HEAD
+    content: none;
+=======
     content: none
+>>>>>>> main
 }
 
 table {
     border-collapse: collapse;
+<<<<<<< HEAD
+    border-spacing: 0;
+=======
     border-spacing: 0
+>>>>>>> main
 }
