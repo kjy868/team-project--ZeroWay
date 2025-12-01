@@ -9,12 +9,9 @@
 </head>
 
 <body>
+    <!-- header 영역 -->
     <header>
         <div class="container">
-            <!-- 버튼 test -->
-            <!-- <button class="btn btn--black">안녕하세요</button>
-        <button class="btn btn--blackLine">안녕하세요</button>
-        <button class="btn btn--whiteLine">안녕하세요</button> -->
             <h1>
                 <a href="">
                     <img src="./assets/img/logo.png" alt="로고 이미지">
@@ -43,9 +40,12 @@
 
     <main>
         <section class="hero">
-            <h2></h2>
-            <h2></h2>
+            <div class="hero__txt-wrap">
+                <h2 class="hero__txt01">SEEKING</h2>
+                <h2 class="hero__txt02">ZEROWAY</h2>
+            </div>
         </section>
+
 
         <section class="intro">
             <div class="intro__txt">
@@ -60,20 +60,100 @@
         </section>
 
         <section class="effect">
+            <div class="container">
+                <h2 class="effect__title">5R 원칙</h2>
 
+                <!-- SVG 선 -->
+                <svg id="effect__line" width="1177" height="3285" viewBox="0 0 1177 3285" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M142.902 1.72656C83.7715 125.162 3.90188 316.185 142.902 531.646C281.902 747.106 691.597 656.338 614.876 575.139C542.133 498.151 469.297 825.998 572.873 945.583C676.45 1065.17 827.454 1085.86 977.298 1122.56C1127.14 1159.25 1192.38 1360.26 1084.1 1485.27C949.24 1640.98 640.857 1569.99 640.857 1738.96C640.857 1885.86 1188.14 1881.87 1172.68 2208.28C1149.7 2693.27 501.428 2068.91 236.432 2208.28C-6.1717 2335.88 124.717 2625.33 190.1 2549.84C263.841 2464.7 30.8272 2400.76 5.55872 2741.5C-19.7097 3082.24 268.338 2824.65 427.362 2953.3C507.058 3017.77 515.313 3220.46 508.765 3283.73"
+                        stroke="#12F96B" stroke-width="8" />
+                </svg>
+                <div class="effect__img">
+                    <img src="./assets/img/5r refuse.png" alt="" class="effect__img01">
+                    <img src="./assets/img/5r reduce.png" alt="" class="effect__img02">
+                    <img src="./assets/img/5r reuse.png" alt="" class="effect__img03">
+                    <img src="./assets/img/5r recycle.png" alt="" class="effect__img04">
+                    <img src="./assets/img/5r rot.png" alt="" class="effect__img05">
+                </div>
+                <h2 class="effect__subtitle">제로웨이스트의 효과</h2>
+
+                <ul class="effect__list">
+                    <li>
+                        <img src="./assets/img/effect-sec 01 icon.png" alt="">
+                        <h3>탄소 배출 절감</h3>
+                        <p>재활용·분리수거·퇴비화로 <br>
+                            폐기물 관리 배출을 크게 줄이고, <br>
+                            생산·소비 과정의 탄소도 절감</p>
+                    </li>
+                    <li>
+                        <img src="./assets/img/effect-sec 02 icon.png" alt="">
+                        <h3>자원 절약</h3>
+                        <p>불필요한 쓰레기를 줄여 원자재 <br>
+                            사용을 줄이고, 매립·소각으로 인한 <br>
+                            토양·수질·대기 오염을 예방</p>
+                    </li>
+                    <li>
+                        <img src="./assets/img/effect-sec 03 icon.png" alt="">
+                        <h3>비용 절감</h3>
+                        <p>폐기물 처리비와 환경오염 대응 <br>
+                            비용을 줄이고, 재활용·재사용으로 <br>
+                            사회적 비용까지 절감</p>
+                    </li>
+                </ul>
+                <div class="effect__merit-wrap">
+                    <h3>오늘 내가 컵 하나를 아낀다면?</h3>
+                    <div class="effect__merit">
+                        <img src="" alt="">
+                        <ul class="effect__merit-list">
+                            <li>
+                                <img src="./assets/img/effect-sec-cup icon 01.png" alt="">
+                                <div>
+                                    <p class="line01">내가 하루 컵 1개 절약</p>
+                                    <p class="line02">→ 30g CO₂ 감축</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./assets/img/effect-sec-cup icon 02.png" alt="">
+                                <div>
+                                    <p class="line01">100만 명이 하루 컵 1개 절약</p>
+                                    <p class="line02">→ 30,000kg (30톤) CO₂ 감축</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./assets/img/effect-sec-cup icon 03.png" alt="">
+                                <div>
+                                    <p class="line01">자동차 150,000km 주행 감축</p>
+                                    <p class="line02">→ 서울 ↔ 부산(약 400km) 375회 왕복 효과</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="zeromap">
 
         </section>
+        </div>
     </main>
+
 
 
     <footer>
 
     </footer>
 
+    <!-- jquery  -->
     <script src="./assets/js/jquery-1.12.3.js"></script>
+
+    <!-- gsap  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- script  -->
     <script src="./assets/js/script.js"></script>
 </body>
 

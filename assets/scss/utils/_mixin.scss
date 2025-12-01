@@ -30,43 +30,43 @@
 }
 
 // title mixin ====================================
-// title01 mixin
-@mixin title01 ($size: $font-60, $weight: 700, $color: v.$neutral-900, $font-family: 'LaundryGothic') {
+
+@mixin title01 ($size: v.$font-60, $weight: 700, $color: v.$neutral-900, $font-family: 'LaundryGothic') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        font-size: $font-48;
+        font-size: v.$font-48;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        font-size: $font-40;
+        font-size: v.$font-40;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-34;
+        font-size: v.$font-34;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        font-size: $font-28;
+        font-size: v.$font-28;
     }
 }
 
-// title02 mixin
-@mixin title02 ($size: $font-50, $weight: 700, $color: v.$neutral-900, $font-family: 'LaundryGothic') {
-    font-size: $size;
+
+@mixin title02 ($size: v.$font-50, $weight: 700, $color: v.$neutral-900, $font-family: 'LaundryGothic') {
+    font-size: v.$font-50;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        font-size: $font-40;
+        font-size: v.$font-40;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        font-size: $font-30;
+        font-size: v.$font-30;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
@@ -74,292 +74,315 @@
     }
 
     @media (max-width: v.$breakpoint-small) {
-        font-size: $font-26;
+        font-size: v.$font-26;
     }
 }
 
 // subtitle mixin =================================
-// subtitle01 mixin
-@mixin subtitle01 ($size: $font-40, $weight: 700, $color: v.$neutral-900, $font-family: 'LaundryGothic') {
+
+@mixin subtitle01 ($size: v.$font-40, $weight: 700, $color: v.$neutral-900, $font-family: 'LaundryGothic') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        // font-size: $font-40;
+        // font-size: v.$font-40;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        font-size: $font-30;
+        font-size: v.$font-30;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-26;
+        font-size: v.$font-26;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        // font-size: $font-26;
+        // font-size: v.$font-26;
     }
 }
 
-// subtitle02 mixin
-@mixin subtitle02 ($size: $font-60, $weight: 600, $color: v.$neutral-900, $font-family: 'LaundryGothic') {
+
+@mixin subtitle02 ($size: v.$font-60, $weight: 600, $color: v.$neutral-900, $font-family: 'LaundryGothic') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        font-size: $font-50;
+        font-size: v.$font-50;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        font-size: $font-44;
+        font-size: v.$font-44;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-36;
+        font-size: v.$font-36;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        font-size: $font-30;
+        font-size: v.$font-30;
     }
 }
 
 
 // mainBody mixin =================================
-// mainBody01 mixin
-@mixin mainBody01 ($size: $font-30, $weight: 400, $color: v.$neutral-800, $font-family: 'Pretendard') {
+
+@mixin mainBody01 ($size: v.$font-30, $weight: 400, $color: v.$neutral-800, $font-family: 'Pretendard') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        font-size: $font-20;
+        font-size: v.$font-20;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        font-size: $font-18;
+        font-size: v.$font-18;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-16;
+        font-size: v.$font-16;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        font-size: $font-14;
+        font-size: v.$font-14;
     }
 }
 
-// mainBody02 mixin 
-@mixin mainBody02 ($size: $font-30, $weight: 700, $color: v.$neutral-800, $font-family: 'Pretendard') {
+
+@mixin mainBody02 ($size: v.$font-30, $weight: 700, $color: v.$neutral-800, $font-family: 'Pretendard') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        font-size: $font-24;
+        font-size: v.$font-24;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        // font-size: $font-24;
+        // font-size: v.$font-24;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-22;
+        font-size: v.$font-22;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        font-size: $font-20;
+        font-size: v.$font-20;
     }
 }
 
-// mainBody03 mixin 
-@mixin mainBody03 ($size: $font-20, $weight: 500, $color: v.$neutral-800, $font-family: 'Pretendard') {
+
+@mixin mainBody03 ($size: v.$font-20, $weight: 500, $color: v.$neutral-800, $font-family: 'Pretendard') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        font-size: $font-18;
+        font-size: v.$font-18;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        font-size: $font-16;
+        font-size: v.$font-16;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        // font-size: $font-16;
+        // font-size: v.$font-16;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        // font-size: $font-16;
+        // font-size: v.$font-16;
     }
 }
 
-// mainBody04 mixin 
-@mixin mainBody04 ($size: $font-24, $weight: 400, $color: v.$neutral-800, $font-family: 'Pretendard') {
+
+@mixin mainBody04 ($size: v.$font-24, $weight: 400, $color: v.$neutral-800, $font-family: 'Pretendard') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        // font-size: $font-24;
+        // font-size: v.$font-24;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        font-size: $font-18;
+        font-size: v.$font-18;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-16;
+        font-size: v.$font-16;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        font-size: $font-16;
+        font-size: v.$font-16;
     }
 }
 
-// mainBody05 mixin 
-@mixin mainBody05 ($size: $font-24, $weight: 700, $color: v.$neutral-800, $font-family: 'Pretendard') {
+
+@mixin mainBody05 ($size: v.$font-24, $weight: 700, $color: v.$neutral-800, $font-family: 'Pretendard') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        // font-size: $font-24;
+        // font-size: v.$font-24;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        font-size: $font-22;
+        font-size: v.$font-22;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-18;
+        font-size: v.$font-18;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        font-size: $font-16;
+        font-size: v.$font-16;
     }
 }
 
 // about mixin ==================================
-@mixin aboutBody01 ($size: $font-24, $weight: 500, $color: v.$neutral-800, $font-family: 'Pretendard') {
+@mixin aboutBody01 ($size: v.$font-24, $weight: 500, $color: v.$neutral-800, $font-family: 'Pretendard') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        // font-size: $font-24;
+        // font-size: v.$font-24;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        font-size: $font-20;
+        font-size: v.$font-20;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-16;
+        font-size: v.$font-16;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        font-size: $font-14;
+        font-size: v.$font-14;
     }
 }
 
-@mixin aboutBody02 ($size: $font-26, $weight: 500, $color: v.$neutral-800, $font-family: 'Paperlogy') {
+@mixin aboutBody02 ($size: v.$font-26, $weight: 500, $color: v.$neutral-800, $font-family: 'Paperlogy') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        // font-size: $font-26;
+        // font-size: v.$font-26;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        // font-size: $font-26;
+        // font-size: v.$font-26;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-20;
+        font-size: v.$font-20;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        // font-size: $font-20;
+        // font-size: v.$font-20;
     }
 }
 
-@mixin aboutBody03 ($size: $font-26, $weight: 600, $color: v.$neutral-800, $font-family: 'Paperlogy') {
+@mixin aboutBody03 ($size: v.$font-26, $weight: 600, $color: v.$neutral-800, $font-family: 'Paperlogy') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        // font-size: $font-26;
+        // font-size: v.$font-26;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        // font-size: $font-26;
+        // font-size: v.$font-26;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-20;
+        font-size: v.$font-20;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        // font-size: $font-20;
+        // font-size: v.$font-20;
     }
 }
 
 // tumbler mixin ================================
-@mixin tumblerBody01 ($size: $font-20, $weight: 300, $color: v.$neutral-800, $font-family: 'Pretendard') {
+@mixin tumblerBody01 ($size: v.$font-20, $weight: 300, $color: v.$neutral-800, $font-family: 'Pretendard') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        // font-size: $font-20;
+        // font-size: v.$font-20;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        font-size: $font-18;
+        font-size: v.$font-18;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-14;
+        font-size: v.$font-14;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        font-size: $font-14;
+        font-size: v.$font-14;
     }
 }
 
 // map mixin ================================
-@mixin mapBody01 ($size: $font-22, $weight: 600, $color: v.$neutral-800, $font-family: 'Paperlogy') {
+@mixin mapBody01 ($size: v.$font-22, $weight: 600, $color: v.$neutral-800, $font-family: 'Paperlogy') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        font-size: $font-22;
+        font-size: v.$font-22;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        font-size: $font-22;
+        font-size: v.$font-22;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-18;
+        font-size: v.$font-18;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: v.$font-16;
+    }
+}
+
+@mixin mapBody02 ($size: v.$font-20, $weight: 500, $color: v.$neutral-800, $font-family: 'Pretendard') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        // font-size: v.$font-20;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        // font-size: v.$font-20;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: v.$font-18;
     }
 
     @media (max-width: v.$breakpoint-small) {
@@ -367,141 +390,118 @@
     }
 }
 
-@mixin mapBody02 ($size: $font-20, $weight: 500, $color: v.$neutral-800, $font-family: 'Pretendard') {
+@mixin mapBody03 ($size: v.$font-22, $weight: 400, $color: v.$neutral-800, $font-family: 'Pretendard') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        // font-size: $font-20;
+        // font-size: v.$font-22;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        // font-size: $font-20;
+        // font-size: v.$font-22;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-18;
+        font-size: v.$font-18;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        font-size: $font-16;
+        font-size: v.$font-16;
     }
 }
 
-@mixin mapBody03 ($size: $font-22, $weight: 400, $color: v.$neutral-800, $font-family: 'Pretendard') {
+@mixin mapBody04 ($size: v.$font-26, $weight: 700, $color: v.$neutral-800, $font-family: 'Paperlogy') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        // font-size: $font-22;
+        // font-size: v.$font-26;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        // font-size: $font-22;
+        // font-size: v.$font-26;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-18;
+        font-size: v.$font-22;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        font-size: $font-16;
+        font-size: v.$font-18;
     }
 }
 
-@mixin mapBody04 ($size: $font-26, $weight: 700, $color: v.$neutral-800, $font-family: 'Paperlogy') {
+@mixin mapBody05 ($size: v.$font-22, $weight: 500, $color: v.$neutral-800, $font-family: 'Pretendard') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        // font-size: $font-26;
+        // font-size: v.$font-22;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        // font-size: $font-26;
+        // font-size: v.$font-22;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-22;
+        font-size: v.$font-18;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        font-size: $font-18;
-    }
-}
-
-@mixin mapBody05 ($size: $font-22, $weight: 500, $color: v.$neutral-800, $font-family: 'Pretendard') {
-    font-size: $size;
-    font-weight: $weight;
-    color: $color;
-    font-family: $font-family;
-
-    @media (max-width: v.$breakpoint-tablet) {
-        // font-size: $font-22;
-    }
-
-    @media (max-width: v.$breakpoint-medium) {
-        // font-size: $font-22;
-    }
-
-    @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-18;
-    }
-
-    @media (max-width: v.$breakpoint-small) {
-        font-size: $font-14;
+        font-size: v.$font-14;
     }
 }
 
 // report mixin ==================================
-@mixin reportBody01 ($size: $font-26, $weight: 600, $color: v.$neutral-800, $font-family: 'Pretendard') {
+@mixin reportBody01 ($size: v.$font-26, $weight: 600, $color: v.$neutral-800, $font-family: 'Pretendard') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        // font-size: $font-26;
+        // font-size: v.$font-26;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        font-size: $font-22;
+        font-size: v.$font-22;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-20;
+        font-size: v.$font-20;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        font-size: $font-18;
+        font-size: v.$font-18;
     }
 }
 
-@mixin reportBody02 ($size: $font-20, $weight: 400, $color: v.$neutral-800, $font-family: 'Pretendard') {
+@mixin reportBody02 ($size: v.$font-20, $weight: 400, $color: v.$neutral-800, $font-family: 'Pretendard') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     font-family: $font-family;
 
     @media (max-width: v.$breakpoint-tablet) {
-        // font-size: $font-20;
+        // font-size: v.$font-20;
     }
 
     @media (max-width: v.$breakpoint-medium) {
-        // font-size: $font-20;
+        // font-size: v.$font-20;
     }
 
     @media (max-width: v.$breakpoint-mobile) {
-        font-size: $font-18;
+        font-size: v.$font-18;
     }
 
     @media (max-width: v.$breakpoint-small) {
-        font-size: $font-16;
+        font-size: v.$font-16;
     }
 }

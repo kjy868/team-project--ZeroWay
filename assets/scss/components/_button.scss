@@ -21,11 +21,12 @@
 
     &--black {
         background-color: u.$neutral-900;
+        border: u.rem(3) solid u.$neutral-900;
 
         &:hover {
             background-color: u.$primary-600;
             transition: 0.3s all ease-in-out;
-            border: 2px solid u.$primary-600;
+            border: u.rem(3) solid u.$primary-600;
         }
     }
 
