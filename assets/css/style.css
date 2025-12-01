@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body,
 div,
@@ -106,7 +107,8 @@ body {
 }
 
 ol,
-ul {
+ul,
+li {
   list-style: none;
 }
 
@@ -128,6 +130,230 @@ table {
   border-spacing: 0;
 }
 
+body {
+  color: #121212;
+  background-color: #fff;
+  font-family: "Pretendard";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../font/Pretendard-Thin.ttf") format("ttf");
+  src: url("../../font/Pretendard-Thin.woff") format("woff");
+  src: url("../../font/Pretendard-Thin.woff2") format("woff2");
+  src: url("../../font/Pretendard-Thin.eot") format("eot");
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../font/Pretendard-ExtraLight.ttf") format("ttf");
+  src: url("../../font/Pretendard-ExtraLight.woff") format("woff");
+  src: url("../../font/Pretendard-ExtraLight.woff2") format("woff2");
+  src: url("../../font/Pretendard-ExtraLight.eot") format("eot");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../font/Pretendard-Light.ttf") format("ttf");
+  src: url("../../font/Pretendard-Light.woff") format("woff");
+  src: url("../../font/Pretendard-Light.woff2") format("woff2");
+  src: url("../../font/Pretendard-Light.eot") format("eot");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../font/Pretendard-Regular.ttf") format("ttf");
+  src: url("../../font/Pretendard-Regular.woff") format("woff");
+  src: url("../../font/Pretendard-Regular.woff2") format("woff2");
+  src: url("../../font/Pretendard-Regular.eot") format("eot");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../font/Pretendard-Medium.ttf") format("ttf");
+  src: url("../../font/Pretendard-Medium.woff") format("woff");
+  src: url("../../font/Pretendard-Medium.woff2") format("woff2");
+  src: url("../../font/Pretendard-Medium.eot") format("eot");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../font/Pretendard-SemiBold.ttf") format("ttf");
+  src: url("../../font/Pretendard-SemiBold.woff") format("woff");
+  src: url("../../font/Pretendard-SemiBold.woff2") format("woff2");
+  src: url("../../font/Pretendard-SemiBold.eot") format("eot");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../font/Pretendard-Bold.ttf") format("ttf");
+  src: url("../../font/Pretendard-Bold.woff") format("woff");
+  src: url("../../font/Pretendard-Bold.woff2") format("woff2");
+  src: url("../../font/Pretendard-Bold.eot") format("eot");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../font/Pretendard-ExtraBold.ttf") format("ttf");
+  src: url("../../font/Pretendard-ExtraBold.woff") format("woff");
+  src: url("../../font/Pretendard-ExtraBold.woff2") format("woff2");
+  src: url("../../font/Pretendard-ExtraBold.eot") format("eot");
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../font/Pretendard-Black.ttf") format("ttf");
+  src: url("../../font/Pretendard-Black.woff") format("woff");
+  src: url("../../font/Pretendard-Black.woff2") format("woff2");
+  src: url("../../font/Pretendard-Black.eot") format("eot");
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Paperozi";
+  src: url("../../font/Paperlogy-1Thin.ttf") format("ttf");
+  src: url("../../font/Paperlogy-1Thin.woff") format("woff");
+  src: url("../../font/Paperlogy-1Thin.woff2") format("woff2");
+  src: url("../../font/Paperlogy-1Thin.eot") format("eot");
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Paperozi";
+  src: url("../../font/Paperlogy-2ExtraLight.ttf") format("ttf");
+  src: url("../../font/Paperlogy-2ExtraLight.woff") format("woff");
+  src: url("../../font/Paperlogy-2ExtraLight.woff2") format("woff2");
+  src: url("../../font/Paperlogy-2ExtraLight.eot") format("eot");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Paperozi";
+  src: url("../../font/Paperlogy-3Light.ttf") format("ttf");
+  src: url("../../font/Paperlogy-3Light.woff") format("woff");
+  src: url("../../font/Paperlogy-3Light.woff2") format("woff2");
+  src: url("../../font/Paperlogy-3Light.eot") format("eot");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Paperozi";
+  src: url("../../font/Paperlogy-4Regular.ttf") format("ttf");
+  src: url("../../font/Paperlogy-4Regular.woff") format("woff");
+  src: url("../../font/Paperlogy-4Regular.woff2") format("woff2");
+  src: url("../../font/Paperlogy-4Regular.eot") format("eot");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Paperozi";
+  src: url("../../font/Paperlogy-5Medium.ttf") format("ttf");
+  src: url("../../font/Paperlogy-5Medium.woff") format("woff");
+  src: url("../../font/Paperlogy-5Medium.woff2") format("woff2");
+  src: url("../../font/Paperlogy-5Medium.eot") format("eot");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Paperozi";
+  src: url("../../font/Paperlogy-6SemiBold.ttf") format("ttf");
+  src: url("../../font/Paperlogy-6SemiBold.woff") format("woff");
+  src: url("../../font/Paperlogy-6SemiBold.woff2") format("woff2");
+  src: url("../../font/Paperlogy-6SemiBold.eot") format("eot");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Paperozi";
+  src: url("../../font/Paperlogy-7Bold.ttf") format("ttf");
+  src: url("../../font/Paperlogy-7Bold.woff") format("woff");
+  src: url("../../font/Paperlogy-7Bold.woff2") format("woff2");
+  src: url("../../font/Paperlogy-7Bold.eot") format("eot");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Paperozi";
+  src: url("../../font/Paperlogy-8ExtraBold.ttf") format("ttf");
+  src: url("../../font/Paperlogy-8ExtraBold.woff") format("woff");
+  src: url("../../font/Paperlogy-8ExtraBold.woff2") format("woff2");
+  src: url("../../font/Paperlogy-8ExtraBold.eot") format("eot");
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Paperozi";
+  src: url("../../font/Paperlogy-9Black.ttf") format("ttf");
+  src: url("../../font/Paperlogy-9Black.woff") format("woff");
+  src: url("../../font/Paperlogy-9Black.woff2") format("woff2");
+  src: url("../../font/Paperlogy-9Black.eot") format("eot");
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LaundryGothic";
+  src: url("../../font/런드리고딕 Regular.ttf") format("ttf");
+  src: url("../../font/런드리고딕 Regular.woff") format("woff");
+  src: url("../../font/런드리고딕 Regular.woff2") format("woff2");
+  src: url("../../font/런드리고딕 Regular.eot") format("eot");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LaundryGothic";
+  src: url("../../font/런드리고딕 Bold.ttf") format("ttf");
+  src: url("../../font/런드리고딕 Bold.woff") format("woff");
+  src: url("../../font/런드리고딕 Bold.woff2") format("woff2");
+  src: url("../../font/런드리고딕 Bold.eot") format("eot");
+  font-weight: 700;
+  font-display: swap;
+}
+header .container {
+  width: 100%;
+  height: 6.25rem;
+  background-color: #121212;
+  opacity: 0.8;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  flex-direction: row;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: #fff;
+}
+
+.intro-sec {
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -137,4 +363,81 @@ table {
   .container {
     width: 100%;
   }
+}
+
+.btn {
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 3.125rem;
+  padding: 1.25rem 3.75rem;
+}
+@media (max-width: 1024px) {
+  .btn {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn {
+    font-size: 1rem;
+    padding: 0.9375rem 2.5rem;
+  }
+}
+.btn--black {
+  background-color: #121212;
+}
+.btn--black:hover {
+  background-color: #00d76b;
+  transition: 0.3s all ease-in-out;
+  border: 2px solid #00d76b;
+}
+.btn--blackLine {
+  background-color: #fff;
+  color: #121212;
+  border: 0.1875rem solid #121212;
+}
+.btn--blackLine:hover {
+  background-color: #121212;
+  color: #fff;
+  transition: 0.3s all ease-in-out;
+}
+.btn--whiteLine {
+  background-color: transparent;
+  color: #fff;
+  border: 0.1875rem solid #fff;
+}
+.btn--whiteLine:hover {
+  background-color: #fff;
+  color: #121212;
+  border: 0.1875rem solid #121212;
+  transition: 0.3s all ease-in-out;
+}
+
+.hero {
+  background: url("../img/hero-sec-bg.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.intro__txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: column;
+}
+.intro__title {
+  padding-bottom: 1.25rem;
+}
+.intro__conts {
+  padding-bottom: 2.5rem;
 }

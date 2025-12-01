@@ -1,1 +1,23 @@
 @use '../utils' as u;
+
+header .container {
+    width: 100%;
+    height: u.rem(100);
+    background-color: u.$neutral-900;
+    opacity: 0.8;
+    color: u.$neutral-50;
+    @include u.flex(space-between, center, );
+    z-index: 10;
+    position: fixed;
+    top: 0
+}
+
+.menu-list {
+    @include u.flex (space-between, center, u.rem(40));
+    @include u.defineFont(u.rem(20), 500, u.$neutral-50);
+}
+
+.intro-sec {
+    width: 100%;
+    height: 100%;
+}

@@ -1,1 +1,507 @@
+@use 'function' as f;
+@use 'variables' as v;
+
 // flex, grid etc
+
+// flex mixin
+@mixin flex($justifyContent: space-between, $alignItems: center, $gap: null, $flexDirection: row) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    gap: $gap;
+    flex-direction: $flexDirection;
+}
+
+// btn flex mixin
+@mixin btnFlex($justifyContent: center, $alignItems: center, $gap: f.rem(10)) {
+    display: inline-flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    gap: $gap;
+}
+
+// 폰트 크기, 굵기, 간격, 색상 등 기본설정
+@mixin defineFont($size: null, $weight: 400, $color: v.$neutral-900, $lineHeight: 1.3, $letterSpacing: 0) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+    color: $color;
+}
+
+// title mixin ====================================
+// title01 mixin
+@mixin title01 ($size: $font-60, $weight: 700, $color: v.$neutral-900, $font-family: 'LaundryGothic') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        font-size: $font-48;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        font-size: $font-40;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-34;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-28;
+    }
+}
+
+// title02 mixin
+@mixin title02 ($size: $font-50, $weight: 700, $color: v.$neutral-900, $font-family: 'LaundryGothic') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        font-size: $font-40;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        font-size: $font-30;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        // font-size: $font-30; 동일사이즈라 제외
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-26;
+    }
+}
+
+// subtitle mixin =================================
+// subtitle01 mixin
+@mixin subtitle01 ($size: $font-40, $weight: 700, $color: v.$neutral-900, $font-family: 'LaundryGothic') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        // font-size: $font-40;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        font-size: $font-30;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-26;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        // font-size: $font-26;
+    }
+}
+
+// subtitle02 mixin
+@mixin subtitle02 ($size: $font-60, $weight: 600, $color: v.$neutral-900, $font-family: 'LaundryGothic') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        font-size: $font-50;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        font-size: $font-44;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-36;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-30;
+    }
+}
+
+
+// mainBody mixin =================================
+// mainBody01 mixin
+@mixin mainBody01 ($size: $font-30, $weight: 400, $color: v.$neutral-800, $font-family: 'Pretendard') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        font-size: $font-20;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        font-size: $font-18;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-16;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-14;
+    }
+}
+
+// mainBody02 mixin 
+@mixin mainBody02 ($size: $font-30, $weight: 700, $color: v.$neutral-800, $font-family: 'Pretendard') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        font-size: $font-24;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        // font-size: $font-24;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-22;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-20;
+    }
+}
+
+// mainBody03 mixin 
+@mixin mainBody03 ($size: $font-20, $weight: 500, $color: v.$neutral-800, $font-family: 'Pretendard') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        font-size: $font-18;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        font-size: $font-16;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        // font-size: $font-16;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        // font-size: $font-16;
+    }
+}
+
+// mainBody04 mixin 
+@mixin mainBody04 ($size: $font-24, $weight: 400, $color: v.$neutral-800, $font-family: 'Pretendard') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        // font-size: $font-24;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        font-size: $font-18;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-16;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-16;
+    }
+}
+
+// mainBody05 mixin 
+@mixin mainBody05 ($size: $font-24, $weight: 700, $color: v.$neutral-800, $font-family: 'Pretendard') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        // font-size: $font-24;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        font-size: $font-22;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-18;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-16;
+    }
+}
+
+// about mixin ==================================
+@mixin aboutBody01 ($size: $font-24, $weight: 500, $color: v.$neutral-800, $font-family: 'Pretendard') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        // font-size: $font-24;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        font-size: $font-20;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-16;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-14;
+    }
+}
+
+@mixin aboutBody02 ($size: $font-26, $weight: 500, $color: v.$neutral-800, $font-family: 'Paperlogy') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        // font-size: $font-26;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        // font-size: $font-26;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-20;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        // font-size: $font-20;
+    }
+}
+
+@mixin aboutBody03 ($size: $font-26, $weight: 600, $color: v.$neutral-800, $font-family: 'Paperlogy') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        // font-size: $font-26;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        // font-size: $font-26;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-20;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        // font-size: $font-20;
+    }
+}
+
+// tumbler mixin ================================
+@mixin tumblerBody01 ($size: $font-20, $weight: 300, $color: v.$neutral-800, $font-family: 'Pretendard') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        // font-size: $font-20;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        font-size: $font-18;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-14;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-14;
+    }
+}
+
+// map mixin ================================
+@mixin mapBody01 ($size: $font-22, $weight: 600, $color: v.$neutral-800, $font-family: 'Paperlogy') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        font-size: $font-22;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        font-size: $font-22;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-18;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-16;
+    }
+}
+
+@mixin mapBody02 ($size: $font-20, $weight: 500, $color: v.$neutral-800, $font-family: 'Pretendard') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        // font-size: $font-20;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        // font-size: $font-20;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-18;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-16;
+    }
+}
+
+@mixin mapBody03 ($size: $font-22, $weight: 400, $color: v.$neutral-800, $font-family: 'Pretendard') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        // font-size: $font-22;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        // font-size: $font-22;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-18;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-16;
+    }
+}
+
+@mixin mapBody04 ($size: $font-26, $weight: 700, $color: v.$neutral-800, $font-family: 'Paperlogy') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        // font-size: $font-26;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        // font-size: $font-26;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-22;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-18;
+    }
+}
+
+@mixin mapBody05 ($size: $font-22, $weight: 500, $color: v.$neutral-800, $font-family: 'Pretendard') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        // font-size: $font-22;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        // font-size: $font-22;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-18;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-14;
+    }
+}
+
+// report mixin ==================================
+@mixin reportBody01 ($size: $font-26, $weight: 600, $color: v.$neutral-800, $font-family: 'Pretendard') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        // font-size: $font-26;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        font-size: $font-22;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-20;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-18;
+    }
+}
+
+@mixin reportBody02 ($size: $font-20, $weight: 400, $color: v.$neutral-800, $font-family: 'Pretendard') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        // font-size: $font-20;
+    }
+
+    @media (max-width: v.$breakpoint-medium) {
+        // font-size: $font-20;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: $font-18;
+    }
+
+    @media (max-width: v.$breakpoint-small) {
+        font-size: $font-16;
+    }
+}

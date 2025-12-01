@@ -1,1 +1,7 @@
 // rem, functions
+
+// font size를 rem으로 변환 
+@function rem($size) {
+    $size : calc($size / 16);
+    @return #{$size}rem;
+}
