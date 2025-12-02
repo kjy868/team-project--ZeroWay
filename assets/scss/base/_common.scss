@@ -1,3 +1,14 @@
 @use '../utils' as u;
 
+body {
+    color: u.$neutral-900;
+    background-color: u.$neutral-50;
+    font-family: 'Pretendard';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 // body, a, img 등 html전반에 공통으로 적용되는 스타일

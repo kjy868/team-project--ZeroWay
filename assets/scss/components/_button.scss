@@ -1,1 +1,57 @@
 @use '../utils' as u;
+
+.btn {
+
+    // btn normal
+    @include u.defineFont (u.rem(30), 600, u.$neutral-50);
+    @include u.btnFlex;
+    border-radius: u.rem(50);
+    padding: u.rem(20) u.rem(60);
+
+    // btn medium 
+    @media (max-width: u.$breakpoint-tablet) {
+        font-size: u.rem(20);
+    }
+
+    // btn small
+    @media (max-width: u.$breakpoint-mobile) {
+        font-size: u.rem(16);
+        padding: u.rem(15) u.rem(40);
+    }
+
+    &--black {
+        background-color: u.$neutral-900;
+        border: u.rem(3) solid u.$neutral-900;
+
+        &:hover {
+            background-color: u.$primary-600;
+            transition: 0.3s all ease-in-out;
+            border: u.rem(3) solid u.$primary-600;
+        }
+    }
+
+    &--blackLine {
+        background-color: u.$neutral-50;
+        color: u.$neutral-900;
+        border: u.rem(3) solid u.$neutral-900;
+
+        &:hover {
+            background-color: u.$neutral-900;
+            color: u.$neutral-50;
+            transition: 0.3s all ease-in-out;
+        }
+    }
+
+    &--whiteLine {
+        background-color: transparent;
+        color: u.$neutral-50;
+        border: u.rem(3) solid u.$neutral-50;
+
+        &:hover {
+            background-color: u.$neutral-50;
+            color: u.$neutral-900;
+            border: u.rem(3) solid u.$neutral-900;
+            transition: 0.3s all ease-in-out;
+        }
+    }
+}

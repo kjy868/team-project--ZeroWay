@@ -3,31 +3,31 @@
 
 // 공통 반응형 mixin
 @mixin responsive($device) {
-    @if $device ==pc {
+    @if $device =='pc' {
         @media (max-width: v.$breakpoint-pc) {
             @content;
         }
     }
 
-    @else if $device ==tablet {
+    @else if $device =='tablet' {
         @media (max-width: v.$breakpoint-tablet) {
             @content;
         }
     }
 
-    @else if $device ==medium {
+    @else if $device =='medium' {
         @media (max-width: v.$breakpoint-medium) {
             @content;
         }
     }
 
-    @else if $device ==mobile {
+    @else if $device =='mobile' {
         @media (max-width: v.$breakpoint-mobile) {
             @content;
         }
     }
 
-    @else if $device ==small {
+    @else if $device =='small' {
         @media (max-width: v.$breakpoint-small) {
             @content;
         }
@@ -48,7 +48,7 @@
     }
 }
 
-// 반응형 글자 크기 조정 헬퍼 mixin
+// 반응형 글자 크기 조정 헬퍼 mixin ----> (예림) 이부분 clamp로는 화면사이즈에 따라 정확한 폰트지정은 어려워서 media query로 맞추는게 어떨까요?
 @mixin fluid-font($min, $max) {
     font-size: clamp($min, 2vw, $max);
 }
