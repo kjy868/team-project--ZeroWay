@@ -1,16 +1,37 @@
 @use '../utils' as u;
 
-footer {
+.footer {
     width: 100%;
-    height: u.rem(140) 0;
+    padding: u.rem(140) 0;
     background-color: u.$neutral-800;
     color: u.$neutral-300;
-    @include u.flex;
+
+    .container {
+        @include u.flex(space-between, flex-end);
+
+    }
 
     &__txt {
         ul {
-            @include u.flex;
+            @include u.flex(flex-start, center);
         }
+    }
+
+    &__policy {
+        @include u.defineFont (u.rem(18), 700, u.$neutral-300);
+        @include u.flex(flex-start, center, u.rem(20))
+    }
+
+    &__info {
+        @include u.defineFont (u.rem(16), 400, u.$neutral-400);
+        padding-top: u.$padding-20;
+        max-width: u.rem(800);
+        flex-wrap: wrap;
+        ;
+    }
+
+    .copyright {
+        padding-top: u.$padding-30;
     }
 
     &__left {
@@ -18,6 +39,6 @@ footer {
     }
 
     &__sns {
-        @include u.flex;
+        @include u.flex(center, flex-end);
     }
 }

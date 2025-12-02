@@ -90,7 +90,7 @@
 
     &__img {
         position: relative;
-        height: u.rem(3400);
+        height: u.rem(3100);
         z-index: 2;
     }
 
@@ -173,7 +173,34 @@
 
     &__merit {
         @include u.flex(center);
+
+        /* SVG 기본 상태 */
+        svg {
+            overflow: visible;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* JS에서 strokeDasharray/offset을 덮어씌우지만 초기값을 지정해둠 */
+        svg path {
+            stroke: #12F96B;
+            stroke-width: 8;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            transition: none;
+        }
+
+        svg circle {
+            transform-origin: center;
+            transform-box: fill-box;
+            opacity: 0.3;
+            transform: scale(0.7);
+        }
     }
+
 
     &__merit-list {
         @include u.flex(space-around, center, u.$padding-60, column);
@@ -218,10 +245,12 @@
     &__title {
         @include u.title01;
         padding-bottom: u.$padding-20;
+        line-height: 1.2;
     }
 
     &__desc {
         @include u.mainBody01;
+        line-height: 1.3;
         padding-bottom: u.$padding-40;
     }
 }
