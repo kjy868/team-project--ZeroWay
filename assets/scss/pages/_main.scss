@@ -11,22 +11,77 @@
     position: relative;
 
     &__txt-wrap {
+        position: relative;
         font-family: 'Peak Comedy';
         font-size: u.rem(200);
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
-        position: absolute;
     }
 
     &__txt01 {
-        color: u.$neutral-50;
+        position: absolute;
+        top: u.rem(-250);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: u.$primary-500;
+        z-index: 0;
     }
 
     &__txt02 {
-        color: u.$primary-500;
+        position: absolute;
+        color: u.$neutral-50;
+        top: u.rem(250);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
     }
+
+    &__img-wrap {
+        position: relative;
+
+        img {
+            position: absolute;
+        }
+
+        .img-mask {
+            top: u.rem(680);
+            left: 54%;
+            transform: translate(-50%, -50%);
+            height: u.rem(860);
+            z-index: 1;
+        }
+
+        .circle-img-sm {
+            top: u.rem(650);
+            right: 27%;
+        }
+
+        .circle-img-lg {
+            top: u.rem(400);
+            left: 43%;
+        }
+
+        .eyes-img {
+            top: u.rem(160);
+            left: 37%;
+            z-index: 4;
+        }
+
+        .line-img {
+            top: u.rem(770);
+            left: 23%;
+        }
+
+        .star-img {
+            top: u.rem(810);
+            right: 22%;
+        }
+
+    }
+
+
 }
 
 // intro section
@@ -41,6 +96,10 @@
     &__title {
         padding-bottom: u.$padding-20;
         @include u.title01;
+
+        span {
+            color: u.$primary-600;
+        }
     }
 
     &__conts {
@@ -131,13 +190,15 @@
 
     &__subtitle {
         @include u.subtitle02;
-        text-align: center;
         color: u.$neutral-900;
         background-color: u.$primary-500;
         padding: u.rem(20) u.rem(50);
         border-radius: u.rem(100);
-        // width: 100%;
-        z-index: 2;
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        z-index: 5;
+
     }
 
     &__list {
@@ -168,17 +229,17 @@
             text-align: center;
             color: u.$neutral-50;
             padding-bottom: u.$padding-40;
+            margin: 0 auto;
         }
     }
 
     &__merit {
-        @include u.flex(center);
+        @include u.flex(center, center, u.$padding-40);
 
         /* SVG 기본 상태 */
         svg {
             overflow: visible;
             display: block;
-            margin: 0 auto;
         }
 
         /* JS에서 strokeDasharray/offset을 덮어씌우지만 초기값을 지정해둠 */

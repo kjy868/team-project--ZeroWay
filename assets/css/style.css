@@ -430,19 +430,63 @@ header .container {
   position: relative;
 }
 .hero__txt-wrap {
+  position: relative;
   font-family: "Peak Comedy";
   font-size: 12.5rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  position: absolute;
 }
 .hero__txt01 {
-  color: #fff;
+  position: absolute;
+  top: -15.625rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #12f96b;
+  z-index: 0;
 }
 .hero__txt02 {
-  color: #12f96b;
+  position: absolute;
+  color: #fff;
+  top: 15.625rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+.hero__img-wrap {
+  position: relative;
+}
+.hero__img-wrap img {
+  position: absolute;
+}
+.hero__img-wrap .img-mask {
+  top: 42.5rem;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  height: 53.75rem;
+  z-index: 1;
+}
+.hero__img-wrap .circle-img-sm {
+  top: 40.625rem;
+  right: 27%;
+}
+.hero__img-wrap .circle-img-lg {
+  top: 25rem;
+  left: 43%;
+}
+.hero__img-wrap .eyes-img {
+  top: 10rem;
+  left: 37%;
+  z-index: 4;
+}
+.hero__img-wrap .line-img {
+  top: 48.125rem;
+  left: 23%;
+}
+.hero__img-wrap .star-img {
+  top: 50.625rem;
+  right: 22%;
 }
 
 .intro {
@@ -482,6 +526,9 @@ header .container {
   .intro__title {
     font-size: 1.75rem;
   }
+}
+.intro__title span {
+  color: #00d76b;
 }
 .intro__conts {
   padding-bottom: 2.5rem;
@@ -607,12 +654,15 @@ header .container {
   font-weight: 600;
   color: #121212;
   font-family: "LaundryGothic";
-  text-align: center;
   color: #121212;
   background-color: #12f96b;
   padding: 1.25rem 3.125rem;
   border-radius: 6.25rem;
-  z-index: 2;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  z-index: 5;
 }
 @media (max-width: 1024px) {
   .effect__subtitle {
@@ -699,6 +749,7 @@ header .container {
   text-align: center;
   color: #fff;
   padding-bottom: 2.5rem;
+  margin: 0 auto;
 }
 @media (max-width: 768px) {
   .effect__merit-wrap h3 {
@@ -714,6 +765,7 @@ header .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2.5rem;
   flex-direction: row;
   /* SVG 기본 상태 */
   /* JS에서 strokeDasharray/offset을 덮어씌우지만 초기값을 지정해둠 */
@@ -721,7 +773,6 @@ header .container {
 .effect__merit svg {
   overflow: visible;
   display: block;
-  margin: 0 auto;
 }
 .effect__merit svg path {
   stroke: #12F96B;
