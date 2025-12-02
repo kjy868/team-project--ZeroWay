@@ -61,28 +61,37 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom: u.rem(4000);
+    padding-top: 200px;
+    padding-bottom: u.$padding-200;
 
     &__title {
         @include u.title01;
         text-align: center;
         color: u.$neutral-50;
         padding-top: u.$padding-100;
+        padding-bottom: u.$padding-60;
     }
 
-    svg {
-        overflow: visible;
-    }
-
-    #effect__line {
-        stroke-linecap: round;
-        top: 0;
+    #line-svg {
         position: absolute;
+        top: u.rem(300);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: u.rem(1177);
+        height: auto;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    #line-path {
+        stroke-linecap: round;
     }
 
     &__img {
         position: relative;
-        padding-bottom: u.rem(3100);
+        height: u.rem(3400);
+        z-index: 2;
     }
 
     &__img01 {
@@ -162,6 +171,10 @@
         }
     }
 
+    &__merit {
+        @include u.flex(center);
+    }
+
     &__merit-list {
         @include u.flex(space-around, center, u.$padding-60, column);
 
@@ -181,5 +194,4 @@
             line-height: 1.3;
         }
     }
-
 }

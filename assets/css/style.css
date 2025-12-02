@@ -464,7 +464,8 @@ header .container {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 250rem;
+  padding-top: 200px;
+  padding-bottom: 12.5rem;
 }
 .effect__title {
   font-size: 3.75rem;
@@ -474,6 +475,7 @@ header .container {
   text-align: center;
   color: #fff;
   padding-top: 6.25rem;
+  padding-bottom: 3.75rem;
 }
 @media (max-width: 1024px) {
   .effect__title {
@@ -495,17 +497,24 @@ header .container {
     font-size: 1.75rem;
   }
 }
-.effect svg {
-  overflow: visible;
-}
-.effect #effect__line {
-  stroke-linecap: round;
-  top: 0;
+.effect #line-svg {
   position: absolute;
+  top: 18.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 73.5625rem;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+.effect #line-path {
+  stroke-linecap: round;
 }
 .effect__img {
   position: relative;
-  padding-bottom: 193.75rem;
+  height: 212.5rem;
+  z-index: 2;
 }
 .effect__img01 {
   position: absolute;
@@ -644,6 +653,12 @@ header .container {
   .effect__merit-wrap h3 {
     font-size: 1.625rem;
   }
+}
+.effect__merit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 .effect__merit-list {
   display: flex;

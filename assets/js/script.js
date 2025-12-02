@@ -1,22 +1,27 @@
+
 gsap.registerPlugin(ScrollTrigger);
 
-const path = document.querySelector("#effect__line");
-const length = path.getTotalLength();
+// 1. Path 가져오기
+const path = document.querySelector("#line-path");
 
-// 초기 설정: 전체 선을 숨기기
+// 2. 선의 전체 길이 구하기
+const pathLength = path.getTotalLength();
+
+// 3. 초기 상태(선 숨기기)
 gsap.set(path, {
-    strokeDasharray: length,
-    strokeDashoffset: length
+    strokeDasharray: pathLength,
+    strokeDashoffset: pathLength
 });
 
-// 스크롤에 따라 선이 그려지는 애니메이션
+// 4. 스크롤하면 선이 그려지는 애니메이션
 gsap.to(path, {
-    strokeDashoffset: 0,
+    strokeDashoffset: 0, // 0이 되면 선이 완전히 나타남
     ease: "none",
     scrollTrigger: {
-        trigger: ".intro",
-        start: "top center",
-        end: "bottom top",
-        scrub: 1
+        trigger: ".effect__img",
+        start: "top 90%",
+        end: "bottom 10%",  // 더 일찍 끝나도록
+        scrub: 0.3,  // 더 빠르게 반응
+        markers: false  // 디버깅 시 true로 변경
     }
 });
