@@ -297,6 +297,36 @@ header .container {
   color: #fff;
 }
 
+footer {
+  width: 100%;
+  height: 8.75rem 0;
+  background-color: #333;
+  color: #e9e9e9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+footer__txt ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+footer__left {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.875rem;
+  flex-direction: column;
+}
+footer__sns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -464,7 +494,6 @@ header .container {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 200px;
   padding-bottom: 12.5rem;
 }
 .effect__title {
@@ -499,11 +528,11 @@ header .container {
 }
 .effect #line-svg {
   position: absolute;
-  top: 18.75rem;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 73.5625rem;
+  max-width: 75rem;
   height: auto;
   pointer-events: none;
   z-index: 1;
@@ -718,5 +747,85 @@ header .container {
 @media (max-width: 360px) {
   .effect__merit-list .line02 {
     font-size: 1rem;
+  }
+}
+.effect__txt {
+  text-align: center;
+  padding: 12.5rem 0;
+}
+.effect__txt h3 {
+  padding-bottom: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #121212;
+  font-family: "LaundryGothic";
+  color: #12f96b;
+}
+@media (max-width: 768px) {
+  .effect__txt h3 {
+    font-size: 1.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .effect__txt h3 {
+    font-size: 1.625rem;
+  }
+}
+.zeromap__wrap {
+  padding: 12.5rem 0;
+  text-align: center;
+}
+.zeromap__title {
+  font-size: 3.75rem;
+  font-weight: 700;
+  color: #121212;
+  font-family: "LaundryGothic";
+  padding-bottom: 1.25rem;
+}
+@media (max-width: 1024px) {
+  .zeromap__title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .zeromap__title {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .zeromap__title {
+    font-size: 2.125rem;
+  }
+}
+@media (max-width: 360px) {
+  .zeromap__title {
+    font-size: 1.75rem;
+  }
+}
+.zeromap__desc {
+  font-size: 1.875rem;
+  font-weight: 400;
+  color: #333;
+  font-family: "Pretendard";
+  padding-bottom: 2.5rem;
+}
+@media (max-width: 1024px) {
+  .zeromap__desc {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .zeromap__desc {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 480px) {
+  .zeromap__desc {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 360px) {
+  .zeromap__desc {
+    font-size: 0.875rem;
   }
 }

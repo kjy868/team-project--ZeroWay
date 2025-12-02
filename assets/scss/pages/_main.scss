@@ -61,7 +61,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 200px;
+    // padding-top: 200px;
     padding-bottom: u.$padding-200;
 
     &__title {
@@ -74,11 +74,11 @@
 
     #line-svg {
         position: absolute;
-        top: u.rem(300);
+        top: 0;
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
-        max-width: u.rem(1177);
+        max-width: u.rem(1200);
         height: auto;
         pointer-events: none;
         z-index: 1;
@@ -193,5 +193,35 @@
             color: u.$neutral-50;
             line-height: 1.3;
         }
+    }
+
+    &__txt {
+        text-align: center;
+        padding: u.$padding-200 0;
+
+        h3 {
+            padding-bottom: u.$padding-40;
+            @include u.subtitle01;
+            color: u.$primary-500;
+        }
+    }
+}
+
+
+// zeromap section 
+.zeromap {
+    &__wrap {
+        padding: u.$padding-200 0;
+        text-align: center
+    }
+
+    &__title {
+        @include u.title01;
+        padding-bottom: u.$padding-20;
+    }
+
+    &__desc {
+        @include u.mainBody01;
+        padding-bottom: u.$padding-40;
     }
 }

@@ -1,1 +1,23 @@
 @use '../utils' as u;
+
+footer {
+    width: 100%;
+    height: u.rem(140) 0;
+    background-color: u.$neutral-800;
+    color: u.$neutral-300;
+    @include u.flex;
+
+    &__txt {
+        ul {
+            @include u.flex;
+        }
+    }
+
+    &__left {
+        @include u.flex(center, flex-start, u.$padding-30, column);
+    }
+
+    &__sns {
+        @include u.flex;
+    }
+}

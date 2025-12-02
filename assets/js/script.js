@@ -18,10 +18,10 @@ gsap.to(path, {
     strokeDashoffset: 0, // 0이 되면 선이 완전히 나타남
     ease: "none",
     scrollTrigger: {
-        trigger: ".effect__img",
-        start: "top 90%",
-        end: "bottom 10%",  // 더 일찍 끝나도록
-        scrub: 0.3,  // 더 빠르게 반응
+        trigger: ".effect",
+        start: "top 90%",  // effect가 화면 맨 위에 닿을 때 시작
+        end: "bottom 300%",  // effect가 화면 끝에서 사라질 때 끝
+        scrub: 1,  // 부드럽게
         markers: false  // 디버깅 시 true로 변경
     }
 });
