@@ -18,7 +18,6 @@
         transform: translate(-50%, -50%);
         z-index: 2;
         position: absolute;
-
     }
 
     &__txt01 {
@@ -62,28 +61,37 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom: u.rem(4000);
+    // padding-top: 200px;
+    padding-bottom: u.$padding-200;
 
     &__title {
         @include u.title01;
         text-align: center;
         color: u.$neutral-50;
         padding-top: u.$padding-100;
+        padding-bottom: u.$padding-60;
     }
 
-    svg {
-        overflow: visible;
-    }
-
-    #effect__line {
-        stroke-linecap: round;
-        top: 0;
+    #line-svg {
         position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: u.rem(1200);
+        height: auto;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    #line-path {
+        stroke-linecap: round;
     }
 
     &__img {
         position: relative;
-        padding-bottom: u.rem(3100);
+        height: u.rem(3100);
+        z-index: 2;
     }
 
     &__img01 {
@@ -163,6 +171,37 @@
         }
     }
 
+    &__merit {
+        @include u.flex(center);
+
+        /* SVG 기본 상태 */
+        svg {
+            overflow: visible;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* JS에서 strokeDasharray/offset을 덮어씌우지만 초기값을 지정해둠 */
+        svg path {
+            stroke: #12F96B;
+            stroke-width: 8;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            transition: none;
+        }
+
+        svg circle {
+            transform-origin: center;
+            transform-box: fill-box;
+            opacity: 0.3;
+            transform: scale(0.7);
+        }
+    }
+
+
     &__merit-list {
         @include u.flex(space-around, center, u.$padding-60, column);
 
@@ -183,4 +222,35 @@
         }
     }
 
+    &__txt {
+        text-align: center;
+        padding: u.$padding-200 0;
+
+        h3 {
+            padding-bottom: u.$padding-40;
+            @include u.subtitle01;
+            color: u.$primary-500;
+        }
+    }
+}
+
+
+// zeromap section 
+.zeromap {
+    &__wrap {
+        padding: u.$padding-200 0;
+        text-align: center
+    }
+
+    &__title {
+        @include u.title01;
+        padding-bottom: u.$padding-20;
+        line-height: 1.2;
+    }
+
+    &__desc {
+        @include u.mainBody01;
+        line-height: 1.3;
+        padding-bottom: u.$padding-40;
+    }
 }

@@ -1,1 +1,44 @@
 @use '../utils' as u;
+
+.footer {
+    width: 100%;
+    padding: u.rem(140) 0;
+    background-color: u.$neutral-800;
+    color: u.$neutral-300;
+
+    .container {
+        @include u.flex(space-between, flex-end);
+
+    }
+
+    &__txt {
+        ul {
+            @include u.flex(flex-start, center);
+        }
+    }
+
+    &__policy {
+        @include u.defineFont (u.rem(18), 700, u.$neutral-300);
+        @include u.flex(flex-start, center, u.rem(20))
+    }
+
+    &__info {
+        @include u.defineFont (u.rem(16), 400, u.$neutral-400);
+        padding-top: u.$padding-20;
+        max-width: u.rem(800);
+        flex-wrap: wrap;
+        ;
+    }
+
+    .copyright {
+        padding-top: u.$padding-30;
+    }
+
+    &__left {
+        @include u.flex(center, flex-start, u.$padding-30, column);
+    }
+
+    &__sns {
+        @include u.flex(center, flex-end);
+    }
+}

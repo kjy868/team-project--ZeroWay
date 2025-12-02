@@ -49,7 +49,7 @@
 
         <section class="intro">
             <div class="intro__txt">
-                <h2 class="intro__title">제로 웨이스트에 대해 알고계신가요?</h2>
+                <h2 class="intro__title"><span>제로 웨이스트</span>에 대해 알고계신가요?</h2>
                 <p class="intro__conts">모든 제품과 포장재를 태우지 않고, 인간의 건강과 환경에 위협이 되는 물질을 <br>
                     토지, 해양, 공기로 배출하지 않도록 생산, 소비, 재사용 및 회수 과정을 통해 <br>
                     모든 자원을 보존하고 최소화하자는 사회적 운동입니다.</p>
@@ -64,12 +64,21 @@
                 <h2 class="effect__title">5R 원칙</h2>
 
                 <!-- SVG 선 -->
-                <svg id="effect__line" width="1177" height="3285" viewBox="0 0 1177 3285" fill="none"
+                <!-- <svg id="effect__line" width="1177" height="3285" viewBox="0 0 1177 3285" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M142.902 1.72656C83.7715 125.162 3.90188 316.185 142.902 531.646C281.902 747.106 691.597 656.338 614.876 575.139C542.133 498.151 469.297 825.998 572.873 945.583C676.45 1065.17 827.454 1085.86 977.298 1122.56C1127.14 1159.25 1192.38 1360.26 1084.1 1485.27C949.24 1640.98 640.857 1569.99 640.857 1738.96C640.857 1885.86 1188.14 1881.87 1172.68 2208.28C1149.7 2693.27 501.428 2068.91 236.432 2208.28C-6.1717 2335.88 124.717 2625.33 190.1 2549.84C263.841 2464.7 30.8272 2400.76 5.55872 2741.5C-19.7097 3082.24 268.338 2824.65 427.362 2953.3C507.058 3017.77 515.313 3220.46 508.765 3283.73"
                         stroke="#12F96B" stroke-width="8" />
+                </svg> -->
+
+
+                <svg id="line-svg" width="100%" height="3285" viewBox="0 0 1177 3285"
+                    preserveAspectRatio="xMidYMid meet">
+                    <path id="line-path"
+                        d="M142.902 1.72656C83.7715 125.162 3.90188 316.185 142.902 531.646C281.902 747.106 691.597 656.338 614.876 575.139C542.133 498.151 469.297 825.998 572.873 945.583C676.45 1065.17 827.454 1085.86 977.298 1122.56C1127.14 1159.25 1192.38 1360.26 1084.1 1485.27C949.24 1640.98 640.857 1569.99 640.857 1738.96C640.857 1885.86 1188.14 1881.87 1172.68 2208.28C1149.7 2693.27 501.428 2068.91 236.432 2208.28C-6.1717 2335.88 124.717 2625.33 190.1 2549.84C263.841 2464.7 30.8272 2400.76 5.55872 2741.5C-19.7097 3082.24 268.338 2824.65 427.362 2953.3C507.058 3017.77 515.313 3220.46 508.765 3283.73"
+                        stroke="#12F96B" stroke-width="8" fill="none" />
                 </svg>
+
                 <div class="effect__img">
                     <img src="./assets/img/5r refuse.png" alt="" class="effect__img01">
                     <img src="./assets/img/5r reduce.png" alt="" class="effect__img02">
@@ -105,7 +114,15 @@
                 <div class="effect__merit-wrap">
                     <h3>오늘 내가 컵 하나를 아낀다면?</h3>
                     <div class="effect__merit">
-                        <img src="" alt="">
+                        <svg width="38" height="501" viewBox="0 0 38 501" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="19" cy="19" r="12" stroke="#12F96B" stroke-width="14" />
+                            <circle cx="19" cy="242" r="12" stroke="#12F96B" stroke-width="14" />
+                            <circle cx="19" cy="482" r="12" stroke="#12F96B" stroke-width="14" />
+                            <path d="M17 6L17 492" stroke="#12F96B" stroke-width="8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
                         <ul class="effect__merit-list">
                             <li>
                                 <img src="./assets/img/effect-sec-cup icon 01.png" alt="">
@@ -131,19 +148,89 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+                <div class="effect__txt">
+                    <h3>지구를 위한 행동, 어디서부터 시작할까요?</h3>
+                    <a href="#" class="btn btn--whiteLine">
+                        텀블러 할인 카페 보러가기 →
+                    </a>
+                </div>
         </section>
 
         <section class="zeromap">
-
+            <div class="zeromap__wrap">
+                <h2 class="zeromap__title">
+                    오늘의 발걸음을 지도에 남기고, <br>
+                    함께 푸른 지구를 만들어가요.
+                </h2>
+                <p class="zeromap__desc">
+                    ZeroMap은 정보를 제보하며, 모두가 함께 지도를 채워가는 참여형 지도입니다. <br>
+                    당신의 핀으로 커뮤니티와 지구를 더 푸르게 만들어보세요.
+                </p>
+                <a href="" class="btn btn--black">
+                    ZeroMap으로 이동하기 →
+                </a>
+            </div>
         </section>
         </div>
     </main>
+    </div>
 
 
-
-    <footer>
-
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__left">
+                <a href="">
+                    <img src="./assets/img/footer logo.png" alt="푸터 로고">
+                </a>
+                <div class="footer__txt">
+                    <ul class="footer__policy">
+                        <li>
+                            <a href="">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="">개인정보처리방침</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__info ">
+                        <li>상호명 : 제로웨이 | </li>
+                        <li>
+                            주소 : 서울시 종로구 000로 00길 |
+                        </li>
+                        <li>
+                            전화 : 000-0000-0000 |
+                        </li>
+                        <li>
+                            메일 : zeroway@contact
+                        </li>
+                        <li>
+                            사업자등록번호 : 000-00-00000
+                        </li>
+                    </ul>
+                    <div class="copyright">
+                        <p>Copyright © 2025 ZEROWAY All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__right">
+                <ul class="footer__sns">
+                    <li>
+                        <a href="">
+                            <img src="./assets/img/footer facebook.png" alt="페이스북 아이콘">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./assets/img/footer instagram.png" alt="인스타그램 아이콘">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./assets/img/footer youtube.png" alt="유투브 아이콘">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </footer>
 
     <!-- jquery  -->
