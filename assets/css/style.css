@@ -143,125 +143,125 @@ a {
 
 @font-face {
   font-family: "Peak Comedy";
-  src: url("../../font/Peak Comedy.ttf") format("ttf"), url("../../font/Peak Comedy.woff2") format("woff2"), url("../../font/Peak Comedy.woff") format("woff"), url("../../font/Peak Comedy.eot") format("eot");
+  src: url("../font/PeakComedy.ttf") format("ttf"), url("../font/PeakComedy.woff2") format("woff2"), url("../font/PeakComedy.woff") format("woff"), url("../font/PeakComedy.eot") format("eot");
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("../../font/Pretendard-Thin.ttf") format("ttf"), url("../../font/Pretendard-Thin.woff") format("woff"), url("../../font/Pretendard-Thin.woff2") format("woff2"), url("../../font/Pretendard-Thin.eot") format("eot");
+  src: url("../font/Pretendard-Thin.ttf") format("ttf"), url("../font/Pretendard-Thin.woff") format("woff"), url("../font/Pretendard-Thin.woff2") format("woff2"), url("../font/Pretendard-Thin.eot") format("eot");
   font-weight: 100;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("../../font/Pretendard-ExtraLight.ttf") format("ttf"), url("../../font/Pretendard-ExtraLight.woff") format("woff"), url("../../font/Pretendard-ExtraLight.woff2") format("woff2"), url("../../font/Pretendard-ExtraLight.eot") format("eot");
+  src: url("../font/Pretendard-ExtraLight.ttf") format("ttf"), url("../font/Pretendard-ExtraLight.woff") format("woff"), url("../font/Pretendard-ExtraLight.woff2") format("woff2"), url("../font/Pretendard-ExtraLight.eot") format("eot");
   font-weight: 200;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("../../font/Pretendard-Light.ttf") format("ttf"), url("../../font/Pretendard-Light.woff") format("woff"), url("../../font/Pretendard-Light.woff2") format("woff2"), url("../../font/Pretendard-Light.eot") format("eot");
+  src: url("../font/Pretendard-Light.ttf") format("ttf"), url("../font/Pretendard-Light.woff") format("woff"), url("../font/Pretendard-Light.woff2") format("woff2"), url("../font/Pretendard-Light.eot") format("eot");
   font-weight: 300;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("../../font/Pretendard-Regular.ttf") format("ttf"), url("../../font/Pretendard-Regular.woff") format("woff"), url("../../font/Pretendard-Regular.woff2") format("woff2"), url("../../font/Pretendard-Regular.eot") format("eot");
+  src: url("../font/Pretendard-Regular.ttf") format("ttf"), url("../font/Pretendard-Regular.woff") format("woff"), url("../font/Pretendard-Regular.woff2") format("woff2"), url("../font/Pretendard-Regular.eot") format("eot");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("../../font/Pretendard-Medium.ttf") format("ttf"), url("../../font/Pretendard-Medium.woff") format("woff"), url("../../font/Pretendard-Medium.woff2") format("woff2"), url("../../font/Pretendard-Medium.eot") format("eot");
+  src: url("../font/Pretendard-Medium.ttf") format("ttf"), url("../font/Pretendard-Medium.woff") format("woff"), url("../font/Pretendard-Medium.woff2") format("woff2"), url("../font/Pretendard-Medium.eot") format("eot");
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("../../font/Pretendard-SemiBold.ttf") format("ttf"), url("../../font/Pretendard-SemiBold.woff") format("woff"), url("../../font/Pretendard-SemiBold.woff2") format("woff2"), url("../../font/Pretendard-SemiBold.eot") format("eot");
+  src: url("../font/Pretendard-SemiBold.ttf") format("ttf"), url("../font/Pretendard-SemiBold.woff") format("woff"), url("../font/Pretendard-SemiBold.woff2") format("woff2"), url("../font/Pretendard-SemiBold.eot") format("eot");
   font-weight: 600;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("../../font/Pretendard-Bold.ttf") format("ttf"), url("../../font/Pretendard-Bold.woff") format("woff"), url("../../font/Pretendard-Bold.woff2") format("woff2"), url("../../font/Pretendard-Bold.eot") format("eot");
+  src: url("../font/Pretendard-Bold.ttf") format("ttf"), url("../font/Pretendard-Bold.woff") format("woff"), url("../font/Pretendard-Bold.woff2") format("woff2"), url("../font/Pretendard-Bold.eot") format("eot");
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("../../font/Pretendard-ExtraBold.ttf") format("ttf"), url("../../font/Pretendard-ExtraBold.woff") format("woff"), url("../../font/Pretendard-ExtraBold.woff2") format("woff2"), url("../../font/Pretendard-ExtraBold.eot") format("eot");
+  src: url("../font/Pretendard-ExtraBold.ttf") format("ttf"), url("../font/Pretendard-ExtraBold.woff") format("woff"), url("../font/Pretendard-ExtraBold.woff2") format("woff2"), url("../font/Pretendard-ExtraBold.eot") format("eot");
   font-weight: 800;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("../../font/Pretendard-Black.ttf") format("ttf"), url("../../font/Pretendard-Black.woff") format("woff"), url("../../font/Pretendard-Black.woff2") format("woff2"), url("../../font/Pretendard-Black.eot") format("eot");
+  src: url("../font/Pretendard-Black.ttf") format("ttf"), url("../font/Pretendard-Black.woff") format("woff"), url("../font/Pretendard-Black.woff2") format("woff2"), url("../font/Pretendard-Black.eot") format("eot");
   font-weight: 900;
   font-display: swap;
 }
 @font-face {
   font-family: "Paperozi";
-  src: url("../../font/Paperlogy-1Thin.ttf") format("ttf"), url("../../font/Paperlogy-1Thin.woff") format("woff"), url("../../font/Paperlogy-1Thin.woff2") format("woff2"), url("../../font/Paperlogy-1Thin.eot") format("eot");
+  src: url("../font/Paperlogy-1Thin.ttf") format("ttf"), url("../font/Paperlogy-1Thin.woff") format("woff"), url("../font/Paperlogy-1Thin.woff2") format("woff2"), url("../font/Paperlogy-1Thin.eot") format("eot");
   font-weight: 100;
   font-display: swap;
 }
 @font-face {
   font-family: "Paperozi";
-  src: url("../../font/Paperlogy-2ExtraLight.ttf") format("ttf"), url("../../font/Paperlogy-2ExtraLight.woff") format("woff"), url("../../font/Paperlogy-2ExtraLight.woff2") format("woff2"), url("../../font/Paperlogy-2ExtraLight.eot") format("eot");
+  src: url("../font/Paperlogy-2ExtraLight.ttf") format("ttf"), url("../font/Paperlogy-2ExtraLight.woff") format("woff"), url("../font/Paperlogy-2ExtraLight.woff2") format("woff2"), url("../font/Paperlogy-2ExtraLight.eot") format("eot");
   font-weight: 200;
   font-display: swap;
 }
 @font-face {
   font-family: "Paperozi";
-  src: url("../../font/Paperlogy-3Light.ttf") format("ttf"), url("../../font/Paperlogy-3Light.woff") format("woff"), url("../../font/Paperlogy-3Light.woff2") format("woff2"), url("../../font/Paperlogy-3Light.eot") format("eot");
+  src: url("../font/Paperlogy-3Light.ttf") format("ttf"), url("../font/Paperlogy-3Light.woff") format("woff"), url("../font/Paperlogy-3Light.woff2") format("woff2"), url("../font/Paperlogy-3Light.eot") format("eot");
   font-weight: 300;
   font-display: swap;
 }
 @font-face {
   font-family: "Paperozi";
-  src: url("../../font/Paperlogy-4Regular.ttf") format("ttf"), url("../../font/Paperlogy-4Regular.woff") format("woff"), url("../../font/Paperlogy-4Regular.woff2") format("woff2"), url("../../font/Paperlogy-4Regular.eot") format("eot");
+  src: url("../font/Paperlogy-4Regular.ttf") format("ttf"), url("../font/Paperlogy-4Regular.woff") format("woff"), url("../font/Paperlogy-4Regular.woff2") format("woff2"), url("../font/Paperlogy-4Regular.eot") format("eot");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Paperozi";
-  src: url("../../font/Paperlogy-5Medium.ttf") format("ttf"), url("../../font/Paperlogy-5Medium.woff") format("woff"), url("../../font/Paperlogy-5Medium.woff2") format("woff2"), url("../../font/Paperlogy-5Medium.eot") format("eot");
+  src: url("../font/Paperlogy-5Medium.ttf") format("ttf"), url("../font/Paperlogy-5Medium.woff") format("woff"), url("../font/Paperlogy-5Medium.woff2") format("woff2"), url("../font/Paperlogy-5Medium.eot") format("eot");
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: "Paperozi";
-  src: url("../../font/Paperlogy-6SemiBold.ttf") format("ttf"), url("../../font/Paperlogy-6SemiBold.woff") format("woff"), url("../../font/Paperlogy-6SemiBold.woff2") format("woff2"), url("../../font/Paperlogy-6SemiBold.eot") format("eot");
+  src: url("../font/Paperlogy-6SemiBold.ttf") format("ttf"), url("../font/Paperlogy-6SemiBold.woff") format("woff"), url("../font/Paperlogy-6SemiBold.woff2") format("woff2"), url("../font/Paperlogy-6SemiBold.eot") format("eot");
   font-weight: 600;
   font-display: swap;
 }
 @font-face {
   font-family: "Paperozi";
-  src: url("../../font/Paperlogy-7Bold.ttf") format("ttf"), url("../../font/Paperlogy-7Bold.woff") format("woff"), url("../../font/Paperlogy-7Bold.woff2") format("woff2"), url("../../font/Paperlogy-7Bold.eot") format("eot");
+  src: url("../font/Paperlogy-7Bold.ttf") format("ttf"), url("../font/Paperlogy-7Bold.woff") format("woff"), url("../font/Paperlogy-7Bold.woff2") format("woff2"), url("../font/Paperlogy-7Bold.eot") format("eot");
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "Paperozi";
-  src: url("../../font/Paperlogy-8ExtraBold.ttf") format("ttf"), url("../../font/Paperlogy-8ExtraBold.woff") format("woff"), url("../../font/Paperlogy-8ExtraBold.woff2") format("woff2"), url("../../font/Paperlogy-8ExtraBold.eot") format("eot");
+  src: url("../font/Paperlogy-8ExtraBold.ttf") format("ttf"), url("../font/Paperlogy-8ExtraBold.woff") format("woff"), url("../font/Paperlogy-8ExtraBold.woff2") format("woff2"), url("../font/Paperlogy-8ExtraBold.eot") format("eot");
   font-weight: 800;
   font-display: swap;
 }
 @font-face {
   font-family: "Paperozi";
-  src: url("../../font/Paperlogy-9Black.ttf") format("ttf"), url("../../font/Paperlogy-9Black.woff") format("woff"), url("../../font/Paperlogy-9Black.woff2") format("woff2"), url("../../font/Paperlogy-9Black.eot") format("eot");
+  src: url("../font/Paperlogy-9Black.ttf") format("ttf"), url("../font/Paperlogy-9Black.woff") format("woff"), url("../font/Paperlogy-9Black.woff2") format("woff2"), url("../font/Paperlogy-9Black.eot") format("eot");
   font-weight: 900;
   font-display: swap;
 }
 @font-face {
   font-family: "LaundryGothic";
-  src: url("../../font/런드리고딕 Regular.ttf") format("ttf"), url("../../font/런드리고딕 Regular.woff") format("woff"), url("../../font/런드리고딕 Regular.woff2") format("woff2"), url("../../font/런드리고딕 Regular.eot") format("eot");
+  src: url("../font/LaundryGothic-Regular.ttf") format("ttf"), url("../font/LaundryGothic-Regular.woff") format("woff"), url("../font/LaundryGothic-Regular.woff2") format("woff2"), url("../font/LaundryGothic-Regular.eot") format("eot");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "LaundryGothic";
-  src: url("../../font/런드리고딕 Bold.ttf") format("ttf"), url("../../font/런드리고딕 Bold.woff") format("woff"), url("../../font/런드리고딕 Bold.woff2") format("woff2"), url("../../font/런드리고딕 Bold.eot") format("eot");
+  src: url("../font/LaundryGothic-Bold.ttf") format("ttf"), url("../font/LaundryGothic-Bold.woff") format("woff"), url("../font/LaundryGothic-Bold.woff2") format("woff2"), url("../font/LaundryGothic-Bold.eot") format("eot");
   font-weight: 700;
   font-display: swap;
 }
