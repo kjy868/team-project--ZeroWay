@@ -461,10 +461,10 @@ header .container {
   position: absolute;
 }
 .hero__img-wrap .img-mask {
-  top: 42.5rem;
+  top: 37.5rem;
   left: 54%;
   transform: translate(-50%, -50%);
-  height: 53.75rem;
+  height: 43.75rem;
   z-index: 1;
 }
 .hero__img-wrap .circle-img-sm {
@@ -659,7 +659,6 @@ header .container {
   padding: 1.25rem 3.125rem;
   border-radius: 6.25rem;
   display: block;
-  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
   z-index: 5;
