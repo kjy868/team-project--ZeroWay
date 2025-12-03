@@ -4,11 +4,21 @@ body {
     color: u.$neutral-900;
     background-color: u.$neutral-50;
     font-family: 'Pretendard';
+    line-height: 1.3;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
 }
 
 // body, a, img 등 html전반에 공통으로 적용되는 스타일

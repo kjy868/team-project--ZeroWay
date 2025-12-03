@@ -1,0 +1,19 @@
+@use '../utils' as u;
+
+.sub-hero {
+    width: 100%;
+    height: u.rem(660);
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        @include u.bgImg();
+        background-image: url(../img/sub-hero__bg.webp);
+        position: relative;
+    }
+
+    &__title {
+        @include u.title01($color: u.$neutral-50);
+        @include u.center();
+    }
+}
