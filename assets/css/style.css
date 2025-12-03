@@ -821,11 +821,6 @@ header .container {
     font-size: 1rem;
   }
 }
-@media (max-width: 360px) {
-  .effect__merit-list .line01 {
-    font-size: 1rem;
-  }
-}
 .effect__merit-list .line02 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -871,6 +866,7 @@ header .container {
     font-size: 1.625rem;
   }
 }
+
 .zeromap__wrap {
   padding: 12.5rem 0;
   text-align: center;
