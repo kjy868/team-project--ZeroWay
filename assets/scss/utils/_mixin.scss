@@ -1,5 +1,6 @@
 @use 'function' as f;
 @use 'variables' as v;
+@use 'responsive' as r;
 
 // flex, grid etc
 
@@ -37,19 +38,19 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
+    @include r.responsive(tablet) {
         font-size: v.$font-48;
     }
 
-    @media (max-width: v.$breakpoint-medium) {
+    @include r.responsive(medium) {
         font-size: v.$font-40;
     }
 
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-34;
     }
 
-    @media (max-width: v.$breakpoint-small) {
+    @include r.responsive(small) {
         font-size: v.$font-28;
     }
 }
@@ -61,19 +62,15 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
+    @include r.responsive(tablet) {
         font-size: v.$font-40;
     }
 
-    @media (max-width: v.$breakpoint-medium) {
+    @include r.responsive(medium) {
         font-size: v.$font-30;
     }
 
-    @media (max-width: v.$breakpoint-mobile) {
-        // font-size: $font-30; 동일사이즈라 제외
-    }
-
-    @media (max-width: v.$breakpoint-small) {
+    @include r.responsive(small) {
         font-size: v.$font-26;
     }
 }
@@ -86,21 +83,14 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
-        // font-size: v.$font-40;
-    }
-
-    @media (max-width: v.$breakpoint-medium) {
+    @include r.responsive(medium) {
         font-size: v.$font-30;
     }
 
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-26;
     }
 
-    @media (max-width: v.$breakpoint-small) {
-        // font-size: v.$font-26;
-    }
 }
 
 
@@ -110,19 +100,19 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
+    @include r.responsive(tablet) {
         font-size: v.$font-50;
     }
 
-    @media (max-width: v.$breakpoint-medium) {
+    @include r.responsive(medium) {
         font-size: v.$font-44;
     }
 
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-36;
     }
 
-    @media (max-width: v.$breakpoint-small) {
+    @include r.responsive(small) {
         font-size: v.$font-30;
     }
 }
@@ -136,19 +126,19 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
+    @include r.responsive(tablet) {
         font-size: v.$font-20;
     }
 
-    @media (max-width: v.$breakpoint-medium) {
+    @include r.responsive(medium) {
         font-size: v.$font-18;
     }
 
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-16;
     }
 
-    @media (max-width: v.$breakpoint-small) {
+    @include r.responsive(small) {
         font-size: v.$font-14;
     }
 }
@@ -160,21 +150,18 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
+    @include r.responsive(tablet) {
         font-size: v.$font-24;
     }
 
-    @media (max-width: v.$breakpoint-medium) {
-        // font-size: v.$font-24;
-    }
-
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-22;
     }
 
-    @media (max-width: v.$breakpoint-small) {
+    @include r.responsive(small) {
         font-size: v.$font-20;
     }
+
 }
 
 
@@ -184,21 +171,14 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
+    @include r.responsive(tablet) {
         font-size: v.$font-18;
     }
 
-    @media (max-width: v.$breakpoint-medium) {
+    @include r.responsive(medium) {
         font-size: v.$font-16;
     }
 
-    @media (max-width: v.$breakpoint-mobile) {
-        // font-size: v.$font-16;
-    }
-
-    @media (max-width: v.$breakpoint-small) {
-        // font-size: v.$font-16;
-    }
 }
 
 
@@ -208,21 +188,14 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
-        // font-size: v.$font-24;
-    }
-
-    @media (max-width: v.$breakpoint-medium) {
+    @include r.responsive(medium) {
         font-size: v.$font-18;
     }
 
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-16;
     }
 
-    @media (max-width: v.$breakpoint-small) {
-        font-size: v.$font-16;
-    }
 }
 
 
@@ -232,19 +205,15 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
-        // font-size: v.$font-24;
-    }
-
-    @media (max-width: v.$breakpoint-medium) {
+    @include r.responsive(medium) {
         font-size: v.$font-22;
     }
 
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-18;
     }
 
-    @media (max-width: v.$breakpoint-small) {
+    @include r.responsive(small) {
         font-size: v.$font-16;
     }
 }
@@ -256,22 +225,20 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
-        // font-size: v.$font-24;
-    }
 
-    @media (max-width: v.$breakpoint-medium) {
+    @include r.responsive(medium) {
         font-size: v.$font-20;
     }
 
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-16;
     }
 
-    @media (max-width: v.$breakpoint-small) {
+    @include r.responsive(small) {
         font-size: v.$font-14;
     }
 }
+
 
 @mixin aboutBody02 ($size: v.$font-26, $weight: 500, $color: v.$neutral-800, $font-family: 'Paperlogy') {
     font-size: $size;
@@ -279,21 +246,10 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
-        // font-size: v.$font-26;
-    }
-
-    @media (max-width: v.$breakpoint-medium) {
-        // font-size: v.$font-26;
-    }
-
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-20;
     }
 
-    @media (max-width: v.$breakpoint-small) {
-        // font-size: v.$font-20;
-    }
 }
 
 @mixin aboutBody03 ($size: v.$font-26, $weight: 600, $color: v.$neutral-800, $font-family: 'Paperlogy') {
@@ -302,21 +258,10 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
-        // font-size: v.$font-26;
-    }
-
-    @media (max-width: v.$breakpoint-medium) {
-        // font-size: v.$font-26;
-    }
-
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-20;
     }
 
-    @media (max-width: v.$breakpoint-small) {
-        // font-size: v.$font-20;
-    }
 }
 
 // tumbler mixin ================================
@@ -326,21 +271,14 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
-        // font-size: v.$font-20;
-    }
-
-    @media (max-width: v.$breakpoint-medium) {
+    @include r.responsive(medium) {
         font-size: v.$font-18;
     }
 
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-14;
     }
 
-    @media (max-width: v.$breakpoint-small) {
-        font-size: v.$font-14;
-    }
 }
 
 // map mixin ================================
@@ -350,19 +288,15 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
+    @include r.responsive(tablet) {
         font-size: v.$font-22;
     }
 
-    @media (max-width: v.$breakpoint-medium) {
-        font-size: v.$font-22;
-    }
-
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-18;
     }
 
-    @media (max-width: v.$breakpoint-small) {
+    @include r.responsive(small) {
         font-size: v.$font-16;
     }
 }
@@ -373,21 +307,14 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
-        // font-size: v.$font-20;
-    }
-
-    @media (max-width: v.$breakpoint-medium) {
-        // font-size: v.$font-20;
-    }
-
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-18;
     }
 
-    @media (max-width: v.$breakpoint-small) {
-        font-size: $font-16;
+    @include r.responsive(small) {
+        font-size: v.$font-16;
     }
+
 }
 
 @mixin mapBody03 ($size: v.$font-22, $weight: 400, $color: v.$neutral-800, $font-family: 'Pretendard') {
@@ -396,19 +323,11 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
-        // font-size: v.$font-22;
-    }
-
-    @media (max-width: v.$breakpoint-medium) {
-        // font-size: v.$font-22;
-    }
-
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-18;
     }
 
-    @media (max-width: v.$breakpoint-small) {
+    @include r.responsive(small) {
         font-size: v.$font-16;
     }
 }
@@ -419,19 +338,11 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
-        // font-size: v.$font-26;
-    }
-
-    @media (max-width: v.$breakpoint-medium) {
-        // font-size: v.$font-26;
-    }
-
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-22;
     }
 
-    @media (max-width: v.$breakpoint-small) {
+    @include r.responsive(small) {
         font-size: v.$font-18;
     }
 }
@@ -442,19 +353,11 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
-        // font-size: v.$font-22;
-    }
-
-    @media (max-width: v.$breakpoint-medium) {
-        // font-size: v.$font-22;
-    }
-
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-18;
     }
 
-    @media (max-width: v.$breakpoint-small) {
+    @include r.responsive(small) {
         font-size: v.$font-14;
     }
 }
@@ -466,19 +369,15 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
-        // font-size: v.$font-26;
-    }
-
-    @media (max-width: v.$breakpoint-medium) {
+    @include r.responsive(medium) {
         font-size: v.$font-22;
     }
 
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-20;
     }
 
-    @media (max-width: v.$breakpoint-small) {
+    @include r.responsive(small) {
         font-size: v.$font-18;
     }
 }
@@ -489,19 +388,11 @@
     color: $color;
     font-family: $font-family;
 
-    @media (max-width: v.$breakpoint-tablet) {
-        // font-size: v.$font-20;
-    }
-
-    @media (max-width: v.$breakpoint-medium) {
-        // font-size: v.$font-20;
-    }
-
-    @media (max-width: v.$breakpoint-mobile) {
+    @include r.responsive(mobile) {
         font-size: v.$font-18;
     }
 
-    @media (max-width: v.$breakpoint-small) {
+    @include r.responsive(small) {
         font-size: v.$font-16;
     }
 }
