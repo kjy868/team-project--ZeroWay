@@ -427,7 +427,7 @@ header .container {
 .hero__img-wrap {
   width: 100%;
   height: 100%;
-  background: url("/assets/img/hero-bg.png");
+  background: url("/assets/img/hero-bg.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -531,7 +531,7 @@ header .container {
 
 .effect {
   position: relative;
-  background: linear-gradient(to bottom, rgba(20, 20, 20, 0.264) 10%, rgba(20, 20, 20, 0.547) 25%, rgba(20, 20, 20, 0.613) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%), url("/assets/img/effect-sec-bg.jpeg");
+  background: linear-gradient(to bottom, rgba(20, 20, 20, 0.264) 10%, rgba(20, 20, 20, 0.547) 25%, rgba(20, 20, 20, 0.613) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%), url("/assets/img/effect-sec-bg.webp");
   width: 100%;
   height: 100%;
   background-position: center;
@@ -845,7 +845,7 @@ header .container {
 .zeromap__wrap {
   padding: 12.5rem 0;
   text-align: center;
-  background-image: url("/assets/img/zeromap-bg.png");
+  background-image: url("/assets/img/zeromap-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
