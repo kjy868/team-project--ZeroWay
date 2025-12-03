@@ -3,7 +3,7 @@
 // GSAP ScrollTrigger 애니메이션 ==========================
 gsap.registerPlugin(ScrollTrigger);
 
-// #line-path (기존 전체 선)
+// effect영역에서 선 그려지는 효과
 document.addEventListener('DOMContentLoaded', () => {
     const linePath = document.querySelector("#line-path");
     if (linePath) {
@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // circles: 위치는 고정하고 scale / opacity만 변경
     const circles = document.querySelectorAll('.effect__merit svg circle');
     circles.forEach((circle, index) => {
         const originalR = parseFloat(circle.getAttribute('r')) || 12;
@@ -68,5 +67,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// effect-merit underline 선 그어지는 효과
+// const underlinePath = document.querySelector('.underline-path');
+// const pathLength = underlinePath.getTotalLength();
+
+// gsap.set(underlinePath, {
+//     strokeDasharray: pathLength,
+//     strokeDashoffset: pathLength
+// });
+
+// gsap.to(underlinePath, {
+//     strokeDashoffset: 0,
+//     duration: 1,
+//     ease: 'power1.inOut',
+//     scrollTrigger: {
+//         trigger: '.text-underline',
+//         start: 'top 75%'
+//     }
+// });
 
 

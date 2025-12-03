@@ -2,85 +2,45 @@
 
 // hero section 
 .hero {
-    background: url("../img/hero-sec-bg.jpeg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
-    position: relative;
 
-    &__txt-wrap {
+    &__img-wrap {
+        width: 100%;
+        height: 100%;
+        background: url("/assets/img/hero-bg.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         position: relative;
-        font-family: 'Peak Comedy';
-        font-size: u.rem(200);
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
     }
 
-    &__txt01 {
+    &__img01 {
         position: absolute;
-        top: u.rem(-250);
         left: 50%;
+        top: 30%;
         transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+
+    &__img-kid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         color: u.$primary-500;
         z-index: 0;
     }
 
-    &__txt02 {
+    &__img02 {
         position: absolute;
-        color: u.$neutral-50;
-        top: u.rem(250);
+        top: 80%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 5;
     }
-
-    &__img-wrap {
-        position: relative;
-
-        img {
-            position: absolute;
-        }
-
-        .img-mask {
-            top: u.rem(600);
-            left: 54%;
-            transform: translate(-50%, -50%);
-            height: u.rem(700);
-            z-index: 1;
-        }
-
-        .circle-img-sm {
-            top: u.rem(650);
-            right: 27%;
-        }
-
-        .circle-img-lg {
-            top: u.rem(400);
-            left: 43%;
-        }
-
-        .eyes-img {
-            top: u.rem(160);
-            left: 37%;
-            z-index: 4;
-        }
-
-        .line-img {
-            top: u.rem(770);
-            left: 23%;
-        }
-
-        .star-img {
-            top: u.rem(810);
-            right: 22%;
-        }
-
-    }
-
 
 }
 
@@ -155,28 +115,28 @@
 
     &__img01 {
         position: absolute;
-        top: u.rem(210);
+        top: u.rem(160);
         left: u.rem(274);
         width: u.rem(282);
     }
 
     &__img02 {
         position: absolute;
-        top: u.rem(640);
+        top: u.rem(600);
         right: u.rem(102);
         width: u.rem(336);
     }
 
     &__img03 {
         position: absolute;
-        top: u.rem(1150);
+        top: u.rem(1130);
         right: u.rem(204);
         width: u.rem(294);
     }
 
     &__img04 {
         position: absolute;
-        top: u.rem(1730);
+        top: u.rem(1720);
         left: u.rem(288);
         width: u.rem(273);
     }
@@ -293,6 +253,14 @@
             color: u.$primary-500;
         }
     }
+
+    .underline-svg {
+        position: relative;
+    }
+
+    .underline-path {
+        position: absolute;
+    }
 }
 
 
@@ -300,7 +268,11 @@
 .zeromap {
     &__wrap {
         padding: u.$padding-200 0;
-        text-align: center
+        text-align: center;
+        background-image: url("/assets/img/zeromap-bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     &__title {
