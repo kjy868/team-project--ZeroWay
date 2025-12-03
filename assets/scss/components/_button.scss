@@ -9,16 +9,17 @@
     padding: u.rem(20) u.rem(60);
 
     // btn medium 
-    @media (max-width: u.$breakpoint-tablet) {
+    @include u.responsive(tablet) {
         font-size: u.rem(20);
     }
 
     // btn small
-    @media (max-width: u.$breakpoint-mobile) {
+    @include u.responsive(mobile) {
         font-size: u.rem(16);
         padding: u.rem(15) u.rem(40);
     }
 
+    // black button 
     &--black {
         background-color: u.$neutral-900;
         border: u.rem(3) solid u.$neutral-900;
@@ -30,6 +31,7 @@
         }
     }
 
+    // black line button 
     &--blackLine {
         background-color: u.$neutral-50;
         color: u.$neutral-900;
@@ -42,6 +44,7 @@
         }
     }
 
+    // white line button 
     &--whiteLine {
         background-color: transparent;
         color: u.$neutral-50;

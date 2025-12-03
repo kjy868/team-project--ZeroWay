@@ -421,72 +421,41 @@ header .container {
 }
 
 .hero {
-  background: url("../img/hero-sec-bg.jpeg");
+  width: 100%;
+  height: 100vh;
+}
+.hero__img-wrap {
+  width: 100%;
+  height: 100%;
+  background: url("/assets/img/hero-bg.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh;
   position: relative;
 }
-.hero__txt-wrap {
-  position: relative;
-  font-family: "Peak Comedy";
-  font-size: 12.5rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-.hero__txt01 {
+.hero__img01 {
   position: absolute;
-  top: -15.625rem;
   left: 50%;
+  top: 30%;
   transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.hero__img-kid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   color: #12f96b;
   z-index: 0;
 }
-.hero__txt02 {
+.hero__img02 {
   position: absolute;
-  color: #fff;
-  top: 15.625rem;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
-}
-.hero__img-wrap {
-  position: relative;
-}
-.hero__img-wrap img {
-  position: absolute;
-}
-.hero__img-wrap .img-mask {
-  top: 37.5rem;
-  left: 54%;
-  transform: translate(-50%, -50%);
-  height: 43.75rem;
-  z-index: 1;
-}
-.hero__img-wrap .circle-img-sm {
-  top: 40.625rem;
-  right: 27%;
-}
-.hero__img-wrap .circle-img-lg {
-  top: 25rem;
-  left: 43%;
-}
-.hero__img-wrap .eyes-img {
-  top: 10rem;
-  left: 37%;
-  z-index: 4;
-}
-.hero__img-wrap .line-img {
-  top: 48.125rem;
-  left: 23%;
-}
-.hero__img-wrap .star-img {
-  top: 50.625rem;
-  right: 22%;
 }
 
 .intro {
@@ -621,25 +590,25 @@ header .container {
 }
 .effect__img01 {
   position: absolute;
-  top: 13.125rem;
+  top: 10rem;
   left: 17.125rem;
   width: 17.625rem;
 }
 .effect__img02 {
   position: absolute;
-  top: 40rem;
+  top: 37.5rem;
   right: 6.375rem;
   width: 21rem;
 }
 .effect__img03 {
   position: absolute;
-  top: 71.875rem;
+  top: 70.625rem;
   right: 12.75rem;
   width: 18.375rem;
 }
 .effect__img04 {
   position: absolute;
-  top: 108.125rem;
+  top: 107.5rem;
   left: 18rem;
   width: 17.0625rem;
 }
@@ -821,11 +790,6 @@ header .container {
     font-size: 1rem;
   }
 }
-@media (max-width: 360px) {
-  .effect__merit-list .line01 {
-    font-size: 1rem;
-  }
-}
 .effect__merit-list .line02 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -871,9 +835,20 @@ header .container {
     font-size: 1.625rem;
   }
 }
+.effect .underline-svg {
+  position: relative;
+}
+.effect .underline-path {
+  position: absolute;
+}
+
 .zeromap__wrap {
   padding: 12.5rem 0;
   text-align: center;
+  background-image: url("/assets/img/zeromap-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .zeromap__title {
   font-size: 3.75rem;
