@@ -1,1 +1,8 @@
 @use '../utils' as u;
+
+.about__desc {
+    @include u.mainBody04();
+    text-align: center;
+    padding: u.$padding-100 0;
+    line-height: 1.5;
+}
