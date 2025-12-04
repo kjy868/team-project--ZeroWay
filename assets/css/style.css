@@ -292,6 +292,12 @@ li {
   flex-direction: row;
   height: 100%;
 }
+.header .container .menu-list .menu a {
+  transition: 0.3s;
+}
+.header .container .menu-list .menu a.active {
+  color: #12f96b;
+}
 
 .menu-list {
   display: flex;
