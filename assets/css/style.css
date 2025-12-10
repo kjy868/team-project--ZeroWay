@@ -444,15 +444,20 @@ li {
     font-size: 1.25rem;
   }
 }
-@media (max-width: 480px) {
-  .btn {
-    font-size: 1rem;
-    padding: 0.9375rem 2.5rem;
-  }
-}
 .btn--black {
   background-color: #121212;
   border: 0.1875rem solid #121212;
+}
+@media (max-width: 1024px) {
+  .btn--black {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn--black {
+    font-size: 1rem;
+    padding: 0.9375rem 2.5rem;
+  }
 }
 .btn--black:hover {
   background-color: #00d76b;
@@ -460,9 +465,20 @@ li {
   border: 0.1875rem solid #00d76b;
 }
 .btn--blackLine {
+  font-size: 1.5625rem;
   background-color: #fff;
   color: #121212;
   border: 0.1875rem solid #121212;
+}
+@media (max-width: 480px) {
+  .btn--blackLine {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 1024px) {
+  .btn--blackLine {
+    font-size: 1.25rem;
+  }
 }
 .btn--blackLine:hover {
   background-color: #121212;
@@ -470,9 +486,20 @@ li {
   transition: 0.3s all ease-in-out;
 }
 .btn--whiteLine {
+  font-size: 1.5625rem;
   background-color: transparent;
   color: #fff;
   border: 0.1875rem solid #fff;
+}
+@media (max-width: 1024px) {
+  .btn--whiteLine {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn--whiteLine {
+    font-size: 0.875rem;
+  }
 }
 .btn--whiteLine:hover {
   background-color: #fff;
@@ -680,8 +707,8 @@ li {
   width: 19rem;
 }
 .effect__subtitle {
-  font-size: 3.75rem;
-  font-weight: 600;
+  font-size: 2.75rem;
+  font-weight: 700;
   color: #121212;
   font-family: "LaundryGothic";
   color: #121212;
@@ -695,33 +722,26 @@ li {
 }
 @media (max-width: 1024px) {
   .effect__subtitle {
-    font-size: 3.125rem;
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 768px) {
   .effect__subtitle {
-    font-size: 2.75rem;
-  }
-}
-@media (max-width: 480px) {
-  .effect__subtitle {
-    font-size: 2.25rem;
+    font-size: 1.875rem;
   }
 }
 @media (max-width: 360px) {
   .effect__subtitle {
-    font-size: 1.875rem;
+    font-size: 1.625rem;
   }
 }
 .effect__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 3.75rem;
   flex-direction: row;
   text-align: center;
-  padding-top: 5rem;
-  padding-bottom: 12.5rem;
+  padding: 5rem 1.25rem 12.5rem;
 }
 .effect__list li {
   display: flex;
@@ -822,7 +842,7 @@ li {
 .effect__merit-list {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   gap: 3.75rem;
   flex-direction: column;
 }
@@ -830,8 +850,12 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.25rem;
+  gap: 3.75rem;
   flex-direction: row;
+}
+.effect__merit-list li:first-child img {
+  padding-left: 1.875rem;
+  padding-right: 1.25rem;
 }
 .effect__merit-list .line01 {
   font-size: 1.5rem;
@@ -896,11 +920,24 @@ li {
     font-size: 1.625rem;
   }
 }
-.effect .underline-svg {
+.effect__text-wrap {
   position: relative;
+  display: inline-block;
+  padding-bottom: 0.375rem;
 }
-.effect .underline-path {
+.effect__underline {
   position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.125rem;
+  pointer-events: none;
+}
+.effect__underline-path {
+  stroke: #12f96b;
+  stroke-width: 0.25rem;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .zeromap__wrap {

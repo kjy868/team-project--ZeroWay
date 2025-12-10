@@ -136,6 +136,25 @@
     }
 }
 
+@mixin subtitle03 ($size: v.$font-44, $weight: 700, $color: v.$neutral-900, $font-family: 'LaundryGothic') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+    @include r.responsive(tablet) {
+        font-size: v.$font-40;
+    }
+
+    @include r.responsive(medium) {
+        font-size: v.$font-30;
+    }
+
+    @include r.responsive(small) {
+        font-size: v.$font-26;
+    }
+}
+
 
 // mainBody mixin =================================
 

@@ -149,7 +149,7 @@
     }
 
     &__subtitle {
-        @include u.subtitle02;
+        @include u.subtitle03;
         color: u.$neutral-900;
         background-color: u.$primary-500;
         padding: u.rem(20) u.rem(50);
@@ -162,10 +162,10 @@
     }
 
     &__list {
-        @include u.flex(center, center, u.$padding-60);
+        @include u.flex(space-between, center);
         text-align: center;
-        padding-top: u.$padding-80;
-        padding-bottom: u.$padding-200;
+        padding: u.$padding-80 u.$padding-20 u.$padding-200;
+        ;
 
         li {
             @include u.flex(center, center, u.$padding-30, column);
@@ -224,11 +224,19 @@
 
 
     &__merit-list {
-        @include u.flex(space-around, center, u.$padding-60, column);
+        @include u.flex(space-around, flex-start, u.$padding-60, column);
 
         li {
-            @include u.flex(center, center, u.$padding-20);
+            @include u.flex(center, center, u.$padding-60);
+
+            &:first-child {
+                img {
+                    padding-left: u.$padding-30;
+                    padding-right: u.$padding-20;
+                }
+            }
         }
+
 
         .line01 {
             @include u.mainBody04;
@@ -254,12 +262,26 @@
         }
     }
 
-    .underline-svg {
+    &__text-wrap {
         position: relative;
+        display: inline-block;
+        padding-bottom: u.rem(6); // 텍스트와 선 사이 여백
     }
 
-    .underline-path {
+    &__underline {
         position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: u.rem(18);
+        pointer-events: none;
+    }
+
+    &__underline-path {
+        stroke: u.$primary-500;
+        stroke-width: u.rem(4);
+        stroke-linecap: round;
+        stroke-linejoin: round;
     }
 }
 

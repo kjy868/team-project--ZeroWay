@@ -83,23 +83,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// effect-merit underline 선 그어지는 효과
-// const underlinePath = document.querySelector('.underline-path');
-// const pathLength = underlinePath.getTotalLength();
+// document.querySelectorAll('.effect__underline-path').forEach((pathEl) => {
+//     const len = pathEl.getTotalLength();
 
-// gsap.set(underlinePath, {
-//     strokeDasharray: pathLength,
-//     strokeDashoffset: pathLength
-// });
+//     // 초기 상태: 숨김
+//     gsap.set(pathEl, { strokeDasharray: len, strokeDashoffset: len });
 
-// gsap.to(underlinePath, {
-//     strokeDashoffset: 0,
-//     duration: 1,
-//     ease: 'power1.inOut',
-//     scrollTrigger: {
-//         trigger: '.text-underline',
-//         start: 'top 75%'
-//     }
+//     // 스크롤 시 그리기
+//     gsap.to(pathEl, {
+//         strokeDashoffset: 0,
+//         duration: 0.8,
+//         ease: 'power1.out',
+//         scrollTrigger: {
+//             trigger: pathEl.closest('.effect__item') || pathEl,
+//             start: 'top 80%',
+//             toggleActions: 'play none none none', // 한 번만 재생
+//             markers: false
+//         }
+//     });
 // });
 
 

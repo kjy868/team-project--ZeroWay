@@ -9,20 +9,26 @@
     padding: u.rem(20) u.rem(60);
 
     // btn medium 
-    @include u.responsive(tablet) {
+    @include u.responsive('tablet') {
         font-size: u.rem(20);
     }
 
-    // btn small
-    @include u.responsive(mobile) {
-        font-size: u.rem(16);
-        padding: u.rem(15) u.rem(40);
-    }
 
     // black button 
     &--black {
         background-color: u.$neutral-900;
         border: u.rem(3) solid u.$neutral-900;
+
+        // btn medium 
+        @include u.responsive('tablet') {
+            font-size: u.rem(20);
+        }
+
+        // btn small
+        @include u.responsive('mobile') {
+            font-size: u.rem(16);
+            padding: u.rem(15) u.rem(40);
+        }
 
         &:hover {
             background-color: u.$primary-600;
@@ -31,11 +37,23 @@
         }
     }
 
+
     // black line button 
     &--blackLine {
+        font-size: u.rem(25);
         background-color: u.$neutral-50;
         color: u.$neutral-900;
         border: u.rem(3) solid u.$neutral-900;
+
+        // btn small
+        @include u.responsive('mobile') {
+            font-size: u.rem(14);
+        }
+
+        // btn medium 
+        @include u.responsive('tablet') {
+            font-size: u.rem(20);
+        }
 
         &:hover {
             background-color: u.$neutral-900;
@@ -44,11 +62,23 @@
         }
     }
 
+
     // white line button 
     &--whiteLine {
+        font-size: u.rem(25);
         background-color: transparent;
         color: u.$neutral-50;
         border: u.rem(3) solid u.$neutral-50;
+
+        // btn medium 
+        @include u.responsive('tablet') {
+            font-size: u.rem(20);
+        }
+
+        // btn small
+        @include u.responsive('mobile') {
+            font-size: u.rem(14);
+        }
 
         &:hover {
             background-color: u.$neutral-50;
