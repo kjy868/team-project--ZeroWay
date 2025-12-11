@@ -97,19 +97,78 @@
             <div class="container">
                 <h2 class="effect__title">5R 원칙</h2>
 
-                <svg id="line-svg" width="100%" height="3285" viewBox="0 0 1177 3285"
-                    preserveAspectRatio="xMidYMid meet">
+                <!-- 데스크탑용 (1024px 이상) -->
+                <svg id="line-svg-desktop" class="line-svg" width="1155" height="3285" viewBox="0 0 1155 3285"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path id="line-path"
-                        d="M142.902 1.72656C83.7715 125.162 3.90188 316.185 142.902 531.646C281.902 747.106 691.597 656.338 614.876 575.139C542.133 498.151 469.297 825.998 572.873 945.583C676.45 1065.17 827.454 1085.86 977.298 1122.56C1127.14 1159.25 1192.38 1360.26 1084.1 1485.27C949.24 1640.98 640.857 1569.99 640.857 1738.96C640.857 1885.86 1188.14 1881.87 1172.68 2208.28C1149.7 2693.27 501.428 2068.91 236.432 2208.28C-6.1717 2335.88 124.717 2625.33 190.1 2549.84C263.841 2464.7 30.8272 2400.76 5.55872 2741.5C-19.7097 3082.24 268.338 2824.65 427.362 2953.3C507.058 3017.77 515.313 3220.46 508.765 3283.73"
-                        stroke="#12F96B" stroke-width="8" fill="none" />
+                        d="M140.288 1.70312C82.2702 125.139 3.90373 316.162 140.288 531.622C276.672 747.083 678.657 656.315 603.379 575.116C532.005 498.127 460.54 825.975 562.168 945.559C663.795 1065.14 811.957 1085.84 958.981 1122.53C1106.01 1159.23 1170.02 1360.23 1063.78 1485.25C931.451 1640.95 628.872 1569.96 628.872 1738.94C628.872 1885.84 1165.86 1881.84 1150.68 2208.26C1128.14 2693.25 492.067 2068.89 232.057 2208.26C-5.98028 2335.85 122.445 2625.3 186.598 2549.81C258.951 2464.68 30.3223 2400.74 5.52938 2741.48C-19.2635 3082.22 263.363 2824.63 419.395 2953.27C497.59 3017.74 505.691 3220.44 499.265 3283.7"
+                        stroke="#12F96B" stroke-width="8" />
                 </svg>
 
+
+                <!-- 태블릿용 (1024px 이히) -->
+                <svg id="line-svg-tablet" class="line-svg" width="318" height="2992" viewBox="0 0 318 2992" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path id="line-path"
+                        d="M314.32 2991.19C300.32 2849.69 57.0142 2754.7 26.8203 2608.69C-6.4636 2447.74 125.189 2360.44 140.794 2125.2C156.398 1889.96 19.8951 1869.58 4.14926 1653.54C-11.5966 1437.5 139.304 1238.05 160.251 1070.06C186.859 856.672 96.8411 696.92 61.7883 559.29C32.0705 442.608 23.3203 334.691 88.8203 233.191C154.32 131.691 145.82 0.191406 145.82 0.191406"
+                        stroke="#12F96B" stroke-width="6" />
+                    <circle cx="50.8203" cy="498.191" r="15" fill="#12F96B" />
+                    <circle cx="164.82" cy="993.191" r="15" fill="#12F96B" />
+                    <circle cx="33.8203" cy="1440.19" r="15" fill="#12F96B" />
+                    <circle cx="121.82" cy="1961.19" r="15" fill="#12F96B" />
+                    <circle cx="47.8203" cy="2432.19" r="15" fill="#12F96B" />
+                </svg>
+
+
+                <!-- 모바일용 (480px 이하) -->
+                <svg id="line-svg-mobile" class="line-svg" width="206" height="2585" viewBox="0 0 206 2585" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path id="line-path"
+                        d="M203 2584.05C193.37 2461.86 51.0175 2378.82 30.2492 2252.73C7.35559 2113.74 56.1668 2050.86 66.8998 1847.71C77.6328 1644.56 25.4859 1614.45 14.6554 1427.87C3.82497 1241.3 27.5876 1067.52 59.394 924.529C102.423 731.084 72.8946 618.386 54.3012 482.887C40.361 381.299 35.378 323.901 72.8946 201.271C110.411 78.6414 112.101 0.0546875 112.101 0.0546875"
+                        stroke="#12F96B" stroke-width="5" />
+                    <circle cx="49" cy="323.055" r="15" fill="#12F96B" />
+                    <circle cx="72" cy="770.055" r="15" fill="#12F96B" />
+                    <circle cx="15" cy="1211.05" r="15" fill="#12F96B" />
+                    <circle cx="68" cy="1659.05" r="15" fill="#12F96B" />
+                    <circle cx="28" cy="2110.05" r="15" fill="#12F96B" />
+                </svg>
+
+                <!-- 말풍선 이미지 -->
                 <div class="effect__img">
-                    <img src="./assets/img/5r-refuse.webp" alt="" class="effect__img01">
-                    <img src="./assets/img/5r-reduce.webp" alt="" class="effect__img02">
-                    <img src="./assets/img/5r-reuse.webp" alt="" class="effect__img03">
-                    <img src="./assets/img/5r-recycle.webp" alt="" class="effect__img04">
-                    <img src="./assets/img/5r-rot.webp" alt="" class="effect__img05">
+                    <!-- <img src="./assets/img/5r-refuse.webp" alt="말풍선 이미지" class="effect__img01"> -->
+                    <picture class="effect__img01">
+                        <source srcset="./assets/img/5r-refuse_480.png" media="(max-width: 480px)">
+                        <source srcset="./assets/img/5r-refuse_1024.png" media="(max-width: 1024px)">
+                        <img src="./assets/img/5r-refuse.webp" alt="말풍선 이미지">
+                    </picture>
+
+                    <!-- <img src="./assets/img/5r-reduce.webp" alt="말풍선 이미지" class="effect__img02"> -->
+                    <picture class="effect__img02">
+                        <source srcset="./assets/img/5r-reduce_480.png" media="(max-width: 480px)">
+                        <source srcset="./assets/img/5r-reduce_1024.png" media="(max-width: 1024px)">
+                        <img src="./assets/img/5r-reduce.webp" alt="말풍선 이미지">
+                    </picture>
+
+                    <!-- <img src="./assets/img/5r-reuse.webp" alt="말풍선 이미지" class="effect__img03"> -->
+                    <picture class="effect__img03">
+                        <source srcset="./assets/img/5r-reuse_480.png" media="(max-width: 480px)">
+                        <source srcset="./assets/img/5r-reuse_1024.png" media="(max-width: 1024px)">
+                        <img src="./assets/img/5r-reuse.webp" alt="말풍선 이미지">
+                    </picture>
+
+                    <!-- <img src="./assets/img/5r-recycle.webp" alt="말풍선 이미지" class="effect__img04"> -->
+                    <picture class="effect__img04">
+                        <source srcset="./assets/img/5r-recycle_480.png" media="(max-width: 480px)">
+                        <source srcset="./assets/img/5r-recycle_1024.png" media="(max-width: 1024px)">
+                        <img src="./assets/img/5r-recycle.webp" alt="말풍선 이미지">
+                    </picture>
+
+                    <!-- <img src="./assets/img/5r-rot.webp" alt="말풍선 이미지" class="effect__img05"> -->
+                    <picture class="effect__img05">
+                        <source srcset="./assets/img/5r-rot_480.png" media="(max-width: 480px)">
+                        <source srcset="./assets/img/5r-rot_1024.png" media="(max-width: 1024px)">
+                        <img src="./assets/img/5r-rot.webp" alt="말풍선 이미지">
+                    </picture>
                 </div>
                 <h2 class="effect__subtitle">제로웨이스트의 효과</h2>
 

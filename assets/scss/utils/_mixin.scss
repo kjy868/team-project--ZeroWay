@@ -14,7 +14,7 @@
 }
 
 // btn flex mixin
-@mixin btnFlex($justifyContent: center, $alignItems: center, $gap: f.rem(10)) {
+@mixin btnFlex($justifyContent: space-between, $alignItems: center, $gap: f.rem(10)) {
     display: inline-flex;
     justify-content: $justifyContent;
     align-items: $alignItems;

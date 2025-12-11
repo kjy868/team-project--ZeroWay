@@ -7,6 +7,7 @@
     @include u.btnFlex;
     border-radius: u.rem(50);
     padding: u.rem(20) u.rem(60);
+    text-align: cetner;
 
     // btn medium 
     @include u.responsive('tablet') {
