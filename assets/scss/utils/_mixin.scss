@@ -322,6 +322,26 @@
     }
 }
 
+@mixin aboutBody05 ($size: v.$font-20, $weight: 400, $color: v.$neutral-800, $font-family: 'Paperozi') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+
+
+    @include r.responsive(medium) {
+        font-size: v.$font-18;
+    }
+
+    @include r.responsive(mobile) {
+        font-size: v.$font-16;
+    }
+
+    @include r.responsive(small) {
+        font-size: v.$font-14;
+    }
+}
+
 // tumbler mixin ================================
 @mixin tumblerBody01 ($size: v.$font-20, $weight: 300, $color: v.$neutral-800, $font-family: 'Pretendard') {
     font-size: $size;
