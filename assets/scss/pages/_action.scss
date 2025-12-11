@@ -1,1 +1,249 @@
 @use '../utils' as u;
+
+.about__desc {
+    @include u.mainBody04();
+    text-align: center;
+    padding: u.$padding-100 0;
+    line-height: 1.5;
+}
+
+/* 5R section */
+.r5 {
+    @include u.flex(center, center, u.rem(40), column);
+    width: 100%;
+    padding: u.$padding-100 0;
+
+
+    &__title {
+        @include u.subtitle01();
+    }
+
+    &__card-wrap {
+        width: 100%;
+        @include u.flex(center);
+        flex-wrap: wrap;
+        gap: u.rem(30);
+
+        @include u.responsive(tablet) {
+            gap: u.rem(30) u.rem(20);
+        }
+
+        @include u.responsive(mobile) {
+            gap: u.rem(15);
+        }
+    }
+
+    &__card {
+        position: relative;
+        @include u.bgImg();
+        border-radius: u.rem(20);
+        overflow: hidden;
+        width: calc((100% - (u.rem(30) * 2)) / 3);
+        aspect-ratio: 380 / 580;
+
+        @include u.responsive(tablet) {
+            width: calc((100% - (u.rem(20) * 2)) / 3);
+            aspect-ratio: 320/400;
+        }
+
+        @include u.responsive(medium) {
+            width: calc((100% - (u.rem(20) * 2)) / 2);
+            aspect-ratio: 350/300;
+        }
+
+        @include u.responsive(mobile) {
+            width: 100%;
+            aspect-ratio: 350/300;
+        }
+
+        @include u.responsive(small) {
+            width: 100%;
+            height: u.rem(260);
+        }
+    }
+
+    &__card01 {
+        background-image: url(../img/5Rsec-card01.webp);
+    }
+
+    &__card02 {
+        background-image: url(../img/5Rsec-card02.webp);
+    }
+
+    &__card03 {
+        background-image: url(../img/5Rsec-card03.webp);
+    }
+
+    &__card04 {
+        background-image: url(../img/5Rsec-card04.webp);
+    }
+
+    &__card05 {
+        background-image: url(../img/5Rsec-card05.webp);
+    }
+
+    &__card-textwrap {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: u.rem(115);
+        padding: 1rem 0;
+        text-align: center;
+
+        @include u.flex(center, center, u.rem(25), column);
+
+        background: rgba(0, 0, 0, 0.7);
+        transition: all 0.4s ease;
+    }
+
+    &__card-line {
+        display: block;
+        width: u.rem(40);
+        height: 0;
+
+        border: u.rem(2) solid u.$neutral-300;
+        border-radius: u.rem(50);
+        transition: transform 0.3s ease;
+    }
+
+    &__card-title {
+        @include u.aboutBody04($weight: 700, $color: u.$neutral-50);
+    }
+
+    &__card-desc {
+        @include u.tumblerBody01($weight: 400);
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: opacity 0.25s ease;
+        color: u.$neutral-50;
+
+    }
+
+    /* ----------------- hover ----------------- */
+    &__card:hover {
+        .r5__card-textwrap {
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            padding: 1rem 0;
+        }
+
+        .r5__card-line {
+            top: u.rem(-80);
+            position: relative;
+        }
+
+        .r5__card-desc {
+            opacity: 1;
+            height: auto;
+        }
+    }
+
+    @include u.responsive(tablet) {
+        &__card-textwrap {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            padding: 1rem 0;
+            gap: u.rem(8);
+        }
+
+        &__card-line {
+            display: none;
+        }
+
+        &__card-desc {
+            opacity: 1;
+            height: auto;
+
+            span {
+                display: none;
+            }
+        }
+
+        &__card:hover .r5__card-textwrap {
+            height: auto;
+        }
+    }
+}
+
+/* effects section */
+.effects {
+    @include u.flex(center, center, u.rem(40), column);
+    width: 100%;
+    padding: u.$padding-100 0;
+
+    &__title {
+        @include u.subtitle01();
+    }
+
+    &__wrap {
+        width: 100%;
+        @include u.flex(center, center, u.rem(40), column);
+    }
+
+    &__card {
+        @include u.flex(center, center, u.rem(70));
+        width: 100%;
+
+        &:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        @include u.responsive(mobile) {
+
+            &:nth-child(odd),
+            &:nth-child(odd) {
+                flex-direction: row;
+            }
+        }
+    }
+
+    &__img {
+        // flex: 0 0 auto;
+        width: 100%;
+        max-width: u.rem(230);
+        height: auto;
+        aspect-ratio: 1 / 1;
+
+        @include u.responsive(tablet) {
+            max-width: u.rem(180);
+        }
+
+        @include u.responsive (medium) {
+            max-width: u.rem(140);
+        }
+
+        @include u.responsive (mobile) {
+            max-width: u.rem(95);
+        }
+
+        @include u.responsive (mobile) {
+            max-width: u.rem(76);
+        }
+    }
+
+    &__text-wrap {
+        background: u.$neutral-300;
+        border-radius: u.rem(20);
+        width: 100%;
+        max-width: u.rem(692);
+        padding: u.rem(46);
+    }
+
+    &__card-title {
+        @include u.aboutBody04();
+
+        span {
+            @include u.aboutBody04($weight: 600);
+        }
+    }
+
+}
