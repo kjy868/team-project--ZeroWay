@@ -1041,6 +1041,7 @@ li {
   font-weight: 700;
   color: #121212;
   font-family: "LaundryGothic";
+  text-align: center;
 }
 @media (max-width: 768px) {
   .r5__title {
@@ -1195,7 +1196,7 @@ li {
   padding: 1rem 0;
 }
 .r5__card:hover .r5__card-line {
-  top: -5rem;
+  top: -8.125rem;
   position: relative;
 }
 .r5__card:hover .r5__card-desc {
@@ -1241,6 +1242,7 @@ li {
   font-weight: 700;
   color: #121212;
   font-family: "LaundryGothic";
+  text-align: center;
 }
 @media (max-width: 768px) {
   .effects__title {
@@ -1274,7 +1276,18 @@ li {
 .effects__card:nth-child(odd) {
   flex-direction: row-reverse;
 }
+@media (max-width: 1024px) {
+  .effects__card {
+    gap: 1.875rem;
+  }
+}
 @media (max-width: 480px) {
+  .effects__card {
+    padding: 1.875rem;
+    gap: 1.25rem;
+    background: #e9e9e9;
+    border-radius: 1.25rem;
+  }
   .effects__card:nth-child(odd), .effects__card:nth-child(odd) {
     flex-direction: row;
   }
@@ -1311,6 +1324,22 @@ li {
   width: 100%;
   max-width: 43.25rem;
   padding: 2.875rem;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 0.5rem;
+  flex-direction: column;
+  word-break: keep-all;
+}
+@media (max-width: 768px) {
+  .effects__text-wrap {
+    padding: 1.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .effects__text-wrap {
+    padding: 0;
+  }
 }
 .effects__card-title {
   font-size: 1.875rem;
@@ -1352,5 +1381,234 @@ li {
 @media (max-width: 480px) {
   .effects__card-title span {
     font-size: 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .effects__card-title span::before {
+    content: "\a";
+    white-space: pre;
+  }
+}
+.effects__card-desc {
+  font-size: 1.375rem;
+}
+@media (max-width: 1024px) {
+  .effects__card-desc {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .effects__card-desc {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 480px) {
+  .effects__card-desc {
+    display: none;
+  }
+}
+
+/* benefit section */
+.benefit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-direction: column;
+  width: 100%;
+  padding: 6.25rem 0;
+  word-break: keep-all;
+}
+.benefit__subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #333;
+  font-family: "Paperozi";
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .benefit__subtitle {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 480px) {
+  .benefit__subtitle {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 360px) {
+  .benefit__subtitle {
+    font-size: 0.875rem;
+  }
+}
+.benefit__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #121212;
+  font-family: "LaundryGothic";
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .benefit__title {
+    font-size: 1.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .benefit__title {
+    font-size: 1.625rem;
+  }
+}
+.benefit__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 6.25rem;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  .benefit__wrap {
+    gap: 1.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .benefit__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+    flex-direction: column;
+  }
+}
+.benefit__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-direction: column;
+  font-family: "Paperozi";
+  color: #121212;
+}
+.benefit__circle {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: column;
+  font-weight: 500;
+  color: #333;
+}
+.benefit__circle01 {
+  width: 16.375rem;
+  height: 16.375rem;
+  background: #00d76b;
+}
+@media (max-width: 768px) {
+  .benefit__circle01 {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+  .benefit__circle01 img {
+    width: 6.25rem;
+  }
+}
+.benefit__circle01 p {
+  font-size: 1.75rem;
+}
+@media (max-width: 1024px) {
+  .benefit__circle01 p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .benefit__circle01 p {
+    font-size: 1.375rem;
+  }
+}
+.benefit__circle02 {
+  width: 12.5rem;
+  height: 12.5rem;
+  background: #57fa94;
+}
+@media (max-width: 768px) {
+  .benefit__circle02 {
+    width: 10rem;
+    height: 10rem;
+  }
+  .benefit__circle02 img {
+    width: 5.9375rem;
+  }
+}
+.benefit__circle02 p {
+  font-size: 1.25rem;
+}
+@media (max-width: 768px) {
+  .benefit__circle02 p {
+    font-size: 1rem;
+  }
+}
+.benefit__circle03 {
+  width: 10rem;
+  height: 10rem;
+  background: #9bffc0;
+}
+@media (max-width: 768px) {
+  .benefit__circle03 {
+    width: 8rem;
+    height: 8rem;
+  }
+  .benefit__circle03 img {
+    width: 3.5rem;
+  }
+}
+.benefit__circle03 p {
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .benefit__circle03 p {
+    font-size: 0.875rem;
+  }
+}
+.benefit__text {
+  text-align: center;
+  font-size: 1.625rem;
+  color: #121212;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .benefit__text {
+    font-size: 1.25rem;
+  }
+}
+.benefit__count {
+  font-weight: 600;
+  color: #00d76b;
+}
+
+/* actions section */
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-direction: column;
+  width: 100%;
+  padding: 6.25rem 0;
+}
+.actions__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #121212;
+  font-family: "LaundryGothic";
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .actions__title {
+    font-size: 1.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .actions__title {
+    font-size: 1.625rem;
   }
 }

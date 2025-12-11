@@ -16,6 +16,7 @@
 
     &__title {
         @include u.subtitle01();
+        text-align: center;
     }
 
     &__card-wrap {
@@ -131,7 +132,7 @@
         }
 
         .r5__card-line {
-            top: u.rem(-80);
+            top: u.rem(-130);
             position: relative;
         }
 
@@ -178,6 +179,7 @@
 
     &__title {
         @include u.subtitle01();
+        text-align: center;
     }
 
     &__wrap {
@@ -197,17 +199,25 @@
             flex-direction: row-reverse;
         }
 
+        @include u.responsive(tablet) {
+            gap: u.rem(30);
+        }
+
         @include u.responsive(mobile) {
 
             &:nth-child(odd),
             &:nth-child(odd) {
                 flex-direction: row;
             }
+
+            padding: u.rem(30);
+            gap: u.rem(20);
+            background: u.$neutral-300;
+            border-radius: u.rem(20);
         }
     }
 
     &__img {
-        // flex: 0 0 auto;
         width: 100%;
         max-width: u.rem(230);
         height: auto;
@@ -236,6 +246,16 @@
         width: 100%;
         max-width: u.rem(692);
         padding: u.rem(46);
+        @include u.flex(start, start, u.rem(8), column);
+        word-break: keep-all;
+
+        @include u.responsive(medium) {
+            padding: u.rem(30)
+        }
+
+        @include u.responsive(mobile) {
+            padding: 0;
+        }
     }
 
     &__card-title {
@@ -243,7 +263,175 @@
 
         span {
             @include u.aboutBody04($weight: 600);
+
+            @include u.responsive(mobile) {
+                &::before {
+                    content: "\A";
+                    white-space: pre;
+                }
+            }
         }
     }
 
+    &__card-desc {
+        font-size: u.rem(22);
+
+        @include u.responsive(tablet) {
+            font-size: u.rem(20);
+        }
+
+        @include u.responsive(medium) {
+            font-size: u.rem(18);
+        }
+
+        @include u.responsive(mobile) {
+            display: none;
+        }
+    }
+
+}
+
+/* benefit section */
+.benefit {
+    @include u.flex(center, center, u.rem(40), column);
+    width: 100%;
+    padding: u.$padding-100 0;
+    word-break: keep-all;
+
+    &__subtitle {
+        @include u.aboutBody05();
+        text-align: center;
+    }
+
+    &__title {
+        @include u.subtitle01();
+        text-align: center;
+    }
+
+    &__wrap {
+        @include u.flex(center, end, u.rem(100));
+
+        @include u.responsive(medium) {
+            gap: u.rem(30);
+        }
+
+        @include u.responsive(mobile) {
+            @include u.flex(center, center, u.rem(50), column);
+        }
+    }
+
+    &__item {
+        @include u.flex(center, center, u.rem(10), column);
+        font-family: 'Paperozi';
+        color: u.$neutral-900;
+    }
+
+    &__circle {
+        border-radius: 50%;
+        @include u.flex(center, center, u.rem(8), column);
+        font-weight: 500;
+        color: u.$neutral-800;
+    }
+
+    &__circle01 {
+        width: u.rem(262);
+        height: u.rem(262);
+        background: u.$primary-600;
+
+        @include u.responsive(medium) {
+            width: u.rem(200);
+            height: u.rem(200);
+
+            img {
+                width: u.rem(100);
+            }
+        }
+
+        p {
+            font-size: u.rem(28);
+
+            @include u.responsive(tablet) {
+                font-size: u.rem(24);
+            }
+
+            @include u.responsive(medium) {
+                font-size: u.rem(22);
+            }
+        }
+    }
+
+    &__circle02 {
+        width: u.rem(200);
+        height: u.rem(200);
+        background: u.$primary-400;
+
+        @include u.responsive(medium) {
+            width: u.rem(160);
+            height: u.rem(160);
+
+            img {
+                width: u.rem(95);
+            }
+        }
+
+        p {
+            font-size: u.rem(20);
+
+            @include u.responsive(medium) {
+                font-size: u.rem(16);
+            }
+        }
+    }
+
+    &__circle03 {
+        width: u.rem(160);
+        height: u.rem(160);
+        background: u.$primary-300;
+
+        @include u.responsive(medium) {
+            width: u.rem(128);
+            height: u.rem(128);
+
+            img {
+                width: u.rem(56);
+            }
+        }
+
+        p {
+            font-size: u.rem(16);
+
+            @include u.responsive(medium) {
+                font-size: u.rem(14);
+            }
+        }
+    }
+
+    &__text {
+        text-align: center;
+        font-size: u.rem(26);
+        color: u.$neutral-900;
+        font-weight: 500;
+
+        @include u.responsive(medium) {
+            font-size: u.rem(20);
+        }
+    }
+
+    &__count {
+        font-weight: 600;
+        color: u.$primary-600;
+
+    }
+}
+
+/* actions section */
+.actions {
+    @include u.flex(center, center, u.rem(40), column);
+    width: 100%;
+    padding: u.$padding-100 0;
+
+    &__title {
+        @include u.subtitle01();
+        text-align: center;
+    }
 }
