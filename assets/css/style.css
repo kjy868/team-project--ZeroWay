@@ -511,15 +511,55 @@ li {
 .hero {
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 .hero__img-wrap {
+  background: url("/assets/img/hero-sec-bg.webp");
   width: 100%;
   height: 100%;
-  background: url("/assets/img/hero-bg.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 1024px) {
+  .hero__img-wrap {
+    background: url("/assets/img/hero-sec-bg_1024.png");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 768px) {
+  .hero__img-wrap {
+    background: url("/assets/img/hero-sec-bg_768.png");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 480px) {
+  .hero__img-wrap {
+    background: url("/assets/img/hero-sec-bg_480.png");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 360px) {
+  .hero__img-wrap {
+    background: url("/assets/img/hero-sec-bg_360.png");
+  }
 }
 .hero__img01 {
   position: absolute;
@@ -528,22 +568,64 @@ li {
   transform: translate(-50%, -50%);
   z-index: 0;
 }
-.hero__img-kid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  color: #12f96b;
-  z-index: 0;
-}
 .hero__img02 {
   position: absolute;
-  top: 80%;
   left: 50%;
+  top: 80%;
   transform: translate(-50%, -50%);
-  z-index: 5;
+  z-index: 2;
+}
+.hero__img-kid {
+  background: url("/assets/img/hero-img-kid.png");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+@media (max-width: 1024px) {
+  .hero__img-kid {
+    background: url("/assets/img/hero-img-kid_1024.png");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 768px) {
+  .hero__img-kid {
+    background: url("/assets/img/hero-img-kid_768.png");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 480px) {
+  .hero__img-kid {
+    background: url("/assets/img/hero-img-kid_480.png");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 360px) {
+  .hero__img-kid {
+    background: url("/assets/img/hero-img-kid_360.png");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .intro {

@@ -40,13 +40,42 @@
 
     <main>
         <!-- hero 영역 -->
+
         <section class="hero">
             <div class="hero__img-wrap">
-                <img src="./assets/img/hero-img01-wrap.webp" alt="텍스트와 도형이미지" class="hero__img01">
+                <picture class="hero__img01">
+                    <!-- 360px 이하일 때 텍스트01 이미지 -->
+                    <source srcset="/assets/img/hero-img01-wrap_360.png" media="(max-width: 360px)">
 
-                <img src="./assets/img/hero-img-kid.webp" alt="아이와 도형이미지" class="hero__img-kid">
+                    <!-- 480px 이하일 때 텍스트01 이미지 -->
+                    <source srcset="/assets/img/hero-img01-wrap_480.png" media="(max-width: 480px)">
 
-                <img src="./assets/img/hero-img02-wrap.webp" alt="텍스트와 도형이미지" class="hero__img02">
+                    <!-- 768px 이하일 때 텍스트01 이미지 -->
+                    <source srcset="/assets/img/hero-img01-wrap_768.png" media="(max-width: 768px)">
+
+                    <!-- 1024px 이하일 때 텍스트01 이미지 -->
+                    <source srcset="/assets/img/hero-img01-wrap_1024.png" media="(max-width: 1024px)">
+
+                    <!-- 기본 데스크탑 텍스트01 이미지 -->
+                    <img src="/assets/img/hero-img01-wrap.webp" alt=" 반응형 이미지">
+                </picture>
+                <div class="hero__img-kid"></div>
+                <picture class="hero__img02">
+                    <!-- 360px 이하일 때 텍스트02 이미지 -->
+                    <source srcset="/assets/img/hero-img02-wrap_360.png" media="(max-width: 360px)">
+
+                    <!-- 480px 이하일 때 텍스트02 이미지 -->
+                    <source srcset="/assets/img/hero-img02-wrap_480.png" media="(max-width: 480px)">
+
+                    <!-- 768px 이하일 때 텍스트02 이미지 -->
+                    <source srcset="/assets/img/hero-img02-wrap_768.png" media="(max-width: 768px)">
+
+                    <!-- 1024px 이하일 때 텍스트02 이미지 -->
+                    <source srcset="/assets/img/hero-img02-wrap_1024.png" media="(max-width: 1024px)">
+
+                    <!-- 기본 데스크탑 텍스트02 이미지 -->
+                    <img src="/assets/img/hero-img02-wrap.webp" alt="반응형 이미지">
+                </picture>
             </div>
         </section>
 
