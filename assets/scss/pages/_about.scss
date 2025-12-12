@@ -101,9 +101,9 @@
     &__card-line {
         display: block;
         width: u.rem(40);
-        height: 0;
+        height: u.rem(4);
 
-        border: u.rem(2) solid u.$neutral-300;
+        background-color: u.$neutral-50;
         border-radius: u.rem(50);
         transition: transform 0.3s ease;
     }
@@ -124,17 +124,18 @@
 
     /* ----------------- hover ----------------- */
     &__card:hover {
+
         .r5__card-textwrap {
             bottom: 0;
             left: 0;
             height: 100%;
-            padding: 1rem 0;
+            padding: 0;
         }
 
-        .r5__card-line {
-            top: u.rem(-130);
-            position: relative;
-        }
+        // .r5__card-line {
+        //     position: absolute;
+        //     top: u.rem(-100);
+        // }
 
         .r5__card-desc {
             opacity: 1;
@@ -433,5 +434,21 @@
     &__title {
         @include u.subtitle01();
         text-align: center;
+
+    }
+
+    &__wrap {
+        @include u.flex(center, center, )
+    }
+
+    &__text-title {
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: u.$neutral-400;
+        }
     }
 }
