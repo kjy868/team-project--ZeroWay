@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             strokeDashoffset: 0,
             ease: "none",
             scrollTrigger: {
-                trigger: ".effect",
+                trigger: ".merit",
                 start: "top 90%",
                 end: "bottom 250%",
                 scrub: 0.5,
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             strokeDashoffset: 0,
             ease: "none",
             scrollTrigger: {
-                trigger: ".effect",
+                trigger: ".merit",
                 start: "top 90%",
                 end: "bottom 250%",
                 scrub: 0.5,

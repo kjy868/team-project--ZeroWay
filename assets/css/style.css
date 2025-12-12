@@ -324,6 +324,15 @@ li {
   align-items: flex-end;
   flex-direction: row;
 }
+@media (max-width: 480px) {
+  .footer .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2.5rem;
+    flex-direction: column;
+  }
+}
 .footer__txt ul {
   display: flex;
   justify-content: flex-start;
@@ -570,9 +579,14 @@ li {
 .hero__img01 {
   position: absolute;
   left: 50%;
-  top: 30%;
+  top: 28%;
   transform: translate(-50%, -50%);
   z-index: 0;
+}
+@media (max-width: 768px) {
+  .hero__img01 {
+    top: 40%;
+  }
 }
 .hero__img02 {
   position: absolute;
@@ -580,6 +594,11 @@ li {
   top: 80%;
   transform: translate(-50%, -50%);
   z-index: 2;
+}
+@media (max-width: 768px) {
+  .hero__img02 {
+    top: 68%;
+  }
 }
 .hero__img-kid {
   background: url("/assets/img/hero-img-kid.webp");
@@ -653,6 +672,7 @@ li {
   font-weight: 700;
   color: #121212;
   font-family: "LaundryGothic";
+  text-align: center;
 }
 @media (max-width: 1024px) {
   .intro__title {
@@ -707,17 +727,18 @@ li {
   }
 }
 
-.effect {
+.merit {
   position: relative;
-  background: linear-gradient(to bottom, rgba(20, 20, 20, 0.264) 10%, rgba(20, 20, 20, 0.547) 25%, rgba(20, 20, 20, 0.613) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%), url("/assets/img/effect-sec-bg.webp");
-  width: 100%;
+  background: linear-gradient(to bottom, rgba(20, 20, 20, 0.264) 10%, rgba(20, 20, 20, 0.547) 25%, rgba(20, 20, 20, 0.613) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%), url("/assets/img/merit-sec-bg.webp");
+  width: 100vw;
   height: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   padding-bottom: 12.5rem;
+  width: 100vw;
 }
-.effect__title {
+.merit__title {
   font-size: 3.75rem;
   font-weight: 700;
   color: #121212;
@@ -728,26 +749,26 @@ li {
   padding-bottom: 3.75rem;
 }
 @media (max-width: 1024px) {
-  .effect__title {
+  .merit__title {
     font-size: 3rem;
   }
 }
 @media (max-width: 768px) {
-  .effect__title {
+  .merit__title {
     font-size: 2.5rem;
   }
 }
 @media (max-width: 480px) {
-  .effect__title {
+  .merit__title {
     font-size: 2.125rem;
   }
 }
 @media (max-width: 360px) {
-  .effect__title {
+  .merit__title {
     font-size: 1.75rem;
   }
 }
-.effect .line-svg {
+.merit .line-svg {
   position: absolute;
   top: 0;
   left: 50%;
@@ -758,77 +779,170 @@ li {
   z-index: 1;
   display: none;
 }
-.effect #line-svg-desktop {
+@media (max-width: 1024px) {
+  .merit .line-svg {
+    transform: translateX(-90%);
+  }
+}
+@media (max-width: 768px) {
+  .merit .line-svg {
+    transform: translateX(-80%);
+  }
+}
+.merit #line-svg-desktop {
   max-width: 75rem;
   display: block;
 }
-.effect #line-path {
+.merit #line-path {
   stroke-linecap: round;
 }
 @media (max-width: 1024px) {
-  .effect #line-svg-desktop {
+  .merit #line-svg-desktop {
     display: none;
   }
-  .effect #line-svg-tablet {
+  .merit #line-svg-tablet {
     max-width: 19.375rem;
     display: block;
   }
 }
 @media (max-width: 480px) {
-  .effect #line-svg-tablet {
+  .merit #line-svg-tablet {
     display: none;
   }
-  .effect #line-svg-mobile {
+  .merit #line-svg-mobile {
     max-width: 11.875rem;
     display: block;
   }
 }
-.effect__img {
+.merit__img {
   position: relative;
   height: 193.75rem;
   z-index: 2;
 }
 @media (max-width: 1024px) {
-  .effect__img {
+  .merit__img {
     height: 165.625rem;
   }
 }
 @media (max-width: 480px) {
-  .effect__img {
+  .merit__img {
     height: 134.375rem;
   }
 }
-.effect__img01 {
+.merit__img01 {
   position: absolute;
   top: 10rem;
   left: 17.125rem;
   width: 17.625rem;
 }
-.effect__img02 {
+@media (max-width: 768px) {
+  .merit__img01 {
+    left: 12.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .merit__img01 {
+    left: 6.25rem;
+    top: 0.625rem;
+  }
+}
+.merit__img02 {
   position: absolute;
   top: 37.5rem;
   right: 6.375rem;
   width: 21rem;
 }
-.effect__img03 {
+@media (max-width: 1024px) {
+  .merit__img02 {
+    left: 23.75rem;
+    top: 40.625rem;
+  }
+}
+@media (max-width: 768px) {
+  .merit__img02 {
+    left: 19.375rem;
+    top: 41.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .merit__img02 {
+    left: 7.5rem;
+    top: 26.25rem;
+  }
+}
+.merit__img03 {
   position: absolute;
   top: 70.625rem;
   right: 12.75rem;
   width: 18.375rem;
 }
-.effect__img04 {
+@media (max-width: 1024px) {
+  .merit__img03 {
+    left: 16.25rem;
+    top: 68.125rem;
+  }
+}
+@media (max-width: 768px) {
+  .merit__img03 {
+    left: 11.25rem;
+    top: 69.375rem;
+  }
+}
+@media (max-width: 480px) {
+  .merit__img03 {
+    left: 4.375rem;
+    top: 51.25rem;
+  }
+}
+.merit__img04 {
   position: absolute;
   top: 107.5rem;
   left: 18rem;
   width: 17.0625rem;
 }
-.effect__img05 {
+@media (max-width: 1024px) {
+  .merit__img04 {
+    left: 21.875rem;
+    top: 100rem;
+  }
+}
+@media (max-width: 768px) {
+  .merit__img04 {
+    left: 16.875rem;
+    top: 100.625rem;
+  }
+}
+@media (max-width: 480px) {
+  .merit__img04 {
+    left: 6.875rem;
+    top: 77.5rem;
+  }
+}
+.merit__img05 {
   position: absolute;
   top: 152.5rem;
   left: 13.9375rem;
   width: 19rem;
 }
-.effect__subtitle {
+@media (max-width: 1024px) {
+  .merit__img05 {
+    left: 17.5rem;
+    top: 128.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .merit__img05 {
+    left: 12.5rem;
+    top: 129.375rem;
+  }
+}
+@media (max-width: 480px) {
+  .merit__img05 {
+    left: 5rem;
+    top: 103.125rem;
+  }
+}
+.merit__subtitle {
   font-size: 2.75rem;
   font-weight: 700;
   color: #121212;
@@ -843,36 +957,37 @@ li {
   z-index: 5;
 }
 @media (max-width: 1024px) {
-  .effect__subtitle {
+  .merit__subtitle {
     font-size: 2.5rem;
   }
 }
 @media (max-width: 768px) {
-  .effect__subtitle {
+  .merit__subtitle {
     font-size: 1.875rem;
   }
 }
 @media (max-width: 360px) {
-  .effect__subtitle {
+  .merit__subtitle {
     font-size: 1.625rem;
   }
 }
-.effect__list {
+.merit__list01 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 10%;
   flex-direction: row;
   text-align: center;
   padding: 5rem 1.25rem 12.5rem;
 }
-.effect__list li {
+.merit__list01 li {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.875rem;
   flex-direction: column;
 }
-.effect__list h3 {
+.merit__list01 h3 {
   font-size: 1.875rem;
   font-weight: 700;
   color: #333;
@@ -880,21 +995,21 @@ li {
   color: #fff;
 }
 @media (max-width: 1024px) {
-  .effect__list h3 {
+  .merit__list01 h3 {
     font-size: 1.5rem;
   }
 }
 @media (max-width: 480px) {
-  .effect__list h3 {
+  .merit__list01 h3 {
     font-size: 1.375rem;
   }
 }
 @media (max-width: 360px) {
-  .effect__list h3 {
+  .merit__list01 h3 {
     font-size: 1.25rem;
   }
 }
-.effect__list p {
+.merit__list01 p {
   font-size: 1.25rem;
   font-weight: 500;
   color: #333;
@@ -903,22 +1018,22 @@ li {
   line-height: 1.3;
 }
 @media (max-width: 1024px) {
-  .effect__list p {
+  .merit__list01 p {
     font-size: 1.125rem;
   }
 }
 @media (max-width: 768px) {
-  .effect__list p {
+  .merit__list01 p {
     font-size: 1rem;
   }
 }
 @media (max-width: 480px) {
-  .effect__list {
+  .merit__list01 {
     flex-direction: column;
     gap: 1.875rem;
   }
 }
-.effect__merit-wrap h3 {
+.merit__list02-wrap h3 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #121212;
@@ -929,16 +1044,16 @@ li {
   margin: 0 auto;
 }
 @media (max-width: 768px) {
-  .effect__merit-wrap h3 {
+  .merit__list02-wrap h3 {
     font-size: 1.875rem;
   }
 }
 @media (max-width: 480px) {
-  .effect__merit-wrap h3 {
+  .merit__list02-wrap h3 {
     font-size: 1.625rem;
   }
 }
-.effect__merit {
+.merit__group {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -947,52 +1062,50 @@ li {
   /* SVG 기본 상태 */
   /* JS에서 strokeDasharray/offset을 덮어씌우지만 초기값을 지정해둠 */
 }
-.effect__merit-list {
+.merit__list02 {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   gap: 3.75rem;
   flex-direction: column;
 }
-.effect__merit-list li {
+.merit__list02 li {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3.75rem;
   flex-direction: row;
 }
-.effect__merit-list li img {
-  width: 25%;
-}
-.effect__merit-list li:first-child img {
+.merit__list02 li:first-child img {
   padding-left: 1.875rem;
   padding-right: 1.25rem;
 }
 @media (max-width: 480px) {
-  .effect__merit-list li:first-child img {
+  .merit__list02 li:first-child img {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
   }
 }
-.effect__merit-list li .line01 {
+.merit__list02 li .line01 {
   font-size: 1.5rem;
   font-weight: 500;
   color: #333;
   font-family: "Pretendard";
   color: #fff;
   line-height: 1.3;
+  width: 100%;
 }
 @media (max-width: 768px) {
-  .effect__merit-list li .line01 {
+  .merit__list02 li .line01 {
     font-size: 1.125rem;
   }
 }
 @media (max-width: 480px) {
-  .effect__merit-list li .line01 {
+  .merit__list02 li .line01 {
     font-size: 1rem;
   }
 }
-.effect__merit-list li .line02 {
+.merit__list02 li .line02 {
   font-size: 1.5rem;
   font-weight: 700;
   color: #333;
@@ -1001,31 +1114,31 @@ li {
   line-height: 1.3;
 }
 @media (max-width: 768px) {
-  .effect__merit-list li .line02 {
+  .merit__list02 li .line02 {
     font-size: 1.375rem;
   }
 }
 @media (max-width: 480px) {
-  .effect__merit-list li .line02 {
+  .merit__list02 li .line02 {
     font-size: 1.125rem;
   }
 }
 @media (max-width: 360px) {
-  .effect__merit-list li .line02 {
+  .merit__list02 li .line02 {
     font-size: 1rem;
   }
 }
 @media (max-width: 480px) {
-  .effect__merit-list li {
+  .merit__list02 li {
     gap: 2.5rem;
   }
 }
-.effect__merit-list__txt {
+.merit__txt {
   text-align: center;
-  padding: 12.5rem 0;
+  padding-top: 12.5rem;
   margin: 0 auto;
 }
-.effect__merit-list__txt h3 {
+.merit__txt h3 {
   padding-bottom: 2.5rem;
   font-size: 2.5rem;
   font-weight: 700;
@@ -1034,21 +1147,21 @@ li {
   color: #12f96b;
 }
 @media (max-width: 768px) {
-  .effect__merit-list__txt h3 {
+  .merit__txt h3 {
     font-size: 1.875rem;
   }
 }
 @media (max-width: 480px) {
-  .effect__merit-list__txt h3 {
+  .merit__txt h3 {
     font-size: 1.625rem;
   }
 }
-.effect__merit-list__text-wrap {
+.merit__text-wrap {
   position: relative;
   display: inline-block;
   padding-bottom: 0.375rem;
 }
-.effect__merit-list__underline {
+.merit__underline {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1056,7 +1169,7 @@ li {
   height: 1.125rem;
   pointer-events: none;
 }
-.effect__merit-list__underline-path {
+.merit__underline-path {
   stroke: #12f96b;
   stroke-width: 0.25rem;
   stroke-linecap: round;

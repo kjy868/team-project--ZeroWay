@@ -3340,7 +3340,7 @@
 				},
 
 				// Disable .fire
-				// Also disable .add unless we have memory (since it would have no effect)
+				// Also disable .add unless we have memory (since it would have no merit)
 				// Abort any pending executions
 				lock: function () {
 					locked = true;
