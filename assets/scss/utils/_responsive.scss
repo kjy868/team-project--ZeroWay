@@ -43,7 +43,7 @@
 
 // 컨테이너 반응형 설정 헬퍼 mixin
 @mixin container-responsive {
-    @include responsive(tablet) {
+    @include responsive('tablet') {
         width: 100%;
     }
 }
