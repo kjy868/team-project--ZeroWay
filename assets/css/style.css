@@ -529,7 +529,7 @@ li {
 }
 @media (max-width: 1024px) {
   .hero__img-wrap {
-    background: url("/assets/img/hero-sec-bg_1024.png");
+    background: url("/assets/img/hero-sec-bg_1024.webp");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -539,7 +539,7 @@ li {
 }
 @media (max-width: 768px) {
   .hero__img-wrap {
-    background: url("/assets/img/hero-sec-bg_768.png");
+    background: url("/assets/img/hero-sec-bg_768.webp");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -549,7 +549,7 @@ li {
 }
 @media (max-width: 480px) {
   .hero__img-wrap {
-    background: url("/assets/img/hero-sec-bg_480.png");
+    background: url("/assets/img/hero-sec-bg_480.webp");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -559,7 +559,12 @@ li {
 }
 @media (max-width: 360px) {
   .hero__img-wrap {
-    background: url("/assets/img/hero-sec-bg_360.png");
+    background: url("/assets/img/hero-sec-bg_360.webp");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 .hero__img01 {
@@ -592,7 +597,7 @@ li {
 }
 @media (max-width: 1024px) {
   .hero__img-kid {
-    background: url("/assets/img/hero-img-kid_1024.png");
+    background: url("/assets/img/hero-img-kid_1024.webp");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -602,7 +607,7 @@ li {
 }
 @media (max-width: 768px) {
   .hero__img-kid {
-    background: url("/assets/img/hero-img-kid_768.png");
+    background: url("/assets/img/hero-img-kid_768.webp");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -612,7 +617,7 @@ li {
 }
 @media (max-width: 480px) {
   .hero__img-kid {
-    background: url("/assets/img/hero-img-kid_480.png");
+    background: url("/assets/img/hero-img-kid_480.webp");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -622,7 +627,7 @@ li {
 }
 @media (max-width: 360px) {
   .hero__img-kid {
-    background: url("/assets/img/hero-img-kid_360.png");
+    background: url("/assets/img/hero-img-kid_360.webp");
     width: 100%;
     height: 100%;
     background-position: center;

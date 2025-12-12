@@ -16,22 +16,23 @@
         left: 0;
 
         @include u.responsive('tablet') {
-            background: url("/assets/img/hero-sec-bg_1024.png");
+            background: url("/assets/img/hero-sec-bg_1024.webp");
             @include u.bgImg();
         }
 
         @include u.responsive('medium') {
-            background: url("/assets/img/hero-sec-bg_768.png");
+            background: url("/assets/img/hero-sec-bg_768.webp");
             @include u.bgImg();
         }
 
         @include u.responsive('mobile') {
-            background: url("/assets/img/hero-sec-bg_480.png");
+            background: url("/assets/img/hero-sec-bg_480.webp");
             @include u.bgImg();
         }
 
         @include u.responsive('small') {
-            background: url("/assets/img/hero-sec-bg_360.png");
+            background: url("/assets/img/hero-sec-bg_360.webp");
+            @include u.bgImg();
         }
     }
 
@@ -63,22 +64,22 @@
         z-index: 1;
 
         @include u.responsive('tablet') {
-            background: url("/assets/img/hero-img-kid_1024.png");
+            background: url("/assets/img/hero-img-kid_1024.webp");
             @include u.bgImg();
         }
 
         @include u.responsive('medium') {
-            background: url("/assets/img/hero-img-kid_768.png");
+            background: url("/assets/img/hero-img-kid_768.webp");
             @include u.bgImg();
         }
 
         @include u.responsive('mobile') {
-            background: url("/assets/img/hero-img-kid_480.png");
+            background: url("/assets/img/hero-img-kid_480.webp");
             @include u.bgImg();
         }
 
         @include u.responsive('small') {
-            background: url("/assets/img/hero-img-kid_360.png");
+            background: url("/assets/img/hero-img-kid_360.webp");
             @include u.bgImg();
         }
     }
