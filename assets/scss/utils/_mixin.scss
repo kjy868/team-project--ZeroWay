@@ -285,7 +285,7 @@
 }
 
 
-@mixin aboutBody02 ($size: v.$font-26, $weight: 500, $color: v.$neutral-800, $font-family: 'Paperlogy') {
+@mixin aboutBody02 ($size: v.$font-26, $weight: 500, $color: v.$neutral-800, $font-family: 'Paperozi') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
@@ -297,7 +297,7 @@
 
 }
 
-@mixin aboutBody03 ($size: v.$font-26, $weight: 600, $color: v.$neutral-800, $font-family: 'Paperlogy') {
+@mixin aboutBody03 ($size: v.$font-26, $weight: 600, $color: v.$neutral-800, $font-family: 'Paperozi') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
@@ -367,7 +367,7 @@
 }
 
 // map mixin ================================
-@mixin mapBody01 ($size: v.$font-22, $weight: 600, $color: v.$neutral-800, $font-family: 'Paperlogy') {
+@mixin mapBody01 ($size: v.$font-22, $weight: 600, $color: v.$neutral-800, $font-family: 'Paperozi') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
@@ -417,7 +417,7 @@
     }
 }
 
-@mixin mapBody04 ($size: v.$font-26, $weight: 700, $color: v.$neutral-800, $font-family: 'Paperlogy') {
+@mixin mapBody04 ($size: v.$font-26, $weight: 700, $color: v.$neutral-800, $font-family: 'Paperozi') {
     font-size: $size;
     font-weight: $weight;
     color: $color;
