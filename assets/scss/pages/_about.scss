@@ -434,11 +434,32 @@
     &__title {
         @include u.subtitle01();
         text-align: center;
-
     }
 
     &__wrap {
-        @include u.flex(center, center, )
+        @include u.flex(center, center, u.rem(30), column);
+    }
+
+    &__card {
+        @include u.flex(center, center, u.rem(100));
+        width: 100%;
+    }
+
+    &__text-wrap {
+        width: 100%;
+        max-width: u.rem(480);
+    }
+
+    &__img {
+        width: u.rem(384);
+        height: u.rem(283);
+        // aspect-ratio: 384/283;
+        overflow: hidden;
+        border-radius: u.rem(120) u.rem(20);
+
+        img {
+            @include u.img();
+        }
     }
 
     &__text-title {
@@ -451,4 +472,5 @@
             background-color: u.$neutral-400;
         }
     }
+
 }

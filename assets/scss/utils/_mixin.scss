@@ -38,6 +38,13 @@
     transform: $transform;
 }
 
+// img mixin
+@mixin img($width: 100%, $height: 100%, $objectFit: cover) {
+    width: $width;
+    height: $height;
+    object-fit: $objectFit;
+}
+
 // 폰트 크기, 굵기, 간격, 색상 등 기본설정
 
 @mixin defineFont($size: null, $weight: 400, $color: v.$neutral-900, $lineHeight: 1.3, $letterSpacing: 0) {
