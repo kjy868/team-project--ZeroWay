@@ -14,3 +14,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// checkbox 로직 ================================================
+document.addEventListener("DOMContentLoaded", () => {
+    const checkboxes = document.querySelectorAll(".check-box");
+
+    checkboxes.forEach(box => {
+
+        box.addEventListener("click", () => toggle(box));
+
+        box.addEventListener("keydown", e => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                toggle(box);
+            }
+        });
+    });
+
+    function toggle(box) {
+        if (box.dataset.state === "disabled") return;
+
+        const checked = box.getAttribute("aria-checked") === "true";
+        box.setAttribute("aria-checked", String(!checked));
+    }
+});
+

@@ -1,3 +1,81 @@
 @use '../utils' as u;
-
 // input, select, textarea, checkbox etc
+
+// check box
+
+// check-box component 사용 방법
+// <div class="check-box"
+//      role="checkbox"
+//      aria-checked="false"
+//      tabindex="0"
+//      data-state="default">
+//     <span class="check-box__icon" aria-hidden="true"></span>
+// </div>
+
+.check-box {
+    width: u.rem(24);
+    height: u.rem(24);
+    border-radius: u.rem(3);
+    border: 1px solid u.$neutral-700;
+    background: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    outline: none;
+
+    &:hover {
+        border-color: u.$primary-700;
+    }
+
+    &:focus-visible {
+        border: 2px solid u.$neutral-900;
+    }
+
+    &[aria-checked="true"] {
+        border-color: u.$neutral-700;
+
+        .check-box__icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    &[data-state="error"] {
+        border-color: u.$danger-600;
+
+        &[aria-checked="true"] {
+            background: u.$danger-600;
+        }
+    }
+
+    &[data-state="disabled"] {
+        background: u.$neutral-300;
+        border: u.$neutral-300;
+        cursor: not-allowed;
+        pointer-events: none;
+
+        .check-box__icon {
+            opacity: 0.5;
+        }
+    }
+}
+
+.check-box__icon {
+    @include u.bgImg(u.rem(18), u.rem(16), contain);
+    opacity: 0;
+}
+
+.check-box[aria-checked="true"] .check-box__icon {
+    opacity: 1;
+    background-image: url(../img/check-box__icon.png);
+}
+
+.check-box[data-set="disabled"][aria-checked="true"] .check-box__icon {
+    background-image: url(../img/check-box__icon--disabled.png);
+}
+
+.check-box[data-set="error"][aria-checked="true"] .check-box__icon {
+    background-image: url(../img/check-box__icon--error.png);
+}
