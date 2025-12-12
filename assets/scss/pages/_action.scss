@@ -1,1 +1,57 @@
 @use '../utils' as u;
+
+.action__title {
+    @include u.subtitle01;
+    padding-top: u.$padding-100;
+    text-align: center;
+}
+
+.action__notice {
+    text-align: center;
+    @include u.tumblerBody01($color: u.$neutral-500);
+    padding: u.$padding-10;
+}
+
+.action-tabs {
+    @include u.flex(flex-start, center, u.rem(20));
+    padding: u.rem(60) 0 u.rem(40);
+
+}
+
+
+.tumbler {
+    @include u.flex(center, center, u.rem(40), column);
+    width: 100%;
+
+
+    &__grid {
+        width: 100%;
+        @include u.flex(flex-start, stretch);
+        flex-wrap: wrap;
+        gap: u.rem(38) u.rem(20);
+    }
+
+
+
+    &__card {
+        @include u.flex(flex-start, center, u.rem(30));
+        width: calc((100% - (u.rem(20) * 2)) / 3);
+        box-sizing: border-box;
+        border: 1px solid u.$neutral-400;
+        border-radius: u.rem(20);
+        padding: u.rem(35);
+    }
+
+    &__info {
+        @include u.flex(flex-start, flex-start, u.rem(8), column);
+    }
+
+
+    &__brand {
+        @include u.tumblerBody01($weight: 600, $color: u.$neutral-900, $size: u.$font-24);
+    }
+
+    &__benefit {
+        @include u.tumblerBody01($weight: 400, $color: u.$neutral-800, $size: u.$font-22);
+    }
+}
