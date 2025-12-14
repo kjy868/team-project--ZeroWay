@@ -1,3 +1,21 @@
+// header hamburger ======================================
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const body = document.body;
+
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("is-open");
+        mobileMenu.classList.toggle("is-open");
+
+        if (mobileMenu.classList.contains("is-open")) {
+            body.style.overflow = "hidden";
+        } else {
+            body.style.overflow = "";
+        }
+    });
+});
+
 // header 해당 페이지 primary color 적용 ===================
 document.addEventListener('DOMContentLoaded', () => {
     let current = window.location.pathname.split("/").pop();

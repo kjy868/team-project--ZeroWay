@@ -312,6 +312,88 @@ li {
   color: #fff;
 }
 
+.hamburger {
+  display: none;
+  width: 1.75rem;
+  height: 1.25rem;
+  background: none;
+  border-radius: 50px;
+  border: none;
+  position: relative;
+}
+.hamburger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+}
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+.hamburger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hamburger span:nth-child(3) {
+  bottom: 0;
+}
+.hamburger.is-open span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.is-open span:nth-child(3) {
+  bottom: 50%;
+  transform: rotate(-45deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  height: 100vh;
+  background: #121212;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  z-index: 99;
+  display: none;
+}
+.mobile-menu__list {
+  padding: 5.625rem 4.375rem;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 3.125rem;
+  flex-direction: column;
+}
+.mobile-menu__list a {
+  color: #fff;
+  font-size: 1.125rem;
+}
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+@media (max-width: 1024px) {
+  .header nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .mobile-menu {
+    width: 67%;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-menu {
+    width: 100%;
+  }
+}
 .footer {
   width: 100%;
   padding: 8.75rem 0;
@@ -322,16 +404,16 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  gap: 2.5rem;
   flex-direction: row;
+  flex-wrap: wrap;
 }
-@media (max-width: 480px) {
-  .footer .container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 2.5rem;
-    flex-direction: column;
-  }
+.footer__left {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.875rem;
+  flex-direction: column;
 }
 .footer__txt ul {
   display: flex;
@@ -363,13 +445,6 @@ li {
 }
 .footer .copyright {
   padding-top: 1.875rem;
-}
-.footer__left {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1.875rem;
-  flex-direction: column;
 }
 .footer__sns {
   display: flex;

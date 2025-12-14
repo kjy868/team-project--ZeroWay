@@ -7,11 +7,16 @@
     color: u.$neutral-300;
 
     .container {
-        @include u.flex(space-between, flex-end);
+        @include u.flex(space-between, flex-end, u.rem(40));
+        flex-wrap: wrap;
 
-        @include u.responsive('mobile') {
-            @include u.flex(flex-start, flex-start, u.$padding-40, column);
-        }
+        // @include u.responsive('mobile') {
+        //     @include u.flex(flex-start, flex-start, u.$padding-40, column);
+        // }
+    }
+
+    &__left {
+        @include u.flex(center, flex-start, u.$padding-30, column);
     }
 
     &__txt {
@@ -30,16 +35,12 @@
         padding-top: u.$padding-20;
         max-width: u.rem(800);
         flex-wrap: wrap;
-        ;
     }
 
     .copyright {
         padding-top: u.$padding-30;
     }
 
-    &__left {
-        @include u.flex(center, flex-start, u.$padding-30, column);
-    }
 
     &__sns {
         @include u.flex(center, flex-end);
