@@ -1,5 +1,11 @@
 @use '../utils' as u;
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     color: u.$neutral-900;
     background-color: u.$neutral-50;
