@@ -1,10 +1,12 @@
 // header hamburger ======================================
 document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector(".header");
     const hamburger = document.querySelector(".hamburger");
     const mobileMenu = document.querySelector(".mobile-menu");
     const body = document.body;
 
     hamburger.addEventListener("click", () => {
+        header.classList.toggle("is-menu-open")
         hamburger.classList.toggle("is-open");
         mobileMenu.classList.toggle("is-open");
 

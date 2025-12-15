@@ -34,21 +34,9 @@
     }
 }
 
-// 반응형 숨김 헬퍼 mixin
-@mixin hidden($device) {
-    @include responsive($device) {
-        display: none !important;
-    }
-}
-
 // 컨테이너 반응형 설정 헬퍼 mixin
 @mixin container-responsive {
     @include responsive('tablet') {
         width: 100%;
     }
-}
-
-// 반응형 글자 크기 조정 헬퍼 mixin ----> (예림) 이부분 clamp로는 화면사이즈에 따라 정확한 폰트지정은 어려워서 media query로 맞추는게 어떨까요?
-@mixin fluid-font($min, $max) {
-    font-size: clamp($min, 2vw, $max);
 }

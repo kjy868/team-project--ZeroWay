@@ -1,9 +1,11 @@
 @use '../utils' as u;
 
 .container {
-    width: 1200px;
+    width: 100%;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 0 20px;
+    box-sizing: border-box;
 
     @include u.container-responsive();
 }

@@ -281,9 +281,13 @@ li {
   z-index: 10;
   top: 0;
   height: 6.25rem;
-  background-color: #121212;
-  opacity: 0.8;
+  background-color: rgba(18, 18, 18, 0.8);
   color: #fff;
+  transition: 0.3s;
+}
+.header .logo a {
+  width: 4.625rem;
+  height: 4.625rem;
 }
 .header .container {
   display: flex;
@@ -298,10 +302,16 @@ li {
 .header .container .menu-list .menu a.active {
   color: #12f96b;
 }
+.header nav {
+  min-width: 0;
+}
+.header.is-menu-open {
+  background-color: #121212;
+}
 
 .menu-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   gap: 2.5rem;
   flex-direction: row;
@@ -314,53 +324,50 @@ li {
 
 .hamburger {
   display: none;
-  width: 1.75rem;
+  width: 1.625rem;
   height: 1.25rem;
   background: none;
-  border-radius: 50px;
   border: none;
   position: relative;
 }
 .hamburger span {
   position: absolute;
   left: 0;
+  top: 50%;
   width: 100%;
   height: 2px;
   background: #fff;
   transition: 0.3s;
+  transform-origin: center;
 }
 .hamburger span:nth-child(1) {
-  top: 0;
+  transform: translateY(-8px);
 }
 .hamburger span:nth-child(2) {
-  top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(0);
 }
 .hamburger span:nth-child(3) {
-  bottom: 0;
+  transform: translateY(8px);
 }
 .hamburger.is-open span:nth-child(1) {
-  top: 50%;
   transform: rotate(45deg);
 }
 .hamburger.is-open span:nth-child(2) {
   opacity: 0;
 }
 .hamburger.is-open span:nth-child(3) {
-  bottom: 50%;
   transform: rotate(-45deg);
 }
 
 .mobile-menu {
-  position: fixed;
-  top: 90px;
-  left: 0;
+  position: absolute;
+  top: 100px;
+  right: 0;
   height: 100vh;
   background: #121212;
   transform: translateX(100%);
   transition: transform 0.4s ease;
   z-index: 99;
-  display: none;
 }
 .mobile-menu__list {
   padding: 5.625rem 4.375rem;
@@ -454,9 +461,11 @@ li {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 @media (max-width: 1024px) {
   .container {

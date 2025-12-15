@@ -6,9 +6,14 @@
     z-index: 10;
     top: 0;
     height: u.rem(100);
-    background-color: u.$neutral-900;
-    opacity: 0.8;
+    background-color: rgba(u.$neutral-900, 0.8);
     color: u.$neutral-50;
+    transition: 0.3s;
+
+    .logo a {
+        width: u.rem(74);
+        height: u.rem(74)
+    }
 
     .container {
         @include u.flex(space-between, center);
@@ -22,47 +27,54 @@
             color: u.$primary-500;
         }
     }
+
+    nav {
+        min-width: 0;
+    }
+
+    &.is-menu-open {
+        background-color: u.$neutral-900;
+    }
 }
 
 .menu-list {
-    @include u.flex(space-between, center, u.rem(40));
+    @include u.flex(start, center, u.rem(40));
     @include u.defineFont(u.rem(20), 500, u.$neutral-50);
 }
 
 .hamburger {
     display: none;
-    width: u.rem(28);
+    width: u.rem(26);
     height: u.rem(20);
     background: none;
-    border-radius: 50px;
     border: none;
     position: relative;
 
     span {
         position: absolute;
         left: 0;
+        top: 50%;
         width: 100%;
         height: 2px;
         background: u.$neutral-50;
         transition: 0.3s;
+        transform-origin: center;
     }
 
     span:nth-child(1) {
-        top: 0;
+        transform: translateY(-8px);
     }
 
     span:nth-child(2) {
-        top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(0);
     }
 
     span:nth-child(3) {
-        bottom: 0;
+        transform: translateY(8px);
     }
 
     &.is-open {
         span:nth-child(1) {
-            top: 50%;
             transform: rotate(45deg);
         }
 
@@ -71,22 +83,21 @@
         }
 
         span:nth-child(3) {
-            bottom: 50%;
             transform: rotate(-45deg);
         }
     }
 }
 
 .mobile-menu {
-    position: fixed;
-    top: 90px;
-    left: 0;
+    position: absolute;
+    top: 100px;
+    right: 0;
     height: 100vh;
     background: u.$neutral-900;
     transform: translateX(100%);
     transition: transform 0.4s ease;
     z-index: 99;
-    display: none;
+    // display: none;
 
     &__list {
         padding: u.rem(90) u.rem(70);
@@ -114,6 +125,7 @@
 
     .mobile-menu {
         width: 67%;
+        // display: block;
     }
 }
 
