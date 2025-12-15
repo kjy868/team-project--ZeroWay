@@ -1,1 +1,125 @@
 @use '../utils' as u;
+
+.map {
+    width: 100%;
+    height: 100%;
+
+    &__conts-wrap {
+        padding: u.$padding-100 0 u.$padding-160;
+        background-color: u.$neutral-50;
+        border-top-left-radius: u.rem(200);
+        border-top-right-radius: u.rem(200);
+        width: 100%;
+        height: 100%;
+        margin-top: u.rem(-200);
+
+        @include u.borderTop();
+    }
+
+    &__img-wrap {
+        width: 100%;
+        height: u.rem(2000);
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+
+    &__img {
+        background-image: url("/assets/img/map-pc.webp");
+        @include u.bgImg();
+        background-size: auto 100%;
+        overflow-x: auto;
+
+        @include u.responsive('tablet') {
+            background-image: url("/assets/img/map-tablet.webp");
+            background-size: auto 100%;
+        }
+
+        @include u.responsive('mobile') {
+            background-image: url("/assets/img/map-mobile.webp");
+            background-size: auto 100%;
+        }
+    }
+
+    &__title-wrap {
+        margin-bottom: u.$padding-30;
+    }
+
+    &__title {
+        @include u.subtitle02;
+    }
+
+    &__desc {
+        @include u.mapBody01;
+        // color: u.$neutral-800;
+
+        span {
+            color: u.$primary-600;
+        }
+    }
+
+    &__grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        gap: u.rem(20);
+
+        @include u.responsive('tablet') {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include u.responsive('mobile') {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__grid-title {
+        @include u.mapBody01;
+        color: u.$neutral-900;
+    }
+
+    &__grid-hashtag {
+        @include u.mapBody02;
+        color: u.$primary-600;
+    }
+
+
+    &__grid-list {
+        @include u.mapBody03;
+        padding-left: 20px;
+        list-style-position: inside;
+
+        li {
+            list-style: disc;
+            // list-style-position: inside;
+            // padding-left: 0
+        }
+    }
+
+    &__grid-item {
+        background-color: u.$neutral-50;
+        // border: 1px solid #999;
+        padding: u.rem(10);
+        line-height: 1.5;
+    }
+
+    &__report-cta {
+        padding: u.$padding-80 0;
+        text-align: center;
+        background-color: u.$neutral-300;
+    }
+
+    &__report-text {
+        line-height: 1.5;
+    }
+
+    &__report-title {
+        @include u.mapBody04;
+    }
+
+    &__report-desc {
+        @include u.mapBody03;
+        margin-bottom: u.$padding-20;
+    }
+
+}
