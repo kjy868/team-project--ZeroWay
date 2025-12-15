@@ -13,7 +13,7 @@
         height: 100%;
         margin-top: u.rem(-200);
 
-        @include u.borderTop();
+        @include u.borderTopRadius();
     }
 
     &__img-wrap {

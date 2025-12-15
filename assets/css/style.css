@@ -531,7 +531,7 @@ li {
   gap: 0.625rem;
   border-radius: 3.125rem;
   padding: 1.25rem 3.75rem;
-  text-align: cetner;
+  text-align: center;
 }
 @media (max-width: 1024px) {
   .btn {
@@ -664,6 +664,83 @@ li {
 
 .check-box[data-set=error][aria-checked=true] .check-box__icon {
   background-image: url(../img/check-box__icon--error.png);
+}
+
+input,
+textarea,
+select {
+  padding: 1.25rem;
+  color: #999;
+  background-color: #e9e9e9;
+  border-radius: 0.625rem;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #999;
+  font-family: "Pretendard";
+  margin-left: 1.25rem;
+}
+@media (max-width: 480px) {
+  input,
+  textarea,
+  select {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 360px) {
+  input,
+  textarea,
+  select {
+    font-size: 1rem;
+  }
+}
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: #999;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+input[type=text],
+textarea {
+  width: 80%;
+}
+
+input[type=button] {
+  background-color: #121212;
+  color: #fff;
+}
+
+textarea {
+  height: 10rem;
+  resize: none;
+}
+
+label {
+  width: 80%;
+  font-size: 1.625rem;
+  font-weight: 600;
+  color: #333;
+  font-family: "Pretendard";
+}
+@media (max-width: 768px) {
+  label {
+    font-size: 1.375rem;
+  }
+}
+@media (max-width: 480px) {
+  label {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 360px) {
+  label {
+    font-size: 1.125rem;
+  }
 }
 
 .hero {
@@ -2709,4 +2786,101 @@ li {
   .map__report-desc {
     font-size: 1rem;
   }
+}
+
+.report__form-wrap {
+  border-top-left-radius: 12.5rem;
+  border-top-right-radius: 12.5rem;
+  margin-top: -12.5rem;
+  z-index: 1;
+  position: relative;
+  background-color: #fff;
+}
+@media (max-width: 1024px) {
+  .report__form-wrap {
+    border-top-left-radius: 6.25rem;
+    border-top-right-radius: 6.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .report__form-wrap {
+    border-top-left-radius: 3.125rem;
+    border-top-right-radius: 3.125rem;
+  }
+}
+@media (max-width: 480px) {
+  .report__form-wrap {
+    border-top-left-radius: 1.875rem;
+    border-top-right-radius: 1.875rem;
+  }
+}
+.report__desc {
+  padding: 6.25rem 0 3.75rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: #121212;
+}
+.report__form div {
+  padding-bottom: 1.875rem;
+}
+.report fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.report__day {
+  width: auto;
+}
+.report__day span {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #999;
+  font-family: "Pretendard";
+}
+@media (max-width: 480px) {
+  .report__day span {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 360px) {
+  .report__day span {
+    font-size: 1rem;
+  }
+}
+.report__address div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: row;
+}
+.report__address-btn {
+  background-color: #121212;
+  color: #fff;
+}
+.report__checkbox {
+  width: auto;
+}
+.report__checkbox span {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #999;
+  font-family: "Pretendard";
+}
+@media (max-width: 480px) {
+  .report__checkbox span {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 360px) {
+  .report__checkbox span {
+    font-size: 1rem;
+  }
+}
+.report__btn {
+  display: block;
+  margin: 0 auto;
+  margin: 3.75rem 0 15.625rem;
 }

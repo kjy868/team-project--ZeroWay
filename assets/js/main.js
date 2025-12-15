@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // effect__merit 내부 path (세로 선)
-const meritPath = document.querySelector('.effect__merit svg path');
+const meritPath = document.querySelector('.merit__group svg path');
 if (meritPath) {
     const len2 = meritPath.getTotalLength();
     meritPath.style.strokeDasharray = len2;
@@ -69,7 +69,7 @@ if (meritPath) {
         strokeDashoffset: 0,
         ease: 'none',
         scrollTrigger: {
-            trigger: '.effect__merit-wrap',
+            trigger: '.merit__list02-wrap',
             start: 'top 30%',
             end: 'bottom 90%',
             scrub: 1
@@ -77,7 +77,7 @@ if (meritPath) {
     });
 }
 
-const circles = document.querySelectorAll('.effect__merit svg circle');
+const circles = document.querySelectorAll('.merit__group svg circle');
 circles.forEach((circle, index) => {
     const originalR = parseFloat(circle.getAttribute('r')) || 12;
     const smallR = Math.max(1, originalR * 0.7);
@@ -86,7 +86,7 @@ circles.forEach((circle, index) => {
     circle.setAttribute('r', smallR);
     circle.style.opacity = 0.35;
 
-    const itemTrigger = document.querySelector(`.effect__merit-list li:nth-child(${index + 1})`) || document.querySelector('.effect__merit-wrap');
+    const itemTrigger = document.querySelector(`.merit__list02  li:nth-child(${index + 1})`) || document.querySelector('.merit__list02-wrap');
 
     gsap.to(circle, {
         attr: { r: originalR }, // r 속성만 키우면 위치는 변하지 않음
@@ -102,22 +102,22 @@ circles.forEach((circle, index) => {
 });
 
 
-// document.querySelectorAll('.effect__underline-path').forEach((pathEl) => {
-//     const len = pathEl.getTotalLength();
+document.querySelectorAll('.effect__underline-path').forEach((pathEl) => {
+    const len = pathEl.getTotalLength();
 
-//     // 초기 상태: 숨김
-//     gsap.set(pathEl, { strokeDasharray: len, strokeDashoffset: len });
+    // 초기 상태: 숨김
+    gsap.set(pathEl, { strokeDasharray: len, strokeDashoffset: len });
 
-//     // 스크롤 시 그리기
-//     gsap.to(pathEl, {
-//         strokeDashoffset: 0,
-//         duration: 0.8,
-//         ease: 'power1.out',
-//         scrollTrigger: {
-//             trigger: pathEl.closest('.effect__item') || pathEl,
-//             start: 'top 80%',
-//             toggleActions: 'play none none none', // 한 번만 재생
-//             markers: false
-//         }
-//     });
-// });
+    // 스크롤 시 그리기
+    gsap.to(pathEl, {
+        strokeDashoffset: 0,
+        duration: 0.8,
+        ease: 'power1.out',
+        scrollTrigger: {
+            trigger: pathEl.closest('.effect__item') || pathEl,
+            start: 'top 80%',
+            toggleActions: 'play none none none', // 한 번만 재생
+            markers: false
+        }
+    });
+});

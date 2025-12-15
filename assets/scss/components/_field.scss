@@ -79,3 +79,51 @@
 .check-box[data-set="error"][aria-checked="true"] .check-box__icon {
     background-image: url(../img/check-box__icon--error.png);
 }
+
+// Input field styles
+
+input,
+textarea,
+select {
+    padding: u.rem(20);
+    color: u.$neutral-500;
+    background-color: u.$neutral-300;
+    border-radius: u.rem(10);
+    border: none;
+    @include u.reportBody02;
+    margin-left: u.$padding-20;
+
+    &::placeholder {
+        color: u.$neutral-500;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+input[type="text"],
+textarea {
+    width: 80%;
+}
+
+input[type="button"] {
+    background-color: u.$neutral-900;
+    color: u.$neutral-50;
+}
+
+textarea {
+    // width: 100%;
+    height: u.rem(160);
+    resize: none;
+}
+
+select {
+    // width: rem(430);
+
+}
+
+label {
+    width: 80%;
+    @include u.reportBody01;
+}
