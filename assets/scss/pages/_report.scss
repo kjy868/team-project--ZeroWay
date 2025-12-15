@@ -1,1 +1,64 @@
 @use '../utils' as u;
+
+.report {
+    &__form-wrap {
+        @include u.borderTopRadius();
+        margin-top: u.rem(-200);
+        z-index: 1;
+        position: relative;
+        background-color: u.$neutral-50;
+    }
+
+    &__desc {
+        padding: u.$padding-100 0 u.$padding-60;
+        text-align: center;
+        @include u.defineFont(u.rem(24));
+    }
+
+
+    &__form {
+        div {
+            padding-bottom: u.$padding-30;
+        }
+    }
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: u.rem(20);
+
+    }
+
+    &__day {
+        width: auto;
+
+        span {
+            @include u.reportBody02;
+        }
+    }
+
+    &__address {
+        div {
+            @include u.flex(flex-start, stretch);
+        }
+    }
+
+    &__address-btn {
+        background-color: u.$neutral-900;
+        color: u.$neutral-50;
+    }
+
+    &__checkbox {
+        width: auto;
+
+        span {
+            @include u.reportBody02;
+        }
+    }
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        margin: u.$padding-60 0 u.$padding-250;
+    }
+}

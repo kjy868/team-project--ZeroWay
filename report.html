@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>report</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- header 영역 -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <a href="/">
+                    <img src="./assets/img/logo.webp" alt="로고 이미지">
+                </a>
+            </h1>
+
+            <nav>
+                <ul class="menu-list">
+                    <li class="menu">
+                        <a href="/about.html">제로 웨이스트란?</a>
+                    </li>
+                    <li class="menu">
+                        <a href="/action.html">지구를 위한 Action</a>
+                    </li>
+                    <li class="menu">
+                        <a href="/map.html">ZeroMap</a>
+                    </li>
+                    <li class="menu">
+                        <a href="/report.html">제보하기</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- hamburger -->
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- mobile menu -->
+            <div class="mobile-menu">
+                <ul class="mobile-menu__list">
+                    <li>
+                        <a href="/about.html">제로 웨이스트란?</a>
+                    </li>
+                    <li>
+                        <a href="/action.html">지구를 위한 Action</a>
+                    </li>
+                    <li>
+                        <a href="/map.html">ZeroMap</a>
+                    </li>
+                    <li>
+                        <a href="/report.html">제보하기</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="sub-hero">
+            <div class="sub-hero__bg">
+                <div class="container">
+                    <h2 class="sub-hero__title">
+                        ZeroMap 제보하기
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="report__form-wrap">
+            <div class="container">
+                <h4 class="report__desc">
+                    제보하신 정보는 검토 후 지도에 반영됩니다. 정확한 정보 제공에 도움을 주시면 감사하겠습니다.
+                </h4>
+
+                <section class="report__wrap">
+                    <form action="#" class="report__form">
+                        <fieldset>
+                            <div>
+                                <label class="report__select">
+                                    제보유형
+                                    <select name="shop-type" required>
+                                        <option value="">신규샵 제보</option>
+                                        <option value="">기존샵 정보 수정</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="report__name">
+                                    가게이름
+                                    <input type="text" name="shop-name" placeholder="가게이름을 입력해주세요" required>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="report__address">
+                                    <!-- <div> -->
+                                    <span>주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;소</span>
+                                    <div class="address-wrap">
+                                        <input type="text" id="sample6_postcode" placeholder="우편번호">
+                                        <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"
+                                            class="report__address-btn" placeholder="우편번호">
+                                        <!-- </div> -->
+                                    </div>
+                                    <div>
+                                        <input type="text" id="sample6_address" placeholder="주소">
+                                    </div>
+                                    <div>
+                                        <input type="text" id="sample6_detailAddress" placeholder="상세주소">
+                                    </div>
+                                    <!-- <input type="text" id="sample6_extraAddress" placeholder="참고항목"> -->
+                                </label>
+                            </div>
+
+                            <div>
+                                <label class="report__day">
+                                    운영요일
+                                    <input type="radio" name="shop-day" class="day"><span>월</span>
+                                    <input type="radio" name="shop-day" class="day"><span>화</span>
+                                    <input type="radio" name="shop-day" class="day"><span>수</span>
+                                    <input type="radio" name="shop-day" class="day"><span>목</span>
+                                    <input type="radio" name="shop-day" class="day"><span>금</span>
+                                    <input type="radio" name="shop-day" class="day"><span>토</span>
+                                    <input type="radio" name="shop-day" class="day"><span>일</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="report__time">
+                                    운영시간
+                                    <input type="text" name="shop-time" placeholder="운영시간을 입력해주세요">
+                                </label>
+                            </div>
+                            <div>
+                                <label class="report__tel">
+                                    전화번호
+                                    <input type="text" name="shop-tell" placeholder="-은(는) 제외하고 입력해주세요">
+                                </label>
+                            </div>
+                            <div>
+                                <label class="report__website">
+                                    웹사이트
+                                    <input type="text" name="shop-website" placeholder="https://">
+                                </label>
+                            </div>
+                            <div>
+                                <label class="report__content">
+                                    내&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;용
+                                    <textarea name="shop-content" id=""
+                                        placeholder="제로웨이스트 활동 / 제품 소개 등 자유롭게 적어주세요! 예: 세제 리필 가능, 텀블러 할인, 친환경 제품 판매 등"></textarea>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="report__checkbox">
+                                    <input type="checkbox" class="checkbox"><span>제보하신 정보의 제공 활용에 동의합니다.</span>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                    <a class="report__btn btn btn--black">제보하기</a>
+
+            </div>
+
+        </section>
+    </main>
+
+
+
+
+    <!-- footer 영역 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__left">
+                <a href="">
+                    <img src="./assets/img/footer-logo.webp" alt="푸터 로고">
+                </a>
+                <div class="footer__txt">
+                    <ul class="footer__policy">
+                        <li>
+                            <a href="">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="">개인정보처리방침</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__info ">
+                        <li>상호명 : 제로웨이 | </li>
+                        <li>
+                            주소 : 서울시 종로구 000로 00길 |
+                        </li>
+                        <li>
+                            전화 : 000-0000-0000 |
+                        </li>
+                        <li>
+                            메일 : zeroway@contact
+                        </li>
+                        <li>
+                            사업자등록번호 : 000-00-00000
+                        </li>
+                    </ul>
+                    <div class="copyright">
+                        <p>Copyright © 2025 ZEROWAY All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__right">
+                <ul class="footer__sns">
+                    <li>
+                        <a href="">
+                            <img src="./assets/img/footer-facebook.webp" alt="페이스북 아이콘">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./assets/img/footer-instagram.webp" alt="인스타그램 아이콘">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./assets/img/footer-youtube.webp" alt="유투브 아이콘">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jquery  -->
+    <script src="./assets/js/jquery-1.12.3.js"></script>
+
+    <!-- gsap  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- daum postcode  -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+    <!-- script  -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/report.js"></script>
+
+
+</body>
+
+</html>
