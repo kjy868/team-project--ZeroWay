@@ -8,7 +8,7 @@
 
     // hero 배경 이미지
     &__img-wrap {
-        background: url("./assets/img/hero-sec-bg.webp");
+        background: url("../img/hero-sec-bg.webp");
         @include u.bgImg();
         position: relative;
         height: 100vh;
@@ -17,22 +17,22 @@
         left: 0;
 
         @include u.responsive('tablet') {
-            background: url("./assets/img/hero-sec-bg_1024.webp");
+            background: url("../img/hero-sec-bg_1024.webp");
             @include u.bgImg();
         }
 
         @include u.responsive('medium') {
-            background: url("./assets/img/hero-sec-bg_768.webp");
+            background: url("../img/hero-sec-bg_768.webp");
             @include u.bgImg();
         }
 
         @include u.responsive('mobile') {
-            background: url("./assets/img/hero-sec-bg_480.webp");
+            background: url("../img/hero-sec-bg_480.webp");
             @include u.bgImg();
         }
 
         @include u.responsive('small') {
-            background: url("./assets/img/hero-sec-bg_360.webp");
+            background: url("../img/hero-sec-bg_360.webp");
             @include u.bgImg();
         }
     }
@@ -67,7 +67,7 @@
 
     // hero 아이 이미지
     &__img-kid {
-        background: url("./assets/img/hero-img-kid.webp");
+        background: url("../img/hero-img-kid.webp");
         @include u.bgImg();
         position: absolute;
         left: 0;
@@ -77,22 +77,22 @@
         z-index: 1;
 
         @include u.responsive('tablet') {
-            background: url("./assets/img/hero-img-kid_1024.webp");
+            background: url("../img/hero-img-kid_1024.webp");
             @include u.bgImg();
         }
 
         @include u.responsive('medium') {
-            background: url("/assets/img/hero-img-kid_768.webp");
+            background: url("../img/hero-img-kid_768.webp");
             @include u.bgImg();
         }
 
         @include u.responsive('mobile') {
-            background: url("./assets/img/hero-img-kid_480.webp");
+            background: url("../img/hero-img-kid_480.webp");
             @include u.bgImg();
         }
 
         @include u.responsive('small') {
-            background: url("./assets/img/hero-img-kid_360.webp");
+            background: url("../img/hero-img-kid_360.webp");
             @include u.bgImg();
         }
     }
@@ -131,7 +131,7 @@
 
 .merit {
     position: relative;
-    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.264) 10%, rgba(20, 20, 20, 0.547) 25%, rgba(20, 20, 20, 0.613) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%), url("./assets/img/merit-sec-bg.webp");
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.264) 10%, rgba(20, 20, 20, 0.547) 25%, rgba(20, 20, 20, 0.613) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%), url("../img/merit-sec-bg.webp");
     @include u.bgImg();
     padding-bottom: u.$padding-200;
     width: 100%;
@@ -561,7 +561,7 @@
 
 // zeromap section 
 .zeromap {
-    background-image: url("./assets/img/zeromap-sec-bg.webp");
+    background-image: url("../img/zeromap-sec-bg.webp");
     @include u.bgImg();
 
     &__wrap {
