@@ -104,18 +104,18 @@
 
                     <!-- 주소 -->
                     <div class="form-row">
-                        <div class="form-label">주소</div>
+                        <div class="form-label">주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</div>
 
-                        <div class="form-field">
+                        <div class="form-field address-field">
                             <div class="address-row">
-                                <input type="text" placeholder="우편번호">
+                                <input type="text" placeholder="우편번호" id="sample6_postcode">
                                 <button type="button" class="report__address-btn" onclick="sample6_execDaumPostcode()"
                                     value="우편번호 찾기">
                                     우편번호 찾기
                                 </button>
                             </div>
-                            <div><input type="text" placeholder="주소"> </div>
-                            <div><input type="text" placeholder="상세주소"></div>
+                            <div><input type="text" placeholder="주소" id="sample6_address"> </div>
+                            <div><input type="text" placeholder="상세주소" id="sample6_detailAddress"></div>
 
                         </div>
                     </div>
@@ -124,13 +124,13 @@
                     <div class="form-row">
                         <div class="form-label">운영요일</div>
                         <div class="form-field day-group">
-                            <input type="radio"> &nbsp;월</input>
-                            <input type="radio"> &nbsp;화</input>
-                            <input type="radio"> &nbsp;수</input>
-                            <input type="radio"> &nbsp;목</input>
-                            <input type="radio"> &nbsp;금</input>
-                            <input type="radio"> &nbsp;토</input>
-                            <input type="radio"> &nbsp;일</input>
+                            <input type="radio"> &nbsp;월
+                            <input type="radio"> &nbsp;화
+                            <input type="radio"> &nbsp;수
+                            <input type="radio"> &nbsp;목
+                            <input type="radio"> &nbsp;금
+                            <input type="radio"> &nbsp;토
+                            <input type="radio"> &nbsp;일
                         </div>
                     </div>
 
@@ -171,8 +171,8 @@
                         <div class="form-label"></div>
                         <div class="form-field">
                             <label class="checkbox">
-                                <input type="checkbox" required />
-                                제보하신 정보의 제공 활용에 동의합니다.
+                                <input type="checkbox" required>
+                                <span>제보하신 정보의 제공 활용에 동의합니다.</span>
                             </label>
                         </div>
                     </div>
