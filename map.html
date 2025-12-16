@@ -65,9 +65,15 @@
     </header>
 
     <main>
+        <!-- map section  -->
         <section class="map">
             <div class="map__img-wrap">
-                <div class="map__img"></div>
+                <picture class="map__img">
+                    <source srcset="./assets/img/map-mobile.webp" media="(max-width: 480px)">
+                    <source srcset="./assets/img/map-tablet.webp" media="(max-width: 1024px)">
+                    <img src="./assets/img/map-pc.webp" alt="지도 이미지">
+                </picture>
+                <button class="btn btn--blackLine map__notice">핀을 터치해 더 많은 정보를 알아보세요!</button>
             </div>
 
             <div class="map__conts-wrap">
@@ -75,8 +81,12 @@
                     <div class="map__title-wrap">
                         <h2 class="map__title">ZeroMap</h2>
                         <div class="map__desc">
-                            <p>오늘 방문한 제로웨이스트 샵, 인스타그램에 <span>#제로웨이</span>를 복사해서 인증하고 함께 기록해보세요.
-                                <img src="/assets/img/map-copy-icon.webp" alt="복사하기 아이콘">
+                            <p>
+                                오늘 방문한 제로웨이스트 샵, 인스타그램에
+                                <span id="copyText">#제로웨이</span>를 복사해서 인증하고 함께 기록해보세요.
+                                <button type="button" class="copy-btn" id="copyBtn">
+                                    <img src="/assets/img/map-copy-icon.webp" alt="복사하기 아이콘">
+                                </button>
                             </p>
                         </div>
                     </div>
@@ -86,19 +96,20 @@
                                 <h3 class="map__grid-title">❶ 자연공감 숨</h3> <span class="map__grid-hashtag">
                                     #생활용품판매</span>
                                 <ul class="map__grid-list">
-                                    <li>주소: 인천 서구 원당대로 671 성광빌딩
+                                    <li>주소<br>
+                                        인천 서구 원당대로 671 성광빌딩
                                         3층 301호</li>
-                                    <li>운영시간: 목-토 10:00-18:00</li>
-                                    <li>연락처: 010-4203-3491</li>
+                                    <li>운영시간 <br> 목-토 10:00-18:00</li>
+                                    <li>연락처<br> 010-4203-3491</li>
                                 </ul>
                             </div>
                             <div class="map__grid-item map__grid-item-2">
                                 <h3 class="map__grid-title">❷ 복합문화공간 포엘</h3> <span class="map__grid-hashtag">
                                     #생활용품판매</span>
                                 <ul class="map__grid-list">
-                                    <li>주소: 인천 계양구 양지로 151 2층</li>
-                                    <li>운영시간: 월-금 9:00-20:00 토 10:00-18:00</li>
-                                    <li>연락처: 010-5632-0771</li>
+                                    <li>주소<br> 인천 계양구 양지로 151 2층</li>
+                                    <li>운영시간 <br> 월-금 9:00-20:00, 토 10:00-18:00</li>
+                                    <li>연락처<br> 010-5632-0771</li>
                                 </ul>
                             </div>
 
@@ -106,9 +117,9 @@
                                 <h3 class="map__grid-title">❸ 얼스호텔</h3> <span class="map__grid-hashtag"> #리필스테이션
                                     #생활용품판매</span>
                                 <ul class="map__grid-list">
-                                    <li>주소: 인천 부평구 부평문화로 161 2층</li>
-                                    <li>운영시간: 화-토 11:00-19:00</li>
-                                    <li>연락처: 032-523-3657 010-6770-3657</li>
+                                    <li>주소 <br> 인천 부평구 부평문화로 161 2층</li>
+                                    <li>운영시간 <br> 화-토 11:00-19:00</li>
+                                    <li>연락처 <br> 032-523-3657 / 010-6770-3657</li>
                                     <li>환경 프로그램</li>
                                     <li>온라인 스토어 운영</li>
                                 </ul>
@@ -117,27 +128,27 @@
                                 <h3 class="map__grid-title">❹ 파랑주택135</h3> <span class="map__grid-hashtag">
                                     #생활용품판매</span>
                                 <ul class="map__grid-list">
-                                    <li>주소: 인천 부평구 이규보로 135</li>
-                                    <li>운영시간: 화-토 14:00-20:00</li>
-                                    <li>연락처: 010-5610-8017</li>
+                                    <li>주소 <br> 인천 부평구 이규보로 135</li>
+                                    <li>운영시간 <br> 화-토 14:00-20:00</li>
+                                    <li>연락처 <br> 010-5610-8017</li>
                                     <li>온라인 스토어 운영</li>
                                 </ul>
                             </div>
                             <div class="map__grid-item map__grid-item-5">
                                 <h3 class="map__grid-title">❺ 슬로슬로</h3> <span class="map__grid-hashtag"> #생활용품판매</span>
                                 <ul class="map__grid-list">
-                                    <li>주소: 인천 동구 서해대로513번길 9</li>
-                                    <li>운영시간: 수-일 11:30-18:30</li>
-                                    <li>연락처: 인스타그램 @sloslo__ 계정 통해 문의</li>
+                                    <li>주소 <br> 인천 동구 서해대로513번길 9</li>
+                                    <li>운영시간 <br> 수-일 11:30-18:30</li>
+                                    <li>연락처 <br> 인스타그램 @sloslo__ 계정 통해 문의</li>
                                 </ul>
                             </div>
                             <div class="map__grid-item map__grid-item-6">
                                 <h3 class="map__grid-title">❻ 소중한 모든것 컵둥지</h3> <span class="map__grid-hashtag"> #생활용품판매
                                     #텀블러할인카페</span>
                                 <ul class="map__grid-list">
-                                    <li>주소: 인천 미추홀구 한나루로458번길 10 1층</li>
-                                    <li>운영시간: 매일 9:00-20:00 공휴일 9:00-18:00</li>
-                                    <li>연락처: 070-4266-0247</li>
+                                    <li>주소 <br> 인천 미추홀구 한나루로458번길 10 1층</li>
+                                    <li>운영시간 <br> 매일 9:00-20:00 <br>공휴일 9:00-18:00</li>
+                                    <li>연락처 <br> 070-4266-0247</li>
                                     <li>텀블러 지참 시 1,000원 할인 혜택 제공</li>
                                     <li>담아가는날 운영 (가져온 용기에 스페셜메뉴를 원하는 만큼 담아서 판매)</li>
                                 </ul>
@@ -146,19 +157,19 @@
                                 <h3 class="map__grid-title">❼ 새활용 알맹이가게</h3> <span class="map__grid-hashtag">
                                     #생활용품판매</span>
                                 <ul class="map__grid-list">
-                                    <li>주소: 인천 미추홀구 매소홀로290번길 7
+                                    <li>주소 <br> 인천 미추홀구 매소홀로290번길 7
                                         인천업사이클에코센터 1층</li>
-                                    <li>운영시간: 월-토 10:00-17:00 12:00-17:20 휴게시간 (일요일, 공휴일 휴무)</li>
-                                    <li>연락처: 0507-1405-2076 032-212-2929</li>
+                                    <li>운영시간 <br> 월-토 10:00-17:00, 12:00-17:20 휴게시간 <br>(일요일, 공휴일 휴무)</li>
+                                    <li>연락처 <br> 0507-1405-2076 / 032-212-2929</li>
                                 </ul>
                             </div>
                             <div class="map__grid-item map__grid-item-8">
                                 <h3 class="map__grid-title">❽ 우리동네 봄날</h3> <span class="map__grid-hashtag"> #생활용품판매
                                     #텀블러할인카페</span>
                                 <ul class="map__grid-list">
-                                    <li>주소: 인천 연수구 청량로164번길 10</li>
-                                    <li>운영시간: 월-금 10:00-20:00 토 10:00-18:00</li>
-                                    <li>연락처: 070-8801-1995</li>
+                                    <li>주소 <br> 인천 연수구 청량로164번길 10</li>
+                                    <li>운영시간 <br> 월-금 10:00-20:00, 토 10:00-18:00</li>
+                                    <li>연락처 <br> 070-8801-1995</li>
                                     <li>텀블러 300원할인</li>
                                 </ul>
                             </div>
@@ -166,10 +177,10 @@
                                 <h3 class="map__grid-title">❾ 플래닛어스</h3> <span class="map__grid-hashtag"> #생활용품판매
                                     #리필스테이션</span>
                                 <ul class="map__grid-list">
-                                    <li>주소: 인천 연수구 인천타워대로 257
+                                    <li>주소 <br> 인천 연수구 인천타워대로 257
                                         C동 1층 120호</li>
-                                    <li>운영시간: - 매일 9:00-21:00 * 오전, 야간, 일요일은 무인운영</li>
-                                    <li>연락처: 0507-1347-0393</li>
+                                    <li>운영시간 <br>매일 9:00-21:00 <br>* 오전, 야간, 일요일은 무인운영</li>
+                                    <li>연락처 <br>0507-1347-0393</li>
                                     <li>최근 “무조건 3,000원 할인” 프로모션. 인천 e지 ESG·제로웨이스트 쿠폰 사용 가능.</li>
                                 </ul>
                             </div>
@@ -177,11 +188,11 @@
                                 <h3 class="map__grid-title">❿ 지구본 송도</h3> <span class="map__grid-hashtag"> #생활용품판매
                                     #텀블러할인카페</span>
                                 <ul class="map__grid-list">
-                                    <li>주소: 인천 연수구 송도과학로 56
+                                    <li>주소 <br> 인천 연수구 송도과학로 56
                                         송도테크노파크 BT센터 1층
                                         104~105호</li>
-                                    <li>운영시간: 월-금 8:30-19:00 토-일 11:00-21:00</li>
-                                    <li>연락처: 0507-1342-5138</li>
+                                    <li>운영시간 <br> 월-금 8:30-19:00, 토-일 11:00-21:00</li>
+                                    <li>연락처 <br> 0507-1342-5138</li>
                                     <li>용기내 캠페인 참여 시 혜택: 개인 용기 지참하고
                                         빵류 4개 이상 구매 시, 1,000원 할인 혜택 제공</li>
                                 </ul>

@@ -14,7 +14,6 @@
         font-size: u.rem(20);
     }
 
-
     // black button 
     &--black {
         background-color: u.$neutral-900;
@@ -35,6 +34,12 @@
             background-color: u.$primary-600;
             transition: 0.3s all ease-in-out;
             border: u.rem(3) solid u.$primary-600;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: u.rem(25) u.rem(65);
+        }
+
+        &:disabled {
+            background-color: u.$neutral-500
         }
     }
 
@@ -60,6 +65,8 @@
             background-color: u.$neutral-900;
             color: u.$neutral-50;
             transition: 0.3s all ease-in-out;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: u.rem(25) u.rem(65);
         }
     }
 

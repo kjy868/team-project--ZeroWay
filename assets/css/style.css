@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html,
 body,
 div,
@@ -563,6 +562,11 @@ li {
   background-color: #00d76b;
   transition: 0.3s all ease-in-out;
   border: 0.1875rem solid #00d76b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 1.5625rem 4.0625rem;
+}
+.btn--black:disabled {
+  background-color: #999;
 }
 .btn--blackLine {
   font-size: 1.5625rem;
@@ -584,6 +588,8 @@ li {
   background-color: #121212;
   color: #fff;
   transition: 0.3s all ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 1.5625rem 4.0625rem;
 }
 .btn--whiteLine {
   font-size: 1.5625rem;
@@ -679,12 +685,13 @@ select {
   color: #999;
   background-color: #e9e9e9;
   border-radius: 0.625rem;
-  border: none;
+  border: 1px solid #e9e9e9;
   font-size: 1.25rem;
   font-weight: 400;
   color: #999;
   font-family: "Pretendard";
   margin-left: 1.25rem;
+  width: 100%;
 }
 @media (max-width: 480px) {
   input,
@@ -709,11 +716,19 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
+  border: 1px solid #555;
+  color: #333;
 }
-
-input[type=text],
-textarea {
-  width: 80%;
+input:hover,
+textarea:hover,
+select:hover {
+  border: 1px solid #555;
+}
+input[data-state=error],
+textarea[data-state=error],
+select[data-state=error] {
+  background-color: #fff1f0;
+  color: #333;
 }
 
 input[type=button] {
@@ -755,7 +770,7 @@ label {
   position: relative;
 }
 .hero__img-wrap {
-  background: url("/assets/img/hero-sec-bg.webp");
+  background: url("./assets/img/hero-sec-bg.webp");
   width: 100%;
   height: 100%;
   background-position: center;
@@ -769,7 +784,7 @@ label {
 }
 @media (max-width: 1024px) {
   .hero__img-wrap {
-    background: url("/assets/img/hero-sec-bg_1024.webp");
+    background: url("./assets/img/hero-sec-bg_1024.webp");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -779,7 +794,7 @@ label {
 }
 @media (max-width: 768px) {
   .hero__img-wrap {
-    background: url("/assets/img/hero-sec-bg_768.webp");
+    background: url("./assets/img/hero-sec-bg_768.webp");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -789,7 +804,7 @@ label {
 }
 @media (max-width: 480px) {
   .hero__img-wrap {
-    background: url("/assets/img/hero-sec-bg_480.webp");
+    background: url("./assets/img/hero-sec-bg_480.webp");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -799,7 +814,7 @@ label {
 }
 @media (max-width: 360px) {
   .hero__img-wrap {
-    background: url("/assets/img/hero-sec-bg_360.webp");
+    background: url("./assets/img/hero-sec-bg_360.webp");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -832,7 +847,7 @@ label {
   }
 }
 .hero__img-kid {
-  background: url("/assets/img/hero-img-kid.webp");
+  background: url("./assets/img/hero-img-kid.webp");
   width: 100%;
   height: 100%;
   background-position: center;
@@ -847,7 +862,7 @@ label {
 }
 @media (max-width: 1024px) {
   .hero__img-kid {
-    background: url("/assets/img/hero-img-kid_1024.webp");
+    background: url("./assets/img/hero-img-kid_1024.webp");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -867,7 +882,7 @@ label {
 }
 @media (max-width: 480px) {
   .hero__img-kid {
-    background: url("/assets/img/hero-img-kid_480.webp");
+    background: url("./assets/img/hero-img-kid_480.webp");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -877,7 +892,7 @@ label {
 }
 @media (max-width: 360px) {
   .hero__img-kid {
-    background: url("/assets/img/hero-img-kid_360.webp");
+    background: url("./assets/img/hero-img-kid_360.webp");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -960,14 +975,14 @@ label {
 
 .merit {
   position: relative;
-  background: linear-gradient(to bottom, rgba(20, 20, 20, 0.264) 10%, rgba(20, 20, 20, 0.547) 25%, rgba(20, 20, 20, 0.613) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%), url("/assets/img/merit-sec-bg.webp");
-  width: 100vw;
+  background: linear-gradient(to bottom, rgba(20, 20, 20, 0.264) 10%, rgba(20, 20, 20, 0.547) 25%, rgba(20, 20, 20, 0.613) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%), url("./assets/img/merit-sec-bg.webp");
+  width: 100%;
   height: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   padding-bottom: 12.5rem;
-  width: 100vw;
+  width: 100%;
 }
 .merit__title {
   font-size: 3.75rem;
@@ -1185,7 +1200,8 @@ label {
   display: block;
   width: fit-content;
   margin: 0 auto;
-  z-index: 5;
+  z-index: 1;
+  position: relative;
 }
 @media (max-width: 1024px) {
   .merit__subtitle {
@@ -1209,7 +1225,7 @@ label {
   gap: 10%;
   flex-direction: row;
   text-align: center;
-  padding: 5rem 1.25rem 12.5rem;
+  padding: 5rem 0 12.5rem;
 }
 .merit__list01 li {
   display: flex;
@@ -1258,10 +1274,18 @@ label {
     font-size: 1rem;
   }
 }
+@media (max-width: 1024px) {
+  .merit__list01 img {
+    width: 3.75rem;
+  }
+}
 @media (max-width: 480px) {
   .merit__list01 {
     flex-direction: column;
     gap: 1.875rem;
+  }
+  .merit__list01 img {
+    width: 3.125rem;
   }
 }
 .merit__list02-wrap h3 {
@@ -1284,14 +1308,51 @@ label {
     font-size: 1.625rem;
   }
 }
+@media (max-width: 480px) {
+  .merit__list02 {
+    gap: 3.4375rem;
+  }
+}
+.merit__list02 span {
+  position: relative;
+  display: inline-block;
+}
+.merit__list02 span.isActive .merit__underline path {
+  stroke-dashoffset: 0;
+}
+@media (max-width: 1024px) {
+  .merit__list02 li:nth-child(3) img {
+    height: 6.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .merit__list02 li:nth-child(3) img {
+    height: 5rem;
+  }
+}
+@media (max-width: 360px) {
+  .merit__list02 li:nth-child(3) img {
+    height: 4.0625rem;
+  }
+}
+.merit__underline {
+  position: absolute;
+  left: 0;
+  top: 1.25rem;
+  width: 100%;
+  height: 1.125rem;
+}
+.merit__underline path {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  transition: stroke-dashoffset 0.8s ease;
+}
 .merit__group {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
   flex-direction: row;
-  /* SVG 기본 상태 */
-  /* JS에서 strokeDasharray/offset을 덮어씌우지만 초기값을 지정해둠 */
 }
 .merit__list02 {
   display: flex;
@@ -1311,10 +1372,51 @@ label {
   padding-left: 1.875rem;
   padding-right: 1.25rem;
 }
+@media (max-width: 1024px) {
+  .merit__list02 li:first-child img {
+    height: 6.25rem;
+  }
+}
 @media (max-width: 480px) {
   .merit__list02 li:first-child img {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
+    height: 4.5625rem;
+  }
+}
+@media (max-width: 360px) {
+  .merit__list02 li:first-child img {
+    height: 3.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .merit__list02 li:nth-child(2) img {
+    height: 9.8125rem;
+  }
+}
+@media (max-width: 480px) {
+  .merit__list02 li:nth-child(2) img {
+    height: 7.5rem;
+  }
+}
+@media (max-width: 360px) {
+  .merit__list02 li:nth-child(2) img {
+    height: 5.875rem;
+  }
+}
+@media (max-width: 1024px) {
+  .merit__list02 li:nth-child(3) img {
+    height: 6.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .merit__list02 li:nth-child(3) img {
+    height: 5rem;
+  }
+}
+@media (max-width: 360px) {
+  .merit__list02 li:nth-child(3) img {
+    height: 4.0625rem;
   }
 }
 .merit__list02 li .line01 {
@@ -1407,13 +1509,17 @@ label {
   stroke-linejoin: round;
 }
 
+.zeromap {
+  background-image: url("./assets/img/zeromap-sec-bg.webp");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .zeromap__wrap {
   padding: 12.5rem 0;
   text-align: center;
-  background-image: url("/assets/img/zeromap-bg.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .zeromap__title {
   font-size: 3.75rem;
@@ -1442,6 +1548,20 @@ label {
   .zeromap__title {
     font-size: 1.75rem;
   }
+}
+.zeromap__title span {
+  position: relative;
+  display: inline-block;
+}
+.zeromap__title span svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: -1;
 }
 .zeromap__desc {
   font-size: 1.875rem;
@@ -2568,7 +2688,8 @@ label {
   border-top-right-radius: 12.5rem;
   width: 100%;
   height: 100%;
-  margin-top: -12.5rem;
+  z-index: 1;
+  position: relative;
   border-top-left-radius: 12.5rem;
   border-top-right-radius: 12.5rem;
 }
@@ -2592,30 +2713,38 @@ label {
 }
 .map__img-wrap {
   width: 100%;
-  height: 125rem;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-.map__img {
-  background-image: url("/assets/img/map-pc.webp");
-  width: 100%;
   height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  overflow-x: auto;
+  position: relative;
 }
 @media (max-width: 1024px) {
-  .map__img {
-    background-image: url("/assets/img/map-tablet.webp");
-    background-size: auto 100%;
+  .map__img-wrap {
+    overflow-y: hidden;
   }
 }
-@media (max-width: 480px) {
-  .map__img {
-    background-image: url("/assets/img/map-mobile.webp");
-    background-size: auto 100%;
+.map__img img {
+  width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .map__img img {
+    height: auto;
+    width: auto;
+    max-width: none;
+    object-fit: none;
+  }
+}
+.map__notice {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+@media (max-width: 1024px) {
+  .map__notice {
+    display: block;
   }
 }
 .map__title-wrap {
@@ -2671,6 +2800,10 @@ label {
 .map__desc span {
   color: #00d76b;
 }
+.map__desc button {
+  background-color: transparent;
+  border: none;
+}
 .map__grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2715,6 +2848,7 @@ label {
   color: #333;
   font-family: "Pretendard";
   color: #00d76b;
+  line-height: 1.8;
 }
 @media (max-width: 480px) {
   .map__grid-hashtag {
@@ -2751,6 +2885,7 @@ label {
   background-color: #fff;
   padding: 0.625rem;
   line-height: 1.5;
+  word-break: keep-all;
 }
 .map__report-cta {
   padding: 5rem 0;
@@ -2831,11 +2966,50 @@ label {
 }
 .report__form div {
   padding-bottom: 1.875rem;
+  display: flex;
 }
 .report fieldset {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+.report .form-row {
+  display: flex;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+@media (max-width: 480px) {
+  .report .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+.report .form-label {
+  width: 120px;
+  flex-shrink: 0;
+  font-weight: 600;
+  line-height: 40px;
+}
+@media (max-width: 480px) {
+  .report .form-label {
+    width: 100%;
+    line-height: normal;
+  }
+}
+.report .form-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.report .address-row {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+.report .address-row input {
+  flex: 1;
 }
 .report__day {
   width: auto;
@@ -2869,19 +3043,19 @@ label {
 .report__checkbox {
   width: auto;
 }
-.report__checkbox span {
+.report__checkbox label {
   font-size: 1.25rem;
   font-weight: 400;
   color: #999;
   font-family: "Pretendard";
 }
 @media (max-width: 480px) {
-  .report__checkbox span {
+  .report__checkbox label {
     font-size: 1.125rem;
   }
 }
 @media (max-width: 360px) {
-  .report__checkbox span {
+  .report__checkbox label {
     font-size: 1rem;
   }
 }

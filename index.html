@@ -69,36 +69,35 @@
             <div class="hero__img-wrap">
                 <picture class="hero__img01">
                     <!-- 360px 이하일 때 텍스트01 이미지 -->
-                    <source srcset="/assets/img/hero-img01-wrap_360.webp" media="(max-width: 360px)">
+                    <source srcset="./assets/img/hero-img01-wrap_360.webp" media="(max-width: 360px)">
 
                     <!-- 480px 이하일 때 텍스트01 이미지 -->
-                    <source srcset="/assets/img/hero-img01-wrap_480.webp" media="(max-width: 480px)">
+                    <source srcset="./assets/img/hero-img01-wrap_480.webp" media="(max-width: 480px)">
 
                     <!-- 768px 이하일 때 텍스트01 이미지 -->
-                    <source srcset="/assets/img/hero-img01-wrap_768.webp" media="(max-width: 768px)">
+                    <source srcset="./assets/img/hero-img01-wrap_768.webp" media="(max-width: 768px)">
 
                     <!-- 1024px 이하일 때 텍스트01 이미지 -->
-                    <source srcset="/assets/img/hero-img01-wrap_1024.webp" media="(max-width: 1024px)">
+                    <source srcset="./assets/img/hero-img01-wrap_1024.webp" media="(max-width: 1024px)">
 
                     <!-- 기본 데스크탑 텍스트01 이미지 -->
-                    <img src="/assets/img/hero-img01-wrap_1024.webp" alt=" 반응형 이미지">
+                    <img src="./assets/img/hero-img01-wrap_1024.webp" alt=" 반응형 이미지">
                 </picture>
                 <div class="hero__img-kid"></div>
                 <picture class="hero__img02">
                     <!-- 360px 이하일 때 텍스트02 이미지 -->
-                    <source srcset="/assets/img/hero-img02-wrap_360.webp" media="(max-width: 360px)">
+                    <source srcset="./assets/img/hero-img02-wrap_360.webp" media="(max-width: 360px)">
 
                     <!-- 480px 이하일 때 텍스트02 이미지 -->
-                    <source srcset="/assets/img/hero-img02-wrap_480.webp" media="(max-width: 480px)">
-
+                    <source srcset="./assets/img/hero-img02-wrap_480.webp" media="(max-width: 480px)">
                     <!-- 768px 이하일 때 텍스트02 이미지 -->
-                    <source srcset="/assets/img/hero-img02-wrap_768.webp" media="(max-width: 768px)">
+                    <source srcset="./assets/img/hero-img02-wrap_768.webp" media="(max-width: 768px)">
 
                     <!-- 1024px 이하일 때 텍스트02 이미지 -->
-                    <source srcset="/assets/img/hero-img02-wrap_1024.webp" media="(max-width: 1024px)">
+                    <source srcset="./assets/img/hero-img02-wrap_1024.webp" media="(max-width: 1024px)">
 
                     <!-- 기본 데스크탑 텍스트02 이미지 -->
-                    <img src="/assets/img/hero-img02-wrap_1024.webp" alt="반응형 이미지">
+                    <img src="./assets/img/hero-img02-wrap_1024.webp" alt="반응형 이미지">
                 </picture>
             </div>
         </section>
@@ -230,27 +229,42 @@
                                 <img src="./assets/img/merit-sec-cup01.webp" alt="컵 이미지">
                                 <div>
                                     <p class="line01">내가 하루 컵 1개 절약</p>
-                                    <p class="line02">→ 30g CO₂ 감축</p>
-                                    <!-- <svg class="effect__underline" viewBox="0 0 260 20"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path class="effect__underline-path" d="M5 12 Q60 5 120 12 T240 11"
-                                            stroke="#12F96B" stroke-width="4" fill="none" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg> -->
+                                    <p class="line02">→ <span>30g CO₂
+                                            <svg class="merit__underline" viewBox="0 0 100 12"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path class="merit__underline-path" d="M2 8 Q25 4 50 7 T98 6"
+                                                    stroke="#12F96B" stroke-width="3" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </span> 감축</p>
                                 </div>
                             </li>
                             <li>
                                 <img src="./assets/img/merit-sec-cup02.webp" alt="컵 이미지">
                                 <div>
                                     <p class="line01">100만 명이 하루 컵 1개 절약</p>
-                                    <p class="line02">→ 30,000kg (30톤) CO₂ 감축</p>
+                                    <p class="line02">→ <span>30,000kg
+                                            <svg class="merit__underline" viewBox="0 0 100 12"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path class="merit__underline-path" d="M2 8 Q25 4 50 7 T98 6"
+                                                    stroke="#12F96B" stroke-width="3" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </span> (30톤) CO₂ 감축</p>
                                 </div>
                             </li>
                             <li>
                                 <img src="./assets/img/merit-sec-cup03.webp" alt="차 이미지">
                                 <div>
                                     <p class="line01">자동차 150,000km 주행 감축</p>
-                                    <p class="line02">→ 서울 ↔ 부산(약 400km) 375회 왕복 효과</p>
+                                    <p class="line02">→ 서울 ↔ 부산(약 400km) <span>375회 왕복
+                                            <svg class="merit__underline" viewBox="0 0 100 12"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path class="merit__underline-path" d="M2 8 Q25 4 50 7 T98 6"
+                                                    stroke="#12F96B" stroke-width="3" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </span> 효과</p>
                                 </div>
                             </li>
                         </ul>
@@ -268,18 +282,27 @@
 
         <!-- zeromap 영역  -->
         <section class="zeromap">
-            <div class="zeromap__wrap">
-                <h2 class="zeromap__title">
-                    오늘의 발걸음을 지도에 남기고, <br>
-                    함께 푸른 지구를 만들어가요.
-                </h2>
-                <p class="zeromap__desc">
-                    ZeroMap은 정보를 제보하며, 모두가 함께 지도를 채워가는 참여형 지도입니다. <br>
-                    당신의 핀으로 커뮤니티와 지구를 더 푸르게 만들어보세요.
-                </p>
-                <a href="/map.html" class="btn btn--black">
-                    ZeroMap으로 이동하기 →
-                </a>
+            <div class="container">
+                <div class="zeromap__wrap">
+                    <h2 class="zeromap__title">
+                        오늘의 <span>발걸음
+                            <svg width="211" height="123" viewBox="0 0 211 123" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.98182 119.725C315.447 99.329 169.425 -39.3088 40.8041 15.0441C-65.7802 60.0847 69.3911 152.489 209.832 93.0272"
+                                    stroke="#12F96B" stroke-width="5" />
+                            </svg>
+                        </span>을 지도에 남기고, <br>
+                        함께 푸른 지구를 만들어가요.
+                    </h2>
+                    <p class="zeromap__desc">
+                        ZeroMap은 정보를 제보하며, 모두가 함께 지도를 채워가는 참여형 지도입니다. <br>
+                        당신의 핀으로 커뮤니티와 지구를 더 푸르게 만들어보세요.
+                    </p>
+                    <a href="/map.html" class="btn btn--black">
+                        ZeroMap으로 이동하기 →
+                    </a>
+                </div>
             </div>
         </section>
     </main>
