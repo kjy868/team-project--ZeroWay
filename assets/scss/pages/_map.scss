@@ -3,6 +3,7 @@
 .map {
     width: 100%;
     height: 100%;
+    // overflow-x: hidden;
 
     &__conts-wrap {
         padding: u.$padding-100 0 u.$padding-160;
@@ -11,35 +12,51 @@
         border-top-right-radius: u.rem(200);
         width: 100%;
         height: 100%;
-        margin-top: u.rem(-200);
-
+        z-index: 1;
+        position: relative;
         @include u.borderTopRadius();
+        // margin-top: u.rem(-200);
     }
 
     &__img-wrap {
         width: 100%;
-        height: u.rem(2000);
-        overflow-x: auto;
-        white-space: nowrap;
+        height: 100%;
+        position: relative;
+
+        @include u.responsive('tablet') {
+            // overflow-x: auto;
+            overflow-y: hidden;
+        }
     }
 
 
     &__img {
-        background-image: url("/assets/img/map-pc.webp");
-        @include u.bgImg();
-        background-size: auto 100%;
-        overflow-x: auto;
+        img {
+            width: 100%;
+            @include u.img();
 
-        @include u.responsive('tablet') {
-            background-image: url("/assets/img/map-tablet.webp");
-            background-size: auto 100%;
-        }
-
-        @include u.responsive('mobile') {
-            background-image: url("/assets/img/map-mobile.webp");
-            background-size: auto 100%;
+            @include u.responsive('tablet') {
+                height: auto;
+                width: auto;
+                max-width: none;
+                object-fit: none;
+            }
         }
     }
+
+    &__notice {
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // margin-top: u.rem(-200);
+        display: none;
+
+        @include u.responsive('tablet') {
+            display: block;
+        }
+    }
+
 
     &__title-wrap {
         margin-bottom: u.$padding-30;
@@ -55,6 +72,12 @@
 
         span {
             color: u.$primary-600;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            ;
         }
     }
 
@@ -81,6 +104,7 @@
     &__grid-hashtag {
         @include u.mapBody02;
         color: u.$primary-600;
+        line-height: 1.8;
     }
 
 
@@ -101,6 +125,7 @@
         // border: 1px solid #999;
         padding: u.rem(10);
         line-height: 1.5;
+        word-break: keep-all
     }
 
     &__report-cta {

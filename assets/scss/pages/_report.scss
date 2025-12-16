@@ -19,6 +19,7 @@
     &__form {
         div {
             padding-bottom: u.$padding-30;
+            display: flex;
         }
     }
 
@@ -28,6 +29,48 @@
         gap: u.rem(20);
 
     }
+
+    .form-row {
+        display: flex;
+        grid-template-columns: 120px 1fr; // ← 제목 폭 고정
+        gap: 16px;
+        align-items: flex-start;
+        margin-bottom: 24px;
+
+        @include u.responsive('mobile') {
+            grid-template-columns: 1fr; // ← 모바일에서는 한 줄로
+        }
+    }
+
+    .form-label {
+        width: 120px;
+        flex-shrink: 0;
+        font-weight: 600;
+        line-height: 40px; // input 높이랑 맞추기
+
+        @include u.responsive('mobile') {
+            width: 100%;
+            line-height: normal;
+        }
+    }
+
+    .form-field {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .address-row {
+        display: flex;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .address-row input {
+        flex: 1; // 우편번호 input만 늘어나게
+    }
+
 
     &__day {
         width: auto;
@@ -51,7 +94,7 @@
     &__checkbox {
         width: auto;
 
-        span {
+        label {
             @include u.reportBody02;
         }
     }

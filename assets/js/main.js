@@ -1,5 +1,5 @@
 
-// GSAP ScrollTrigger 애니메이션 ==========================
+// effect 애니메이션 ==========================
 gsap.registerPlugin(ScrollTrigger);
 
 // effect영역에서 선 그려지는 효과
@@ -121,3 +121,35 @@ document.querySelectorAll('.effect__underline-path').forEach((pathEl) => {
         }
     });
 });
+
+// 밑줄효과 ==========================
+document.querySelectorAll('.merit__list02 .line02 span').forEach((span) => {
+    ScrollTrigger.create({
+        trigger: span,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleClass: 'isActive',
+        // toggleActions: 'play none none none',
+        markers: false
+    });
+});
+
+// zeromap 밑줄 그리기 효과 ==========================
+const zeromapPath = document.querySelector('.zeromap__title svg path');
+if (zeromapPath) {
+    const len = zeromapPath.getTotalLength();
+    zeromapPath.style.strokeDasharray = len;
+    zeromapPath.style.strokeDashoffset = len;
+
+    gsap.to(zeromapPath, {
+        strokeDashoffset: 0,
+        ease: 'power1.out',
+        scrollTrigger: {
+            trigger: '.zeromap__title',
+            start: 'top 60%',
+            end: 'top 50%',
+            scrub: 1,
+            markers: false
+        }
+    });
+}

@@ -76,12 +76,116 @@
 
         <section class="report__form-wrap">
             <div class="container">
-                <h4 class="report__desc">
+                <p class="report__desc">
                     제보하신 정보는 검토 후 지도에 반영됩니다. 정확한 정보 제공에 도움을 주시면 감사하겠습니다.
-                </h4>
+                </p>
 
-                <section class="report__wrap">
-                    <form action="#" class="report__form">
+                <form class="report__form">
+
+                    <!-- 제보유형 -->
+                    <div class="form-row">
+                        <div class="form-label">제보유형</div>
+                        <div class="form-field">
+                            <select required>
+                                <option value="">선택해주세요</option>
+                                <option>신규샵 제보</option>
+                                <option>기존샵 정보 수정</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 가게이름 -->
+                    <div class="form-row">
+                        <div class="form-label">가게이름</div>
+                        <div class="form-field">
+                            <input type="text" placeholder="가게이름을 입력해주세요" required />
+                        </div>
+                    </div>
+
+                    <!-- 주소 -->
+                    <div class="form-row">
+                        <div class="form-label">주소</div>
+
+                        <div class="form-field">
+                            <div class="address-row">
+                                <input type="text" placeholder="우편번호">
+                                <button type="button" class="report__address-btn" onclick="sample6_execDaumPostcode()"
+                                    value="우편번호 찾기">
+                                    우편번호 찾기
+                                </button>
+                            </div>
+                            <div><input type="text" placeholder="주소"> </div>
+                            <div><input type="text" placeholder="상세주소"></div>
+
+                        </div>
+                    </div>
+
+                    <!-- 운영요일 -->
+                    <div class="form-row">
+                        <div class="form-label">운영요일</div>
+                        <div class="form-field day-group">
+                            <input type="radio"> &nbsp;월</input>
+                            <input type="radio"> &nbsp;화</input>
+                            <input type="radio"> &nbsp;수</input>
+                            <input type="radio"> &nbsp;목</input>
+                            <input type="radio"> &nbsp;금</input>
+                            <input type="radio"> &nbsp;토</input>
+                            <input type="radio"> &nbsp;일</input>
+                        </div>
+                    </div>
+
+                    <!-- 운영시간 -->
+                    <div class="form-row">
+                        <div class="form-label">운영시간</div>
+                        <div class="form-field">
+                            <input type="text" placeholder="예: 10:00 - 18:00" />
+                        </div>
+                    </div>
+
+                    <!-- 전화번호 -->
+                    <div class="form-row">
+                        <div class="form-label">전화번호</div>
+                        <div class="form-field">
+                            <input type="text" placeholder="- 없이 입력해주세요" />
+                        </div>
+                    </div>
+
+                    <!-- 웹사이트 -->
+                    <div class="form-row">
+                        <div class="form-label">웹사이트</div>
+                        <div class="form-field">
+                            <input type="text" placeholder="https://" />
+                        </div>
+                    </div>
+
+                    <!-- 내용 -->
+                    <div class="form-row">
+                        <div class="form-label">내&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;용</div>
+                        <div class="form-field">
+                            <textarea placeholder="제로웨이스트 활동, 제품 소개 등을 자유롭게 적어주세요"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- 동의 -->
+                    <div class="form-row">
+                        <div class="form-label"></div>
+                        <div class="form-field">
+                            <label class="checkbox">
+                                <input type="checkbox" required />
+                                제보하신 정보의 제공 활용에 동의합니다.
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 제출 버튼 -->
+                    <button type="submit" class="btn btn--black report__btn">
+                        제보하기
+                    </button>
+
+                </form>
+
+
+                <!-- <form action="#" class="report__form">
                         <fieldset>
                             <div>
                                 <label class="report__select">
@@ -100,14 +204,14 @@
                             </div>
                             <div>
                                 <label class="report__address">
-                                    <!-- <div> -->
+
                                     <span>주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         &nbsp;소</span>
                                     <div class="address-wrap">
                                         <input type="text" id="sample6_postcode" placeholder="우편번호">
                                         <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"
                                             class="report__address-btn" placeholder="우편번호">
-                                        <!-- </div> -->
+
                                     </div>
                                     <div>
                                         <input type="text" id="sample6_address" placeholder="주소">
@@ -115,7 +219,22 @@
                                     <div>
                                         <input type="text" id="sample6_detailAddress" placeholder="상세주소">
                                     </div>
-                                    <!-- <input type="text" id="sample6_extraAddress" placeholder="참고항목"> -->
+
+                                    
+                                    <label>주소</label>
+
+                                    <div class="address-wrap">
+                                        <input type="text" id="sample6_postcode" placeholder="우편번호">
+                                        <button type="button" onclick="sample6_execDaumPostcode()"
+                                            class="report__address-btn">
+                                            우편번호 찾기
+                                        </button>
+                                    </div>
+
+                                    <input type="text" id="sample6_address" placeholder="주소">
+                                    <input type="text" id="sample6_detailAddress" placeholder="상세주소">
+
+
                                 </label>
                             </div>
 
@@ -158,7 +277,7 @@
                             </div>
                             <div>
                                 <label class="report__checkbox">
-                                    <input type="checkbox" class="checkbox"><span>제보하신 정보의 제공 활용에 동의합니다.</span>
+                                    <input type="checkbox" class="checkbox"><span> &nbsp;제보하신 정보의 제공 활용에 동의합니다.</span>
                                 </label>
                             </div>
                         </fieldset>
@@ -166,9 +285,10 @@
 
                     <a class="report__btn btn btn--black">제보하기</a>
 
+                </div> -->
             </div>
-
         </section>
+
     </main>
 
 

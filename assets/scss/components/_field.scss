@@ -80,6 +80,8 @@
     background-image: url(../img/check-box__icon--error.png);
 }
 
+
+
 // Input field styles
 
 input,
@@ -89,23 +91,34 @@ select {
     color: u.$neutral-500;
     background-color: u.$neutral-300;
     border-radius: u.rem(10);
-    border: none;
+    border: 1px solid u.$neutral-300;
     @include u.reportBody02;
     margin-left: u.$padding-20;
+    width: 100%;
 
     &::placeholder {
         color: u.$neutral-500;
     }
 
     &:focus {
+        // outline: 1px solid u.$neutral-700;
         outline: none;
+        border: 1px solid u.$neutral-700;
+        color: u.$neutral-800;
+    }
+
+    &:hover {
+        border: 1px solid u.$neutral-700;
+    }
+
+    &[data-state="error"] {
+        background-color: u.$danger-50;
+        color: u.$neutral-800;
     }
 }
 
 input[type="text"],
-textarea {
-    width: 80%;
-}
+textarea {}
 
 input[type="button"] {
     background-color: u.$neutral-900;
@@ -113,7 +126,7 @@ input[type="button"] {
 }
 
 textarea {
-    // width: 100%;
+
     height: u.rem(160);
     resize: none;
 }
