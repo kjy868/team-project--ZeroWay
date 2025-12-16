@@ -10,11 +10,21 @@
     text-align: center;
     @include u.tumblerBody01($color: u.$neutral-500);
     padding: u.$padding-10;
+
+
 }
 
 .action-tabs {
     @include u.flex(flex-start, center, u.rem(20));
     padding: u.rem(60) 0 u.rem(40);
+
+    @include u.responsive(medium) {
+        padding: u.rem(40) 0;
+    }
+
+    @include u.responsive(mobile) {
+        padding: u.rem(40) 0 u.rem(20);
+    }
 
 
     &__btn {
@@ -30,24 +40,47 @@
         &.is-active {
             background-color: u.$primary-600;
             color: u.$neutral-50;
+
+        }
+
+        @include u.responsive(medium) {
+            @include u.tumblerBody01($weight: 500,
+                $size: u.$font-18,
+                $color: u.$neutral-700);
+            padding: u.rem(10) u.rem(20);
+        }
+
+        @include u.responsive(mobile) {
+            font-size: u.$font-16;
+        }
+
+        @include u.responsive(small) {
+            padding: u.rem(8) u.rem(15);
         }
     }
 
 }
 
-// .action-panel {
-//     display: none;
-// }
-
-// .action-panel.is-active {
-//     display: block;
-// }
 
 
+
+//텀블러
 .tumbler {
     @include u.flex(center, center, u.rem(40), column);
     width: 100%;
     margin-bottom: u.rem(250);
+
+    @include u.responsive(tablet) {
+        margin-bottom: u.rem(200);
+    }
+
+    @include u.responsive(mobile) {
+        margin-bottom: u.rem(180);
+    }
+
+    @include u.responsive(small) {
+        margin-bottom: u.rem(160);
+    }
 
 
     &__grid {
@@ -55,6 +88,14 @@
         @include u.flex(flex-start, stretch);
         flex-wrap: wrap;
         gap: u.rem(38) u.rem(20);
+
+        @include u.responsive(tablet) {
+            gap: u.rem(20);
+        }
+
+        @include u.responsive(small) {
+            gap: u.rem(10);
+        }
     }
 
 
@@ -64,49 +105,143 @@
         width: calc((100% - (u.rem(20) * 2)) / 3);
         box-sizing: border-box;
         border: 1px solid u.$neutral-400;
+        transition: border-color .25s ease;
         border-radius: u.rem(20);
         padding: u.rem(35);
+
+        &:hover,
+        &:focus-visible {
+            border-color: u.$primary-600;
+        }
+
+        @include u.responsive(tablet) {
+            gap: u.rem(15);
+        }
+
+
+        @include u.responsive(medium) {
+            width: calc((100% - u.rem(20)) / 2);
+        }
+
+
+        @include u.responsive(mobile) {
+            width: calc((100% - u.rem(20)) / 2);
+            flex-direction: column;
+            align-items: center;
+            gap: u.rem(5);
+            text-align: center;
+        }
+    }
+
+    &__logo {
+        width: u.rem(110);
+        height: u.rem(110);
+        flex: 0 0 auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+
+        @include u.responsive(tablet) {
+            width: u.rem(90);
+            height: u.rem(90);
+        }
     }
 
     &__info {
         @include u.flex(flex-start, flex-start, u.rem(8), column);
+
+        @include u.responsive(mobile) {
+            align-items: center;
+            gap: 0;
+        }
     }
 
 
     &__brand {
         @include u.tumblerBody01($weight: 600, $color: u.$neutral-900, $size: u.$font-24);
+
+        @include u.responsive(tablet) {
+            @include u.tumblerBody01($weight: 600, $color: u.$neutral-900, $size: u.$font-22);
+        }
+
+        @include u.responsive(medium) {
+            font-size: u.$font-22;
+        }
+
+        @include u.responsive(mobile) {
+            font-size: u.$font-18;
+        }
+
+        @include u.responsive(small) {
+            font-size: u.$font-16;
+        }
     }
 
     &__benefit {
         @include u.tumblerBody01($weight: 400, $color: u.$neutral-800, $size: u.$font-22);
+
+        @include u.responsive(tablet) {
+            @include u.tumblerBody01($weight: 400, $color: u.$neutral-800, $size: u.$font-20);
+        }
+
+        @include u.responsive(medium) {
+            font-size: u.$font-20;
+        }
+
+        @include u.responsive(mobile) {
+            font-size: u.$font-16;
+        }
+
+        @include u.responsive(small) {
+            font-size: u.$font-14;
+        }
     }
 }
 
 
+
+//정책
 .campaign {
     @include u.flex(center, center, column);
     width: 100%;
     margin-bottom: u.rem(100);
 
+    @include u.responsive(mobile) {
+        margin-bottom: u.rem(80);
+    }
+
     &__grid {
         width: 100%;
-        @include u.flex(flex, center);
+        @include u.flex(left, center);
         flex-wrap: wrap;
         gap: u.rem(80) u.rem(20);
+
+        @include u.responsive(medium) {
+            gap: u.rem(40) u.rem(20);
+        }
+
+        @include u.responsive(mobile) {
+            gap: u.rem(30) u.rem(20);
+        }
     }
 
     &__card {
         width: calc((100% - (u.rem(20) * 3)) / 4);
 
-        @include u.responsive(medium) {
+        @include u.responsive(tablet) {
             width: calc((100% - (u.rem(20) * 2)) / 3);
         }
 
-        @include u.responsive(mobile) {
+        @include u.responsive(medium) {
             width: calc((100% - u.rem(20)) / 2);
         }
 
-        @include u.responsive(small) {
+        @include u.responsive(mobile) {
             width: 100%;
         }
     }
@@ -115,6 +250,10 @@
         display: block;
         height: 100%;
         @include u.flex(flex-start, flex-start, u.rem(14), column);
+
+        @include u.responsive(tablet) {
+            gap: u.rem(10);
+        }
     }
 
     &__img {
@@ -127,6 +266,10 @@
             display: block;
             transform-origin: center center;
             transition: transform .3s ease-out;
+        }
+
+        @include u.responsive(mobile) {
+            height: u.rem(290);
         }
     }
 
@@ -141,17 +284,45 @@
         font-weight: u.$font-medium;
         color: u.$neutral-900;
         margin-bottom: u.rem(10);
+
+        @include u.responsive(tablet) {
+            font-size: u.$font-20;
+        }
+
+        @include u.responsive(mobile) {
+            margin-bottom: u.rem(4);
+        }
+
+        @include u.responsive(small) {
+            font-size: u.$font-18;
+        }
     }
 
     &__date {
         font-size: u.$font-16;
         font-weight: u.$font-regular;
         color: u.$neutral-500;
+
+        @include u.responsive(small) {
+            font-size: u.$font-14;
+        }
     }
 
     &__pagination {
         padding-bottom: u.rem(250);
         @include u.flex(center, center, u.rem(20));
+
+        @include u.responsive(tablet) {
+            padding-bottom: u.rem(200);
+        }
+
+        @include u.responsive(medium) {
+            padding-bottom: u.rem(180);
+        }
+
+        @include u.responsive(small) {
+            padding-bottom: u.rem(160);
+        }
     }
 
     &__page-btn {
@@ -189,6 +360,7 @@
 }
 
 
+//원데이
 .oneday {
     @include u.flex(center, center);
     flex-direction: column;
@@ -202,16 +374,25 @@
         gap: u.rem(60) u.rem(20);
         margin-bottom: u.rem(100);
 
+        @include u.responsive(medium) {
+            gap: u.rem(40) u.rem(16);
+        }
+
+        @include u.responsive(mobile) {
+            gap: u.rem(50);
+            margin-bottom: u.rem(80);
+        }
+
     }
 
     &__card {
         width: calc((100% - (u.rem(20) * 2)) / 3);
 
-        @include u.responsive(mobile) {
+        @include u.responsive(medium) {
             width: calc((100% - u.rem(20)) / 2);
         }
 
-        @include u.responsive(small) {
+        @include u.responsive(mobile) {
             width: 100%;
         }
     }
@@ -234,6 +415,11 @@
             transition: transform .25s ease;
         }
 
+        @include u.responsive(mobile) {
+            height: u.rem(290);
+        }
+
+
         .oneday__wrap:hover & img {
             transform: scale(1.1);
         }
@@ -243,8 +429,34 @@
         font-size: u.$font-24;
         font-weight: u.$font-medium;
         color: u.$neutral-900;
-        margin-top: u.rem(14);
         margin-bottom: u.rem(10);
+
+
+        @include u.responsive(tablet) {
+            font-size: u.$font-20;
+        }
+
+        @include u.responsive(mobile) {
+            margin-bottom: u.rem(4);
+        }
+
+        @include u.responsive(small) {
+            font-size: u.$font-18;
+        }
+    }
+
+
+    &__host {
+        font-size: u.$font-20;
+        color: u.$neutral-500;
+
+        @include u.responsive(tablet) {
+            font-size: u.$font-18;
+        }
+
+        @include u.responsive(small) {
+            font-size: u.$font-14;
+        }
     }
 
 }

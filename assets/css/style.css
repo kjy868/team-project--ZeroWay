@@ -2385,6 +2385,16 @@ label {
   flex-direction: row;
   padding: 3.75rem 0 2.5rem;
 }
+@media (max-width: 768px) {
+  .action-tabs {
+    padding: 2.5rem 0;
+  }
+}
+@media (max-width: 480px) {
+  .action-tabs {
+    padding: 2.5rem 0 1.25rem;
+  }
+}
 .action-tabs__btn {
   display: inline-flex;
   justify-content: center;
@@ -2415,6 +2425,35 @@ label {
   background-color: #00d76b;
   color: #fff;
 }
+@media (max-width: 768px) {
+  .action-tabs__btn {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #555;
+    font-family: "Pretendard";
+    padding: 0.625rem 1.25rem;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .action-tabs__btn {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 768px) and (max-width: 480px) {
+  .action-tabs__btn {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .action-tabs__btn {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 360px) {
+  .action-tabs__btn {
+    padding: 0.5rem 0.9375rem;
+  }
+}
 
 .tumbler {
   display: flex;
@@ -2425,6 +2464,21 @@ label {
   width: 100%;
   margin-bottom: 15.625rem;
 }
+@media (max-width: 1024px) {
+  .tumbler {
+    margin-bottom: 12.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .tumbler {
+    margin-bottom: 11.25rem;
+  }
+}
+@media (max-width: 360px) {
+  .tumbler {
+    margin-bottom: 10rem;
+  }
+}
 .tumbler__grid {
   width: 100%;
   display: flex;
@@ -2433,6 +2487,16 @@ label {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 2.375rem 1.25rem;
+}
+@media (max-width: 1024px) {
+  .tumbler__grid {
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 360px) {
+  .tumbler__grid {
+    gap: 0.625rem;
+  }
 }
 .tumbler__card {
   display: flex;
@@ -2443,8 +2507,48 @@ label {
   width: calc((100% - 1.25rem * 2) / 3);
   box-sizing: border-box;
   border: 1px solid #ccc;
+  transition: border-color 0.25s ease;
   border-radius: 1.25rem;
   padding: 2.1875rem;
+}
+.tumbler__card:hover, .tumbler__card:focus-visible {
+  border-color: #00d76b;
+}
+@media (max-width: 1024px) {
+  .tumbler__card {
+    gap: 0.9375rem;
+  }
+}
+@media (max-width: 768px) {
+  .tumbler__card {
+    width: calc((100% - 1.25rem) / 2);
+  }
+}
+@media (max-width: 480px) {
+  .tumbler__card {
+    width: calc((100% - 1.25rem) / 2);
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3125rem;
+    text-align: center;
+  }
+}
+.tumbler__logo {
+  width: 6.875rem;
+  height: 6.875rem;
+  flex: 0 0 auto;
+}
+.tumbler__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+@media (max-width: 1024px) {
+  .tumbler__logo {
+    width: 5.625rem;
+    height: 5.625rem;
+  }
 }
 .tumbler__info {
   display: flex;
@@ -2452,6 +2556,12 @@ label {
   align-items: flex-start;
   gap: 0.5rem;
   flex-direction: column;
+}
+@media (max-width: 480px) {
+  .tumbler__info {
+    align-items: center;
+    gap: 0;
+  }
 }
 .tumbler__brand {
   font-size: 1.5rem;
@@ -2467,6 +2577,39 @@ label {
 @media (max-width: 480px) {
   .tumbler__brand {
     font-size: 0.875rem;
+  }
+}
+@media (max-width: 1024px) {
+  .tumbler__brand {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #121212;
+    font-family: "Pretendard";
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  .tumbler__brand {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 1024px) and (max-width: 480px) {
+  .tumbler__brand {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 768px) {
+  .tumbler__brand {
+    font-size: 1.375rem;
+  }
+}
+@media (max-width: 480px) {
+  .tumbler__brand {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 360px) {
+  .tumbler__brand {
+    font-size: 1rem;
   }
 }
 .tumbler__benefit {
@@ -2485,6 +2628,39 @@ label {
     font-size: 0.875rem;
   }
 }
+@media (max-width: 1024px) {
+  .tumbler__benefit {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #333;
+    font-family: "Pretendard";
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  .tumbler__benefit {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 1024px) and (max-width: 480px) {
+  .tumbler__benefit {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 768px) {
+  .tumbler__benefit {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .tumbler__benefit {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 360px) {
+  .tumbler__benefit {
+    font-size: 0.875rem;
+  }
+}
 
 .campaign {
   display: flex;
@@ -2495,29 +2671,44 @@ label {
   width: 100%;
   margin-bottom: 6.25rem;
 }
+@media (max-width: 480px) {
+  .campaign {
+    margin-bottom: 5rem;
+  }
+}
 .campaign__grid {
   width: 100%;
   display: flex;
-  justify-content: flex;
+  justify-content: left;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 5rem 1.25rem;
 }
+@media (max-width: 768px) {
+  .campaign__grid {
+    gap: 2.5rem 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .campaign__grid {
+    gap: 1.875rem 1.25rem;
+  }
+}
 .campaign__card {
   width: calc((100% - 1.25rem * 3) / 4);
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .campaign__card {
     width: calc((100% - 1.25rem * 2) / 3);
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .campaign__card {
     width: calc((100% - 1.25rem) / 2);
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .campaign__card {
     width: 100%;
   }
@@ -2530,6 +2721,11 @@ label {
   align-items: flex-start;
   gap: 0.875rem;
   flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .campaign__wrap {
+    gap: 0.625rem;
+  }
 }
 .campaign__img {
   width: 100%;
@@ -2544,6 +2740,11 @@ label {
   transform-origin: center center;
   transition: transform 0.3s ease-out;
 }
+@media (max-width: 480px) {
+  .campaign__img {
+    height: 18.125rem;
+  }
+}
 .campaign__wrap:hover .campaign__img img, .campaign__wrap:focus-visible .campaign__img img {
   transform: scale(1.1);
 }
@@ -2553,10 +2754,30 @@ label {
   color: #121212;
   margin-bottom: 0.625rem;
 }
+@media (max-width: 1024px) {
+  .campaign__title {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .campaign__title {
+    margin-bottom: 0.25rem;
+  }
+}
+@media (max-width: 360px) {
+  .campaign__title {
+    font-size: 1.125rem;
+  }
+}
 .campaign__date {
   font-size: 1rem;
   font-weight: 400;
   color: #999;
+}
+@media (max-width: 360px) {
+  .campaign__date {
+    font-size: 0.875rem;
+  }
 }
 .campaign__pagination {
   padding-bottom: 15.625rem;
@@ -2565,6 +2786,21 @@ label {
   align-items: center;
   gap: 1.25rem;
   flex-direction: row;
+}
+@media (max-width: 1024px) {
+  .campaign__pagination {
+    padding-bottom: 12.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .campaign__pagination {
+    padding-bottom: 11.25rem;
+  }
+}
+@media (max-width: 360px) {
+  .campaign__pagination {
+    padding-bottom: 10rem;
+  }
 }
 .campaign__page-btn {
   height: 1.5625rem;
@@ -2635,15 +2871,26 @@ label {
   gap: 3.75rem 1.25rem;
   margin-bottom: 6.25rem;
 }
+@media (max-width: 768px) {
+  .oneday__grid {
+    gap: 2.5rem 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .oneday__grid {
+    gap: 3.125rem;
+    margin-bottom: 5rem;
+  }
+}
 .oneday__card {
   width: calc((100% - 1.25rem * 2) / 3);
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .oneday__card {
     width: calc((100% - 1.25rem) / 2);
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .oneday__card {
     width: 100%;
   }
@@ -2669,6 +2916,11 @@ label {
   display: block;
   transition: transform 0.25s ease;
 }
+@media (max-width: 480px) {
+  .oneday__img {
+    height: 18.125rem;
+  }
+}
 .oneday__wrap:hover .oneday__img img {
   transform: scale(1.1);
 }
@@ -2676,8 +2928,36 @@ label {
   font-size: 1.5rem;
   font-weight: 500;
   color: #121212;
-  margin-top: 0.875rem;
   margin-bottom: 0.625rem;
+}
+@media (max-width: 1024px) {
+  .oneday__title {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .oneday__title {
+    margin-bottom: 0.25rem;
+  }
+}
+@media (max-width: 360px) {
+  .oneday__title {
+    font-size: 1.125rem;
+  }
+}
+.oneday__host {
+  font-size: 1.25rem;
+  color: #999;
+}
+@media (max-width: 1024px) {
+  .oneday__host {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 360px) {
+  .oneday__host {
+    font-size: 0.875rem;
+  }
 }
 
 .map {
