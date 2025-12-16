@@ -11,7 +11,7 @@
         background: url("../img/hero-sec-bg.webp");
         @include u.bgImg();
         position: relative;
-        height: 100vh;
+        // height: 100vh;
         width: 100%;
         top: 0;
         left: 0;
@@ -561,7 +561,7 @@
 
 // zeromap section 
 .zeromap {
-    background-image: url("../img/zeromap-sec-bg.webp");
+    background-image: url(../img/zeromap-bg.webp);
     @include u.bgImg();
 
     &__wrap {
