@@ -55,3 +55,21 @@ function sample6_execDaumPostcode() {
         }
     }).open();
 }
+
+function changeContent(selectedValue) {
+    // 모든 콘텐츠 박스를 가져옵니다.
+    const contentBoxes = document.querySelectorAll('.report__conts');
+
+    // 모든 박스를 숨깁니다.
+    contentBoxes.forEach(box => {
+        box.style.display = 'none';
+    });
+
+    // 선택된 값에 해당하는 콘텐츠 박스만 보이게 합니다.
+    if (selectedValue) {
+        const selectedBox = document.getElementById(selectedValue);
+        if (selectedBox) {
+            selectedBox.style.display = 'block';
+        }
+    }
+}

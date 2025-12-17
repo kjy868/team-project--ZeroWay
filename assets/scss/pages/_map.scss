@@ -15,17 +15,34 @@
         z-index: 1;
         position: relative;
         @include u.borderTopRadius();
-        // margin-top: u.rem(-200);
+        margin-top: u.rem(-200);
+
+        @include u.responsive('tablet') {
+            margin-top: 0;
+        }
     }
 
     &__img-wrap {
-        width: 100%;
-        height: 100%;
         position: relative;
 
         @include u.responsive('tablet') {
             // overflow-x: auto;
             overflow-y: hidden;
+        }
+
+        .pin-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+
+        .pin1 {
+            position: absolute;
+            top: 50px;
+            left: 100px;
         }
     }
 
@@ -79,6 +96,10 @@
             background-color: transparent;
             border: none;
             ;
+        }
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 

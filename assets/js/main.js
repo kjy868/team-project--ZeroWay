@@ -1,8 +1,8 @@
 
-// effect 애니메이션 ==========================
+// merit 애니메이션 ==========================
 gsap.registerPlugin(ScrollTrigger);
 
-// effect영역에서 선 그려지는 효과
+// merit영역에서 선 그려지는 효과
 document.addEventListener('DOMContentLoaded', () => {
     const linePath = document.querySelector("#line-path");
     if (linePath) {
@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
             ease: "none",
             scrollTrigger: {
                 trigger: ".merit",
-                start: "top 90%",
-                end: "bottom 250%",
+                start: "top 120%",
+                end: "bottom 120%",
                 scrub: 0.5,
                 markers: false
             }
@@ -58,7 +58,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// effect__merit 내부 path (세로 선)
+
+// 말풍선 핀 애니메이션
+const images = document.querySelectorAll('.merit__img01, .merit__img02, .merit__img03, .merit__img04, .merit__img05');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            //observer.unobserve(entry.target); // 한 번만 재생
+        }
+    });
+}, { threshold: 0.1 }); // 50% 보이면 트리거
+
+images.forEach(img => observer.observe(img));
+
+gsap.from('.merit__img01, .merit__img02, .merit__img03, .merit__img04, .merit__img05', {
+    y: -60,
+    scale: 0.3,
+    opacity: 0,
+    duration: 0.6,
+    ease: 'back.out(1.7)', // 핀 꽂히는 튕김 느낌
+    stagger: 0.15, // 순차 등장
+    scrollTrigger: {
+        trigger: '.merit__img',
+        start: 'top 50%', // 뷰포트 80% 지점에서 시작
+        end: 'top 50%',
+        scrub: 0.5,
+    }
+});
+
+
+// merit list02 path (세로 선)
 const meritPath = document.querySelector('.merit__group svg path');
 if (meritPath) {
     const len2 = meritPath.getTotalLength();
@@ -71,7 +101,7 @@ if (meritPath) {
         scrollTrigger: {
             trigger: '.merit__list02-wrap',
             start: 'top 30%',
-            end: 'bottom 90%',
+            end: 'bottom bottom',
             scrub: 1
         }
     });
@@ -122,14 +152,14 @@ document.querySelectorAll('.effect__underline-path').forEach((pathEl) => {
     });
 });
 
-// 밑줄효과 ==========================
+// merit list02 밑줄효과 ==========================
 document.querySelectorAll('.merit__list02 .line02 span').forEach((span) => {
     ScrollTrigger.create({
         trigger: span,
-        start: 'top 80%',
-        end: 'bottom 20%',
+        start: 'top 60%',
+        end: 'bottom top',
         toggleClass: 'isActive',
-        // toggleActions: 'play none none none',
+        toggleActions: 'play none none none',
         markers: false
     });
 });
