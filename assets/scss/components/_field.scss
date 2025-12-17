@@ -82,7 +82,7 @@
 
 
 
-// Input field styles
+// Input field 스타일
 
 input,
 textarea,
@@ -94,8 +94,7 @@ select {
     border: 1px solid u.$neutral-300;
     @include u.reportBody02;
     // margin-left: u.$padding-20;
-    width: 100%;
-    box-sizing: border-box;
+    // width: 100%;
 
     &::placeholder {
         color: u.$neutral-500;
@@ -112,14 +111,16 @@ select {
         border: 1px solid u.$neutral-700;
     }
 
+    &:active {
+        color: u.$neutral-800;
+    }
+
     &[data-state="error"] {
         background-color: u.$danger-50;
         color: u.$neutral-800;
     }
-}
 
-// input[type="text"],
-// textarea {}
+}
 
 input[type="button"] {
     background-color: u.$neutral-900;
@@ -127,16 +128,27 @@ input[type="button"] {
 }
 
 textarea {
-    height: u.rem(160);
+    height: u.rem(340);
     resize: none;
 }
 
-select {
-    // width: u.rem(430);
+label {
+    @include u.reportBody01;
+    width: auto;
 }
 
-label {
-    width: auto;
-    // width: 80%;
-    @include u.reportBody01;
+.form-label::before {
+    content: '';
+    display: inline-block;
+    width: u.rem(12); // 별표 또는 공백 차지할 너비
+    margin-right: u.rem(10);
+}
+
+// 필수인 경우만 별표 표시
+.form-row:has([required]) .form-label::before {
+    content: '*';
+    color: u.$primary-600;
+    display: inline-block;
+    width: u.rem(12);
+    margin-right: u.rem(10);
 }

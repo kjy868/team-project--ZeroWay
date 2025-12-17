@@ -39,11 +39,17 @@
 
     // hero 'seeking' 텍스트 이미지
     &__img01 {
+        width: 100%;
+        max-width: u.rem(550);
         position: absolute;
         left: 50%;
         top: 28%;
         transform: translate(-50%, -50%);
         z-index: 0;
+
+        img {
+            width: 100%;
+        }
 
         @include u.responsive('medium') {
             top: 40%;
@@ -53,11 +59,17 @@
 
     // hero 'zeroway' 텍스트 이미지
     &__img02 {
+        width: 100%;
+        max-width: u.rem(825);
         position: absolute;
         left: 50%;
         top: 80%;
         transform: translate(-50%, -50%);
         z-index: 2;
+
+        img {
+            width: 100%;
+        }
 
         @include u.responsive('medium') {
             top: 68%;
@@ -75,6 +87,10 @@
         width: 100%;
         height: 100%;
         z-index: 1;
+
+        img {
+            width: 100%;
+        }
 
         @include u.responsive('tablet') {
             background: url("../img/hero-img-kid_1024.webp");
@@ -204,6 +220,30 @@
         height: u.rem(3100);
         z-index: 2;
 
+        @media (max-width:1200px) {
+            height: u.rem(3080);
+        }
+
+        @media (max-width:1170px) {
+            height: u.rem(3000);
+        }
+
+        @media (max-width:1145px) {
+            height: u.rem(2930);
+        }
+
+        @media (max-width:1120px) {
+            height: u.rem(2850);
+        }
+
+        @media (max-width:1090px) {
+            height: u.rem(2770);
+        }
+
+        @media (max-width:1060px) {
+            height: u.rem(2680);
+        }
+
         @include u.responsive('tablet') {
             height: u.rem(2650);
         }
@@ -215,47 +255,106 @@
 
     &__img01 {
         position: absolute;
-        top: u.rem(160);
+        top: u.rem(170);
         left: u.rem(274);
-        width: u.rem(282);
+        // width: u.rem(282);
+
+        img {
+            width: clamp(200px, 50vw, 280px);
+        }
+
+        @media(max-width:1200px) {
+            top: u.rem(120);
+            left: u.rem(220);
+        }
+
+        @media(max-width:1100px) {
+            top: u.rem(60);
+            left: u.rem(180);
+        }
+
+
+        @include u.responsive('tablet') {
+            left: u.rem(250);
+            top: u.rem(170);
+        }
+
 
         @include u.responsive('medium') {
-            left: u.rem(200);
+            left: u.rem(170);
+            top: u.rem(180);
+        }
+
+        @media (max-width:665px) {
+            left: u.rem(110);
         }
 
         @include u.responsive('mobile') {
             left: u.rem(100);
-            top: u.rem(10);
+            top: u.rem(5);
         }
     }
 
     &__img02 {
         position: absolute;
-        top: u.rem(600);
+        top: u.rem(620);
         right: u.rem(102);
-        width: u.rem(336);
+
+        img {
+            width: clamp(200px, 50vw, 330px);
+        }
+
+        @media(max-width:1200px) {
+            top: u.rem(570);
+            right: u.rem(120);
+        }
+
+        @media(max-width:1100px) {
+            top: u.rem(450);
+            right: u.rem(160);
+        }
 
         @include u.responsive('tablet') {
             left: u.rem(380);
             top: u.rem(650);
         }
 
+
         @include u.responsive('medium') {
             left: u.rem(310);
             top: u.rem(670);
         }
 
+        @media (max-width:665px) {
+            left: u.rem(210);
+            top: u.rem(680);
+        }
+
         @include u.responsive('mobile') {
             left: u.rem(120);
-            top: u.rem(420);
+            top: u.rem(430);
         }
     }
 
     &__img03 {
         position: absolute;
-        top: u.rem(1130);
+        top: u.rem(1160);
         right: u.rem(204);
-        width: u.rem(294);
+        // width: u.rem(294);
+
+        img {
+            width: clamp(200px, 50vw, 290px);
+        }
+
+        @media(max-width:1200px) {
+            top: u.rem(1100);
+            right: u.rem(220);
+        }
+
+        @media(max-width:1100px) {
+            top: u.rem(990);
+            right: u.rem(260);
+        }
 
         @include u.responsive('tablet') {
             left: u.rem(260);
@@ -267,17 +366,35 @@
             top: u.rem(1110);
         }
 
+        @media(max-width:665px) {
+            left: u.rem(90);
+        }
+
         @include u.responsive('mobile') {
             left: u.rem(70);
-            top: u.rem(820);
+            top: u.rem(830);
         }
     }
 
     &__img04 {
         position: absolute;
-        top: u.rem(1720);
+        top: u.rem(1760);
         left: u.rem(288);
-        width: u.rem(273);
+        // width: u.rem(273);
+
+        img {
+            width: clamp(200px, 50vw, 270px);
+        }
+
+        @media(max-width:1200px) {
+            top: u.rem(1700);
+            left: u.rem(320);
+        }
+
+        @media (max-width:1100px) {
+            top: u.rem(1610);
+            left: u.rem(350);
+        }
 
         @include u.responsive('tablet') {
             left: u.rem(350);
@@ -289,17 +406,36 @@
             top: u.rem(1610);
         }
 
+        @media(max-width:665px) {
+            left: u.rem(170);
+            top: u.rem(1620);
+        }
+
         @include u.responsive('mobile') {
-            left: u.rem(110);
-            top: u.rem(1240);
+            left: u.rem(120);
+            top: u.rem(1230);
         }
     }
 
     &__img05 {
         position: absolute;
-        top: u.rem(2440);
+        top: u.rem(2500);
         left: u.rem(223);
-        width: u.rem(304);
+        // width: u.rem(304);
+
+        img {
+            width: clamp(200px, 50vw, 300px);
+        }
+
+        @media (max-width:1200px) {
+            top: u.rem(2400);
+            left: u.rem(280);
+        }
+
+        @media (max-width:1100px) {
+            top: u.rem(2250);
+            left: u.rem(280);
+        }
 
         @include u.responsive('tablet') {
             left: u.rem(280);
@@ -311,11 +447,70 @@
             top: u.rem(2070);
         }
 
+        @media(max-width:665px) {
+            left: u.rem(110);
+            top: u.rem(2080);
+        }
+
         @include u.responsive('mobile') {
             left: u.rem(80);
-            top: u.rem(1650);
+            top: u.rem(1660);
         }
     }
+
+
+    // CSS 애니메이션 정의
+    @keyframes pin-drop {
+        0% {
+            opacity: 0;
+            transform: translateY(-300px);
+        }
+
+        60% {
+            opacity: 1;
+            transform: translateY(30px);
+        }
+
+        80% {
+            transform: translateY(-10px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    // 초기 상태(숨김)
+    .merit__img01,
+    .merit__img02,
+    .merit__img03,
+    .merit__img04,
+    .merit__img05 {
+        opacity: 0;
+    }
+
+    // 등장 시 애니메이션 적용
+    .merit__img01.is-visible {
+        animation: pin-drop 0.6s ease-out 0s forwards;
+    }
+
+    .merit__img02.is-visible {
+        animation: pin-drop 0.6s ease-out 0.2s forwards;
+    }
+
+    .merit__img03.is-visible {
+        animation: pin-drop 0.6s ease-out 0.4s forwards;
+    }
+
+    .merit__img04.is-visible {
+        animation: pin-drop 0.6s ease-out 0.6s forwards;
+    }
+
+    .merit__img05.is-visible {
+        animation: pin-drop 0.6s ease-out 0.8s forwards;
+    }
+
 
     &__subtitle {
         @include u.subtitle03;
