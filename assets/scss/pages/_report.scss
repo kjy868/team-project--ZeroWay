@@ -18,7 +18,7 @@
 
     &__form {
         div {
-            display: flex;
+            @include u.flex(flex-start, center);
             @include u.defineFont(u.rem(24), 600);
         }
 
@@ -28,26 +28,24 @@
         }
     }
 
-    fieldset {
-        display: flex;
-        flex-direction: column;
-        gap: u.rem(20);
-
+    &__form {
+        width: 100%;
     }
 
     .form-row {
         display: flex;
-        gap: u.rem(16);
         align-items: flex-start;
-        flex-direction: column;
-        // margin-bottom: 24px;
+        gap: u.rem(16);
+        width: 100%;
+
+        @include u.responsive('mobile') {
+            flex-direction: column;
+        }
     }
 
     .form-label {
-        width: u.rem(120);
-        flex-shrink: 0;
-        font-weight: 600;
-        line-height: 40px; // input 높이랑 맞추기
+        flex: 0 0 20%;
+        min-width: 0;
         @include u.reportBody01;
 
         @include u.responsive('mobile') {
@@ -57,6 +55,7 @@
     }
 
     .form-field {
+        // @include u.flex(stretch, center, u.rem(10), column);
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -64,22 +63,39 @@
 
 
         .day-group {
-            input {
+            display: flex;
+            gap: u.rem(10);
+            flex-wrap: wrap;
+            align-items: center;
 
+            input {
+                width: auto;
                 @include u.defineFont(u.rem(16));
             }
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            box-sizing: border-box;
         }
     }
 
     .address-field {
-        display: flex;
-        flex-direction: column;
+        // flex-direction: column;
+        gap: u.rem(10);
     }
 
     &__address-btn {
         background-color: u.$neutral-900;
         color: u.$neutral-50;
         display: inline-block;
+        padding: u.rem(20);
+        margin-left: u.rem(20);
+        border-radius: u.rem(10);
+        border: none;
+        @include u.reportBody02;
 
         // =============================
         background-color: u.$neutral-900;
@@ -90,15 +106,16 @@
     }
 
     .address-row {
+        // @include u.flex(flex-start, center, u.rem(8));
         display: flex;
-        flex-direction: row;
         gap: u.rem(8);
         width: 100%;
+        align-items: center;
     }
 
-    .address-row input {
-        flex: 1;
-    }
+    // .address-row input {
+    //     flex: 1;
+    // }
 
 
     .checkbox {
