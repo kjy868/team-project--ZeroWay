@@ -105,7 +105,7 @@
         width: calc((100% - (u.rem(20) * 2)) / 3);
         box-sizing: border-box;
         border: 1px solid u.$neutral-400;
-        transition: border-color .25s ease;
+        transition: border-color .3s ease;
         border-radius: u.rem(20);
         padding: u.rem(35);
 
@@ -412,7 +412,7 @@
         img {
             @include u.img(100%, 100%);
             display: block;
-            transition: transform .25s ease;
+            transition: transform .3s ease;
         }
 
         @include u.responsive(mobile) {
