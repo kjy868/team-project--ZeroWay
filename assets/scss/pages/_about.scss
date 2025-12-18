@@ -1,9 +1,42 @@
 @use '../utils' as u;
 
+.about-wrap {
+    @include u.borderTopRadius();
+    margin-top: u.rem(-200);
+    z-index: 1;
+    position: relative;
+    background-color: u.$neutral-50;
+    padding-top: u.$padding-100;
+    padding-bottom: u.$padding-250;
+
+    @include u.responsive(tablet) {
+        margin-top: u.rem(-100);
+    }
+
+    @include u.responsive(medium) {
+        margin-top: u.rem(-50);
+    }
+
+    @include u.responsive(mobile) {
+        margin-top: u.rem(-30);
+    }
+
+    .container {
+        @include u.flex(center, center, u.rem(200), column);
+
+        @include u.responsive(tablet) {
+            gap: u.rem(150);
+        }
+
+        @include u.responsive(medium) {
+            gap: u.rem(100);
+        }
+    }
+}
+
 .about__desc {
     @include u.mainBody04();
     text-align: center;
-    padding: u.$padding-100 0;
     line-height: 1.5;
 }
 
@@ -11,7 +44,6 @@
 .r5 {
     @include u.flex(center, center, u.rem(40), column);
     width: 100%;
-    padding: u.$padding-100 0;
 
 
     &__title {
@@ -176,7 +208,6 @@
 .effects {
     @include u.flex(center, center, u.rem(40), column);
     width: 100%;
-    padding: u.$padding-100 0;
 
     &__title {
         @include u.subtitle01();
@@ -296,7 +327,6 @@
 .benefit {
     @include u.flex(center, center, u.rem(40), column);
     width: 100%;
-    padding: u.$padding-100 0;
     word-break: keep-all;
 
     &__subtitle {
@@ -421,7 +451,6 @@
 .actions {
     @include u.flex(center, center, u.rem(40), column);
     width: 100%;
-    padding: u.$padding-100 0;
 
     &__title {
         @include u.subtitle01();
@@ -540,4 +569,10 @@
             font-size: u.rem(16);
         }
     }
+}
+
+/* fade-up effect */
+.fade-up-section {
+    opacity: 0;
+    transform: translateY(60px);
 }
