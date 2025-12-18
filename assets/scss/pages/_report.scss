@@ -12,7 +12,8 @@
         z-index: 1;
         position: relative;
         background-color: u.$neutral-50;
-        padding-top: u.$padding-100;
+        margin-top: u.$padding-100 ;
+
         padding-bottom: u.$padding-250;
     }
 
@@ -23,11 +24,9 @@
     }
 
 
-    &__form {
-        @include u.reportBody01;
-    }
 
     &__form {
+        @include u.reportBody01;
         width: 100%;
     }
 

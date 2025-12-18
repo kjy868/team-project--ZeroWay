@@ -23,7 +23,7 @@
     // black button 
     &--black {
         background-color: u.$neutral-900;
-        border: u.rem(3) solid u.$neutral-900;
+        border: u.rem(2) solid u.$neutral-900;
         transition:
             background-color 0.2s ease,
             border-color 0.2s ease,
@@ -43,10 +43,20 @@
 
         &:active {
             background-color: u.$primary-700;
+            margin: 0;
+            transform: 0;
+            box-shadow: none;
         }
 
         &:disabled {
             background-color: u.$neutral-500;
+            border: u.rem(2) solid u.$neutral-500;
+            margin: 0;
+            transform: none;
+            padding: u.rem(20) u.rem(60);
+            box-shadow: none;
+            transition: none;
+            cursor: auto;
         }
     }
 
@@ -72,6 +82,8 @@
             background-color: u.$neutral-900;
             color: u.$neutral-50;
             transition: 0.3s all ease-in-out;
+            margin: u.rem(-5) u.rem(-5);
+            transform: translateY(-2px);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             padding: u.rem(25) u.rem(65);
         }

@@ -24,9 +24,8 @@
     }
 
     &__img-wrap {
-        margin: 0 auto;
-        width: u.rem(1900);
-        height: 100%;
+        width: u.rem(1880);
+        // height: 100%;
         // width: fit-content;
         // height: fit-content;
         position: relative;
@@ -35,9 +34,10 @@
         overflow-y: hidden;
         // ======================
 
+
         @include u.responsive('tablet') {
-            overflow-x: auto;
-            overflow-y: hidden;
+            // overflow-x: auto;
+            // overflow-y: hidden;
         }
 
         .pin-img {
@@ -54,7 +54,7 @@
 
         .pin1 {
             position: absolute;
-            top: 10vh;
+            top: u.rem(250);
             right: u.rem(580);
         }
 
@@ -85,16 +85,37 @@
 
         .pin6 {
             position: absolute;
+            top: u.rem(1070);
+            right: u.rem(550);
+        }
+
+        .pin7 {
+            position: absolute;
             top: u.rem(1100);
+            right: u.rem(630);
+        }
+
+        .pin8 {
+            position: absolute;
+            top: u.rem(1270);
+            right: u.rem(650);
+        }
+
+        .pin9 {
+            position: absolute;
+            top: u.rem(1360);
+            right: u.rem(700);
+        }
+
+        .pin10 {
+            position: absolute;
+            top: u.rem(1400);
             right: u.rem(550);
         }
     }
 
-
     &__img {
-
         img {
-
             height: 100%;
             // width: 100%;
             @include u.img();
@@ -108,6 +129,290 @@
             @include u.responsive('tablet') {}
         }
     }
+
+    .pin-bubble {
+        position: relative;
+        background: u.$neutral-900;
+        color: u.$neutral-50;
+        border-radius: u.rem(20);
+        // width: u.rem(250);
+        // height: u.rem(130);
+        padding: u.rem(20) u.rem(30);
+        opacity: 0;
+        transform: translateY(-6px);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 20;
+
+        .pin-img img {
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .pin-img img.is-selected {
+            transform: scale(1.2);
+        }
+
+
+        &.active {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .bubble-title {
+            @include u.flex(space-between, center, u.rem(8));
+            margin-bottom: u.rem(8);
+
+            p:first-child {
+                font-size: u.rem(18);
+                font-weight: 700;
+            }
+
+            p:nth-child(2) {
+                font-size: u.rem(14);
+                font-weight: 300;
+                line-height: 1.5;
+            }
+        }
+
+        .bubble-desc {
+            font-size: u.rem(14);
+            padding-left: u.rem(18);
+        }
+
+        a {
+            float: right;
+            color: u.$primary-600;
+            font-size: u.rem(12);
+            margin-top: u.rem(12);
+        }
+
+        &.is-active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .pin-img img {
+        cursor: pointer;
+    }
+
+    .pin-bubble:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 29px solid transparent;
+        border-top-color: u.$neutral-900;
+        border-bottom: 0;
+        margin-left: -29px;
+        margin-bottom: -29px;
+    }
+
+    .bubble1 {
+        position: absolute;
+        top: u.rem(90);
+        right: u.rem(470);
+    }
+
+    .bubble2 {
+        position: absolute;
+        top: u.rem(250);
+        right: u.rem(15);
+    }
+
+    .bubble3 {
+        position: absolute;
+        top: u.rem(690);
+        right: u.rem(120);
+    }
+
+    .bubble4 {
+        position: absolute;
+        top: u.rem(750);
+        right: u.rem(235);
+    }
+
+    .bubble5 {
+        position: absolute;
+        top: u.rem(790);
+        right: u.rem(620);
+    }
+
+    .bubble6 {
+        position: absolute;
+        top: u.rem(910);
+        right: u.rem(410);
+    }
+
+    .bubble7 {
+        position: absolute;
+        top: u.rem(940);
+        right: u.rem(500);
+    }
+
+    .bubble8 {
+        position: absolute;
+        top: u.rem(1110);
+        right: u.rem(535);
+    }
+
+    .bubble9 {
+        position: absolute;
+        top: u.rem(1200);
+        right: u.rem(595);
+    }
+
+    .bubble10 {
+        position: absolute;
+        top: u.rem(1240);
+        right: u.rem(440);
+    }
+
+
+    /* =Map Pin Animation
+// ========================================================================== */
+
+    @-webkit-keyframes pulsate {
+        0% {
+            -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+            opacity: 0;
+        }
+    }
+
+    @-moz-keyframes pulsate {
+        0% {
+            -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+            opacity: 0;
+        }
+    }
+
+    @keyframes pulsate {
+        0% {
+            -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+            opacity: 0;
+        }
+    }
+
+    .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    @-webkit-keyframes bounceInDown {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+        }
+
+        60% {
+            opacity: 1;
+            -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+        }
+
+        80% {
+            -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+        }
+
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes bounceInDown {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(-2000px);
+            -ms-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+        }
+
+        60% {
+            opacity: 1;
+            -webkit-transform: translateY(30px);
+            -ms-transform: translateY(30px);
+            transform: translateY(30px);
+        }
+
+        80% {
+            -webkit-transform: translateY(-10px);
+            -ms-transform: translateY(-10px);
+            transform: translateY(-10px);
+        }
+
+        100% {
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+
+    .bounceInDown {
+        -webkit-animation-name: bounceInDown;
+        animation-name: bounceInDown;
+    }
+
+
+    .double-arrow-img {
+        @include u.flex(space-between, center);
+        position: relative;
+
+        img {
+            top: 500px;
+            position: absolute;
+            display: block;
+            margin-bottom: u.rem(10);
+            width: u.rem(40);
+            height: auto;
+        }
+
+        .arrow2 {
+            transform: rotate(180deg);
+        }
+
+        @include u.responsive('tablet') {
+            display: none;
+        }
+    }
+
+    &__text-wrap {
+        padding-bottom: u.$padding-60;
+    }
+
 
     &__notice {
         position: absolute;
@@ -125,6 +430,7 @@
 
     &__title-wrap {
         margin-bottom: u.$padding-30;
+        margin-top: u.$padding-100;
     }
 
     &__title {
@@ -168,6 +474,10 @@
     &__grid-title {
         @include u.mapBody01;
         color: u.$neutral-900;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     &__grid-hashtag {
