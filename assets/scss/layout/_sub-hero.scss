@@ -4,6 +4,14 @@
     width: 100%;
     height: u.rem(660);
 
+    @include u.responsive(tablet) {
+        height: u.rem(560);
+    }
+
+    @include u.responsive(mobile) {
+        height: u.rem(460);
+    }
+
     &__bg {
         width: 100%;
         height: 100%;
@@ -13,7 +21,9 @@
     }
 
     &__title {
+        width: 100%;
         @include u.title01($color: u.$neutral-50);
         @include u.center();
+        text-align: center;
     }
 }

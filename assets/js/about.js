@@ -1,5 +1,4 @@
 // ============================ about page ============================
-
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".benefit__count");
     let started = false;
@@ -39,4 +38,39 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     window.addEventListener("scroll", onScroll);
+
+    // fade up gsap
+    gsap.registerPlugin(ScrollTrigger);
+
+    const introTl = gsap.timeline();
+
+    introTl
+        .from(".fade-up-title", {
+            opacity: 0,
+            y: 40,
+            duration: 0.9,
+            ease: "power2.out"
+        })
+        .from(".fade-up-desc", {
+            opacity: 0,
+            y: 40,
+            duration: 0.9,
+            ease: "power2.out"
+        }, "-=0.3");
+
+    gsap.utils.toArray(".fade-up-section").forEach((section) => {
+        gsap.to(section, {
+            opacity: 1,
+            y: 0,
+            duration: 0.9,
+            ease: "power2.out",
+            scrollTrigger: {
+                duration: 1.0,
+                trigger: section,
+                start: "top 80%",
+                toggleActions: "play none none none",
+            }
+        });
+    });
 });
+
