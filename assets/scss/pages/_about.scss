@@ -113,7 +113,7 @@
     }
 
     &__card-desc {
-        @include u.tumblerBody01($weight: 400);
+        @include u.actionBody01($weight: 400);
         opacity: 0;
         height: 0;
         overflow: hidden;

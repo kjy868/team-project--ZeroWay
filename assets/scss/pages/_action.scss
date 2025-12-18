@@ -8,7 +8,7 @@
 
 .action__notice {
     text-align: center;
-    @include u.tumblerBody01($color: u.$neutral-500);
+    @include u.actionBody01($color: u.$neutral-500);
     padding: u.$padding-10;
 
 
@@ -29,7 +29,7 @@
 
     &__btn {
         @include u.btnFlex(center, center);
-        @include u.tumblerBody01($weight: 500, $size: u.$font-22, $color: u.$neutral-700);
+        @include u.actionBody01($weight: 500, $size: u.$font-22, $color: u.$neutral-700);
         padding: u.rem(10) u.rem(30);
         border-radius: u.rem(50);
         border: none;
@@ -44,7 +44,7 @@
         }
 
         @include u.responsive(medium) {
-            @include u.tumblerBody01($weight: 500,
+            @include u.actionBody01($weight: 500,
                 $size: u.$font-18,
                 $color: u.$neutral-700);
             padding: u.rem(10) u.rem(20);
@@ -163,10 +163,10 @@
 
 
     &__brand {
-        @include u.tumblerBody01($weight: 600, $color: u.$neutral-900, $size: u.$font-24);
+        @include u.actionBody01($weight: 600, $color: u.$neutral-900, $size: u.$font-24);
 
         @include u.responsive(tablet) {
-            @include u.tumblerBody01($weight: 600, $color: u.$neutral-900, $size: u.$font-22);
+            @include u.actionBody01($weight: 600, $color: u.$neutral-900, $size: u.$font-22);
         }
 
         @include u.responsive(medium) {
@@ -183,10 +183,10 @@
     }
 
     &__benefit {
-        @include u.tumblerBody01($weight: 400, $color: u.$neutral-800, $size: u.$font-22);
+        @include u.actionBody01($weight: 400, $color: u.$neutral-800, $size: u.$font-22);
 
         @include u.responsive(tablet) {
-            @include u.tumblerBody01($weight: 400, $color: u.$neutral-800, $size: u.$font-20);
+            @include u.actionBody01($weight: 400, $color: u.$neutral-800, $size: u.$font-20);
         }
 
         @include u.responsive(medium) {

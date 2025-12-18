@@ -3,19 +3,20 @@
 .map {
     width: 100%;
     height: 100%;
-    // overflow-x: hidden;
+    // ==========================
+    overflow-x: auto;
+    overflow-y: hidden;
+    // ============================
 
     &__conts-wrap {
         padding: u.$padding-100 0 u.$padding-160;
         background-color: u.$neutral-50;
-        border-top-left-radius: u.rem(200);
-        border-top-right-radius: u.rem(200);
+        // @include u.borderTopRadius();
         width: 100%;
         height: 100%;
         z-index: 1;
         position: relative;
-        @include u.borderTopRadius();
-        margin-top: u.rem(-200);
+        // margin-top: u.rem(-200);
 
         @include u.responsive('tablet') {
             margin-top: 0;
@@ -23,42 +24,88 @@
     }
 
     &__img-wrap {
+        margin: 0 auto;
+        width: u.rem(1900);
+        height: 100%;
+        // width: fit-content;
+        // height: fit-content;
         position: relative;
+        // ======================
+        overflow-x: auto;
+        overflow-y: hidden;
+        // ======================
 
         @include u.responsive('tablet') {
-            // overflow-x: auto;
+            overflow-x: auto;
             overflow-y: hidden;
         }
 
         .pin-img {
+            // ======================
             position: absolute;
+            width: u.rem(1920);
+            // ======================
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            // height: 100%;
             z-index: 10;
         }
 
         .pin1 {
             position: absolute;
-            top: 50px;
-            left: 100px;
+            top: 10vh;
+            right: u.rem(580);
+        }
+
+
+        .pin2 {
+            position: absolute;
+            top: u.rem(410);
+            right: u.rem(150);
+        }
+
+        .pin3 {
+            position: absolute;
+            top: u.rem(850);
+            right: u.rem(220);
+        }
+
+        .pin4 {
+            position: absolute;
+            top: u.rem(910);
+            right: u.rem(350);
+        }
+
+        .pin5 {
+            position: absolute;
+            top: u.rem(950);
+            right: u.rem(720);
+        }
+
+        .pin6 {
+            position: absolute;
+            top: u.rem(1100);
+            right: u.rem(550);
         }
     }
 
 
     &__img {
-        img {
-            height: 100%;
-            width: 100%;
-            @include u.img();
 
-            @include u.responsive('tablet') {
-                height: auto;
-                width: auto;
-                max-width: none;
-                object-fit: none;
-            }
+        img {
+
+            height: 100%;
+            // width: 100%;
+            @include u.img();
+            height: auto;
+            width: auto;
+            // width: fit-content;
+            // height: fit-content;
+            max-width: none;
+            object-fit: none;
+
+            @include u.responsive('tablet') {}
         }
     }
 

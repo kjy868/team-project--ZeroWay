@@ -12,7 +12,7 @@
         @include u.bgImg();
         position: relative;
         // height: 100vh;
-        width: 100%;
+        // width: 100%;
         top: 0;
         left: 0;
 
@@ -37,30 +37,32 @@
         }
     }
 
+    // .hero__img01,
+    // .hero__img02 {
+    //     width: min(80vw, 900px);
+    // }
+
     // hero 'seeking' 텍스트 이미지
     &__img01 {
-        width: 100%;
-        max-width: u.rem(550);
         position: absolute;
         left: 50%;
         top: 28%;
         transform: translate(-50%, -50%);
         z-index: 0;
 
-        img {
-            width: 100%;
-        }
-
         @include u.responsive('medium') {
             top: 40%;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
         }
 
     }
 
     // hero 'zeroway' 텍스트 이미지
     &__img02 {
-        width: 100%;
-        max-width: u.rem(825);
         position: absolute;
         left: 50%;
         top: 80%;
@@ -68,7 +70,8 @@
         z-index: 2;
 
         img {
-            width: 100%;
+            display: block;
+            max-width: 100%;
         }
 
         @include u.responsive('medium') {
@@ -89,7 +92,7 @@
         z-index: 1;
 
         img {
-            width: 100%;
+            // width: 100%;
         }
 
         @include u.responsive('tablet') {
