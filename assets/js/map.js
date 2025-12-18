@@ -76,11 +76,16 @@ if (tabMenu) {
 
     tabMenu.addEventListener('mousemove', (e) => {
         if (!isDown) return;
+        e.preventDefault();
         const x = e.pageX - tabMenu.offsetLeft;
         const walk = (x - startX);
+
+        // 스크롤은 항상 실행
+        tabMenu.scrollLeft = scrollLeft - walk;
+
+        // 임계값은 클릭 판정용
         if (Math.abs(walk) > DRAG_THRESHOLD) {
             didDrag = true;
-            tabMenu.scrollLeft = scrollLeft - walk;
         }
     });
 

@@ -1,3 +1,5 @@
+// 카카오 api 주소검색 js ==================================
+
 function sample6_execDaumPostcode() {
     new daum.Postcode({
         oncomplete: function (data) {
