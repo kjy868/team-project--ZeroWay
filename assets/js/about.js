@@ -72,5 +72,18 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // circle text gsap
+    gsap.utils.toArray(".circle-svg path").forEach((path) => {
+        gsap.to(path, {
+            strokeDashoffset: 0,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: path.closest("section"),
+                start: "top 75%",
+            }
+        });
+    });
 });
 

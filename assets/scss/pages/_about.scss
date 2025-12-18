@@ -134,10 +134,10 @@
         display: block;
         width: u.rem(40);
         height: u.rem(4);
-
         background-color: u.$neutral-50;
         border-radius: u.rem(50);
-        transition: transform 0.3s ease;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
     }
 
     &__card-title {
@@ -575,4 +575,36 @@
 .fade-up-section {
     opacity: 0;
     transform: translateY(60px);
+}
+
+/* circle-text */
+.circle-text {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+
+.circle-svg {
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 120%;
+    height: auto;
+    pointer-events: none;
+    z-index: -1;
+
+    &:nth-of-type(2) {
+        bottom: 0;
+    }
+
+    path {
+        fill: none;
+        stroke: u.$primary-500;
+        stroke-width: 5;
+        stroke-linecap: round;
+        stroke-dasharray: 500;
+        stroke-dashoffset: 500;
+    }
 }
