@@ -140,3 +140,36 @@ if (tabMenu) {
     // 초기 커서 설정
     tabMenu.style.cursor = 'grab';
 }
+
+
+// 지도 더보기 버튼 ========================
+// $(function () {
+//     $('.map__more-btn').on('click', function () {
+//         if ($(this).children().is('.open')) {
+//             $(this).html('<p class="close">닫기</p>').addClass('close-btn');
+//             $(this).parent().removeClass('slide-up').addClass('slide-down');
+//         } else {
+//             $(this).html('<p class="open">더보기+</p>').removeClass('close-btn');
+//             $(this).parent().removeClass('slide-down').addClass('slide-up');
+//         }
+//     });
+// });
+
+$(function () {
+
+    $('.map__more-btn').on('click', function (e) {
+        e.preventDefault();
+        const textWrap = $(this).parent();
+        const isOpen = $(this).children().is('.open');
+
+        if (isOpen) {
+            // 더보기 → 닫기 (slide-down)
+            $(this).html('<p class="close">닫기</p>').addClass('close-btn');
+            textWrap.removeClass('slide-up').addClass('slide-down');
+        } else {
+            // 닫기 → 더보기 (slide-up)
+            $(this).html('<p class="open">더보기+</p>').removeClass('close-btn');
+            textWrap.removeClass('slide-down').addClass('slide-up');
+        }
+    });
+});

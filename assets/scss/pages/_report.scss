@@ -12,9 +12,10 @@
         z-index: 1;
         position: relative;
         background-color: u.$neutral-50;
-        margin-top: u.$padding-100 ;
-
+        padding-top: u.$padding-100 ;
         padding-bottom: u.$padding-250;
+        margin-top: u.rem(-200);
+        @include u.borderTopRadius();
     }
 
     &__desc {

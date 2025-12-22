@@ -68,140 +68,150 @@
         <!-- map section  -->
         <section class="map">
             <div class="map__img-wrap">
-                <picture class="map__img">
-                    <source srcset="./assets/img/map-mobile02.webp" media="(max-width: 480px)">
-                    <source srcset="./assets/img/map-tablet02.webp" media="(max-width: 1024px)">
-                    <img src="./assets/img/map-pc02.webp" alt="지도 이미지">
-                </picture>
-                <button class="btn btn--blackLine map__notice">핀을 터치해 더 많은 정보를 알아보세요!</button>
+                <div class="map__canvas">
+                    <picture class="map__img">
+                        <source srcset="./assets/img/map-mobile02.webp" media="(max-width: 480px)">
+                        <source srcset="./assets/img/map-tablet02.webp" media="(max-width: 1024px)">
+                        <img src="./assets/img/map-pc02.webp" alt="지도 이미지">
+                    </picture>
+                    <div class="map__notice btn btn--blackLine">
+                        핀을 터치해 더 많은 정보를 알아보세요!
+                    </div>
 
-                <!-- 핀 이미지 -->
-                <div class="pin-img">
-                    <img src="./assets/img/map-pin01.webp" alt="핀 이미지" class="pin1">
-                    <img src="./assets/img/map-pin02.webp" alt="핀 이미지" class="pin2">
-                    <img src="./assets/img/map-pin03.webp" alt="핀 이미지" class="pin3">
-                    <img src="./assets/img/map-pin04.webp" alt="핀 이미지" class="pin4">
-                    <img src="./assets/img/map-pin05.webp" alt="핀 이미지" class="pin5">
-                    <img src="./assets/img/map-pin06.webp" alt="핀 이미지" class="pin6">
-                    <img src="./assets/img/map-pin07.webp" alt="핀 이미지" class="pin7">
-                    <img src="./assets/img/map-pin08.webp" alt="핀 이미지" class="pin8">
-                    <img src="./assets/img/map-pin09.webp" alt="핀 이미지" class="pin9">
-                    <img src="./assets/img/map-pin10.webp" alt="핀 이미지" class="pin10">
-                </div>
+                    <!-- 핀 이미지 -->
+                    <div class="pin-img">
+                        <img src="./assets/img/map-pin01.webp" alt="핀 이미지" class="pin1">
+                        <img src="./assets/img/map-pin02.webp" alt="핀 이미지" class="pin2">
+                        <img src="./assets/img/map-pin03.webp" alt="핀 이미지" class="pin3">
+                        <img src="./assets/img/map-pin04.webp" alt="핀 이미지" class="pin4">
+                        <img src="./assets/img/map-pin05.webp" alt="핀 이미지" class="pin5">
+                        <img src="./assets/img/map-pin06.webp" alt="핀 이미지" class="pin6">
+                        <img src="./assets/img/map-pin07.webp" alt="핀 이미지" class="pin7">
+                        <img src="./assets/img/map-pin08.webp" alt="핀 이미지" class="pin8">
+                        <img src="./assets/img/map-pin09.webp" alt="핀 이미지" class="pin9">
+                        <img src="./assets/img/map-pin10.webp" alt="핀 이미지" class="pin10">
+                    </div>
 
-                <!-- 말풍선 -->
-                <div class="pin-bubble-wrap">
-                    <div class="pin-bubble bubble1">
-                        <div class="bubble-title">
-                            <p>❶ 자연공감 숨</p>
-                            <p>제로웨이스트 상점</p>
+                    <!-- 말풍선 -->
+                    <div class="pin-bubble-wrap">
+                        <div class="pin-bubble bubble1">
+                            <div class="bubble-title">
+                                <p>❶ 자연공감 숨</p>
+                                <p>제로웨이스트 상점</p>
+                            </div>
+                            <div class="bubble-desc">
+                                인천 동구 서해대로513번길 9 <br>운영시간: 수-일 11:30-18:30
+                            </div>
+                            <a href="#">알아보러가기 →</a>
                         </div>
-                        <div class="bubble-desc">
-                            인천 동구 서해대로513번길 9 <br>운영시간: 수-일 11:30-18:30
+                        <div class="pin-bubble bubble2">
+                            <div class="bubble-title">
+                                <p>❷ 복합문화공간 포엘</p>
+                                <p>생활용품판매</p>
+                            </div>
+                            <div class="bubble-desc">
+                                인천 계양구 양지로 151 2층 <br>운영시간:월-금 9:00-20:00, 토 10:00-18:00
+                            </div>
+                            <a href="#">알아보러가기 →</a>
                         </div>
-                        <a href="#">알아보러가기 →</a>
+                        <div class="pin-bubble bubble3">
+                            <div class="bubble-title">
+                                <p>❸ 얼스호텔</p>
+                                <p>리필스테이션
+                                    <br>생활용품판매
+                                </p>
+                            </div>
+                            <div class="bubble-desc">
+                                인천 부평구 부평문화로 161 2층 <br>운영시간: 화-토 11:00-19:00
+                            </div>
+                            <a href="#">알아보러가기 →</a>
+                        </div>
+                        <div class="pin-bubble bubble4">
+                            <div class="bubble-title">
+                                <p>❹ 파랑주택135</p>
+                                <p>생활용품판매</p>
+                            </div>
+                            <div class="bubble-desc">
+                                인천 부평구 이규보로 135 <br>운영시간: 화-토 14:00-20:00
+                            </div>
+                            <a href="#">알아보러가기 →</a>
+                        </div>
+                        <div class="pin-bubble bubble5">
+                            <div class="bubble-title">
+                                <p>❺ 슬로슬로</p>
+                                <p>생활용품판매</p>
+                            </div>
+                            <div class="bubble-desc">
+                                인천 동구 서해대로513번길 9<br>수-일 11:30-18:30
+                            </div>
+                            <a href="#">알아보러가기 →</a>
+                        </div>
+                        <div class="pin-bubble bubble6">
+                            <div class="bubble-title">
+                                <p>❻ 소중한 모든것 컵둥지</p>
+                                <p>생활용품판매 <br>
+                                    텀블러할인카페</p>
+                            </div>
+                            <div class="bubble-desc">
+                                인천 미추홀구 한나루로458번길 10 1층 <br>운영시간: 매일 9:00-20:00 <br>공휴일 9:00-18:00
+                            </div>
+                            <a href="#">알아보러가기 →</a>
+                        </div>
+                        <div class="pin-bubble bubble7">
+                            <div class="bubble-title">
+                                <p>❼ 새활용 알맹이가게</p>
+                                <p>생활용품판매</p>
+                            </div>
+                            <div class="bubble-desc">
+                                인천 미추홀구 매소홀로290번길 7 인천업사이클에코센터 1층 <br>운영시간: 월-토 10:00-17:00, <br>12:00-17:20 휴게시간(일요일,
+                                공휴일
+                                휴무)
+                            </div>
+                            <a href="#">알아보러가기 →</a>
+                        </div>
+                        <div class="pin-bubble bubble8">
+                            <div class="bubble-title">
+                                <p>❽ 우리동네 봄날</p>
+                                <p>생활용품판매 <br>
+                                    텀블러할인카페</p>
+                            </div>
+                            <div class="bubble-desc">
+                                인천 연수구 청량로164번길 10 <br>운영시간: 월-금 10:00-20:00, <br>토 10:00-18:00
+                            </div>
+                            <a href="#">알아보러가기 →</a>
+                        </div>
+                        <div class="pin-bubble bubble9">
+                            <div class="bubble-title">
+                                <p>❾ 플래닛어스</p>
+                                <p>생활용품판매 <br>리필스테이션</p>
+                            </div>
+                            <div class="bubble-desc">
+                                인천 연수구 인천타워대로 257, C동 1층 120호<br>운영시간: 매일 9:00-21:00 <br>* 오전, 야간, 일요일은 무인운영
+                            </div>
+                            <a href="#">알아보러가기 →</a>
+                        </div>
+                        <div class="pin-bubble bubble10">
+                            <div class="bubble-title">
+                                <p>❿ 지구본 송도</p>
+                                <p>생활용품판매 <br>텀블러할인카페</p>
+                            </div>
+                            <div class="bubble-desc">
+                                인천 연수구 송도과학로 56 송도테크노파크 BT센터 1층, 104~105호<br>운영시간: 월-금 8:30-19:00, <br>토-일 11:00-21:00
+                            </div>
+                            <a href="#">알아보러가기 →</a>
+                        </div>
                     </div>
-                    <div class="pin-bubble bubble2">
-                        <div class="bubble-title">
-                            <p>❷ 복합문화공간 포엘</p>
-                            <p>제로웨이스트 상점</p>
-                        </div>
-                        <div class="bubble-desc">
-                            인천 동구 서해대로513번길 9 <br>운영시간: 수-일 11:30-18:30
-                        </div>
-                        <a href="#">알아보러가기 →</a>
+                    <div class="double-arrow-img">
+                        <img src="./assets/img/map-double-arrow.webp" alt="화살표 이미지" class="arrow1">
+                        <img src="./assets/img/map-double-arrow.webp" alt="화살표 이미지" class="arrow2">
                     </div>
-                    <div class="pin-bubble bubble3">
-                        <div class="bubble-title">
-                            <p>❸ 얼스호텔</p>
-                            <p>제로웨이스트 상점</p>
-                        </div>
-                        <div class="bubble-desc">
-                            인천 동구 서해대로513번길 9 <br>운영시간: 수-일 11:30-18:30
-                        </div>
-                        <a href="#">알아보러가기 →</a>
-                    </div>
-                    <div class="pin-bubble bubble4">
-                        <div class="bubble-title">
-                            <p>❹ 파랑주택135</p>
-                            <p>제로웨이스트 상점</p>
-                        </div>
-                        <div class="bubble-desc">
-                            인천 동구 서해대로513번길 9 <br>운영시간: 수-일 11:30-18:30
-                        </div>
-                        <a href="#">알아보러가기 →</a>
-                    </div>
-                    <div class="pin-bubble bubble5">
-                        <div class="bubble-title">
-                            <p>❺ 슬로슬로</p>
-                            <p>제로웨이스트 상점</p>
-                        </div>
-                        <div class="bubble-desc">
-                            인천 동구 서해대로513번길 9 <br>운영시간: 수-일 11:30-18:30
-                        </div>
-                        <a href="#">알아보러가기 →</a>
-                    </div>
-                    <div class="pin-bubble bubble6">
-                        <div class="bubble-title">
-                            <p>❻ 소중한 모든것 컵둥지</p>
-                            <p>제로웨이스트 상점</p>
-                        </div>
-                        <div class="bubble-desc">
-                            인천 동구 서해대로513번길 9 <br>운영시간: 수-일 11:30-18:30
-                        </div>
-                        <a href="#">알아보러가기 →</a>
-                    </div>
-                    <div class="pin-bubble bubble7">
-                        <div class="bubble-title">
-                            <p>❼ 새활용 알맹이가게</p>
-                            <p>제로웨이스트 상점</p>
-                        </div>
-                        <div class="bubble-desc">
-                            인천 동구 서해대로513번길 9 <br>운영시간: 수-일 11:30-18:30
-                        </div>
-                        <a href="#">알아보러가기 →</a>
-                    </div>
-                    <div class="pin-bubble bubble8">
-                        <div class="bubble-title">
-                            <p>❽ 우리동네 봄날</p>
-                            <p>제로웨이스트 상점</p>
-                        </div>
-                        <div class="bubble-desc">
-                            인천 동구 서해대로513번길 9 <br>운영시간: 수-일 11:30-18:30
-                        </div>
-                        <a href="#">알아보러가기 →</a>
-                    </div>
-                    <div class="pin-bubble bubble9">
-                        <div class="bubble-title">
-                            <p>❾ 플래닛어스</p>
-                            <p>제로웨이스트 상점</p>
-                        </div>
-                        <div class="bubble-desc">
-                            인천 동구 서해대로513번길 9 <br>운영시간: 수-일 11:30-18:30
-                        </div>
-                        <a href="#">알아보러가기 →</a>
-                    </div>
-                    <div class="pin-bubble bubble10">
-                        <div class="bubble-title">
-                            <p>❿ 지구본 송도</p>
-                            <p>제로웨이스트 상점</p>
-                        </div>
-                        <div class="bubble-desc">
-                            인천 동구 서해대로513번길 9 <br>운영시간: 수-일 11:30-18:30
-                        </div>
-                        <a href="#">알아보러가기 →</a>
-                    </div>
-                </div>
-                <div class="double-arrow-img">
-                    <img src="./assets/img/map-double-arrow.webp" alt="화살표 이미지" class="arrow1">
-                    <img src="./assets/img/map-double-arrow.webp" alt="화살표 이미지" class="arrow2">
                 </div>
 
             </div>
 
 
 
-            <div aclass="map__conts-wrap">
+            <div class="map__conts-wrap">
                 <div class="container">
                     <div class="map__title-wrap">
                         <h2 class="map__title">ZeroMap</h2>
@@ -352,18 +362,24 @@
                                         빵류 4개 이상 구매 시, 1,000원 할인 혜택 제공</li>
                                 </ul>
                             </div>
-
+                            <div class="fade"></div>
                         </div>
+
+                        <a href="" class="map__more-btn btn btn--blackLine">
+                            <p class="open">더보기+</p>
+                        </a>
 
                     </div>
                 </div>
 
                 <div class="map__report-cta">
-                    <div class="map__report-text">
-                        <h3 class="map__report-title">여러분과 더 많이 발전해나갈 제로웨이</h3>
-                        <p class="map__report-desc">함께 만들어나가고 싶으시다면 제보해주세요</p>
+                    <div class="container">
+                        <div class="map__report-text">
+                            <h3 class="map__report-title">여러분과 더 많이 발전해나갈 제로웨이</h3>
+                            <p class="map__report-desc">함께 만들어나가고 싶으시다면 제보해주세요</p>
+                        </div>
+                        <a href="#report" class="btn btn--blackLine map__btn">제로웨이스트샵 제보하기</a>
                     </div>
-                    <button class="btn btn--blackLine map__btn">제로웨이스트샵 제보하기</button>
                 </div>
             </div>
         </section>
