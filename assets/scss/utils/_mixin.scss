@@ -253,11 +253,15 @@
     color: $color;
     font-family: $font-family;
 
-    @include r.responsive(medium) {
-        font-size: v.$font-18;
+    @include r.responsive(tablet) {
+        font-size: v.$font-22;
     }
 
     @include r.responsive(mobile) {
+        font-size: v.$font-18;
+    }
+
+    @include r.responsive(small) {
         font-size: v.$font-16;
     }
 
@@ -270,7 +274,7 @@
     color: $color;
     font-family: $font-family;
 
-    @include r.responsive(medium) {
+    @include r.responsive(tablet) {
         font-size: v.$font-22;
     }
 

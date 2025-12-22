@@ -15,6 +15,7 @@
         // width: 100%;
         top: 0;
         left: 0;
+        z-index: 1;
 
         @include u.responsive('tablet') {
             background: url("../img/hero-sec-bg_1024.webp");
@@ -50,13 +51,27 @@
         transform: translate(-50%, -50%);
         z-index: 0;
 
-        @include u.responsive('medium') {
-            top: 40%;
-        }
-
         img {
             display: block;
-            max-width: 100%;
+            width: 95%;
+        }
+
+        @include u.responsive('tablet') {
+            transform: translate(-40%, -50%);
+
+            img {
+                width: 85%;
+            }
+        }
+
+        @include u.responsive('medium') {
+            top: 36%;
+            width: 55%;
+        }
+
+        @include u.responsive('mobile') {
+            top: 40%;
+            width: 75%;
         }
 
     }
@@ -68,55 +83,63 @@
         top: 80%;
         transform: translate(-50%, -50%);
         z-index: 2;
+        width: 55%;
 
         img {
             display: block;
-            max-width: 100%;
+            // max-width: 100%;
+            width: 100%;
+        }
+
+        @include u.responsive('tablet') {
+            width: 65%;
+            top: 75%;
         }
 
         @include u.responsive('medium') {
             top: 68%;
-
-        }
-    }
-
-    // hero 아이 이미지
-    &__img-kid {
-        background: url("../img/hero-img-kid.webp");
-        @include u.bgImg();
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-
-        img {
-            // width: 100%;
-        }
-
-        @include u.responsive('tablet') {
-            background: url("../img/hero-img-kid_1024.webp");
-            @include u.bgImg();
-        }
-
-        @include u.responsive('medium') {
-            background: url("../img/hero-img-kid_768.webp");
-            @include u.bgImg();
         }
 
         @include u.responsive('mobile') {
-            background: url("../img/hero-img-kid_480.webp");
-            @include u.bgImg();
+            width: 95%;
         }
 
-        @include u.responsive('small') {
-            background: url("../img/hero-img-kid_360.webp");
+        // hero 아이 이미지
+        &__img-kid {
+            background: url("../img/hero-img-kid.webp");
             @include u.bgImg();
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+
+            img {
+                // width: 100%;
+            }
+
+            @include u.responsive('tablet') {
+                background: url("../img/hero-img-kid_1024.webp");
+                @include u.bgImg();
+            }
+
+            @include u.responsive('medium') {
+                background: url("../img/hero-img-kid_768.webp");
+                @include u.bgImg();
+            }
+
+            @include u.responsive('mobile') {
+                background: url("../img/hero-img-kid_480.webp");
+                @include u.bgImg();
+            }
+
+            @include u.responsive('small') {
+                background: url("../img/hero-img-kid_360.webp");
+                @include u.bgImg();
+            }
         }
     }
-
-
 }
 
 // intro section =================================
@@ -574,47 +597,6 @@
         }
     }
 
-    &__list02 {
-
-        @include u.responsive('mobile') {
-            gap: u.rem(55);
-        }
-
-        span {
-            position: relative;
-            display: inline-block;
-
-            &.isActive .merit__underline path {
-                stroke-dashoffset: 0;
-            }
-
-        }
-
-
-
-        li:nth-child(3) {
-
-            @include u.responsive('tablet') {
-                img {
-                    height: u.rem(110);
-                }
-            }
-
-            @include u.responsive('mobile') {
-                img {
-                    height: u.rem(80);
-                }
-            }
-
-            @include u.responsive('small') {
-                img {
-                    height: u.rem(65);
-                }
-            }
-        }
-
-    }
-
     &__underline {
         position: absolute;
         left: 0;
@@ -634,11 +616,25 @@
 
     &__group {
         @include u.flex(center, center, u.$padding-40);
+
+        @include u.responsive('mobile') {
+            gap: u.$padding-20;
+        }
     }
 
 
     &__list02 {
         @include u.flex(space-around, flex-start, u.$padding-60, column);
+
+        span {
+            position: relative;
+            display: inline-block;
+        }
+
+        span.isActive .merit__underline path {
+            stroke-dashoffset: 0;
+        }
+
 
         li {
             @include u.flex(center, center, u.$padding-60);
@@ -650,9 +646,7 @@
                     padding-right: u.$padding-20;
 
                     @include u.responsive('tablet') {
-
                         height: u.rem(100);
-
                     }
 
                     @include u.responsive('mobile') {
@@ -662,9 +656,7 @@
                     }
 
                     @include u.responsive('small') {
-
                         height: u.rem(56);
-
                     }
                 }
             }
@@ -715,8 +707,16 @@
             }
 
             @include u.responsive('mobile') {
-                gap: u.$padding-40;
+                gap: u.$padding-20;
             }
+        }
+
+        @include u.responsive('mobile') {
+            gap: u.$padding-30;
+        }
+
+        @include u.responsive('small') {
+            gap: u.$padding-20;
         }
     }
 
@@ -746,6 +746,10 @@
         width: 100%;
         height: u.rem(18);
         pointer-events: none;
+
+        @include u.responsive('mobile') {
+            top: u.rem(12);
+        }
     }
 
     &__underline-path {
