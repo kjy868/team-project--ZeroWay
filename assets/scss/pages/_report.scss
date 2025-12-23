@@ -16,6 +16,18 @@
         padding-bottom: u.$padding-60;
         text-align: center;
         @include u.defineFont(u.rem(24));
+
+        @include u.responsive('medium') {
+            @include u.defineFont(u.rem(22));
+        }
+
+        @include u.responsive('mobile') {
+            @include u.defineFont(u.rem(20));
+        }
+
+        @include u.responsive('small') {
+            @include u.defineFont(u.rem(18));
+        }
     }
 
 
@@ -66,7 +78,7 @@
         min-width: 0;
         display: flex;
         // flex-direction: column;
-        gap: u.rem(10);
+        gap: u.rem(20);
         @include u.reportBody02;
 
 
@@ -91,6 +103,11 @@
 
         select {
             width: u.rem(430);
+            appearance: none;
+            background-image: url("/assets/img/report-select-img.webp");
+            background-repeat: no-repeat;
+            background-position: right u.rem(10) center;
+            // @include u.bgImg();
         }
     }
 

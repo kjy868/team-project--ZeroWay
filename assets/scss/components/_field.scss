@@ -84,7 +84,7 @@
 
 // Input field 스타일
 
-input,
+input:not([type="radio"], [type="checkbox"]),
 textarea,
 select {
     padding: u.rem(20);
@@ -151,4 +151,36 @@ label {
     display: inline-block;
     width: u.rem(12);
     margin-right: u.rem(10);
+}
+
+
+// 라디오 버튼 커스텀 =================================================
+
+/* 기본스타일 제거, 버튼 모양 재설정 */
+input[type='radio'] {
+    flex-shrink: 0;
+    -webkit-appearance: none;
+    /* 웹킷 브라우저에서 기본 스타일 제거*/
+    -moz-appearance: none;
+    /* 모질라 브라우저에서 기본 스타일 제거*/
+    appearance: none;
+    /*기본 브라우저에서 기본 스타일 제거*/
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ccc;
+    /*체크되지 않았을 때의 테두리 색상*/
+    border-radius: 50%;
+    outline: none;
+    /*focus 시에 나타나는 기본 스타일 제거*/
+    cursor: pointer;
+}
+
+/* 체크 시 버튼 모양 스타일*/
+input[type='radio']:checked {
+    background-color: u.$primary-500;
+    /*체크 시 내부 원 색상*/
+    border: 5px solid #fff;
+    /*라인이 아닌, 라인과 원 사이 색상*/
+    box-shadow: 0 0 0 1px u.$neutral-700;
+    /*라인*/
 }
