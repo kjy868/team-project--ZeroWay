@@ -20,13 +20,14 @@
         position: relative; // ⭐ 기준점
         height: 100%;
         line-height: 0;
+        // overflow: hidden;
 
         @include u.responsive('tablet') {
-            width: 1500px;
+            width: u.rem(1500)
         }
 
         @include u.responsive('mobile') {
-            width: 800px;
+            width: u.rem(800)
         }
     }
 
@@ -617,27 +618,34 @@
         animation-name: bounceInDown;
     }
 
-
     .double-arrow-img {
         @include u.flex(space-between, center);
-        position: relative;
+        position: absolute;
+        // left: 50%;
+        top: 50%;
+        transform: translatex(-50%);
+        width: fit-content;
 
         img {
-            top: 500px;
-            position: absolute;
-            display: block;
-            margin-bottom: u.rem(10);
-            width: u.rem(40);
-            height: auto;
+            position: sticky; // bottom: u.rem(140);
+            // top: 500px;
+            // top: 70%;
+            left: 0;
+            right: 0;
+
+            // margin-bottom: u.rem(10);
+            width: u.rem(50);
+            // height: auto;
             z-index: 10;
+            display: block;
+
+            @include u.responsive('tablet') {
+                display: block;
+            }
         }
 
         .arrow2 {
             transform: rotate(180deg);
-        }
-
-        @include u.responsive('tablet') {
-            display: none;
         }
     }
 
