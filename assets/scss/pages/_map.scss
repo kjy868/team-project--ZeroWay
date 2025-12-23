@@ -15,20 +15,11 @@
         height: 100%;
     }
 
-    // @include u.responsive('tablet') {
-    //     width: u.rem(1500);
-    //     overflow-x: auto;
-    //     overflow-y: hidden;
-    // }
-
-    // @include u.responsive('mobile') {
-    //     width: u.rem(800);
-    //     overflow-x: auto;
-    //     overflow-y: hidden;
-    // }
     &__canvas {
         width: 1900px;
         position: relative; // ⭐ 기준점
+        height: 100%;
+        line-height: 0;
 
         @include u.responsive('tablet') {
             width: 1500px;
@@ -47,7 +38,7 @@
         top: 0;
         left: 0;
         // width: 100%;
-        // height: 100%;
+        height: 100%;
         z-index: 10;
 
         @include u.responsive('tablet') {
@@ -240,6 +231,7 @@
             @include u.img();
             height: auto;
             width: auto;
+            display: block;
             // width: fit-content;
             // height: fit-content;
             // max-width: none;
@@ -249,20 +241,28 @@
     }
 
     .pin-bubble {
-        position: relative;
+        // position: relative;
+        position: absolute;
         background: u.$neutral-900;
         color: u.$neutral-50;
         border-radius: u.rem(20);
         // width: u.rem(250);
         // height: u.rem(130);
+        // height: fit-content;
         padding: u.rem(20) u.rem(30);
         opacity: 0;
-        transform: translateY(-6px);
-        transition: opacity 0.2s ease, transform 0.2s ease;
         visibility: hidden;
         transform: translateY(-10px);
         transition: all 0.3s ease;
         z-index: 20;
+
+        // .pin-bubble .bubble-title p,
+        // .pin-bubble .bubble-desc {
+        //     margin: 0;
+        //     line-height: 1.5;
+        //     word-break: keep-all;
+        // }
+
 
         .pin-img img {
             cursor: pointer;
@@ -272,7 +272,6 @@
         .pin-img img.is-selected {
             transform: scale(1.2);
         }
-
 
         &.active {
             display: block;
@@ -313,6 +312,7 @@
         }
 
         a {
+            // align-self: flex-end;
             float: right;
             color: u.$primary-600;
             font-size: u.rem(12);
@@ -336,15 +336,15 @@
         bottom: 0;
         left: 50%;
         width: 0;
-        height: 5px;
+        height: u.rem(5);
         // border: 29px solid transparent;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 30px solid u.$neutral-900;
+        border-left: u.rem(10) solid transparent;
+        border-right: u.rem(10) solid transparent;
+        border-top: u.rem(30) solid u.$neutral-900;
         border-top-color: u.$neutral-900;
         border-bottom: 0;
-        margin-left: -10px;
-        margin-bottom: -29px;
+        margin-left: u.rem(-10);
+        margin-bottom: u.rem(-29);
     }
 
     .bubble1 {
@@ -719,13 +719,13 @@
 
 
     &__notice {
-        position: absolute;
-        top: 95%;
+        position: sticky;
         left: 50%;
-        transform: translate(-50%, -50%);
-        // margin-top: u.rem(-200);
-
+        transform: translateX(-50%);
+        bottom: u.rem(120);
+        z-index: 30;
         display: none;
+        width: fit-content;
 
         @include u.responsive('pc') {
             display: block;
@@ -738,7 +738,7 @@
             transition: none;
             margin: 0;
             box-shadow: none;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
             padding: u.rem(20) u.rem(60);
 
             @include u.responsive('mobile') {
