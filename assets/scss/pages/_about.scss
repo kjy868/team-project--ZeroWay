@@ -197,8 +197,22 @@
             }
         }
 
-        &__card:hover .r5__card-textwrap {
-            height: auto;
+        // 1024px 이하에서는 호버 효과 비활성화
+        &__card:hover {
+            .r5__card-textwrap {
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            .r5__card-line {
+                position: static;
+                top: auto;
+            }
+
+            .r5__card-desc {
+                opacity: 1;
+                height: auto;
+            }
         }
     }
 }
@@ -228,6 +242,11 @@
 
         &:nth-child(odd) {
             flex-direction: row-reverse;
+        }
+
+        &.fade-up-card {
+            opacity: 0;
+            transform: translateY(u.rem(100));
         }
 
         @include u.responsive(tablet) {
@@ -466,6 +485,11 @@
         align-items: center;
         gap: u.rem(100);
         width: 100%;
+
+        &.fade-up-card {
+            opacity: 0;
+            transform: translateY(u.rem(100));
+        }
 
         @include u.responsive(tablet) {
             gap: u.rem(60);
