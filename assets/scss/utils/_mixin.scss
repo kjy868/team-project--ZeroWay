@@ -48,22 +48,30 @@
 @mixin borderTopRadius ($borderTopLeftRadius: f.rem(200), $borderTopRightRadius: f.rem(200)) {
     border-top-left-radius: $borderTopLeftRadius;
     border-top-right-radius: $borderTopRightRadius;
+    margin-top: f.rem(-200);
+    z-index: 1;
+    position: relative;
+    background-color: v.$neutral-50;
 
     @include r.responsive('tablet') {
         border-top-left-radius: f.rem(100);
         border-top-right-radius: f.rem(100);
+        margin-top: f.rem(-100);
     }
 
     @include r.responsive('medium') {
         border-top-left-radius: f.rem(50);
         border-top-right-radius: f.rem(50);
+        margin-top: f.rem(-50);
     }
 
     @include r.responsive('mobile') {
         border-top-left-radius: f.rem(30);
         border-top-right-radius: f.rem(30);
+        margin-top: f.rem(-30);
     }
 }
+
 
 // 폰트 크기, 굵기, 간격, 색상 등 기본설정
 

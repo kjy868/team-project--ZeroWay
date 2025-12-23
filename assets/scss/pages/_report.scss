@@ -8,14 +8,8 @@
 
     &__form-wrap {
         @include u.borderTopRadius();
-        margin-top: u.rem(-200);
-        z-index: 1;
-        position: relative;
-        background-color: u.$neutral-50;
         padding-top: u.$padding-100 ;
         padding-bottom: u.$padding-250;
-        margin-top: u.rem(-200);
-        @include u.borderTopRadius();
     }
 
     &__desc {
