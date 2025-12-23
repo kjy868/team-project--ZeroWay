@@ -10,9 +10,24 @@
     color: u.$neutral-50;
     transition: 0.3s;
 
+    @include u.responsive(tablet) {
+        height: u.rem(80);
+    }
+
     .logo a {
         width: u.rem(74);
-        height: u.rem(74)
+        height: u.rem(74);
+
+        @include u.responsive(tablet) {
+            width: u.rem(60);
+            height: u.rem(60);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     .container {
@@ -97,7 +112,10 @@
     transform: translateX(100%);
     transition: transform 0.4s ease;
     z-index: 99;
-    // display: none;
+
+    @include u.responsive(tablet) {
+        top: 80px;
+    }
 
     &__list {
         padding: u.rem(90) u.rem(70);
