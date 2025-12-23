@@ -3425,12 +3425,12 @@ label {
 }
 @media (max-width: 1024px) {
   .map__canvas {
-    width: 1500px;
+    width: 93.75rem;
   }
 }
 @media (max-width: 480px) {
   .map__canvas {
-    width: 800px;
+    width: 50rem;
   }
 }
 .map .pin-img {
@@ -3992,24 +3992,26 @@ label {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  transform: translatex(-50%);
+  width: fit-content;
 }
 .map .double-arrow-img img {
-  top: 500px;
-  position: absolute;
-  display: block;
-  margin-bottom: 0.625rem;
-  width: 2.5rem;
-  height: auto;
+  position: sticky;
+  left: 0;
+  right: 0;
+  width: 3.125rem;
   z-index: 10;
+  display: block;
+}
+@media (max-width: 1024px) {
+  .map .double-arrow-img img {
+    display: block;
+  }
 }
 .map .double-arrow-img .arrow2 {
   transform: rotate(180deg);
-}
-@media (max-width: 1024px) {
-  .map .double-arrow-img {
-    display: none;
-  }
 }
 .map__conts-wrap {
   padding-top: 6.25rem;
