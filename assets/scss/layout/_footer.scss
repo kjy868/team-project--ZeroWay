@@ -9,14 +9,16 @@
     .container {
         @include u.flex(space-between, flex-end, u.rem(40));
         flex-wrap: wrap;
-
-        // @include u.responsive('mobile') {
-        //     @include u.flex(flex-start, flex-start, u.$padding-40, column);
-        // }
     }
 
     &__left {
         @include u.flex(center, flex-start, u.$padding-30, column);
+    }
+
+    &__left,
+    &__right {
+        flex: 0 0 auto;
+        min-width: 0;
     }
 
     &__txt {
