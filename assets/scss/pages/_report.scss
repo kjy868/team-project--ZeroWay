@@ -44,7 +44,7 @@
         width: 100%;
         margin-bottom: u.rem(30);
 
-        @include u.responsive('mobile') {
+        @include u.responsive('medium') {
             flex-direction: column;
             gap: 0;
             align-items: stretch;
@@ -65,10 +65,11 @@
         min-width: 0;
         @include u.reportBody01;
 
-        @include u.responsive('mobile') {
+        @include u.responsive('medium') {
             width: 100%;
             line-height: normal;
             flex: 0;
+            margin-bottom: u.rem(10);
         }
     }
 
@@ -81,12 +82,19 @@
         gap: u.rem(20);
         @include u.reportBody02;
 
+        @include u.responsive('medium') {
+            width: 100%;
+            flex: 1;
+        }
+
 
         .day-group {
             display: flex;
             gap: u.rem(10);
             flex-wrap: wrap;
             align-items: center;
+            width: 100%;
+            flex: 1;
 
             input {
                 width: auto;
@@ -102,13 +110,19 @@
         }
 
         select {
-            width: u.rem(430);
+            width: u.rem(410);
             appearance: none;
             background-image: url("/assets/img/report-select-img.webp");
             background-repeat: no-repeat;
             background-position: right u.rem(10) center;
             // @include u.bgImg();
+
+            @include u.responsive('medium') {
+                width: 100%;
+            }
         }
+
+
     }
 
 
@@ -117,7 +131,7 @@
         flex-direction: column;
         gap: u.rem(30);
 
-        @include u.responsive('mobile') {
+        @include u.responsive('medium') {
             width: 100%;
         }
     }
@@ -147,10 +161,10 @@
         align-items: center;
 
         input:first-child {
-            flex: 0 0 u.rem(430);
+            flex: 0 0 u.rem(410);
 
-            @include u.responsive('mobile') {
-                flex: 0;
+            @include u.responsive('medium') {
+                flex: 1;
             }
         }
 
@@ -162,6 +176,7 @@
     .checkbox {
         width: auto;
         margin-bottom: u.$padding-60;
+        @include u.flex(start, center, u.rem(10));
 
         span {
             @include u.reportBody02;
