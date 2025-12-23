@@ -3,8 +3,12 @@
 .map {
     width: 100%;
     height: 100%;
+    padding-top: u.rem(100); // header 높이만큼 상단 여백 추가하여 header 영역 확보
     // overflow: hidden;
 
+    @include u.responsive('tablet') {
+        padding-top: u.rem(80); // tablet header 높이
+    }
 
     &__img-wrap {
         // width: u.rem(1900);
@@ -41,6 +45,8 @@
         // width: 100%;
         height: auto;
         z-index: 10;
+
+        pointer-events: none; // header 클릭 방지
 
         @include u.responsive('tablet') {
             width: u.rem(1500);
@@ -267,6 +273,7 @@
 
         .pin-img img {
             cursor: pointer;
+            pointer-events: auto;
             transition: transform 0.2s ease;
         }
 

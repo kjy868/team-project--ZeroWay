@@ -24,10 +24,8 @@ window.addEventListener('load', () => {
     }
 
     if (mapImg && mapImg.complete) {
-        // 이미지가 이미 로드된 경우
         setMapHeight();
     } else if (mapImg) {
-        // 이미지 로드 대기
         mapImg.addEventListener('load', setMapHeight);
     }
 
@@ -48,8 +46,6 @@ copyBtn.addEventListener("click", async () => {
 });
 
 // 말풍선 핀 꽂히는 효과 애니메이션 =============================================
-
-// GSAP ScrollTrigger 플러그인 등록
 gsap.registerPlugin(ScrollTrigger);
 
 // 핀 꽂히는 애니메이션
@@ -58,40 +54,55 @@ gsap.from('.pin1, .pin2, .pin3, .pin4, .pin5, .pin6, .pin7, .pin8, .pin9, .pin10
     scale: 0.3,
     opacity: 0,
     duration: 0.6,
-    ease: 'back.out(1.7)', // 핀 꽂히는 튕김 느낌
-    stagger: 0.3, // 순차 등장 (0.15초 간격으로 하나씩)
+    ease: 'back.out(1.7)',
+    stagger: 0.3,
     scrollTrigger: {
         trigger: '.map .pin-img',
-        start: 'top 80%', // 뷰포트 80% 지점에서 시작
-        once: true, // 한 번만 재생
+        start: 'top 80%',
+        once: true,
     }
 });
 
 
 // / 지도 가로 드래그 스크롤 기능 + 핀 클릭 분리 ======================
 const tabMenu = document.querySelector('.map__img-wrap');
+const header = document.querySelector('.header');
+
+// header 영역인지 확인하는 함수
+function isInHeaderArea(clientY) {
+    if (!header) return false;
+    const headerRect = header.getBoundingClientRect();
+    return clientY < headerRect.bottom;
+}
 
 if (tabMenu) {
     let isDown = false;
     let startX;
     let scrollLeft;
-    let startScrollLeft; // 클릭-드래그 판정 기준값
-    let didDrag = false; // 드래그로 인한 클릭 방지 플래그
-    const DRAG_THRESHOLD = 6; // px
+    let startScrollLeft;
+    let didDrag = false;
+    const DRAG_THRESHOLD = 6;
 
     tabMenu.addEventListener('mousedown', (e) => {
+        // header 영역 클릭은 완전히 무시하고 이벤트 전파 차단
+        if (isInHeaderArea(e.clientY)) {
+            e.stopPropagation();
+            e.preventDefault();
+            isDown = false;
+            return;
+        }
+
         isDown = true;
         didDrag = false;
         tabMenu.style.cursor = 'grabbing';
         startX = e.pageX - tabMenu.offsetLeft;
         scrollLeft = tabMenu.scrollLeft;
         startScrollLeft = tabMenu.scrollLeft;
-    });
+    }, false); // bubble phase에서 실행하여 header 이벤트가 먼저 처리되도록
 
     // document에서 mouseup 감지 (tabMenu 밖에서도)
     document.addEventListener('mouseup', () => {
         isDown = false;
-        // didDrag는 다음 mousedown 때 초기화
         if (tabMenu) {
             tabMenu.style.cursor = 'grab';
         }
@@ -104,14 +115,18 @@ if (tabMenu) {
 
     tabMenu.addEventListener('mousemove', (e) => {
         if (!isDown) return;
+        // header 영역에서는 드래그 무시
+        if (isInHeaderArea(e.clientY)) {
+            isDown = false;
+            tabMenu.style.cursor = 'grab';
+            return;
+        }
         e.preventDefault();
         const x = e.pageX - tabMenu.offsetLeft;
         const walk = (x - startX);
 
-        // 스크롤은 항상 실행
         tabMenu.scrollLeft = scrollLeft - walk;
 
-        // 임계값은 클릭 판정용
         if (Math.abs(walk) > DRAG_THRESHOLD) {
             didDrag = true;
         }
@@ -160,7 +175,11 @@ if (tabMenu) {
     });
 
     // 빈 공간 클릭 시 모두 닫기
-    tabMenu.addEventListener('click', () => {
+    tabMenu.addEventListener('click', (e) => {
+        if (isInHeaderArea(e.clientY)) {
+            e.stopPropagation();
+            return;
+        }
         hideAllBubbles();
         clearSelectedPins();
     });
