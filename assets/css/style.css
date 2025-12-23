@@ -3721,6 +3721,7 @@ input[type=radio]:checked {
 .map .pin-bubble .bubble-desc {
   font-size: 0.875rem;
   padding-left: 1.125rem;
+  line-height: 1.5;
   word-break: keep-all;
   display: block;
   margin-bottom: 0.5rem;
