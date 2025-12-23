@@ -45,7 +45,6 @@
     @include u.flex(center, center, u.rem(40), column);
     width: 100%;
 
-
     &__title {
         @include u.subtitle01();
         text-align: center;
