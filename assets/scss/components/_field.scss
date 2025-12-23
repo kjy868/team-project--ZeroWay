@@ -25,6 +25,12 @@
     transition: all 0.2s ease;
     outline: none;
 
+    @include u.responsive(tablet) {
+        &:hover {
+            border-color: u.$neutral-700;
+        }
+    }
+
     &:hover {
         border-color: u.$primary-700;
     }
