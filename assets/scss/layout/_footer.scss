@@ -32,6 +32,20 @@
         padding-top: u.$padding-20;
         max-width: u.rem(800);
         flex-wrap: wrap;
+
+        li {
+            white-space: nowrap;
+        }
+
+        li::after {
+            content: "|";
+            padding-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        li:last-child::after {
+            content: "";
+        }
     }
 
     .copyright {
