@@ -5,6 +5,34 @@ window.addEventListener('load', () => {
     if (mapScroll) {
         mapScroll.scrollLeft = mapScroll.scrollWidth / 2;
     }
+
+    // 이미지 높이에 맞춰 canvas, pin-img 높이 조정
+    const mapCanvas = document.querySelector('.map__canvas');
+    const mapImg = document.querySelector('.map__img img');
+    const pinImg = document.querySelector('.pin-img');
+
+    function setMapHeight() {
+        if (mapImg && mapCanvas) {
+            const imgHeight = mapImg.offsetHeight;
+            if (imgHeight > 0) {
+                mapCanvas.style.height = imgHeight + 'px';
+                if (pinImg) {
+                    pinImg.style.height = imgHeight + 'px';
+                }
+            }
+        }
+    }
+
+    if (mapImg && mapImg.complete) {
+        // 이미지가 이미 로드된 경우
+        setMapHeight();
+    } else if (mapImg) {
+        // 이미지 로드 대기
+        mapImg.addEventListener('load', setMapHeight);
+    }
+
+    // 리사이즈 시에도 높이 재조정
+    window.addEventListener('resize', setMapHeight);
 });
 
 const copyBtn = document.getElementById("copyBtn");
