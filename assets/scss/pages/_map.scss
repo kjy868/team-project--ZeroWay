@@ -130,8 +130,8 @@
 
     .pin5 {
         position: absolute;
-        top: u.rem(950);
-        right: u.rem(720);
+        top: u.rem(930);
+        right: u.rem(740);
 
         @include u.responsive('tablet') {
             width: u.rem(50);
@@ -147,8 +147,8 @@
 
     .pin6 {
         position: absolute;
-        top: u.rem(1070);
-        right: u.rem(550);
+        top: u.rem(1050);
+        right: u.rem(570);
 
         @include u.responsive('tablet') {
 
@@ -165,8 +165,8 @@
 
     .pin7 {
         position: absolute;
-        top: u.rem(1100);
-        right: u.rem(630);
+        top: u.rem(1110);
+        right: u.rem(650);
 
         @include u.responsive('tablet') {
             width: u.rem(50);
@@ -182,7 +182,7 @@
 
     .pin8 {
         position: absolute;
-        top: u.rem(1270);
+        top: u.rem(1240);
         right: u.rem(650);
 
         @include u.responsive('tablet') {
@@ -199,8 +199,8 @@
 
     .pin9 {
         position: absolute;
-        top: u.rem(1360);
-        right: u.rem(700);
+        top: u.rem(1350);
+        right: u.rem(710);
 
         @include u.responsive('tablet') {
             width: u.rem(50);
@@ -365,12 +365,12 @@
 
     .bubble2 {
         position: absolute;
-        top: u.rem(250);
-        right: u.rem(25);
+        top: u.rem(230);
+        right: u.rem(40);
 
         @include u.responsive('tablet') {
-            top: u.rem(150);
-            right: u.rem(125);
+            top: u.rem(130);
+            right: u.rem(140);
         }
 
         @include u.responsive('mobile') {
@@ -381,28 +381,28 @@
 
     .bubble3 {
         position: absolute;
-        top: u.rem(690);
+        top: u.rem(670);
         right: u.rem(130);
 
         @include u.responsive('tablet') {
-            top: u.rem(450);
+            top: u.rem(430);
             right: u.rem(220);
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(370);
-            right: u.rem(-305);
+            top: u.rem(350);
+            right: u.rem(-295);
         }
     }
 
     .bubble4 {
         position: absolute;
         top: u.rem(750);
-        right: u.rem(245);
+        right: u.rem(260);
 
         @include u.responsive('tablet') {
             top: u.rem(490);
-            right: u.rem(285);
+            right: u.rem(295);
         }
 
         @include u.responsive('mobile') {
@@ -413,8 +413,8 @@
 
     .bubble5 {
         position: absolute;
-        top: u.rem(790);
-        right: u.rem(630);
+        top: u.rem(770);
+        right: u.rem(655);
 
         @include u.responsive('tablet') {
             top: u.rem(500);
@@ -429,27 +429,27 @@
 
     .bubble6 {
         position: absolute;
-        top: u.rem(910);
-        right: u.rem(420);
+        top: u.rem(850);
+        right: u.rem(445);
 
         @include u.responsive('tablet') {
-            top: u.rem(590);
-            right: u.rem(405);
+            top: u.rem(550);
+            right: u.rem(415);
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(500);
+            top: u.rem(480);
             right: u.rem(-120);
         }
     }
 
     .bubble7 {
         position: absolute;
-        top: u.rem(940);
-        right: u.rem(510);
+        top: u.rem(910);
+        right: u.rem(530);
 
         @include u.responsive('tablet') {
-            top: u.rem(610);
+            top: u.rem(570);
             right: u.rem(485);
         }
 
@@ -461,48 +461,48 @@
 
     .bubble8 {
         position: absolute;
-        top: u.rem(1110);
-        right: u.rem(545);
+        top: u.rem(1040);
+        right: u.rem(550);
 
         @include u.responsive('tablet') {
-            top: u.rem(720);
-            right: u.rem(500);
+            top: u.rem(680);
+            right: u.rem(510);
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(620);
+            top: u.rem(600);
             right: u.rem(-45);
         }
     }
 
     .bubble9 {
         position: absolute;
-        top: u.rem(1200);
-        right: u.rem(605);
+        top: u.rem(1150);
+        right: u.rem(580);
 
         @include u.responsive('tablet') {
-            top: u.rem(780);
-            right: u.rem(560);
+            top: u.rem(740);
+            right: u.rem(530);
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(670);
+            top: u.rem(650);
             right: u.rem(15);
         }
     }
 
     .bubble10 {
         position: absolute;
-        top: u.rem(1240);
-        right: u.rem(450);
+        top: u.rem(1180);
+        right: u.rem(430);
 
         @include u.responsive('tablet') {
-            top: u.rem(810);
-            right: u.rem(440);
+            top: u.rem(750);
+            right: u.rem(420);
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(700);
+            top: u.rem(680);
             right: u.rem(-85);
         }
     }
@@ -629,6 +629,7 @@
             margin-bottom: u.rem(10);
             width: u.rem(40);
             height: auto;
+            z-index: 10;
         }
 
         .arrow2 {
@@ -739,6 +740,10 @@
             box-shadow: none;
             transform: translate(-50%, -50%);
             padding: u.rem(20) u.rem(60);
+
+            @include u.responsive('mobile') {
+                padding: u.rem(15) u.rem(40);
+            }
         }
     }
 
