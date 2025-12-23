@@ -244,6 +244,11 @@
             flex-direction: row-reverse;
         }
 
+        &.fade-up-card {
+            opacity: 0;
+            transform: translateY(u.rem(100));
+        }
+
         @include u.responsive(tablet) {
             gap: u.rem(30);
         }
@@ -480,6 +485,11 @@
         align-items: center;
         gap: u.rem(100);
         width: 100%;
+
+        &.fade-up-card {
+            opacity: 0;
+            transform: translateY(u.rem(100));
+        }
 
         @include u.responsive(tablet) {
             gap: u.rem(60);
