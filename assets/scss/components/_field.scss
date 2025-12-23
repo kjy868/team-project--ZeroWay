@@ -120,11 +120,25 @@ select {
         color: u.$neutral-800;
     }
 
+    &:not(:placeholder-shown) {
+        color: u.$neutral-800;
+        background-color: u.$neutral-50;
+        border: 1px solid u.$neutral-700;
+    }
+
 }
 
 input[type="button"] {
     background-color: u.$neutral-900;
     color: u.$neutral-50;
+}
+
+/* 값이 있을 때 (입력 완료) */
+input:not(:placeholder-shown),
+textarea:not(:placeholder-shown) {
+    color: u.$neutral-800;
+    background-color: u.$neutral-50;
+    border-radius: 1px solid u.$neutral-700;
 }
 
 textarea {
@@ -142,10 +156,28 @@ label {
     display: inline-block;
     width: u.rem(12); // 별표 또는 공백 차지할 너비
     margin-right: u.rem(10);
+
+    @include u.responsive('mobile') {
+        margin-right: 0;
+        width: 0;
+    }
 }
 
-// 필수인 경우만 별표 표시
+// 필수인 경우만 별표 표시 
 .form-row:has([required]) .form-label::before {
+    content: '*';
+    color: u.$primary-600;
+    display: inline-block;
+    width: u.rem(12);
+    margin-right: u.rem(10);
+
+    @include u.responsive('mobile') {
+        margin-right: u.rem(5);
+    }
+}
+
+// 필수인 경우만 별표 표시 (체크박스 전용)
+.form-row:has(input[type="checkbox"][required]) .form-label::after {
     content: '*';
     color: u.$primary-600;
     display: inline-block;
@@ -183,4 +215,50 @@ input[type='radio']:checked {
     /*라인이 아닌, 라인과 원 사이 색상*/
     box-shadow: 0 0 0 1px u.$neutral-700;
     /*라인*/
+}
+
+
+// checkbox 커스텀 (report페이지 동그라미) ==========================================
+/*기본적인 checkbox 디자인 만들기, 박스부분 원래 디자인 없애기*/
+input[type="checkbox"] {
+    margin: 0px;
+    padding: 0px;
+    appearance: none;
+    -webkit-appearance: none;
+    height: 24px;
+    width: 24px;
+    background-color: u.$neutral-50;
+    border: 1px solid u.$neutral-700;
+    border-radius: 50%;
+    cursor: pointer;
+    @include u.flex(center, center);
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+
+/* 체크박스 내의 체크 모양 디자인을 하는 부분.*/
+input[type="checkbox"]:after {
+    content: '';
+    color: white;
+    display: none;
+    border-radius: 50%;
+    border: 7px solid u.$primary-500;
+}
+
+/* hover시 체크박스 색이 짙어짐 */
+input[type="checkbox"]:hover {
+    border: 1px solid u.$neutral-900;
+}
+
+/* 체크박스 체크시, 체크박스 배경색 바뀜 */
+input[type="checkbox"]:checked {
+    // background-color: #c0c7be;
+}
+
+/* 체크박스 체크 이후, 체크 박스 이후 요소인 체크 아이콘 css 변화
+display:none => block을 줌으로써 이제 체크가 보인다.
+*/
+input[type="checkbox"]:checked::after {
+    display: block;
 }
