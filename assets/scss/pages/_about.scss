@@ -197,8 +197,22 @@
             }
         }
 
-        &__card:hover .r5__card-textwrap {
-            height: auto;
+        // 1024px 이하에서는 호버 효과 비활성화
+        &__card:hover {
+            .r5__card-textwrap {
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            .r5__card-line {
+                position: static;
+                top: auto;
+            }
+
+            .r5__card-desc {
+                opacity: 1;
+                height: auto;
+            }
         }
     }
 }
