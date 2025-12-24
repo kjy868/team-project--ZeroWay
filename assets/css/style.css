@@ -2625,7 +2625,7 @@ input[type=checkbox]:checked::after {
   gap: clamp(1.25rem, 6vw, 6.25rem);
   flex-direction: row;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .benefit__wrap {
     display: flex;
     justify-content: center;

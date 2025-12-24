@@ -364,7 +364,7 @@
     &__wrap {
         @include u.flex(center, end, clamp(u.rem(20), 6vw, u.rem(100)));
 
-        @include u.responsive(mobile) {
+        @include u.responsive(medium) {
             @include u.flex(center, center, u.rem(50), column);
         }
     }
