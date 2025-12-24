@@ -17,13 +17,19 @@
         height: 100%;
         @include u.bgImg();
         background-image: url(../img/sub-hero__bg.webp);
-        position: relative;
+        display: flex;
+        align-items: center;
+
+        .container {
+            @include u.flex(center, center);
+            height: 100%;
+            text-align: center;
+            position: relative;
+        }
     }
 
     &__title {
         width: 100%;
         @include u.title01($color: u.$neutral-50);
-        @include u.center();
-        text-align: center;
     }
 }
