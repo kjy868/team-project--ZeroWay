@@ -38,6 +38,12 @@
     @include u.mainBody04();
     text-align: center;
     line-height: 1.5;
+
+    @include u.responsive(mobile) {
+        br {
+            display: none;
+        }
+    }
 }
 
 /* 5R section */
@@ -297,7 +303,6 @@
         max-width: u.rem(692);
         padding: u.rem(46);
         @include u.flex(start, start, u.rem(8), column);
-        word-break: keep-all;
 
         @include u.responsive(medium) {
             padding: u.rem(30)
@@ -331,7 +336,7 @@
         }
 
         @include u.responsive(medium) {
-            font-size: u.rem(18);
+            font-size: u.rem(16);
         }
 
         @include u.responsive(mobile) {
@@ -345,7 +350,6 @@
 .benefit {
     @include u.flex(center, center, u.rem(40), column);
     width: 100%;
-    word-break: keep-all;
 
     &__subtitle {
         @include u.aboutBody05();
@@ -358,11 +362,7 @@
     }
 
     &__wrap {
-        @include u.flex(center, end, u.rem(100));
-
-        @include u.responsive(medium) {
-            gap: u.rem(30);
-        }
+        @include u.flex(center, end, clamp(u.rem(20), 6vw, u.rem(100)));
 
         @include u.responsive(mobile) {
             @include u.flex(center, center, u.rem(50), column);

@@ -1,1 +1,31 @@
 @use '../utils' as u;
+
+.breadcrumb {
+    @include u.flex(start, center, u.rem(8));
+    font-size: u.rem(14);
+    font-family: 'Pretendard';
+    font-weight: 500;
+    color: u.$neutral-400;
+    position: absolute;
+    top: u.rem(130);
+    left: u.rem(20);
+    z-index: 2;
+
+    @include u.responsive(tablet) {
+        display: none;
+    }
+
+    &__item:not(:last-child)::after {
+        content: ">";
+        margin-left: 8px;
+        cursor: default;
+        pointer-events: none;
+    }
+
+    &__item--current {
+        color: u.$neutral-50;
+        font-weight: 600;
+        cursor: default;
+        pointer-events: none;
+    }
+}
