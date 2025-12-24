@@ -10,8 +10,6 @@
     border-top-right-radius: u.rem(200);
 
     margin-top: u.rem(-200);
-
-    padding-top: u.$padding-100;
     padding-bottom: u.$padding-250;
 
     @include u.responsive(tablet) {
@@ -45,9 +43,11 @@
 .action-tabs {
     @include u.flex(flex-start, center, u.rem(20));
     padding: u.rem(60) 0 u.rem(40);
+    flex-wrap: wrap;
 
     @include u.responsive(medium) {
         padding: u.rem(40) 0;
+        gap: u.rem(10);
     }
 
     @include u.responsive(mobile) {
@@ -129,7 +129,7 @@
 
 
     &__card {
-        @include u.flex(flex-start, center, u.rem(30));
+        @include u.flex(center, center, u.rem(30));
         width: calc((100% - (u.rem(20) * 2)) / 3);
         box-sizing: border-box;
         border: 1px solid u.$neutral-400;
@@ -144,6 +144,7 @@
 
         @include u.responsive(tablet) {
             gap: u.rem(15);
+            padding: u.rem(30) u.rem(20);
         }
 
 
@@ -175,8 +176,8 @@
 
 
         @include u.responsive(tablet) {
-            width: u.rem(90);
-            height: u.rem(90);
+            width: u.rem(80);
+            height: u.rem(80);
         }
     }
 
@@ -194,14 +195,10 @@
         @include u.actionBody01($weight: 600, $color: u.$neutral-900, $size: u.$font-24);
 
         @include u.responsive(tablet) {
-            @include u.actionBody01($weight: 600, $color: u.$neutral-900, $size: u.$font-22);
+            @include u.actionBody01($weight: 600, $color: u.$neutral-900, $size: u.$font-20);
         }
 
         @include u.responsive(medium) {
-            font-size: u.$font-22;
-        }
-
-        @include u.responsive(mobile) {
             font-size: u.$font-18;
         }
 
@@ -214,14 +211,10 @@
         @include u.actionBody01($weight: 400, $color: u.$neutral-800, $size: u.$font-22);
 
         @include u.responsive(tablet) {
-            @include u.actionBody01($weight: 400, $color: u.$neutral-800, $size: u.$font-20);
+            @include u.actionBody01($weight: 400, $color: u.$neutral-800, $size: u.$font-18);
         }
 
         @include u.responsive(medium) {
-            font-size: u.$font-20;
-        }
-
-        @include u.responsive(mobile) {
             font-size: u.$font-16;
         }
 
