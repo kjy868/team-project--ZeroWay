@@ -2421,6 +2421,11 @@ input[type=checkbox]:checked::after {
   gap: 2.5rem;
   flex-direction: column;
 }
+@media (max-width: 768px) {
+  .effects__wrap {
+    gap: 1.25rem;
+  }
+}
 .effects__card {
   display: flex;
   justify-content: center;

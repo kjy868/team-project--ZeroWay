@@ -236,6 +236,10 @@
     &__wrap {
         width: 100%;
         @include u.flex(center, center, u.rem(40), column);
+
+        @include u.responsive(medium) {
+            gap: u.rem(20);
+        }
     }
 
     &__card {
