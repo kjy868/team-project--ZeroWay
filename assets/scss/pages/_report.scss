@@ -15,19 +15,7 @@
     &__desc {
         padding-bottom: u.$padding-60;
         text-align: center;
-        @include u.defineFont(u.rem(24));
-
-        @include u.responsive('medium') {
-            @include u.defineFont(u.rem(22));
-        }
-
-        @include u.responsive('mobile') {
-            @include u.defineFont(u.rem(20));
-        }
-
-        @include u.responsive('small') {
-            @include u.defineFont(u.rem(18));
-        }
+        @include u.aboutBody01();
     }
 
 
@@ -78,6 +66,7 @@
         flex: 1;
         min-width: 0;
         display: flex;
+        flex-wrap: wrap;
         // flex-direction: column;
         gap: u.rem(20);
         @include u.reportBody02;
