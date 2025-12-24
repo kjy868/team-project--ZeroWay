@@ -622,6 +622,7 @@ li {
   border-radius: 3.125rem;
   padding: 1.25rem 3.75rem;
   text-align: center;
+  border: none;
   transition: background-color 0.2s ease, border-color 0.2s ease, padding 0.2s ease, margin 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 @media (max-width: 1024px) {
@@ -644,6 +645,7 @@ li {
   margin: -0.3125rem -0.3125rem;
   transform: translateY(-2px);
   box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.25);
+  border: none;
 }
 @media (max-width: 480px) {
   .btn--black:hover {
@@ -658,6 +660,7 @@ li {
   transform: 0;
   box-shadow: none;
   padding: 1.25rem 3.75rem;
+  border: none;
 }
 @media (max-width: 480px) {
   .btn--black:active {
@@ -672,6 +675,7 @@ li {
   box-shadow: none;
   transition: none;
   cursor: auto;
+  border: none;
 }
 .btn--blackLine {
   font-size: 1.5625rem;
@@ -3637,7 +3641,6 @@ input[type=checkbox]:checked::after {
   left: 0;
   height: auto;
   z-index: 10;
-  pointer-events: none;
 }
 @media (max-width: 1024px) {
   .map .pin-img {

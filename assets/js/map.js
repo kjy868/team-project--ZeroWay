@@ -103,6 +103,7 @@ if (tabMenu) {
     // document에서 mouseup 감지 (tabMenu 밖에서도)
     document.addEventListener('mouseup', () => {
         isDown = false;
+        didDrag = false;
         if (tabMenu) {
             tabMenu.style.cursor = 'grab';
         }
@@ -110,6 +111,7 @@ if (tabMenu) {
 
     tabMenu.addEventListener('mouseleave', () => {
         isDown = false;
+        didDrag = false;
         tabMenu.style.cursor = 'grab';
     });
 
@@ -136,7 +138,8 @@ if (tabMenu) {
 
     // 핀 클릭 -> 말풍선 토글 ==============================
     const pins = tabMenu.querySelectorAll('.pin-img img[class^="pin"]');
-    const bubbles = tabMenu.querySelectorAll('.pin-bubble');
+    // const bubbles = tabMenu.querySelectorAll('.pin-bubble');
+    const bubbles = document.querySelectorAll('.pin-bubble');
 
     function hideAllBubbles() {
         bubbles.forEach(b => b.classList.remove('active'));
@@ -160,7 +163,8 @@ if (tabMenu) {
             const match = Array.from(pin.classList).join(' ').match(/pin(\d{1,2})/);
             if (!match) return;
             const idx = match[1];
-            const target = tabMenu.querySelector(`.pin-bubble.bubble${idx}`);
+            // const target = tabMenu.querySelector(`.pin-bubble.bubble${idx}`);
+            const target = document.querySelector(`.pin-bubble.bubble${idx}`);
             if (!target) return;
             const willOpen = !target.classList.contains('active');
             hideAllBubbles();

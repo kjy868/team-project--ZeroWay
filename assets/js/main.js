@@ -75,12 +75,14 @@ function setupMeritLine() {
         reverse = true;
     } else {
         path = document.querySelector('#line-path-desktop');
+        reverse = false;
     }
 
     if (!path) return;
 
     const len = path.getTotalLength();
 
+    // reverse 변수 없이 항상 같은 방식:
     gsap.set(path, {
         strokeDasharray: len,
         strokeDashoffset: reverse ? 0 : len

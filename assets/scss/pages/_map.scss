@@ -35,17 +35,14 @@
     }
 
     .pin-img {
-        // ======================
         position: absolute;
         width: u.rem(1900);
-        // ======================
         top: 0;
         left: 0;
         // width: 100%;
         height: auto;
         z-index: 10;
-
-        pointer-events: none; // header 클릭 방지
+        // pointer-events: none;
 
         @include u.responsive('tablet') {
             width: u.rem(1500);

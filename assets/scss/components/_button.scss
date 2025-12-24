@@ -8,6 +8,7 @@
     border-radius: u.rem(50);
     padding: u.rem(20) u.rem(60);
     text-align: center;
+    border: none;
     transition:
         background-color 0.2s ease,
         border-color 0.2s ease,
@@ -37,6 +38,7 @@
             margin: u.rem(-5) u.rem(-5);
             transform: translateY(-2px);
             box-shadow: 0 u.rem(8) u.rem(20) rgba(0, 0, 0, 0.25);
+            border: none;
 
             @include u.responsive('mobile') {
                 padding: u.rem(15) u.rem(45);
@@ -51,6 +53,7 @@
             transform: 0;
             box-shadow: none;
             padding: u.rem(20) u.rem(60);
+            border: none;
 
             @include u.responsive('mobile') {
                 padding: u.rem(15) u.rem(40);
@@ -65,6 +68,7 @@
             box-shadow: none;
             transition: none;
             cursor: auto;
+            border: none;
         }
     }
 
