@@ -30,12 +30,9 @@
     // black button 
     &--black {
         background-color: u.$neutral-900;
-        border: u.rem(2) solid u.$neutral-900;
-
 
         &:hover {
             background-color: u.$primary-600;
-            border-color: u.$primary-600;
             padding: u.rem(25) u.rem(65);
             margin: u.rem(-5) u.rem(-5);
             transform: translateY(-2px);
@@ -54,7 +51,6 @@
             transform: 0;
             box-shadow: none;
             padding: u.rem(20) u.rem(60);
-            border-color: u.$primary-700;
 
             @include u.responsive('mobile') {
                 padding: u.rem(15) u.rem(40);
@@ -63,7 +59,6 @@
 
         &:disabled {
             background-color: u.$neutral-500;
-            border: u.rem(2) solid u.$neutral-500;
             margin: 0;
             transform: none;
             padding: u.rem(20) u.rem(60);
@@ -99,6 +94,7 @@
             transform: translateY(-2px);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             padding: u.rem(25) u.rem(65);
+            border: u.rem(2) solid u.$neutral-900;
 
             @include u.responsive('mobile') {
                 padding: u.rem(15) u.rem(40);
@@ -112,6 +108,7 @@
             color: u.$neutral-50;
             transition: 0.3s all ease-in-out;
             padding: u.rem(20) u.rem(65);
+            border: u.rem(2) solid u.$neutral-900;
 
             @include u.responsive('mobile') {
                 padding: u.rem(15) u.rem(40);
