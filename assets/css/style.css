@@ -2954,7 +2954,6 @@ input[type=checkbox]:checked::after {
   border-top-left-radius: 12.5rem;
   border-top-right-radius: 12.5rem;
   margin-top: -12.5rem;
-  padding-bottom: 15.625rem;
 }
 @media (max-width: 1024px) {
   .action-wrap {
