@@ -141,6 +141,7 @@ body {
   background-color: #fff;
   font-family: "Pretendard";
   line-height: 1.3;
+  word-break: keep-all;
 }
 
 a {
@@ -512,6 +513,39 @@ li {
   }
 }
 
+.breadcrumb {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: row;
+  font-size: 0.875rem;
+  font-family: "Pretendard";
+  font-weight: 500;
+  color: #ccc;
+  position: absolute;
+  top: 8.125rem;
+  left: 1.25rem;
+  z-index: 2;
+}
+@media (max-width: 1024px) {
+  .breadcrumb {
+    display: none;
+  }
+}
+.breadcrumb__item:not(:last-child)::after {
+  content: ">";
+  margin-left: 8px;
+  cursor: default;
+  pointer-events: none;
+}
+.breadcrumb__item--current {
+  color: #fff;
+  font-weight: 600;
+  cursor: default;
+  pointer-events: none;
+}
+
 .sub-hero {
   width: 100%;
   height: 41.25rem;
@@ -535,6 +569,16 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../img/sub-hero__bg.webp);
+  display: flex;
+  align-items: center;
+}
+.sub-hero__bg .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  text-align: center;
   position: relative;
 }
 .sub-hero__title {
@@ -543,11 +587,6 @@ li {
   font-weight: 700;
   color: #fff;
   font-family: "LaundryGothic";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
 }
 @media (max-width: 1024px) {
   .sub-hero__title {
@@ -598,11 +637,9 @@ li {
 }
 .btn--black {
   background-color: #121212;
-  border: 0.125rem solid #121212;
 }
 .btn--black:hover {
   background-color: #00d76b;
-  border-color: #00d76b;
   padding: 1.5625rem 4.0625rem;
   margin: -0.3125rem -0.3125rem;
   transform: translateY(-2px);
@@ -621,7 +658,6 @@ li {
   transform: 0;
   box-shadow: none;
   padding: 1.25rem 3.75rem;
-  border-color: #00b55f;
 }
 @media (max-width: 480px) {
   .btn--black:active {
@@ -630,7 +666,6 @@ li {
 }
 .btn--black:disabled {
   background-color: #999;
-  border: 0.125rem solid #999;
   margin: 0;
   transform: none;
   padding: 1.25rem 3.75rem;
@@ -662,6 +697,7 @@ li {
   transform: translateY(-2px);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 1.5625rem 4.0625rem;
+  border: 0.125rem solid #121212;
 }
 @media (max-width: 480px) {
   .btn--blackLine:hover {
@@ -675,6 +711,7 @@ li {
   color: #fff;
   transition: 0.3s all ease-in-out;
   padding: 1.25rem 4.0625rem;
+  border: 0.125rem solid #121212;
 }
 @media (max-width: 480px) {
   .btn--blackLine:active {
@@ -737,6 +774,11 @@ li {
   justify-content: center;
   transition: all 0.2s ease;
   outline: none;
+}
+@media (max-width: 1024px) {
+  .check-box:hover {
+    border-color: #555;
+  }
 }
 .check-box:hover {
   border-color: #00b55f;
@@ -844,10 +886,25 @@ select[data-state=error] {
   background-color: #fff1f0;
   color: #333;
 }
+input:not([type=radio], [type=checkbox]):not(:placeholder-shown),
+textarea:not(:placeholder-shown),
+select:not(:placeholder-shown) {
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #555;
+}
 
 input[type=button] {
   background-color: #121212;
   color: #fff;
+}
+
+/* 값이 있을 때 (입력 완료) */
+input:not(:placeholder-shown),
+textarea:not(:placeholder-shown) {
+  color: #333;
+  background-color: #fff;
+  border-radius: 1px solid #555;
 }
 
 textarea {
@@ -884,8 +941,27 @@ label {
   width: 0.75rem;
   margin-right: 0.625rem;
 }
+@media (max-width: 480px) {
+  .form-label::before {
+    margin-right: 0;
+    width: 0;
+  }
+}
 
 .form-row:has([required]) .form-label::before {
+  content: "*";
+  color: #00d76b;
+  display: inline-block;
+  width: 0.75rem;
+  margin-right: 0.625rem;
+}
+@media (max-width: 480px) {
+  .form-row:has([required]) .form-label::before {
+    margin-right: 0.3125rem;
+  }
+}
+
+.form-row:has(input[type=checkbox][required]) .form-label::after {
   content: "*";
   color: #00d76b;
   display: inline-block;
@@ -920,6 +996,46 @@ input[type=radio]:checked {
   /*라인이 아닌, 라인과 원 사이 색상*/
   box-shadow: 0 0 0 1px #555;
   /*라인*/
+}
+
+/*기본적인 checkbox 디자인 만들기, 박스부분 원래 디자인 없애기*/
+input[type=checkbox] {
+  margin: 0px;
+  padding: 0px;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  border: 1px solid #555;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* 체크박스 내의 체크 모양 디자인을 하는 부분.*/
+input[type=checkbox]:after {
+  content: "";
+  color: white;
+  display: none;
+  border-radius: 50%;
+  border: 7px solid #12f96b;
+}
+
+/* hover시 체크박스 색이 짙어짐 */
+input[type=checkbox]:hover {
+  border: 1px solid #121212;
+}
+
+/* 체크박스 체크시, 체크박스 배경색 바뀜 */
+/* 체크박스 체크 이후, 체크 박스 이후 요소인 체크 아이콘 css 변화
+display:none => block을 줌으로써 이제 체크가 보인다.
+*/
+input[type=checkbox]:checked::after {
+  display: block;
 }
 
 .hero {
@@ -1781,17 +1897,17 @@ input[type=radio]:checked {
 }
 @media (max-width: 1024px) {
   .merit__list02 li .line01 {
-    font-size: 1.375rem;
+    font-size: 1.125rem;
   }
 }
 @media (max-width: 480px) {
   .merit__list02 li .line01 {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 360px) {
   .merit__list02 li .line01 {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 .merit__list02 li .line02 {
@@ -2041,17 +2157,22 @@ input[type=radio]:checked {
 }
 @media (max-width: 1024px) {
   .about__desc {
-    font-size: 1.375rem;
+    font-size: 1.125rem;
   }
 }
 @media (max-width: 480px) {
   .about__desc {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 360px) {
   .about__desc {
-    font-size: 1rem;
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .about__desc br {
+    display: none;
   }
 }
 
@@ -2254,6 +2375,15 @@ input[type=radio]:checked {
   }
   .r5__card:hover .r5__card-textwrap {
     height: auto;
+    padding: 1rem 0;
+  }
+  .r5__card:hover .r5__card-line {
+    position: static;
+    top: auto;
+  }
+  .r5__card:hover .r5__card-desc {
+    opacity: 1;
+    height: auto;
   }
 }
 
@@ -2304,6 +2434,10 @@ input[type=radio]:checked {
 }
 .effects__card:nth-child(odd) {
   flex-direction: row-reverse;
+}
+.effects__card.fade-up-card {
+  opacity: 0;
+  transform: translateY(6.25rem);
 }
 @media (max-width: 1024px) {
   .effects__card {
@@ -2358,7 +2492,6 @@ input[type=radio]:checked {
   align-items: start;
   gap: 0.5rem;
   flex-direction: column;
-  word-break: keep-all;
 }
 @media (max-width: 768px) {
   .effects__text-wrap {
@@ -2428,7 +2561,7 @@ input[type=radio]:checked {
 }
 @media (max-width: 768px) {
   .effects__card-desc {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 480px) {
@@ -2445,7 +2578,6 @@ input[type=radio]:checked {
   gap: 2.5rem;
   flex-direction: column;
   width: 100%;
-  word-break: keep-all;
 }
 .benefit__subtitle {
   font-size: 1.25rem;
@@ -2490,13 +2622,8 @@ input[type=radio]:checked {
   display: flex;
   justify-content: center;
   align-items: end;
-  gap: 6.25rem;
+  gap: clamp(1.25rem, 6vw, 6.25rem);
   flex-direction: row;
-}
-@media (max-width: 768px) {
-  .benefit__wrap {
-    gap: 1.875rem;
-  }
 }
 @media (max-width: 480px) {
   .benefit__wrap {
@@ -2661,6 +2788,10 @@ input[type=radio]:checked {
   gap: 6.25rem;
   width: 100%;
 }
+.actions__card.fade-up-card {
+  opacity: 0;
+  transform: translateY(6.25rem);
+}
 @media (max-width: 1024px) {
   .actions__card {
     gap: 3.75rem;
@@ -2809,6 +2940,31 @@ input[type=radio]:checked {
   stroke-linecap: round;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
+}
+
+.action-wrap {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  border-top-left-radius: 12.5rem;
+  border-top-right-radius: 12.5rem;
+  margin-top: -12.5rem;
+  padding-top: 6.25rem;
+  padding-bottom: 15.625rem;
+}
+@media (max-width: 1024px) {
+  .action-wrap {
+    margin-top: -7.5rem;
+    border-top-left-radius: 7.5rem;
+    border-top-right-radius: 7.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .action-wrap {
+    margin-top: -2.5rem;
+    border-top-left-radius: 3.75rem;
+    border-top-right-radius: 3.75rem;
+  }
 }
 
 .action__title {
@@ -3269,6 +3425,11 @@ input[type=radio]:checked {
     padding-bottom: 11.25rem;
   }
 }
+@media (max-width: 480px) {
+  .campaign__pagination {
+    gap: 1rem;
+  }
+}
 @media (max-width: 360px) {
   .campaign__pagination {
     padding-bottom: 10rem;
@@ -3432,12 +3593,23 @@ input[type=radio]:checked {
   }
 }
 
+.fade-up-section {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
 .map {
   width: 100%;
   height: 100%;
+  padding-top: 6.25rem;
   /* =Map Pin Animation
   // ========================================================================== */
   /* 흰색 그라데이션 */
+}
+@media (max-width: 1024px) {
+  .map {
+    padding-top: 5rem;
+  }
 }
 .map__img-wrap {
   width: 100%;
@@ -3447,7 +3619,7 @@ input[type=radio]:checked {
   height: 100%;
 }
 .map__canvas {
-  width: 1900px;
+  width: 118.75rem;
   position: relative;
   height: auto;
   line-height: 0;
@@ -3469,6 +3641,7 @@ input[type=radio]:checked {
   left: 0;
   height: auto;
   z-index: 10;
+  pointer-events: none;
 }
 @media (max-width: 1024px) {
   .map .pin-img {
@@ -3670,7 +3843,7 @@ input[type=radio]:checked {
   display: block;
 }
 .map .pin-bubble {
-  position: absolute;
+  position: relative;
   background: #121212;
   color: #fff;
   border-radius: 1.25rem;
@@ -3683,10 +3856,11 @@ input[type=radio]:checked {
 }
 .map .pin-bubble .pin-img img {
   cursor: pointer;
+  pointer-events: auto;
   transition: transform 0.2s ease;
 }
 .map .pin-bubble .pin-img img.is-selected {
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 .map .pin-bubble.active {
   display: block;
@@ -3706,6 +3880,11 @@ input[type=radio]:checked {
   font-size: 1.125rem;
   font-weight: 700;
 }
+@media (max-width: 480px) {
+  .map .pin-bubble .bubble-title p:first-child {
+    line-height: 1.5;
+  }
+}
 .map .pin-bubble .bubble-title p:nth-child(2) {
   font-size: 0.875rem;
   font-weight: 300;
@@ -3723,8 +3902,7 @@ input[type=radio]:checked {
   padding-left: 1.125rem;
   line-height: 1.5;
   word-break: keep-all;
-  display: block;
-  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
   white-space: normal;
 }
 @media (max-width: 480px) {
@@ -3737,6 +3915,7 @@ input[type=radio]:checked {
   color: #00d76b;
   font-size: 0.75rem;
   margin-top: 0.75rem;
+  margin-bottom: 0.3125rem;
   clear: both;
   display: block;
 }
@@ -4337,6 +4516,12 @@ input[type=radio]:checked {
     transform: translateY(0);
   }
 }
+.map .slide-down {
+  padding-bottom: 4.375rem;
+}
+.map .slide-down .fade {
+  display: none;
+}
 @media (max-width: 480px) {
   .map .slide-down {
     -webkit-animation-name: slideDown;
@@ -4547,7 +4732,7 @@ input[type=radio]:checked {
   width: 100%;
   margin-bottom: 1.875rem;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .report .form-row {
     flex-direction: column;
     gap: 0;
@@ -4585,11 +4770,12 @@ input[type=radio]:checked {
     font-size: 1.125rem;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .report .form-label {
     width: 100%;
     line-height: normal;
     flex: 0;
+    margin-bottom: 0.625rem;
   }
 }
 .report .form-field {
@@ -4612,11 +4798,19 @@ input[type=radio]:checked {
     font-size: 1rem;
   }
 }
+@media (max-width: 768px) {
+  .report .form-field {
+    width: 100%;
+    flex: 1;
+  }
+}
 .report .form-field .day-group {
   display: flex;
   gap: 0.625rem;
   flex-wrap: wrap;
   align-items: center;
+  width: 100%;
+  flex: 1;
 }
 .report .form-field .day-group input {
   width: auto;
@@ -4633,18 +4827,23 @@ input[type=radio]:checked {
   max-width: none;
 }
 .report .form-field select {
-  width: 26.875rem;
+  width: 25.625rem;
   appearance: none;
   background-image: url("/assets/img/report-select-img.webp");
   background-repeat: no-repeat;
   background-position: right 0.625rem center;
+}
+@media (max-width: 768px) {
+  .report .form-field select {
+    width: 100%;
+  }
 }
 .report .address-field {
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .report .address-field {
     width: 100%;
   }
@@ -4682,11 +4881,11 @@ input[type=radio]:checked {
   align-items: center;
 }
 .report .address-row input:first-child {
-  flex: 0 0 26.875rem;
+  flex: 0 0 25.625rem;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .report .address-row input:first-child {
-    flex: 0;
+    flex: 1;
   }
 }
 .report .address-row .address-row input {
@@ -4695,6 +4894,11 @@ input[type=radio]:checked {
 .report .checkbox {
   width: auto;
   margin-bottom: 3.75rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.625rem;
+  flex-direction: row;
 }
 .report .checkbox span {
   font-size: 1.25rem;
