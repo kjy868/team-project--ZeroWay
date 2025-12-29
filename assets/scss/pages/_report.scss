@@ -21,11 +21,7 @@
         }
 
         @include u.responsive('mobile') {
-            // padding-top: u.$padding-80 ;
-            // padding-bottom: u.$padding-180;
-        }
-
-        @include u.responsive('small') {
+            padding-top: u.$padding-80 ;
             padding-bottom: u.$padding-160;
         }
     }
@@ -74,6 +70,10 @@
             flex: 0;
             margin-bottom: u.rem(20);
             padding-top: 0;
+        }
+
+        @include u.responsive('mobile') {
+            margin-bottom: u.rem(10);
         }
     }
 
@@ -196,5 +196,10 @@
     &__btn {
         width: 100%;
         display: block;
+    }
+
+    .fade-up {
+        opacity: 0;
+        transform: translateY(70px);
     }
 }

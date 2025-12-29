@@ -1038,4 +1038,9 @@
         margin-bottom: u.$padding-20;
     }
 
+    .fade-up {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+
 }

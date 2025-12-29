@@ -72,7 +72,7 @@
 
         <section class="hero">
             <div class="hero__img-wrap">
-                <picture class="hero__img01">
+                <picture class="hero__img01 hero__img">
                     <!-- 360px 이하일 때 텍스트01 이미지 -->
                     <source srcset="./assets/img/hero-img01-wrap_360.webp" media="(max-width: 360px)">
 
@@ -89,7 +89,7 @@
                     <img src="./assets/img/hero-img01-wrap_1024.webp" alt=" 반응형 이미지">
                 </picture>
                 <div class="hero__img-kid"></div>
-                <picture class="hero__img02">
+                <picture class="hero__img02 hero__img">
                     <!-- 360px 이하일 때 텍스트02 이미지 -->
                     <source srcset="./assets/img/hero-img02-wrap_360.webp" media="(max-width: 360px)">
 
@@ -112,11 +112,11 @@
         <section class="intro">
             <div class="container">
                 <div class="intro__txt">
-                    <h2 class="intro__title"><span>제로 웨이스트</span>에 대해 알고계신가요?</h2>
-                    <p class="intro__conts">모든 제품과 포장재를 태우지 않고, 인간의 건강과 환경에 위협이 되는 물질을 <br>
+                    <h2 class="intro__title fade-up"><span>제로 웨이스트</span>에 대해 알고계신가요?</h2>
+                    <p class="intro__conts fade-up">모든 제품과 포장재를 태우지 않고, 인간의 건강과 환경에 위협이 되는 물질을 <br>
                         토지, 해양, 공기로 배출하지 않도록 생산, 소비, 재사용 및 회수 과정을 통해 <br>
                         모든 자원을 보존하고 최소화하자는 사회적 운동입니다.</p>
-                    <a href="#" class="btn btn--black">
+                    <a href="#" class="btn btn--black fade-up">
                         함께 알아보기 →
                     </a>
                 </div>
@@ -126,7 +126,7 @@
         <!-- merit 영역  -->
         <section class="merit">
             <div class="container">
-                <h2 class="merit__title">5R 원칙</h2>
+                <h2 class="merit__title fade-up">5R 원칙</h2>
 
                 <!-- 데스크탑용 (1024px 이상) -->
                 <svg id="line-svg-desktop" class="line-svg" width="1155" height="3285" viewBox="0 0 1155 3285"
@@ -137,11 +137,8 @@
                 </svg>
 
                 <!-- 태블릿용 (1024px 이하) -->
-                <svg id="line-svg-tablet" class="line-svg" width="318" height="2992" viewBox="0 0 318 2992" fill="none"
+                <!-- <svg id="line-svg-tablet" class="line-svg" width="318" height="2992" viewBox="0 0 318 2992" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-
-                    <!-- <svg id="line-svg-tablet" class="line-svg" style="transform: scaleY(-1);" width="318" height="2992"
-                    viewBox="0 0 318 2992" fill="none" xmlns="http://www.w3.org/2000/svg"> -->
                     <path
                         d="M314.32 2991.19C300.32 2849.69 57.0142 2754.7 26.8203 2608.69C-6.4636 2447.74 125.189 2360.44 140.794 2125.2C156.398 1889.96 19.8951 1869.58 4.14926 1653.54C-11.5966 1437.5 139.304 1238.05 160.251 1070.06C186.859 856.672 96.8411 696.92 61.7883 559.29C32.0705 442.608 23.3203 334.691 88.8203 233.191C154.32 131.691 145.82 0.191406 145.82 0.191406"
                         stroke="#12F96B" stroke-width="6" />
@@ -150,15 +147,26 @@
                     <circle cx="33.8203" cy="1449.19" r="15" fill="#12F96B" />
                     <circle cx="121.82" cy="1970.19" r="15" fill="#12F96B" />
                     <circle cx="47.8203" cy="2441.19" r="15" fill="#12F96B" />
+                </svg> -->
+
+                <svg id="line-svg-tablet" class="line-svg" width="322" height="3000" viewBox="0 0 322 3000" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="52.7363" cy="507.053" r="15" fill="#12F96B" />
+                    <circle cx="163.736" cy="1002.05" r="15" fill="#12F96B" />
+                    <circle cx="35.7363" cy="1449.05" r="15" fill="#12F96B" />
+                    <circle cx="123.736" cy="1970.05" r="15" fill="#12F96B" />
+                    <circle cx="49.7363" cy="2441.05" r="15" fill="#12F96B" />
+                    <path
+                        d="M149.736 0.0527344C148.903 47.3861 136.736 159.453 94.7361 229.053C42.2361 316.053 19.2361 422.053 75.2361 599.553C131.236 777.053 180.736 887.053 167.236 1036.55C153.736 1186.05 -13.9385 1464.92 4.39855 1652.74C22.7356 1840.55 159.596 1925.64 144.236 2123.55C126.736 2349.05 16.7363 2449.55 23.2363 2570.05C34.3239 2775.6 318.736 2848.55 318.736 2999.55"
+                        stroke="#12F96B" stroke-width="6" />
                 </svg>
 
 
 
+
                 <!-- 모바일용 (480px 이하) -->
-                <svg id="line-svg-mobile" class="line-svg" width="206" height="2585" viewBox="0 0 206 2585" fill="none"
+                <!-- <svg id="line-svg-mobile" class="line-svg" width="206" height="2585" viewBox="0 0 206 2585" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <!-- <svg id="line-svg-mobile" class="line-svg" style="transform: scaleY(-1);" width="206" height="2585"
-                    viewBox="0 0 206 2585" fill="none" xmlns="http://www.w3.org/2000/svg"> -->
                     <path
                         d="M203 2584.05C193.37 2461.86 51.0175 2378.82 30.2492 2252.73C7.35559 2113.74 56.1668 2050.86 66.8998 1847.71C77.6328 1644.56 25.4859 1614.45 14.6554 1427.87C3.82497 1241.3 27.5876 1067.52 59.394 924.529C102.423 731.084 72.8946 618.386 54.3012 482.887C40.361 381.299 35.378 323.901 72.8946 201.271C110.411 78.6414 112.101 0.0546875 112.101 0.0546875"
                         stroke="#12F96B" stroke-width="5" />
@@ -167,7 +175,20 @@
                     <circle cx="15" cy="1211.05" r="15" fill="#12F96B" />
                     <circle cx="68" cy="1659.05" r="15" fill="#12F96B" />
                     <circle cx="28" cy="2110.05" r="15" fill="#12F96B" />
+                </svg> -->
+
+                <svg id="line-svg-mobile" class="line-svg" width="193" height="1842" viewBox="0 0 193 1842" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="324.022" r="15" fill="#12F96B" />
+                    <circle cx="47" cy="609.022" r="15" fill="#12F96B" />
+                    <circle cx="18" cy="894.022" r="15" fill="#12F96B" />
+                    <circle cx="15" cy="1179.02" r="15" fill="#12F96B" />
+                    <circle cx="37" cy="1464.02" r="15" fill="#12F96B" />
+                    <path
+                        d="M43.4327 0.0224609C43.2031 30.9521 39.8506 104.181 28.2777 149.661C13.8116 206.51 7.47405 275.775 22.9046 391.761C38.3351 507.747 51.9745 579.626 48.2547 677.315C44.5348 775.005 -1.66706 957.231 3.38563 1079.96C8.43833 1202.68 46.1495 1258.28 41.9173 1387.61C37.0953 1534.96 5.60514 1548.38 21.5 1625.52C45.9173 1744.02 189.5 1742.35 189.5 1841.02"
+                        stroke="#12F96B" stroke-width="6" />
                 </svg>
+
 
 
                 <!-- 말풍선 이미지 -->
@@ -203,34 +224,34 @@
 
 
 
-                <h2 class="merit__subtitle">제로웨이스트의 효과</h2>
+                <h2 class="merit__subtitle fade-up">제로웨이스트의 효과</h2>
 
-                <ul class="merit__list01">
+                <ul class="merit__list01 fade-up">
                     <li>
                         <img src="./assets/img/merit-icon01.webp" alt="이펙트 아이콘">
                         <h3>탄소 배출 절감</h3>
-                        <p>재활용·분리수거·퇴비화로 <br>
-                            폐기물 관리 배출을 크게 줄이고, <br>
+                        <p>재활용·분리수거·퇴비화로
+                            폐기물 관리 배출을 크게 줄이고,
                             생산·소비 과정의 탄소도 절감</p>
                     </li>
                     <li>
                         <img src="./assets/img/merit-icon02.webp" alt="이펙트 아이콘">
                         <h3>자원 절약</h3>
-                        <p>불필요한 쓰레기를 줄여 원자재 <br>
-                            사용을 줄이고, 매립·소각으로 인한 <br>
+                        <p>불필요한 쓰레기를 줄여 원자재
+                            사용을 줄이고, 매립·소각으로 인한
                             토양·수질·대기 오염을 예방</p>
                     </li>
                     <li>
                         <img src="./assets/img/merit-icon03.webp" alt="이펙트 아이콘">
                         <h3>비용 절감</h3>
-                        <p>폐기물 처리비와 환경오염 대응 <br>
-                            비용을 줄이고, 재활용·재사용으로 <br>
+                        <p>폐기물 처리비와 환경오염 대응
+                            비용을 줄이고, 재활용·재사용으로
                             사회적 비용까지 절감</p>
                     </li>
                 </ul>
                 <div class="merit__list02-wrap">
-                    <h3>오늘 내가 컵 하나를 아낀다면?</h3>
-                    <div class="merit__group">
+                    <h3 class="fade-up">오늘 내가 컵 하나를 아낀다면?</h3>
+                    <div class="merit__group fade-up">
                         <svg width="30" height="488" viewBox="0 0 30 488" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M15 15L15 476" stroke="#12F96B" stroke-width="10" stroke-linecap="round"
@@ -289,8 +310,8 @@
 
                 </div>
                 <div class="merit__txt">
-                    <h3>지구를 위한 행동, 어디서부터 시작할까요?</h3>
-                    <a href="/action.html" class="btn btn--whiteLine">
+                    <h3 class="fade-up">지구를 위한 행동, 어디서부터 시작할까요?</h3>
+                    <a href="/action.html" class="btn btn--whiteLine fade-up">
                         텀블러 할인 카페 보러가기 →
                     </a>
                 </div>
@@ -301,7 +322,7 @@
         <section class="zeromap">
             <div class="container">
                 <div class="zeromap__wrap">
-                    <h2 class="zeromap__title">
+                    <h2 class="zeromap__title fade-up">
                         오늘의 <span>발걸음
                             <svg width="152" height="89" viewBox="0 0 152 89" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -312,11 +333,11 @@
                         </span>을 지도에 남기고, <br>
                         함께 푸른 지구를 만들어가요.
                     </h2>
-                    <p class="zeromap__desc">
+                    <p class="zeromap__desc fade-up">
                         ZeroMap은 정보를 제보하며, 모두가 함께 지도를 채워가는 참여형 지도입니다. <br>
                         당신의 핀으로 커뮤니티와 지구를 더 푸르게 만들어보세요.
                     </p>
-                    <a href="/map.html" class="btn btn--black">
+                    <a href="/map.html" class="btn btn--black fade-up">
                         ZeroMap으로 이동하기 →
                     </a>
                 </div>

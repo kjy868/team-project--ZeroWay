@@ -111,6 +111,7 @@ select {
         outline: none;
         border: 1px solid u.$neutral-700;
         color: u.$neutral-800;
+        background-color: u.$neutral-50;
     }
 
     &:hover {
@@ -122,6 +123,7 @@ select {
     }
 
     &[data-state="error"] {
+        border: none;
         background-color: u.$danger-50;
         color: u.$neutral-800;
     }
@@ -183,14 +185,11 @@ label {
 }
 
 // 필수인 경우만 별표 표시 (체크박스 전용)
-.form-row:has(input[type="checkbox"][required]) .form-label::after {
-    content: '*';
+.form-row:has(input[type="checkbox"][required]) .checkbox::after {
+    content: '* ';
     color: u.$primary-600;
-    display: inline-block;
-    width: u.rem(12);
-    margin-right: u.rem(10);
+    margin-right: u.rem(5);
 }
-
 
 // 라디오 버튼 커스텀 =================================================
 
@@ -205,7 +204,7 @@ input[type='radio'] {
     /*기본 브라우저에서 기본 스타일 제거*/
     width: 25px;
     height: 25px;
-    border: 1px solid #ccc;
+    border: 1px solid u.$neutral-700;
     /*체크되지 않았을 때의 테두리 색상*/
     border-radius: 50%;
     outline: none;
@@ -263,7 +262,6 @@ input[type="checkbox"]:checked {
 }
 
 /* 체크박스 체크 이후, 체크 박스 이후 요소인 체크 아이콘 css 변화
-display:none => block을 줌으로써 이제 체크가 보인다.
 */
 input[type="checkbox"]:checked::after {
     display: block;

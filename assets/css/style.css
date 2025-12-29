@@ -878,6 +878,7 @@ select:focus {
   outline: none;
   border: 1px solid #555;
   color: #333;
+  background-color: #fff;
 }
 input:not([type=radio], [type=checkbox]):hover,
 textarea:hover,
@@ -892,6 +893,7 @@ select:active {
 input:not([type=radio], [type=checkbox])[data-state=error],
 textarea[data-state=error],
 select[data-state=error] {
+  border: none;
   background-color: #fff1f0;
   color: #333;
 }
@@ -970,12 +972,10 @@ label {
   }
 }
 
-.form-row:has(input[type=checkbox][required]) .form-label::after {
-  content: "*";
+.form-row:has(input[type=checkbox][required]) .checkbox::after {
+  content: "* ";
   color: #00d76b;
-  display: inline-block;
-  width: 0.75rem;
-  margin-right: 0.625rem;
+  margin-right: 0.3125rem;
 }
 
 /* 기본스타일 제거, 버튼 모양 재설정 */
@@ -989,7 +989,7 @@ input[type=radio] {
   /*기본 브라우저에서 기본 스타일 제거*/
   width: 25px;
   height: 25px;
-  border: 1px solid #ccc;
+  border: 1px solid #555;
   /*체크되지 않았을 때의 테두리 색상*/
   border-radius: 50%;
   outline: none;
@@ -1041,7 +1041,6 @@ input[type=checkbox]:hover {
 
 /* 체크박스 체크시, 체크박스 배경색 바뀜 */
 /* 체크박스 체크 이후, 체크 박스 이후 요소인 체크 아이콘 css 변화
-display:none => block을 줌으로써 이제 체크가 보인다.
 */
 input[type=checkbox]:checked::after {
   display: block;
@@ -1163,7 +1162,7 @@ input[type=checkbox]:checked::after {
     width: 95%;
   }
 }
-.hero__img02__img-kid {
+.hero__img-kid {
   background: url("../img/hero-img-kid.webp");
   width: 100%;
   height: 100%;
@@ -1178,7 +1177,7 @@ input[type=checkbox]:checked::after {
   z-index: 1;
 }
 @media (max-width: 1024px) {
-  .hero__img02__img-kid {
+  .hero__img-kid {
     background: url("../img/hero-img-kid_1024.webp");
     width: 100%;
     height: 100%;
@@ -1188,7 +1187,7 @@ input[type=checkbox]:checked::after {
   }
 }
 @media (max-width: 768px) {
-  .hero__img02__img-kid {
+  .hero__img-kid {
     background: url("../img/hero-img-kid_768.webp");
     width: 100%;
     height: 100%;
@@ -1198,7 +1197,7 @@ input[type=checkbox]:checked::after {
   }
 }
 @media (max-width: 480px) {
-  .hero__img02__img-kid {
+  .hero__img-kid {
     background: url("../img/hero-img-kid_480.webp");
     width: 100%;
     height: 100%;
@@ -1208,7 +1207,7 @@ input[type=checkbox]:checked::after {
   }
 }
 @media (max-width: 360px) {
-  .hero__img02__img-kid {
+  .hero__img-kid {
     background: url("../img/hero-img-kid_360.webp");
     width: 100%;
     height: 100%;
@@ -1287,6 +1286,17 @@ input[type=checkbox]:checked::after {
 @media (max-width: 360px) {
   .intro__conts {
     font-size: 0.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .intro__conts {
+    padding-bottom: 1.875rem;
+  }
+}
+@media (max-width: 360px) {
+  .intro {
+    padding-bottom: 6.25rem;
+    padding-top: 6.25rem;
   }
 }
 
@@ -1725,6 +1735,11 @@ input[type=checkbox]:checked::after {
   gap: 1.875rem;
   flex-direction: column;
 }
+@media (max-width: 480px) {
+  .merit__list01 li {
+    gap: 1.25rem;
+  }
+}
 .merit__list01 h3 {
   font-size: 1.875rem;
   font-weight: 700;
@@ -1779,6 +1794,11 @@ input[type=checkbox]:checked::after {
     width: 3.125rem;
   }
 }
+@media (max-width: 360px) {
+  .merit__list01 {
+    padding-bottom: 9.375rem;
+  }
+}
 .merit__list02-wrap h3 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -1817,6 +1837,7 @@ input[type=checkbox]:checked::after {
   align-items: center;
   gap: 2.5rem;
   flex-direction: row;
+  height: 100%;
 }
 @media (max-width: 480px) {
   .merit__group {
@@ -1851,6 +1872,11 @@ input[type=checkbox]:checked::after {
 @media (max-width: 1024px) {
   .merit__list02 li:first-child img {
     height: 6.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .merit__list02 li:first-child img {
+    height: 5rem;
   }
 }
 @media (max-width: 480px) {
@@ -2017,6 +2043,16 @@ input[type=checkbox]:checked::after {
   padding: 12.5rem 0;
   text-align: center;
 }
+@media (max-width: 1240px) {
+  .zeromap__wrap {
+    padding: 9.375rem 0;
+  }
+}
+@media (max-width: 360px) {
+  .zeromap__wrap {
+    padding: 6.25rem 0;
+  }
+}
 .zeromap__title {
   font-size: 3.75rem;
   font-weight: 700;
@@ -2086,6 +2122,10 @@ input[type=checkbox]:checked::after {
   .zeromap__desc {
     font-size: 0.875rem;
   }
+}
+
+.fade-up {
+  opacity: 0;
 }
 
 .about-wrap {
@@ -4657,6 +4697,10 @@ input[type=checkbox]:checked::after {
     font-size: 1rem;
   }
 }
+.map .fade-up {
+  opacity: 0;
+  transform: translateY(70px);
+}
 
 .report #conts2 {
   display: none;
@@ -4702,8 +4746,9 @@ input[type=checkbox]:checked::after {
     padding-bottom: 11.25rem;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .report__form-wrap {
+    padding-top: 5rem;
     padding-bottom: 10rem;
   }
 }
@@ -4801,6 +4846,11 @@ input[type=checkbox]:checked::after {
     flex: 0;
     margin-bottom: 1.25rem;
     padding-top: 0;
+  }
+}
+@media (max-width: 480px) {
+  .report .form-label {
+    margin-bottom: 0.625rem;
   }
 }
 .report .form-field {
@@ -4949,4 +4999,8 @@ input[type=checkbox]:checked::after {
 .report__btn {
   width: 100%;
   display: block;
+}
+.report .fade-up {
+  opacity: 0;
+  transform: translateY(70px);
 }

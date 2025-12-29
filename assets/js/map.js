@@ -223,3 +223,21 @@ $(function () {
         }
     });
 });
+
+
+// fade up gsap 효과
+
+
+gsap.utils.toArray(".fade-up").forEach(el => {
+    gsap.to(el, {
+        opacity: 1,
+        y: 0,
+        duration: 0.9,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: el,
+            start: "top 80%",
+            toggleActions: "play none none none",
+        }
+    });
+});

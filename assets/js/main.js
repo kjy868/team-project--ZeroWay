@@ -61,18 +61,63 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+// hero 영역 이미지 애니메이션 ==============
+function initHeroAnimation() {
+    const tl = gsap.timeline();
+
+    tl.from(".hero__img01", {
+        x: -160,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+    })
+        .from(".hero__img02", {
+            x: 40,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out"
+        }, "-=0.5");
+}
+
+window.addEventListener("load", initHeroAnimation);
+
+
+// fade up gsap 효과 ====================
+function initFade() {
+    gsap.utils.toArray(".fade-up").forEach(el => {
+
+        gsap.set(el, { opacity: 0, y: 40 });
+
+        gsap.to(el, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: el,
+                start: "top 80%",
+                once: true
+            }
+        });
+    });
+}
+
+window.addEventListener("load", initFade);
+
+// merit merit 선 애니메이션 =====================
 function setupMeritLine() {
-    ScrollTrigger.getAll().forEach(t => t.kill());
+    // ScrollTrigger.getAll().forEach(t => t.kill());
 
     let path;
     let reverse = false;
 
     if (window.matchMedia('(max-width: 480px)').matches) {
         path = document.querySelector('#line-svg-mobile path');
-        reverse = true;
+        reverse = false;
     } else if (window.matchMedia('(max-width: 1024px)').matches) {
         path = document.querySelector('#line-svg-tablet path');
-        reverse = true;
+        reverse = false;
     } else {
         path = document.querySelector('#line-path-desktop');
         reverse = false;
@@ -102,6 +147,9 @@ function setupMeritLine() {
 
 // 최초 실행
 window.addEventListener('load', () => {
+    // fade up 애니메이션
+    initFade();
+
     // merit 메인 선 애니메이션
     setupMeritLine();
 
@@ -161,7 +209,7 @@ window.addEventListener('load', () => {
         });
     });
 
-    // zeromap 밑줄 그리기 효과
+    // zeromap 하이라이트 그리기 효과
     const zeromapPath = document.querySelector('.zeromap__title svg path');
     if (zeromapPath) {
         const len = zeromapPath.getTotalLength();
@@ -175,7 +223,7 @@ window.addEventListener('load', () => {
                 trigger: '.zeromap__title',
                 start: 'top 60%',
                 end: 'top 50%',
-                scrub: 1,
+                scrub: 2,
                 markers: false
             }
         });
@@ -232,57 +280,5 @@ document.querySelectorAll('.effect__underline-path').forEach((pathEl) => {
     });
 });
 
-// ======================= 수정 ====================
-// fade up gsap
-gsap.registerPlugin(ScrollTrigger);
 
-const introTl = gsap.timeline();
 
-introTl
-    .from(".fade-up-title", {
-        opacity: 0,
-        y: 40,
-        duration: 0.9,
-        ease: "power2.out"
-    })
-    .from(".fade-up-desc", {
-        opacity: 0,
-        y: 40,
-        duration: 0.9,
-        ease: "power2.out"
-    }, "-=0.3");
-
-// 카드 fade-up 애니메이션 공통 함수
-function applyCardFadeUp(sectionSelector) {
-    const cards = gsap.utils.toArray(`${sectionSelector} .fade-up-card`);
-    if (cards.length > 0) {
-        gsap.to(cards, {
-            opacity: 1,
-            y: 0,
-            duration: 1.0,
-            ease: "power3.out",
-            stagger: 0.3,
-            scrollTrigger: {
-                trigger: sectionSelector,
-                start: "top 80%",
-                toggleActions: "play none none none",
-            }
-        });
-    }
-}
-[".effects", ".actions"].forEach(applyCardFadeUp);
-
-gsap.utils.toArray(".fade-up-section").forEach((section) => {
-    gsap.to(section, {
-        opacity: 1,
-        y: 0,
-        duration: 0.9,
-        ease: "power2.out",
-        scrollTrigger: {
-            duration: 1.0,
-            trigger: section,
-            start: "top 80%",
-            toggleActions: "play none none none",
-        }
-    });
-});
