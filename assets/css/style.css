@@ -677,6 +677,11 @@ li {
   cursor: auto;
   border: none;
 }
+@media (max-width: 480px) {
+  .btn--black:disabled {
+    padding: 0.9375rem 2.5rem;
+  }
+}
 .btn--blackLine {
   font-size: 1.5625rem;
   background-color: #fff;
@@ -3616,7 +3621,6 @@ input[type=checkbox]:checked::after {
   position: relative;
   overflow-x: auto;
   overflow-y: hidden;
-  height: 100%;
 }
 .map__canvas {
   width: 118.75rem;
@@ -3631,31 +3635,25 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map__canvas {
-    width: 50rem;
+    width: 93.75rem;
   }
 }
 .map .pin-img {
   position: absolute;
-  width: 118.75rem;
+  width: 100%;
   top: 0;
   left: 0;
   height: auto;
   z-index: 10;
+  pointer-events: none;
 }
-@media (max-width: 1024px) {
-  .map .pin-img {
-    width: 93.75rem;
-  }
-}
-@media (max-width: 480px) {
-  .map .pin-img {
-    width: 50rem;
-  }
+.map .pin-img img {
+  pointer-events: auto;
 }
 .map .pin1 {
   position: absolute;
   top: 15.625rem;
-  right: 36.25rem;
+  right: 42.5rem;
 }
 @media (max-width: 1024px) {
   .map .pin1 {
@@ -3666,14 +3664,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .pin1 {
-    top: 10rem;
-    right: -1.25rem;
+    top: 11.25rem;
+    right: 37.5rem;
   }
 }
 .map .pin2 {
   position: absolute;
-  top: 25.625rem;
-  right: 9.375rem;
+  top: 23.75rem;
+  right: 15.625rem;
 }
 @media (max-width: 1024px) {
   .map .pin2 {
@@ -3684,14 +3682,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .pin2 {
-    top: 15.625rem;
-    right: -18.75rem;
+    top: 18.125rem;
+    right: 18.75rem;
   }
 }
 .map .pin3 {
   position: absolute;
-  top: 53.125rem;
-  right: 13.75rem;
+  top: 48.75rem;
+  right: 21.875rem;
 }
 @media (max-width: 1024px) {
   .map .pin3 {
@@ -3702,14 +3700,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .pin3 {
-    top: 32.5rem;
-    right: -15.625rem;
+    top: 36.25rem;
+    right: 21.875rem;
   }
 }
 .map .pin4 {
   position: absolute;
-  top: 56.875rem;
-  right: 21.875rem;
+  top: 51.25rem;
+  right: 28.75rem;
 }
 @media (max-width: 1024px) {
   .map .pin4 {
@@ -3720,14 +3718,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .pin4 {
-    top: 35rem;
-    right: -10.625rem;
+    top: 38.125rem;
+    right: 27.5rem;
   }
 }
 .map .pin5 {
   position: absolute;
-  top: 58.125rem;
-  right: 46.25rem;
+  top: 53.125rem;
+  right: 52.5rem;
 }
 @media (max-width: 1024px) {
   .map .pin5 {
@@ -3738,14 +3736,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .pin5 {
-    top: 35.625rem;
-    right: 5rem;
+    top: 39.375rem;
+    right: 44.375rem;
   }
 }
 .map .pin6 {
   position: absolute;
-  top: 65.625rem;
-  right: 35.625rem;
+  top: 60rem;
+  right: 41.25rem;
 }
 @media (max-width: 1024px) {
   .map .pin6 {
@@ -3756,14 +3754,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .pin6 {
-    top: 40.625rem;
-    right: -1.875rem;
+    top: 45rem;
+    right: 37.5rem;
   }
 }
 .map .pin7 {
   position: absolute;
-  top: 69.375rem;
-  right: 40.625rem;
+  top: 64.375rem;
+  right: 46.875rem;
 }
 @media (max-width: 1024px) {
   .map .pin7 {
@@ -3774,14 +3772,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .pin7 {
-    top: 41.875rem;
-    right: 1.25rem;
+    top: 48.125rem;
+    right: 40rem;
   }
 }
 .map .pin8 {
   position: absolute;
-  top: 77.5rem;
-  right: 40.625rem;
+  top: 71.875rem;
+  right: 46.875rem;
 }
 @media (max-width: 1024px) {
   .map .pin8 {
@@ -3792,14 +3790,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .pin8 {
-    top: 48.125rem;
-    right: 1.25rem;
+    top: 53.125rem;
+    right: 40.625rem;
   }
 }
 .map .pin9 {
   position: absolute;
-  top: 84.375rem;
-  right: 44.375rem;
+  top: 76.875rem;
+  right: 50.625rem;
 }
 @media (max-width: 1024px) {
   .map .pin9 {
@@ -3810,14 +3808,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .pin9 {
-    top: 51.25rem;
-    right: 4.375rem;
+    top: 55.625rem;
+    right: 43.75rem;
   }
 }
 .map .pin10 {
   position: absolute;
-  top: 87.5rem;
-  right: 34.375rem;
+  top: 81.25rem;
+  right: 40.625rem;
 }
 @media (max-width: 1024px) {
   .map .pin10 {
@@ -3828,17 +3826,16 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .pin10 {
-    top: 53.125rem;
-    right: -1.875rem;
+    top: 58.75rem;
+    right: 36.875rem;
   }
 }
 .map__img img {
-  height: 100%;
+  width: 100%;
   width: 100%;
   height: 100%;
   object-fit: cover;
   height: auto;
-  width: auto;
   display: block;
 }
 .map .pin-bubble {
@@ -3943,8 +3940,8 @@ input[type=checkbox]:checked::after {
 }
 .map .bubble1 {
   position: absolute;
-  top: 5.625rem;
-  right: 30rem;
+  top: 5rem;
+  right: 36.25rem;
 }
 @media (max-width: 1024px) {
   .map .bubble1 {
@@ -3954,14 +3951,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .bubble1 {
-    top: 0.625rem;
-    right: -5rem;
+    top: 2.1875rem;
+    right: 34.0625rem;
   }
 }
 .map .bubble2 {
   position: absolute;
-  top: 14.375rem;
-  right: 2.5rem;
+  top: 11.875rem;
+  right: 8.75rem;
 }
 @media (max-width: 1024px) {
   .map .bubble2 {
@@ -3971,14 +3968,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .bubble2 {
-    top: 6.25rem;
-    right: -23.75rem;
+    top: 8.75rem;
+    right: 13.75rem;
   }
 }
 .map .bubble3 {
   position: absolute;
-  top: 41.875rem;
-  right: 8.125rem;
+  top: 36.875rem;
+  right: 16.25rem;
 }
 @media (max-width: 1024px) {
   .map .bubble3 {
@@ -3988,14 +3985,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .bubble3 {
-    top: 21.875rem;
-    right: -18.4375rem;
+    top: 25.625rem;
+    right: 18.75rem;
   }
 }
 .map .bubble4 {
   position: absolute;
-  top: 46.875rem;
-  right: 16.25rem;
+  top: 40.625rem;
+  right: 23.125rem;
 }
 @media (max-width: 1024px) {
   .map .bubble4 {
@@ -4005,14 +4002,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .bubble4 {
-    top: 25.625rem;
-    right: -14.375rem;
+    top: 29.0625rem;
+    right: 23.4375rem;
   }
 }
 .map .bubble5 {
   position: absolute;
-  top: 48.125rem;
-  right: 40.9375rem;
+  top: 42.5rem;
+  right: 47.1875rem;
 }
 @media (max-width: 1024px) {
   .map .bubble5 {
@@ -4022,14 +4019,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .bubble5 {
-    top: 26.25rem;
-    right: 1.875rem;
+    top: 30rem;
+    right: 41.5625rem;
   }
 }
 .map .bubble6 {
   position: absolute;
-  top: 53.125rem;
-  right: 27.8125rem;
+  top: 46.875rem;
+  right: 33.4375rem;
 }
 @media (max-width: 1024px) {
   .map .bubble6 {
@@ -4039,14 +4036,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .bubble6 {
-    top: 30rem;
-    right: -7.5rem;
+    top: 34.375rem;
+    right: 31.875rem;
   }
 }
 .map .bubble7 {
   position: absolute;
-  top: 56.875rem;
-  right: 33.125rem;
+  top: 51.25rem;
+  right: 39.0625rem;
 }
 @media (max-width: 1024px) {
   .map .bubble7 {
@@ -4056,14 +4053,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .bubble7 {
-    top: 32.5rem;
-    right: -3.75rem;
+    top: 38.75rem;
+    right: 35rem;
   }
 }
 .map .bubble8 {
   position: absolute;
-  top: 65rem;
-  right: 34.375rem;
+  top: 58.75rem;
+  right: 40.625rem;
 }
 @media (max-width: 1024px) {
   .map .bubble8 {
@@ -4073,14 +4070,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .bubble8 {
-    top: 37.5rem;
-    right: -2.8125rem;
+    top: 42.5rem;
+    right: 36.5625rem;
   }
 }
 .map .bubble9 {
   position: absolute;
-  top: 71.875rem;
-  right: 36.25rem;
+  top: 63.75rem;
+  right: 42.5rem;
 }
 @media (max-width: 1024px) {
   .map .bubble9 {
@@ -4090,14 +4087,14 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .bubble9 {
-    top: 40.625rem;
-    right: 0.9375rem;
+    top: 45rem;
+    right: 40.3125rem;
   }
 }
 .map .bubble10 {
   position: absolute;
-  top: 73.75rem;
-  right: 26.875rem;
+  top: 66.875rem;
+  right: 33.125rem;
 }
 @media (max-width: 1024px) {
   .map .bubble10 {
@@ -4107,8 +4104,8 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .bubble10 {
-    top: 42.5rem;
-    right: -5.3125rem;
+    top: 48.125rem;
+    right: 33.125rem;
   }
 }
 @-webkit-keyframes pulsate {
@@ -4208,24 +4205,52 @@ input[type=checkbox]:checked::after {
   flex-direction: row;
   position: absolute;
   top: 50%;
-  transform: translatex(-50%);
-  width: fit-content;
+  width: 100%;
 }
 .map .double-arrow-img img {
+  display: none;
   position: sticky;
   left: 0;
   right: 0;
   width: 3.125rem;
   z-index: 10;
-  display: block;
 }
 @media (max-width: 1024px) {
   .map .double-arrow-img img {
     display: block;
   }
 }
+@media (max-width: 480px) {
+  .map .double-arrow-img img {
+    display: block;
+  }
+}
+.map .double-arrow-img .arrow1 {
+  animation: slideLeft 1.5s ease-in-out infinite;
+}
 .map .double-arrow-img .arrow2 {
   transform: rotate(180deg);
+  animation: slideRight 1.5s ease-in-out infinite;
+}
+@keyframes slideLeft {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(-8px);
+    opacity: 1;
+  }
+}
+@keyframes slideRight {
+  0%, 100% {
+    transform: rotate(180deg) translateX(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: rotate(180deg) translateX(-8px);
+    opacity: 1;
+  }
 }
 .map__conts-wrap {
   padding-top: 6.25rem;
@@ -4292,12 +4317,12 @@ input[type=checkbox]:checked::after {
   }
 }
 .map__notice {
+  display: none;
   position: sticky;
   left: 50%;
   transform: translateX(-50%);
   bottom: 2.5rem;
   z-index: 30;
-  display: none;
   width: fit-content;
 }
 @media (max-width: 1240px) {
@@ -4419,6 +4444,7 @@ input[type=checkbox]:checked::after {
 @media (max-width: 480px) {
   .map__grid-container {
     grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 3.75rem;
   }
 }
 .map__grid-title {
@@ -4564,7 +4590,7 @@ input[type=checkbox]:checked::after {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 200px;
+  height: 12.5rem;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255));
   pointer-events: none;
   display: none;
@@ -4577,7 +4603,7 @@ input[type=checkbox]:checked::after {
 .map__more-btn {
   display: none;
   position: absolute;
-  bottom: 1.25rem;
+  bottom: 2.5rem;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -4666,6 +4692,21 @@ input[type=checkbox]:checked::after {
     margin-top: -1.875rem;
   }
 }
+@media (max-width: 1024px) {
+  .report__form-wrap {
+    padding-bottom: 12.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .report__form-wrap {
+    padding-bottom: 11.25rem;
+  }
+}
+@media (max-width: 360px) {
+  .report__form-wrap {
+    padding-bottom: 10rem;
+  }
+}
 .report__desc {
   padding-bottom: 3.75rem;
   text-align: center;
@@ -4729,10 +4770,6 @@ input[type=checkbox]:checked::after {
 .report .form-row:nth-child(7) {
   align-items: flex-start;
 }
-.report .form-row:nth-child(2) .form-label,
-.report .form-row:nth-child(7) .form-label {
-  padding-top: 1.25rem;
-}
 .report .form-label {
   flex: 0 0 6.875rem;
   min-width: 0;
@@ -4740,6 +4777,7 @@ input[type=checkbox]:checked::after {
   font-weight: 600;
   color: #333;
   font-family: "Pretendard";
+  padding-top: 1.25rem;
 }
 @media (max-width: 768px) {
   .report .form-label {
@@ -4761,13 +4799,14 @@ input[type=checkbox]:checked::after {
     width: 100%;
     line-height: normal;
     flex: 0;
-    margin-bottom: 0.625rem;
+    margin-bottom: 1.25rem;
+    padding-top: 0;
   }
 }
 .report .form-field {
+  display: flex;
   flex: 1;
   min-width: 0;
-  display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
   font-size: 1.25rem;
@@ -4792,7 +4831,6 @@ input[type=checkbox]:checked::after {
   }
 }
 .report .form-field .day-group {
-  display: flex;
   gap: 0.625rem;
   flex-wrap: wrap;
   align-items: center;
@@ -4880,7 +4918,7 @@ input[type=checkbox]:checked::after {
 }
 .report .checkbox {
   width: auto;
-  margin-bottom: 3.75rem;
+  margin-bottom: 1.875rem;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -4901,6 +4939,11 @@ input[type=checkbox]:checked::after {
 @media (max-width: 360px) {
   .report .checkbox span {
     font-size: 1rem;
+  }
+}
+@media (max-width: 360px) {
+  .report .checkbox {
+    margin-bottom: 0.9375rem;
   }
 }
 .report__btn {

@@ -231,3 +231,58 @@ document.querySelectorAll('.effect__underline-path').forEach((pathEl) => {
         }
     });
 });
+
+// ======================= 수정 ====================
+// fade up gsap
+gsap.registerPlugin(ScrollTrigger);
+
+const introTl = gsap.timeline();
+
+introTl
+    .from(".fade-up-title", {
+        opacity: 0,
+        y: 40,
+        duration: 0.9,
+        ease: "power2.out"
+    })
+    .from(".fade-up-desc", {
+        opacity: 0,
+        y: 40,
+        duration: 0.9,
+        ease: "power2.out"
+    }, "-=0.3");
+
+// 카드 fade-up 애니메이션 공통 함수
+function applyCardFadeUp(sectionSelector) {
+    const cards = gsap.utils.toArray(`${sectionSelector} .fade-up-card`);
+    if (cards.length > 0) {
+        gsap.to(cards, {
+            opacity: 1,
+            y: 0,
+            duration: 1.0,
+            ease: "power3.out",
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: sectionSelector,
+                start: "top 80%",
+                toggleActions: "play none none none",
+            }
+        });
+    }
+}
+[".effects", ".actions"].forEach(applyCardFadeUp);
+
+gsap.utils.toArray(".fade-up-section").forEach((section) => {
+    gsap.to(section, {
+        opacity: 1,
+        y: 0,
+        duration: 0.9,
+        ease: "power2.out",
+        scrollTrigger: {
+            duration: 1.0,
+            trigger: section,
+            start: "top 80%",
+            toggleActions: "play none none none",
+        }
+    });
+});

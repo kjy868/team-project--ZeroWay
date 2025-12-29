@@ -10,6 +10,24 @@
         @include u.borderTopRadius();
         padding-top: u.$padding-100 ;
         padding-bottom: u.$padding-250;
+
+
+        @include u.responsive('tablet') {
+            padding-bottom: u.$padding-200;
+        }
+
+        @include u.responsive('medium') {
+            padding-bottom: u.rem(180);
+        }
+
+        @include u.responsive('mobile') {
+            // padding-top: u.$padding-80 ;
+            // padding-bottom: u.$padding-180;
+        }
+
+        @include u.responsive('small') {
+            padding-bottom: u.$padding-160;
+        }
     }
 
     &__desc {
@@ -42,30 +60,27 @@
     .form-row:nth-child(2),
     .form-row:nth-child(7) {
         align-items: flex-start;
-
-        .form-label {
-            padding-top: u.rem(20);
-        }
     }
 
     .form-label {
         flex: 0 0 u.rem(110);
         min-width: 0;
         @include u.reportBody01;
+        padding-top: u.rem(20);
 
         @include u.responsive('medium') {
             width: 100%;
             line-height: normal;
             flex: 0;
-            margin-bottom: u.rem(10);
+            margin-bottom: u.rem(20);
+            padding-top: 0;
         }
     }
 
     .form-field {
-        // @include u.flex(stretch, center, u.rem(10), column);
+        display: flex;
         flex: 1;
         min-width: 0;
-        display: flex;
         flex-wrap: wrap;
         // flex-direction: column;
         gap: u.rem(20);
@@ -78,7 +93,7 @@
 
 
         .day-group {
-            display: flex;
+            // @include u.flex(start, center);
             gap: u.rem(10);
             flex-wrap: wrap;
             align-items: center;
@@ -89,6 +104,8 @@
                 width: auto;
                 @include u.defineFont(u.rem(16));
             }
+
+
         }
 
         input:not([type="radio"], [type="checkbox"]),
@@ -164,11 +181,15 @@
 
     .checkbox {
         width: auto;
-        margin-bottom: u.$padding-60;
+        margin-bottom: u.$padding-30;
         @include u.flex(start, center, u.rem(10));
 
         span {
             @include u.reportBody02;
+        }
+
+        @include u.responsive('small') {
+            margin-bottom: u.rem(15);
         }
     }
 

@@ -138,7 +138,6 @@ if (tabMenu) {
 
     // 핀 클릭 -> 말풍선 토글 ==============================
     const pins = tabMenu.querySelectorAll('.pin-img img[class^="pin"]');
-    // const bubbles = tabMenu.querySelectorAll('.pin-bubble');
     const bubbles = document.querySelectorAll('.pin-bubble');
 
     function hideAllBubbles() {

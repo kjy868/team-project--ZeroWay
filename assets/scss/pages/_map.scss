@@ -11,52 +11,56 @@
     }
 
     &__img-wrap {
-        // width: u.rem(1900);
         width: 100%;
+        // height: 100%;
         position: relative;
         overflow-x: auto;
         overflow-y: hidden;
-        height: 100%;
     }
 
     &__canvas {
+        // width: 100%;
+        // max-width: u.rem(1900);
         width: u.rem(1900);
         position: relative; // ⭐ 기준점
         height: auto;
         line-height: 0;
 
         @include u.responsive('tablet') {
-            width: u.rem(1500)
+            width: u.rem(1500);
         }
 
         @include u.responsive('mobile') {
-            width: u.rem(800)
+            width: u.rem(1500);
         }
     }
 
     .pin-img {
         position: absolute;
-        width: u.rem(1900);
+        width: 100%;
         top: 0;
         left: 0;
-        // width: 100%;
         height: auto;
         z-index: 10;
-        // pointer-events: none;
+        pointer-events: none;
+
+        img {
+            pointer-events: auto;
+        }
 
         @include u.responsive('tablet') {
-            width: u.rem(1500);
+            // width: u.rem(1500);
         }
 
         @include u.responsive('mobile') {
-            width: u.rem(800);
+            // width: u.rem(1500);
         }
     }
 
     .pin1 {
         position: absolute;
         top: u.rem(250);
-        right: u.rem(580);
+        right: u.rem(680);
 
         @include u.responsive('tablet') {
             top: u.rem(200);
@@ -65,16 +69,16 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(160);
-            right: u.rem(-20);
+            top: u.rem(180);
+            right: u.rem(600);
         }
     }
 
 
     .pin2 {
         position: absolute;
-        top: u.rem(410);
-        right: u.rem(150);
+        top: u.rem(380);
+        right: u.rem(250);
 
         @include u.responsive('tablet') {
             width: u.rem(50);
@@ -83,15 +87,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(250);
-            right: u.rem(-300);
+            top: u.rem(290);
+            right: u.rem(300);
         }
     }
 
     .pin3 {
         position: absolute;
-        top: u.rem(850);
-        right: u.rem(220);
+        top: u.rem(780);
+        right: u.rem(350);
 
         @include u.responsive('tablet') {
             width: u.rem(50);
@@ -100,15 +104,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(520);
-            right: u.rem(-250);
+            top: u.rem(580);
+            right: u.rem(350);
         }
     }
 
     .pin4 {
         position: absolute;
-        top: u.rem(910);
-        right: u.rem(350);
+        top: u.rem(820);
+        right: u.rem(460);
 
         @include u.responsive('tablet') {
             width: u.rem(50);
@@ -117,15 +121,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(560);
-            right: u.rem(-170);
+            top: u.rem(610);
+            right: u.rem(440);
         }
     }
 
     .pin5 {
         position: absolute;
-        top: u.rem(930);
-        right: u.rem(740);
+        top: u.rem(850);
+        right: u.rem(840);
 
         @include u.responsive('tablet') {
             width: u.rem(50);
@@ -134,15 +138,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(570);
-            right: u.rem(80);
+            top: u.rem(630);
+            right: u.rem(710);
         }
     }
 
     .pin6 {
         position: absolute;
-        top: u.rem(1050);
-        right: u.rem(570);
+        top: u.rem(960);
+        right: u.rem(660);
 
         @include u.responsive('tablet') {
 
@@ -152,15 +156,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(650);
-            right: u.rem(-30);
+            top: u.rem(720);
+            right: u.rem(600);
         }
     }
 
     .pin7 {
         position: absolute;
-        top: u.rem(1110);
-        right: u.rem(650);
+        top: u.rem(1030);
+        right: u.rem(750);
 
         @include u.responsive('tablet') {
             width: u.rem(50);
@@ -169,15 +173,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(670);
-            right: u.rem(20);
+            top: u.rem(770);
+            right: u.rem(640);
         }
     }
 
     .pin8 {
         position: absolute;
-        top: u.rem(1240);
-        right: u.rem(650);
+        top: u.rem(1150);
+        right: u.rem(750);
 
         @include u.responsive('tablet') {
             width: u.rem(50);
@@ -186,15 +190,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(770);
-            right: u.rem(20);
+            top: u.rem(850);
+            right: u.rem(650);
         }
     }
 
     .pin9 {
         position: absolute;
-        top: u.rem(1350);
-        right: u.rem(710);
+        top: u.rem(1230);
+        right: u.rem(810);
 
         @include u.responsive('tablet') {
             width: u.rem(50);
@@ -203,15 +207,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(820);
-            right: u.rem(70);
+            top: u.rem(890);
+            right: u.rem(700);
         }
     }
 
     .pin10 {
         position: absolute;
-        top: u.rem(1400);
-        right: u.rem(550);
+        top: u.rem(1300);
+        right: u.rem(650);
 
         @include u.responsive('tablet') {
             width: u.rem(50);
@@ -220,25 +224,24 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(850);
-            right: u.rem(-30);
-
+            top: u.rem(940);
+            right: u.rem(590);
         }
     }
 
 
     &__img {
         img {
-            height: 100%;
-            // width: 100%;
+
+            width: 100%;
             @include u.img();
             height: auto;
-            width: auto;
+            // width: auto;
             display: block;
-            // width: fit-content;
-            // height: fit-content;
-            // max-width: none;
-            // object-fit: none;
+
+            @include u.responsive('mobile') {
+                // width: u.rem(800);
+            }
         }
     }
 
@@ -355,8 +358,8 @@
 
     .bubble1 {
         position: absolute;
-        top: u.rem(90);
-        right: u.rem(480);
+        top: u.rem(80);
+        right: u.rem(580);
 
         @include u.responsive('tablet') {
             top: u.rem(40);
@@ -364,15 +367,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(10);
-            right: u.rem(-80);
+            top: u.rem(35);
+            right: u.rem(545);
         }
     }
 
     .bubble2 {
         position: absolute;
-        top: u.rem(230);
-        right: u.rem(40);
+        top: u.rem(190);
+        right: u.rem(140);
 
         @include u.responsive('tablet') {
             top: u.rem(130);
@@ -380,15 +383,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(100);
-            right: u.rem(-380);
+            top: u.rem(140);
+            right: u.rem(220);
         }
     }
 
     .bubble3 {
         position: absolute;
-        top: u.rem(670);
-        right: u.rem(130);
+        top: u.rem(590);
+        right: u.rem(260);
 
         @include u.responsive('tablet') {
             top: u.rem(430);
@@ -396,15 +399,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(350);
-            right: u.rem(-295);
+            top: u.rem(410);
+            right: u.rem(300);
         }
     }
 
     .bubble4 {
         position: absolute;
-        top: u.rem(750);
-        right: u.rem(260);
+        top: u.rem(650);
+        right: u.rem(370);
 
         @include u.responsive('tablet') {
             top: u.rem(490);
@@ -412,15 +415,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(410);
-            right: u.rem(-230);
+            top: u.rem(465);
+            right: u.rem(375);
         }
     }
 
     .bubble5 {
         position: absolute;
-        top: u.rem(770);
-        right: u.rem(655);
+        top: u.rem(680);
+        right: u.rem(755);
 
         @include u.responsive('tablet') {
             top: u.rem(500);
@@ -428,15 +431,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(420);
-            right: u.rem(30);
+            top: u.rem(480);
+            right: u.rem(665);
         }
     }
 
     .bubble6 {
         position: absolute;
-        top: u.rem(850);
-        right: u.rem(445);
+        top: u.rem(750);
+        right: u.rem(535);
 
         @include u.responsive('tablet') {
             top: u.rem(550);
@@ -444,15 +447,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(480);
-            right: u.rem(-120);
+            top: u.rem(550);
+            right: u.rem(510);
         }
     }
 
     .bubble7 {
         position: absolute;
-        top: u.rem(910);
-        right: u.rem(530);
+        top: u.rem(820);
+        right: u.rem(625);
 
         @include u.responsive('tablet') {
             top: u.rem(570);
@@ -460,15 +463,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(520);
-            right: u.rem(-60);
+            top: u.rem(620);
+            right: u.rem(560);
         }
     }
 
     .bubble8 {
         position: absolute;
-        top: u.rem(1040);
-        right: u.rem(550);
+        top: u.rem(940);
+        right: u.rem(650);
 
         @include u.responsive('tablet') {
             top: u.rem(680);
@@ -476,15 +479,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(600);
-            right: u.rem(-45);
+            top: u.rem(680);
+            right: u.rem(585);
         }
     }
 
     .bubble9 {
         position: absolute;
-        top: u.rem(1150);
-        right: u.rem(580);
+        top: u.rem(1020);
+        right: u.rem(680);
 
         @include u.responsive('tablet') {
             top: u.rem(740);
@@ -492,15 +495,15 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(650);
-            right: u.rem(15);
+            top: u.rem(720);
+            right: u.rem(645);
         }
     }
 
     .bubble10 {
         position: absolute;
-        top: u.rem(1180);
-        right: u.rem(430);
+        top: u.rem(1070);
+        right: u.rem(530);
 
         @include u.responsive('tablet') {
             top: u.rem(750);
@@ -508,8 +511,8 @@
         }
 
         @include u.responsive('mobile') {
-            top: u.rem(680);
-            right: u.rem(-85);
+            top: u.rem(770);
+            right: u.rem(530);
         }
     }
 
@@ -626,31 +629,62 @@
     .double-arrow-img {
         @include u.flex(space-between, center);
         position: absolute;
-        // left: 50%;
         top: 50%;
-        transform: translatex(-50%);
-        width: fit-content;
+        width: 100%;
 
         img {
-            position: sticky; // bottom: u.rem(140);
-            // top: 500px;
-            // top: 70%;
+            display: none;
+            position: sticky;
             left: 0;
             right: 0;
-
-            // margin-bottom: u.rem(10);
             width: u.rem(50);
-            // height: auto;
             z-index: 10;
-            display: block;
 
             @include u.responsive('tablet') {
                 display: block;
             }
+
+            @include u.responsive('mobile') {
+                display: block;
+            }
+        }
+
+        .arrow1 {
+            animation: slideLeft 1.5s ease-in-out infinite;
         }
 
         .arrow2 {
             transform: rotate(180deg);
+            animation: slideRight 1.5s ease-in-out infinite;
+        }
+
+        // 애니메이션 정의 (파일 하단에 추가)
+        @keyframes slideLeft {
+
+            0%,
+            100% {
+                transform: translateX(0);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: translateX(-8px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideRight {
+
+            0%,
+            100% {
+                transform: rotate(180deg) translateX(0);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: rotate(180deg) translateX(-8px); // rotate 때문에 -10px이 오른쪽
+                opacity: 1;
+            }
         }
     }
 
@@ -732,12 +766,12 @@
 
 
     &__notice {
+        display: none;
         position: sticky;
         left: 50%;
         transform: translateX(-50%);
         bottom: u.rem(40);
         z-index: 30;
-        display: none;
         width: fit-content;
 
         @include u.responsive('pc') {
@@ -821,6 +855,7 @@
 
         @include u.responsive('mobile') {
             grid-template-columns: repeat(1, 1fr);
+            margin-bottom: u.$padding-60;
         }
     }
 
@@ -894,7 +929,6 @@
 
         .fade {
             display: none;
-            ;
         }
 
         padding-bottom: u.rem(70);
@@ -953,7 +987,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        height: 200px;
+        height: u.rem(200);
         background: linear-gradient(to bottom,
                 rgba(255, 255, 255, 0),
                 rgba(255, 255, 255, 1));
@@ -968,7 +1002,7 @@
     &__more-btn {
         display: none;
         position: absolute;
-        bottom: u.rem(20);
+        bottom: u.rem(40);
         left: 50%;
         transform: translateX(-50%);
 

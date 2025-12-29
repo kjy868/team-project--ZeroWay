@@ -69,6 +69,10 @@
             transition: none;
             cursor: auto;
             border: none;
+
+            @include u.responsive('mobile') {
+                padding: u.rem(15) u.rem(40);
+            }
         }
     }
 
