@@ -285,7 +285,7 @@
         }
 
         @include u.responsive('mobile') {
-            height: u.rem(2150);
+            height: u.rem(1550);
         }
     }
 
@@ -326,8 +326,8 @@
         }
 
         @include u.responsive('mobile') {
-            left: u.rem(100);
-            top: u.rem(5);
+            left: u.rem(70);
+            top: u.rem(25);
         }
     }
 
@@ -367,8 +367,8 @@
         }
 
         @include u.responsive('mobile') {
-            left: u.rem(120);
-            top: u.rem(430);
+            left: u.rem(110);
+            top: u.rem(315);
         }
     }
 
@@ -407,8 +407,8 @@
         }
 
         @include u.responsive('mobile') {
-            left: u.rem(70);
-            top: u.rem(830);
+            left: u.rem(80);
+            top: u.rem(590);
         }
     }
 
@@ -448,8 +448,8 @@
         }
 
         @include u.responsive('mobile') {
-            left: u.rem(120);
-            top: u.rem(1230);
+            left: u.rem(80);
+            top: u.rem(860);
         }
     }
 
@@ -489,8 +489,8 @@
         }
 
         @include u.responsive('mobile') {
-            left: u.rem(80);
-            top: u.rem(1660);
+            left: u.rem(90);
+            top: u.rem(1150);
         }
     }
 

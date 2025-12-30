@@ -4,10 +4,25 @@
     width: 100%;
     height: 100%;
     padding-top: u.rem(100); // header 높이만큼 상단 여백 추가하여 header 영역 확보
-    // overflow: hidden;
 
     @include u.responsive('tablet') {
         padding-top: u.rem(80); // tablet header 높이
+    }
+
+    > .container {
+        position: relative;
+    }
+
+    .breadcrumb {
+        top: u.rem(30);
+    }
+    
+    .breadcrumb__item {
+        color: u.$neutral-500;
+    }
+    
+    .breadcrumb__item--current {
+        color: u.$neutral-800;
     }
 
     &__img-wrap {
@@ -1044,3 +1059,4 @@
     }
 
 }
+

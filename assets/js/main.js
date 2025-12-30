@@ -110,13 +110,19 @@ function setupMeritLine() {
     // ScrollTrigger.getAll().forEach(t => t.kill());
 
     let path;
+    let svg;
+    let circles = [];
     let reverse = false;
 
     if (window.matchMedia('(max-width: 480px)').matches) {
         path = document.querySelector('#line-svg-mobile path');
+        svg = document.querySelector('#line-svg-mobile');
+        circles = svg ? Array.from(svg.querySelectorAll('circle')) : [];
         reverse = false;
     } else if (window.matchMedia('(max-width: 1024px)').matches) {
         path = document.querySelector('#line-svg-tablet path');
+        svg = document.querySelector('#line-svg-tablet');
+        circles = svg ? Array.from(svg.querySelectorAll('circle')) : [];
         reverse = false;
     } else {
         path = document.querySelector('#line-path-desktop');
@@ -133,7 +139,8 @@ function setupMeritLine() {
         strokeDashoffset: reverse ? 0 : len
     });
 
-    gsap.to(path, {
+    // path 애니메이션
+    const pathAnimation = gsap.to(path, {
         strokeDashoffset: reverse ? len : 0,
         ease: 'none',
         scrollTrigger: {
@@ -143,6 +150,67 @@ function setupMeritLine() {
             scrub: 0.5
         }
     });
+
+    // circle 애니메이션 설정
+    if (circles.length > 0 && svg) {
+        const svgHeight = parseFloat(svg.getAttribute('height')) || 3000;
+        
+        // 각 circle을 y 좌표 순서대로 정렬 (위에서 아래로)
+        circles.sort((a, b) => {
+            return parseFloat(a.getAttribute('cy')) - parseFloat(b.getAttribute('cy'));
+        });
+
+        // 초기 상태 설정
+        circles.forEach((circle) => {
+            gsap.set(circle, {
+                opacity: 0,
+                scale: 0,
+                transformOrigin: 'center center'
+            });
+        });
+
+        // circle 등장 여부 추적용 Set
+        const revealedCircles = new Set();
+        
+        // path 애니메이션과 동일한 ScrollTrigger 사용
+        ScrollTrigger.create({
+            trigger: '.merit',
+            start: 'top 90%',
+            end: 'bottom 250%',
+            scrub: 0.5,
+            onUpdate: (self) => {
+                // pathAnimation의 ScrollTrigger progress 사용 (같은 trigger이므로 같은 progress)
+                const pathProgress = self.progress; // 0~1 사이의 값
+                
+                circles.forEach((circle, index) => {
+                    // 이미 나타난 circle은 스킵
+                    if (revealedCircles.has(circle)) return;
+                    
+                    // circle의 y 위치를 SVG 높이 기준으로 progress 계산
+                    const circleY = parseFloat(circle.getAttribute('cy')) || 0;
+                    const circleProgress = circleY / svgHeight;
+                    
+                    // path 진행도가 circle 위치에 도달하면 나타남
+                    // circleProgress를 낮춰서 더 일찍 나타나도록 조정
+                    // 첫 번째 circle은 더 일찍 (0.6), 나머지는 점진적으로 (0.75, 0.8, 0.85, 0.9)
+                    const threshold = index === 0 ? 0.8 : Math.min(0.75 + (index * 0.05), 0.95);
+                    const triggerPoint = circleProgress * threshold;
+                    
+                    // path 진행도가 trigger point에 도달하면 나타남
+                    if (pathProgress >= triggerPoint) {
+                        revealedCircles.add(circle);
+                        gsap.to(circle, {
+                            opacity: 1,
+                            scale: 1,
+                            duration: 0.5,
+                            ease: 'back.out(1.7)'
+                        });
+                    }
+                });
+            },
+            markers: false
+        });
+    }
 }
 
 // 최초 실행

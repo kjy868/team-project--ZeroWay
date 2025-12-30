@@ -42,7 +42,7 @@
 
             @include u.responsive('mobile') {
                 padding: u.rem(15) u.rem(45);
-                margin: 0 u.rem(-5);
+                margin: u.rem(-5) u.rem(-5);
                 transform: translateY(-1px);
             }
         }

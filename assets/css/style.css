@@ -310,7 +310,8 @@ li {
 .header .logo a img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .header .container {
   display: flex;
@@ -650,7 +651,7 @@ li {
 @media (max-width: 480px) {
   .btn--black:hover {
     padding: 0.9375rem 2.8125rem;
-    margin: 0 -0.3125rem;
+    margin: -0.3125rem -0.3125rem;
     transform: translateY(-1px);
   }
 }
@@ -867,6 +868,9 @@ select {
     font-size: 1rem;
   }
 }
+input:not([type=radio], [type=checkbox])::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
+  color: #999;
+}
 input:not([type=radio], [type=checkbox])::placeholder,
 textarea::placeholder,
 select::placeholder {
@@ -897,6 +901,11 @@ select[data-state=error] {
   background-color: #fff1f0;
   color: #333;
 }
+input:not([type=radio], [type=checkbox]):not(:-moz-placeholder-shown), textarea:not(:-moz-placeholder-shown), select:not(:-moz-placeholder-shown) {
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #555;
+}
 input:not([type=radio], [type=checkbox]):not(:placeholder-shown),
 textarea:not(:placeholder-shown),
 select:not(:placeholder-shown) {
@@ -911,6 +920,11 @@ input[type=button] {
 }
 
 /* 값이 있을 때 (입력 완료) */
+input:not(:-moz-placeholder-shown), textarea:not(:-moz-placeholder-shown) {
+  color: #333;
+  background-color: #fff;
+  border-radius: 1px solid #555;
+}
 input:not(:placeholder-shown),
 textarea:not(:placeholder-shown) {
   color: #333;
@@ -1011,7 +1025,8 @@ input[type=radio]:checked {
 input[type=checkbox] {
   margin: 0px;
   padding: 0px;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   -webkit-appearance: none;
   height: 24px;
   width: 24px;
@@ -1429,7 +1444,7 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .merit__img {
-    height: 134.375rem;
+    height: 96.875rem;
   }
 }
 .merit__img01 {
@@ -1471,8 +1486,8 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .merit__img01 {
-    left: 6.25rem;
-    top: 0.3125rem;
+    left: 4.375rem;
+    top: 1.5625rem;
   }
 }
 .merit__img02 {
@@ -1515,8 +1530,8 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .merit__img02 {
-    left: 7.5rem;
-    top: 26.875rem;
+    left: 6.875rem;
+    top: 19.6875rem;
   }
 }
 .merit__img03 {
@@ -1558,8 +1573,8 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .merit__img03 {
-    left: 4.375rem;
-    top: 51.875rem;
+    left: 5rem;
+    top: 36.875rem;
   }
 }
 .merit__img04 {
@@ -1602,8 +1617,8 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .merit__img04 {
-    left: 7.5rem;
-    top: 76.875rem;
+    left: 5rem;
+    top: 53.75rem;
   }
 }
 .merit__img05 {
@@ -1646,8 +1661,8 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .merit__img05 {
-    left: 5rem;
-    top: 103.75rem;
+    left: 5.625rem;
+    top: 71.875rem;
   }
 }
 @keyframes pin-drop {
@@ -1699,6 +1714,7 @@ input[type=checkbox]:checked::after {
   padding: 1.25rem 3.125rem;
   border-radius: 6.25rem;
   display: block;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
   z-index: 1;
@@ -2871,7 +2887,8 @@ input[type=checkbox]:checked::after {
 .actions__img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 1024px) {
   .actions__img {
@@ -3224,7 +3241,8 @@ input[type=checkbox]:checked::after {
 .tumbler__logo img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
 }
 @media (max-width: 1024px) {
@@ -3408,7 +3426,8 @@ input[type=checkbox]:checked::after {
 .campaign__img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   transform-origin: center center;
   transition: transform 0.3s ease-out;
@@ -3590,7 +3609,8 @@ input[type=checkbox]:checked::after {
 .oneday__img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -3655,6 +3675,18 @@ input[type=checkbox]:checked::after {
   .map {
     padding-top: 5rem;
   }
+}
+.map > .container {
+  position: relative;
+}
+.map .breadcrumb {
+  top: 1.875rem;
+}
+.map .breadcrumb__item {
+  color: #999;
+}
+.map .breadcrumb__item--current {
+  color: #333;
 }
 .map__img-wrap {
   width: 100%;
@@ -3874,7 +3906,8 @@ input[type=checkbox]:checked::after {
   width: 100%;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: auto;
   display: block;
 }
@@ -4148,94 +4181,37 @@ input[type=checkbox]:checked::after {
     right: 33.125rem;
   }
 }
-@-webkit-keyframes pulsate {
-  0% {
-    -webkit-transform: scale(0.2);
-    transform: scale(0.2);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    opacity: 0;
-  }
-}
-@-moz-keyframes pulsate {
-  0% {
-    -webkit-transform: scale(0.2);
-    transform: scale(0.2);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    opacity: 0;
-  }
-}
 @keyframes pulsate {
   0% {
-    -webkit-transform: scale(0.2);
     transform: scale(0.2);
     opacity: 1;
   }
   100% {
-    -webkit-transform: scale(1.2);
     transform: scale(1.2);
     opacity: 0;
   }
 }
 .map .animated {
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-}
-@-webkit-keyframes bounceInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-2000px);
-    transform: translateY(-2000px);
-  }
-  60% {
-    opacity: 1;
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
-  }
-  80% {
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
 }
 @keyframes bounceInDown {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-2000px);
-    -ms-transform: translateY(-2000px);
     transform: translateY(-2000px);
   }
   60% {
     opacity: 1;
-    -webkit-transform: translateY(30px);
-    -ms-transform: translateY(30px);
     transform: translateY(30px);
   }
   80% {
-    -webkit-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
     transform: translateY(-10px);
   }
   100% {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
     transform: translateY(0);
   }
 }
 .map .bounceInDown {
-  -webkit-animation-name: bounceInDown;
   animation-name: bounceInDown;
 }
 .map .double-arrow-img {
@@ -4347,9 +4323,7 @@ input[type=checkbox]:checked::after {
   .map__text-wrap {
     padding-left: 0;
     padding-right: 0;
-    -webkit-animation-duration: 1s;
     animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     height: 750px;
     overflow: hidden;
@@ -4363,6 +4337,7 @@ input[type=checkbox]:checked::after {
   transform: translateX(-50%);
   bottom: 2.5rem;
   z-index: 30;
+  width: -moz-fit-content;
   width: fit-content;
 }
 @media (max-width: 1240px) {
@@ -4557,27 +4532,13 @@ input[type=checkbox]:checked::after {
   line-height: 1.5;
   word-break: keep-all;
 }
-@-webkit-keyframes slideDown {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
 @keyframes slideDown {
   0% {
     opacity: 1;
-    -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -4589,36 +4550,22 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 480px) {
   .map .slide-down {
-    -webkit-animation-name: slideDown;
     animation-name: slideDown;
     height: auto;
     overflow: visible;
     padding-bottom: 50px;
   }
 }
-@-webkit-keyframes slideUp {
-  0% {
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-}
 @keyframes slideUp {
   0% {
-    -webkit-transform: translateY(20px);
     transform: translateY(20px);
   }
   100% {
-    -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
 }
 @media (max-width: 480px) {
   .map .slide-up {
-    -webkit-animation-name: slideUp;
     animation-name: slideUp;
     height: 1800px;
     padding-bottom: 0;
@@ -4903,7 +4850,9 @@ input[type=checkbox]:checked::after {
 }
 .report .form-field select {
   width: 25.625rem;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-image: url("/assets/img/report-select-img.webp");
   background-repeat: no-repeat;
   background-position: right 0.625rem center;
