@@ -622,6 +622,7 @@ li {
   gap: 0.625rem;
   border-radius: 3.125rem;
   padding: 1.25rem 3.75rem;
+  margin: 0;
   text-align: center;
   border: none;
   transition: background-color 0.2s ease, border-color 0.2s ease, padding 0.2s ease, margin 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
@@ -651,7 +652,7 @@ li {
 @media (max-width: 480px) {
   .btn--black:hover {
     padding: 0.9375rem 2.8125rem;
-    margin: -0.3125rem -0.3125rem;
+    margin: 0 -0.3125rem;
     transform: translateY(-1px);
   }
 }
@@ -666,6 +667,7 @@ li {
 @media (max-width: 480px) {
   .btn--black:active {
     padding: 0.9375rem 2.5rem;
+    margin: 0;
   }
 }
 .btn--black:disabled {
@@ -681,6 +683,7 @@ li {
 @media (max-width: 480px) {
   .btn--black:disabled {
     padding: 0.9375rem 2.5rem;
+    margin: 0;
   }
 }
 .btn--blackLine {
@@ -688,6 +691,7 @@ li {
   background-color: #fff;
   color: #121212;
   border: 0.125rem solid #121212;
+  margin: 0;
 }
 @media (max-width: 1024px) {
   .btn--blackLine {
@@ -721,11 +725,13 @@ li {
   color: #fff;
   transition: 0.3s all ease-in-out;
   padding: 1.25rem 4.0625rem;
+  margin: 0 -0.3125rem;
   border: 0.125rem solid #121212;
 }
 @media (max-width: 480px) {
   .btn--blackLine:active {
     padding: 0.9375rem 2.5rem;
+    margin: 0;
   }
 }
 .btn--blackLine:disabled {
@@ -738,6 +744,7 @@ li {
   background-color: transparent;
   color: #fff;
   border: 0.1875rem solid #fff;
+  margin: 0;
 }
 @media (max-width: 1024px) {
   .btn--whiteLine {
@@ -1727,12 +1734,12 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 768px) {
   .merit__subtitle {
-    font-size: 1.875rem;
+    font-size: 1.625rem;
   }
 }
 @media (max-width: 360px) {
   .merit__subtitle {
-    font-size: 1.625rem;
+    font-size: 1.5rem;
   }
 }
 .merit__list01 {
@@ -3716,7 +3723,7 @@ input[type=checkbox]:checked::after {
   top: 0;
   left: 0;
   height: auto;
-  z-index: 10;
+  z-index: 1;
   pointer-events: none;
 }
 .map .pin-img img {
@@ -3921,7 +3928,7 @@ input[type=checkbox]:checked::after {
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
-  z-index: 20;
+  z-index: 1;
 }
 .map .pin-bubble .pin-img img {
   cursor: pointer;
@@ -4229,7 +4236,7 @@ input[type=checkbox]:checked::after {
   left: 0;
   right: 0;
   width: 3.125rem;
-  z-index: 10;
+  z-index: 1;
 }
 @media (max-width: 1024px) {
   .map .double-arrow-img img {
@@ -4828,7 +4835,7 @@ input[type=checkbox]:checked::after {
   }
 }
 .report .form-field .day-group {
-  gap: 0.625rem;
+  gap: 0;
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
@@ -4841,6 +4848,14 @@ input[type=checkbox]:checked::after {
   line-height: 1.3;
   letter-spacing: 0;
   color: #121212;
+  margin-right: 1.875rem;
+  margin-left: 0.625rem;
+}
+.report .form-field .day-group input:first-child {
+  margin-left: 0;
+}
+.report .form-field .day-group input:last-child {
+  margin-right: 0;
 }
 .report .form-field input:not([type=radio], [type=checkbox]),
 .report .form-field textarea {

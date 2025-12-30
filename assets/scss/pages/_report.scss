@@ -94,7 +94,7 @@
 
         .day-group {
             // @include u.flex(start, center);
-            gap: u.rem(10);
+            gap: 0;
             flex-wrap: wrap;
             align-items: center;
             width: 100%;
@@ -103,6 +103,16 @@
             input {
                 width: auto;
                 @include u.defineFont(u.rem(16));
+                margin-right: u.rem(30);
+                margin-left: u.rem(10);
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
             }
 
 

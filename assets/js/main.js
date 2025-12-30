@@ -105,43 +105,37 @@ function initFade() {
 
 window.addEventListener("load", initFade);
 
-// merit merit 선 애니메이션 =====================
+// merit 선 애니메이션 (데스크탑, 태블릿, 모바일) =====================
 function setupMeritLine() {
-    // ScrollTrigger.getAll().forEach(t => t.kill());
-
     let path;
     let svg;
     let circles = [];
-    let reverse = false;
 
     if (window.matchMedia('(max-width: 480px)').matches) {
         path = document.querySelector('#line-svg-mobile path');
         svg = document.querySelector('#line-svg-mobile');
         circles = svg ? Array.from(svg.querySelectorAll('circle')) : [];
-        reverse = false;
     } else if (window.matchMedia('(max-width: 1024px)').matches) {
         path = document.querySelector('#line-svg-tablet path');
         svg = document.querySelector('#line-svg-tablet');
         circles = svg ? Array.from(svg.querySelectorAll('circle')) : [];
-        reverse = false;
     } else {
         path = document.querySelector('#line-path-desktop');
-        reverse = false;
     }
 
     if (!path) return;
 
     const len = path.getTotalLength();
 
-    // reverse 변수 없이 항상 같은 방식:
+    // path 초기 상태 설정
     gsap.set(path, {
         strokeDasharray: len,
-        strokeDashoffset: reverse ? 0 : len
+        strokeDashoffset: len
     });
 
     // path 애니메이션
-    const pathAnimation = gsap.to(path, {
-        strokeDashoffset: reverse ? len : 0,
+    gsap.to(path, {
+        strokeDashoffset: 0,
         ease: 'none',
         scrollTrigger: {
             trigger: '.merit',
@@ -233,7 +227,7 @@ window.addEventListener('load', () => {
             ease: 'none',
             scrollTrigger: {
                 trigger: '.merit__list02-wrap',
-                start: 'top 65%',
+                start: 'top 50%',
                 end: 'bottom bottom',
                 scrub: 1
             }
@@ -258,7 +252,7 @@ window.addEventListener('load', () => {
             ease: 'power1.out',
             scrollTrigger: {
                 trigger: itemTrigger,
-                start: 'top center',
+                start: 'top 70%',
                 end: 'bottom center',
                 scrub: true
             }

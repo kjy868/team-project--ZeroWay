@@ -7,6 +7,7 @@
     @include u.btnFlex;
     border-radius: u.rem(50);
     padding: u.rem(20) u.rem(60);
+    margin: 0;
     text-align: center;
     border: none;
     transition:
@@ -42,7 +43,7 @@
 
             @include u.responsive('mobile') {
                 padding: u.rem(15) u.rem(45);
-                margin: u.rem(-5) u.rem(-5);
+                margin: 0 u.rem(-5);
                 transform: translateY(-1px);
             }
         }
@@ -57,6 +58,7 @@
 
             @include u.responsive('mobile') {
                 padding: u.rem(15) u.rem(40);
+                margin: 0;
             }
         }
 
@@ -72,6 +74,7 @@
 
             @include u.responsive('mobile') {
                 padding: u.rem(15) u.rem(40);
+                margin: 0;
             }
         }
     }
@@ -83,6 +86,7 @@
         background-color: u.$neutral-50;
         color: u.$neutral-900;
         border: u.rem(2) solid u.$neutral-900;
+        margin: 0;
 
         // btn medium 
         @include u.responsive('tablet') {
@@ -116,10 +120,12 @@
             color: u.$neutral-50;
             transition: 0.3s all ease-in-out;
             padding: u.rem(20) u.rem(65);
+            margin: 0 u.rem(-5);
             border: u.rem(2) solid u.$neutral-900;
 
             @include u.responsive('mobile') {
                 padding: u.rem(15) u.rem(40);
+                margin: 0;
             }
         }
 
@@ -137,6 +143,7 @@
         background-color: transparent;
         color: u.$neutral-50;
         border: u.rem(3) solid u.$neutral-50;
+        margin: 0;
 
         // btn medium 
         @include u.responsive('tablet') {

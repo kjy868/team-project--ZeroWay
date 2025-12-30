@@ -182,11 +182,11 @@
     }
 
     @include r.responsive(medium) {
-        font-size: v.$font-30;
+        font-size: v.$font-26;
     }
 
     @include r.responsive(small) {
-        font-size: v.$font-26;
+        font-size: v.$font-24;
     }
 }
 
