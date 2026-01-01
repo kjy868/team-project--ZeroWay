@@ -4343,7 +4343,7 @@ input[type=checkbox]:checked::after {
   left: 50%;
   transform: translateX(-50%);
   bottom: 2.5rem;
-  z-index: 30;
+  z-index: 5;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -4763,6 +4763,12 @@ input[type=checkbox]:checked::after {
     flex-direction: column;
     gap: 0;
     align-items: stretch;
+    margin-bottom: 1.375rem;
+  }
+}
+@media (max-width: 360px) {
+  .report .form-row {
+    margin-bottom: 2.1875rem;
   }
 }
 .report .form-row:nth-child(2),
@@ -4776,7 +4782,6 @@ input[type=checkbox]:checked::after {
   font-weight: 600;
   color: #333;
   font-family: "Pretendard";
-  padding-top: 1.25rem;
 }
 @media (max-width: 768px) {
   .report .form-label {
@@ -4806,6 +4811,9 @@ input[type=checkbox]:checked::after {
   .report .form-label {
     margin-bottom: 0.625rem;
   }
+}
+.report .address-label, .report .content-label, .report .type-label {
+  padding-top: 0.9375rem;
 }
 .report .form-field {
   display: flex;

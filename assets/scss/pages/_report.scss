@@ -50,6 +50,11 @@
             flex-direction: column;
             gap: 0;
             align-items: stretch;
+            margin-bottom: u.rem(22);
+        }
+
+        @include u.responsive('small') {
+            margin-bottom: u.rem(35);
         }
     }
 
@@ -62,7 +67,6 @@
         flex: 0 0 u.rem(110);
         min-width: 0;
         @include u.reportBody01;
-        padding-top: u.rem(20);
 
         @include u.responsive('medium') {
             width: 100%;
@@ -75,6 +79,10 @@
         @include u.responsive('mobile') {
             margin-bottom: u.rem(10);
         }
+    }
+
+    .address-label, .content-label, .type-label {
+        padding-top: u.rem(15);
     }
 
     .form-field {

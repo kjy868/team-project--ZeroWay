@@ -786,7 +786,7 @@
         left: 50%;
         transform: translateX(-50%);
         bottom: u.rem(40);
-        z-index: 30;
+        z-index: 5;
         width: fit-content;
 
         @include u.responsive('pc') {
