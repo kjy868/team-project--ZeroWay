@@ -9,18 +9,18 @@
         padding-top: u.rem(80); // tablet header 높이
     }
 
-    > .container {
+    >.container {
         position: relative;
     }
 
     .breadcrumb {
         top: u.rem(30);
     }
-    
+
     .breadcrumb__item {
         color: u.$neutral-500;
     }
-    
+
     .breadcrumb__item--current {
         color: u.$neutral-800;
     }
@@ -61,14 +61,7 @@
 
         img {
             pointer-events: auto;
-        }
-
-        @include u.responsive('tablet') {
-            // width: u.rem(1500);
-        }
-
-        @include u.responsive('mobile') {
-            // width: u.rem(1500);
+            cursor: pointer;
         }
     }
 
@@ -261,8 +254,7 @@
     }
 
     .pin-bubble {
-        position: relative;
-        // position: absolute;
+        // position: relative;
         background: u.$neutral-900;
         color: u.$neutral-50;
         border-radius: u.rem(20);
@@ -274,18 +266,7 @@
         transition: all 0.3s ease;
         z-index: 1;
 
-        .pin-img img {
-            cursor: pointer;
-            pointer-events: auto;
-            transition: transform 0.2s ease;
-        }
-
-        .pin-img img.is-selected {
-            transform: scale(1.3);
-        }
-
         &.active {
-            display: block;
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
@@ -339,19 +320,7 @@
             margin-bottom: u.rem(5);
             clear: both;
             display: block;
-            // margin-left: auto;
-
         }
-
-        &.is-active {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .pin-img img {
-        cursor: pointer;
     }
 
     .pin-bubble:after {
@@ -361,7 +330,6 @@
         left: 50%;
         width: 0;
         height: u.rem(5);
-        // border: 29px solid transparent;
         border-left: u.rem(10) solid transparent;
         border-right: u.rem(10) solid transparent;
         border-top: u.rem(30) solid u.$neutral-900;
@@ -531,116 +499,6 @@
         }
     }
 
-
-    /* =Map Pin Animation
-// ========================================================================== */
-
-    @-webkit-keyframes pulsate {
-        0% {
-            -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-            opacity: 1;
-        }
-
-        100% {
-            -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-            opacity: 0;
-        }
-    }
-
-    @-moz-keyframes pulsate {
-        0% {
-            -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-            opacity: 1;
-        }
-
-        100% {
-            -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-            opacity: 0;
-        }
-    }
-
-    @keyframes pulsate {
-        0% {
-            -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-            opacity: 1;
-        }
-
-        100% {
-            -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-            opacity: 0;
-        }
-    }
-
-    .animated {
-        -webkit-animation-duration: 1s;
-        animation-duration: 1s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-    }
-
-    @-webkit-keyframes bounceInDown {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(-2000px);
-            transform: translateY(-2000px);
-        }
-
-        60% {
-            opacity: 1;
-            -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-        }
-
-        80% {
-            -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-        }
-
-        100% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes bounceInDown {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(-2000px);
-            -ms-transform: translateY(-2000px);
-            transform: translateY(-2000px);
-        }
-
-        60% {
-            opacity: 1;
-            -webkit-transform: translateY(30px);
-            -ms-transform: translateY(30px);
-            transform: translateY(30px);
-        }
-
-        80% {
-            -webkit-transform: translateY(-10px);
-            -ms-transform: translateY(-10px);
-            transform: translateY(-10px);
-        }
-
-        100% {
-            -webkit-transform: translateY(0);
-            -ms-transform: translateY(0);
-            transform: translateY(0);
-        }
-    }
-
-    .bounceInDown {
-        -webkit-animation-name: bounceInDown;
-        animation-name: bounceInDown;
-    }
-
     .double-arrow-img {
         @include u.flex(space-between, center);
         position: absolute;
@@ -760,7 +618,6 @@
         @include u.responsive('mobile') {
             padding-left: 0;
             padding-right: 0;
-            // ===============================
             -webkit-animation-duration: 1s;
             animation-duration: 1s;
             -webkit-animation-fill-mode: both;
@@ -768,17 +625,8 @@
             height: 750px;
             overflow: hidden;
             position: relative;
-            // margin: 0;
-            // background: -webkit-linear-gradient(top,
-            //         rgba(255, 255, 255, 0) 0%,
-            //         rgba(255, 255, 255, 1) 60%);
-            // background: linear-gradient(to bottom,
-            //         rgba(255, 255, 255, 0) 0%,
-            //         rgba(255, 255, 255, 1) 60%);
-            // ===============================
         }
     }
-
 
     &__notice {
         display: none;
@@ -910,8 +758,6 @@
         word-break: keep-all
     }
 
-
-
     @-webkit-keyframes slideDown {
         0% {
             opacity: 1;
@@ -992,10 +838,6 @@
         }
     }
 
-    // .close-btn {
-    //     background: none;
-    // }
-
     /* 흰색 그라데이션 */
     .fade {
         position: absolute;
@@ -1026,11 +868,8 @@
             margin: 0;
         }
 
-
         @include u.responsive('mobile') {
-
             display: block;
-
         }
     }
 
@@ -1052,11 +891,4 @@
         @include u.mapBody03;
         margin-bottom: u.$padding-20;
     }
-
-    .fade-up {
-        opacity: 0;
-        transform: translateY(70px);
-    }
-
 }
-

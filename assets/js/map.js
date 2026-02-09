@@ -3,7 +3,8 @@ const mapScroll = document.querySelector('.map__img-wrap');
 
 window.addEventListener('load', () => {
     if (mapScroll) {
-        mapScroll.scrollLeft = mapScroll.scrollWidth / 2;
+        mapScroll.scrollLeft = (mapScroll.scrollWidth - mapScroll.clientWidth) / 2;
+
     }
 
     // 이미지 높이에 맞춰 canvas, pin-img 높이 조정
@@ -65,7 +66,7 @@ gsap.from('.pin1, .pin2, .pin3, .pin4, .pin5, .pin6, .pin7, .pin8, .pin9, .pin10
 
 
 // / 지도 가로 드래그 스크롤 기능 + 핀 클릭 분리 ======================
-const tabMenu = document.querySelector('.map__img-wrap');
+const mapImgWrap = document.querySelector('.map__img-wrap');
 const header = document.querySelector('.header');
 
 // header 영역인지 확인하는 함수
@@ -75,7 +76,7 @@ function isInHeaderArea(clientY) {
     return clientY < headerRect.bottom;
 }
 
-if (tabMenu) {
+if (mapImgWrap) {
     let isDown = false;
     let startX;
     let scrollLeft;
@@ -83,7 +84,7 @@ if (tabMenu) {
     let didDrag = false;
     const DRAG_THRESHOLD = 6;
 
-    tabMenu.addEventListener('mousedown', (e) => {
+    mapImgWrap.addEventListener('mousedown', (e) => {
         // header 영역 클릭은 완전히 무시하고 이벤트 전파 차단
         if (isInHeaderArea(e.clientY)) {
             e.stopPropagation();
@@ -94,40 +95,40 @@ if (tabMenu) {
 
         isDown = true;
         didDrag = false;
-        tabMenu.style.cursor = 'grabbing';
-        startX = e.pageX - tabMenu.offsetLeft;
-        scrollLeft = tabMenu.scrollLeft;
-        startScrollLeft = tabMenu.scrollLeft;
+        mapImgWrap.style.cursor = 'grabbing';
+        startX = e.pageX - mapImgWrap.offsetLeft;
+        scrollLeft = mapImgWrap.scrollLeft;
+        startScrollLeft = mapImgWrap.scrollLeft;
     }, false); // bubble phase에서 실행하여 header 이벤트가 먼저 처리되도록
 
-    // document에서 mouseup 감지 (tabMenu 밖에서도)
+    // document에서 mouseup 감지 (mapImgWrap 밖에서도)
     document.addEventListener('mouseup', () => {
         isDown = false;
         didDrag = false;
-        if (tabMenu) {
-            tabMenu.style.cursor = 'grab';
+        if (mapImgWrap) {
+            mapImgWrap.style.cursor = 'grab';
         }
     });
 
-    tabMenu.addEventListener('mouseleave', () => {
+    mapImgWrap.addEventListener('mouseleave', () => {
         isDown = false;
         didDrag = false;
-        tabMenu.style.cursor = 'grab';
+        mapImgWrap.style.cursor = 'grab';
     });
 
-    tabMenu.addEventListener('mousemove', (e) => {
+    mapImgWrap.addEventListener('mousemove', (e) => {
         if (!isDown) return;
         // header 영역에서는 드래그 무시
         if (isInHeaderArea(e.clientY)) {
             isDown = false;
-            tabMenu.style.cursor = 'grab';
+            mapImgWrap.style.cursor = 'grab';
             return;
         }
         e.preventDefault();
-        const x = e.pageX - tabMenu.offsetLeft;
+        const x = e.pageX - mapImgWrap.offsetLeft;
         const walk = (x - startX);
 
-        tabMenu.scrollLeft = scrollLeft - walk;
+        mapImgWrap.scrollLeft = scrollLeft - walk;
 
         if (Math.abs(walk) > DRAG_THRESHOLD) {
             didDrag = true;
@@ -137,7 +138,7 @@ if (tabMenu) {
 
 
     // 핀 클릭 -> 말풍선 토글 ==============================
-    const pins = tabMenu.querySelectorAll('.pin-img img[class^="pin"]');
+    const pins = mapImgWrap.querySelectorAll('.pin-img img[class^="pin"]');
     const bubbles = document.querySelectorAll('.pin-bubble');
 
     function hideAllBubbles() {
@@ -156,13 +157,13 @@ if (tabMenu) {
         pin.style.cursor = 'pointer';
         pin.addEventListener('click', (e) => {
             // 드래그 직후 발생한 클릭이면 무시 (스크롤 이동량으로 재확인)
-            const moved = Math.abs(tabMenu.scrollLeft - startScrollLeft) > DRAG_THRESHOLD;
+            const moved = Math.abs(mapImgWrap.scrollLeft - startScrollLeft) > DRAG_THRESHOLD;
             if (didDrag || moved) return;
             e.stopPropagation();
             const match = Array.from(pin.classList).join(' ').match(/pin(\d{1,2})/);
             if (!match) return;
             const idx = match[1];
-            // const target = tabMenu.querySelector(`.pin-bubble.bubble${idx}`);
+            // const target = mapImgWrap.querySelector(`.pin-bubble.bubble${idx}`);
             const target = document.querySelector(`.pin-bubble.bubble${idx}`);
             if (!target) return;
             const willOpen = !target.classList.contains('active');
@@ -178,7 +179,7 @@ if (tabMenu) {
     });
 
     // 빈 공간 클릭 시 모두 닫기
-    tabMenu.addEventListener('click', (e) => {
+    mapImgWrap.addEventListener('click', (e) => {
         if (isInHeaderArea(e.clientY)) {
             e.stopPropagation();
             return;
@@ -188,22 +189,9 @@ if (tabMenu) {
     });
 
     // 초기 커서 설정
-    tabMenu.style.cursor = 'grab';
+    mapImgWrap.style.cursor = 'grab';
 }
 
-
-// 지도 더보기 버튼 ========================
-// $(function () {
-//     $('.map__more-btn').on('click', function () {
-//         if ($(this).children().is('.open')) {
-//             $(this).html('<p class="close">닫기</p>').addClass('close-btn');
-//             $(this).parent().removeClass('slide-up').addClass('slide-down');
-//         } else {
-//             $(this).html('<p class="open">더보기+</p>').removeClass('close-btn');
-//             $(this).parent().removeClass('slide-down').addClass('slide-up');
-//         }
-//     });
-// });
 
 $(function () {
 
@@ -226,9 +214,8 @@ $(function () {
 
 
 // fade up gsap 효과
-
-
 gsap.utils.toArray(".fade-up").forEach(el => {
+    gsap.set(el, { opacity: 0, y: 70 });
     gsap.to(el, {
         opacity: 1,
         y: 0,
