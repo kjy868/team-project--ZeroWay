@@ -1,9 +1,9 @@
 // 해시태그 복사 ==========================
-const mapScroll = document.querySelector('.map__img-wrap');
+const mapWrap = document.querySelector('.map__img-wrap');
 
 window.addEventListener('load', () => {
-    if (mapScroll) {
-        mapScroll.scrollLeft = (mapScroll.scrollWidth - mapScroll.clientWidth) / 2;
+    if (mapWrap) {
+        mapWrap.scrollLeft = (mapWrap.scrollWidth - mapWrap.clientWidth) / 2;
 
     }
 
@@ -66,7 +66,6 @@ gsap.from('.pin1, .pin2, .pin3, .pin4, .pin5, .pin6, .pin7, .pin8, .pin9, .pin10
 
 
 // / 지도 가로 드래그 스크롤 기능 + 핀 클릭 분리 ======================
-const mapImgWrap = document.querySelector('.map__img-wrap');
 const header = document.querySelector('.header');
 
 // header 영역인지 확인하는 함수
@@ -76,7 +75,7 @@ function isInHeaderArea(clientY) {
     return clientY < headerRect.bottom;
 }
 
-if (mapImgWrap) {
+if (mapWrap) {
     let isDown = false;
     let startX;
     let scrollLeft;
@@ -84,7 +83,7 @@ if (mapImgWrap) {
     let didDrag = false;
     const DRAG_THRESHOLD = 6;
 
-    mapImgWrap.addEventListener('mousedown', (e) => {
+    mapWrap.addEventListener('mousedown', (e) => {
         // header 영역 클릭은 완전히 무시하고 이벤트 전파 차단
         if (isInHeaderArea(e.clientY)) {
             e.stopPropagation();
@@ -95,40 +94,40 @@ if (mapImgWrap) {
 
         isDown = true;
         didDrag = false;
-        mapImgWrap.style.cursor = 'grabbing';
-        startX = e.pageX - mapImgWrap.offsetLeft;
-        scrollLeft = mapImgWrap.scrollLeft;
-        startScrollLeft = mapImgWrap.scrollLeft;
+        mapWrap.style.cursor = 'grabbing';
+        startX = e.pageX - mapWrap.offsetLeft;
+        scrollLeft = mapWrap.scrollLeft;
+        startScrollLeft = mapWrap.scrollLeft;
     }, false); // bubble phase에서 실행하여 header 이벤트가 먼저 처리되도록
 
-    // document에서 mouseup 감지 (mapImgWrap 밖에서도)
+    // document에서 mouseup 감지 (mapWrap 밖에서도)
     document.addEventListener('mouseup', () => {
         isDown = false;
         didDrag = false;
-        if (mapImgWrap) {
-            mapImgWrap.style.cursor = 'grab';
+        if (mapWrap) {
+            mapWrap.style.cursor = 'grab';
         }
     });
 
-    mapImgWrap.addEventListener('mouseleave', () => {
+    mapWrap.addEventListener('mouseleave', () => {
         isDown = false;
         didDrag = false;
-        mapImgWrap.style.cursor = 'grab';
+        mapWrap.style.cursor = 'grab';
     });
 
-    mapImgWrap.addEventListener('mousemove', (e) => {
+    mapWrap.addEventListener('mousemove', (e) => {
         if (!isDown) return;
         // header 영역에서는 드래그 무시
         if (isInHeaderArea(e.clientY)) {
             isDown = false;
-            mapImgWrap.style.cursor = 'grab';
+            mapWrap.style.cursor = 'grab';
             return;
         }
         e.preventDefault();
-        const x = e.pageX - mapImgWrap.offsetLeft;
+        const x = e.pageX - mapWrap.offsetLeft;
         const walk = (x - startX);
 
-        mapImgWrap.scrollLeft = scrollLeft - walk;
+        mapWrap.scrollLeft = scrollLeft - walk;
 
         if (Math.abs(walk) > DRAG_THRESHOLD) {
             didDrag = true;
@@ -138,7 +137,7 @@ if (mapImgWrap) {
 
 
     // 핀 클릭 -> 말풍선 토글 ==============================
-    const pins = mapImgWrap.querySelectorAll('.pin-img img[class^="pin"]');
+    const pins = mapWrap.querySelectorAll('.pin-img img[class^="pin"]');
     const bubbles = document.querySelectorAll('.pin-bubble');
 
     function hideAllBubbles() {
@@ -147,8 +146,6 @@ if (mapImgWrap) {
 
     function clearSelectedPins() {
         pins.forEach(p => {
-            p.classList.remove('is-selected');
-            // GSAP로 스케일 복구 (inline transform 우선순위 문제 해결)
             gsap.to(p, { scale: 1, duration: 0.15, overwrite: 'auto' });
         });
     }
@@ -157,13 +154,13 @@ if (mapImgWrap) {
         pin.style.cursor = 'pointer';
         pin.addEventListener('click', (e) => {
             // 드래그 직후 발생한 클릭이면 무시 (스크롤 이동량으로 재확인)
-            const moved = Math.abs(mapImgWrap.scrollLeft - startScrollLeft) > DRAG_THRESHOLD;
+            const moved = Math.abs(mapWrap.scrollLeft - startScrollLeft) > DRAG_THRESHOLD;
             if (didDrag || moved) return;
             e.stopPropagation();
             const match = Array.from(pin.classList).join(' ').match(/pin(\d{1,2})/);
             if (!match) return;
             const idx = match[1];
-            // const target = mapImgWrap.querySelector(`.pin-bubble.bubble${idx}`);
+            // const target = mapWrap.querySelector(`.pin-bubble.bubble${idx}`);
             const target = document.querySelector(`.pin-bubble.bubble${idx}`);
             if (!target) return;
             const willOpen = !target.classList.contains('active');
@@ -171,15 +168,14 @@ if (mapImgWrap) {
             clearSelectedPins();
             if (willOpen) {
                 target.classList.add('active');
-                pin.classList.add('is-selected');
                 // GSAP로 클릭 핀 확대
-                gsap.to(pin, { scale: 1.1, duration: 0.15, transformOrigin: '50% 100%', overwrite: 'auto', ease: 'power2.out' });
+                gsap.to(pin, { scale: 1.15, duration: 0.15, transformOrigin: '50% 100%', overwrite: 'auto', ease: 'power2.out' });
             }
         });
     });
 
     // 빈 공간 클릭 시 모두 닫기
-    mapImgWrap.addEventListener('click', (e) => {
+    mapWrap.addEventListener('click', (e) => {
         if (isInHeaderArea(e.clientY)) {
             e.stopPropagation();
             return;
@@ -189,7 +185,7 @@ if (mapImgWrap) {
     });
 
     // 초기 커서 설정
-    mapImgWrap.style.cursor = 'grab';
+    mapWrap.style.cursor = 'grab';
 }
 
 

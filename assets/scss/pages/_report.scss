@@ -81,7 +81,9 @@
         }
     }
 
-    .address-label, .content-label, .type-label {
+    .address-label,
+    .content-label,
+    .type-label {
         padding-top: u.rem(15);
     }
 
@@ -214,10 +216,5 @@
     &__btn {
         width: 100%;
         display: block;
-    }
-
-    .fade-up {
-        opacity: 0;
-        transform: translateY(70px);
     }
 }

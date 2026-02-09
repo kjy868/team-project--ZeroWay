@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // fade up gsap 효과
 gsap.utils.toArray(".fade-up").forEach(el => {
+    gsap.set(el, { opacity: 0, y: 70 });
     gsap.to(el, {
         opacity: 1,
         y: 0,

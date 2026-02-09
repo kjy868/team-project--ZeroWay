@@ -4249,8 +4249,8 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 768px) {
   .map__text-wrap {
-    padding-left: 0 1.25rem;
-    padding-right: 0 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 @media (max-width: 480px) {
@@ -4764,7 +4764,9 @@ input[type=checkbox]:checked::after {
     margin-bottom: 0.625rem;
   }
 }
-.report .address-label, .report .content-label, .report .type-label {
+.report .address-label,
+.report .content-label,
+.report .type-label {
   padding-top: 0.9375rem;
 }
 .report .form-field {
@@ -4921,8 +4923,4 @@ input[type=checkbox]:checked::after {
 .report__btn {
   width: 100%;
   display: block;
-}
-.report .fade-up {
-  opacity: 0;
-  transform: translateY(70px);
 }

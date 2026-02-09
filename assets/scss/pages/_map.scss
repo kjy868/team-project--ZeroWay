@@ -611,8 +611,8 @@
         }
 
         @include u.responsive('medium') {
-            padding-left: 0 u.rem(20);
-            padding-right: 0 u.rem(20);
+            padding-left: u.rem(20);
+            padding-right: u.rem(20);
         }
 
         @include u.responsive('mobile') {
