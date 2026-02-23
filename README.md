@@ -4,7 +4,7 @@
 
 ## 🔗 Demo
 - Site: https://zeroway.netlify.app/
-- Repo: (깃허브 URL 넣기)
+- Repo: https://github.com/kjy868/team-project--ZeroWay
 
 ## ✨ Overview
 ZeroWay는 제로웨이스트를 처음 시작하는 사람도 가까운 실천 장소를 빠르게 찾고,  
