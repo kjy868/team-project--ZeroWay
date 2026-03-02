@@ -32,8 +32,6 @@
         @include u.aboutBody01();
     }
 
-
-
     &__form {
         @include u.reportBody01;
         width: 100%;
@@ -65,12 +63,12 @@
 
     .form-label {
         flex: 0 0 u.rem(110);
-        min-width: 0;
+        // min-width: 0;
         @include u.reportBody01;
 
         @include u.responsive('medium') {
-            width: 100%;
-            line-height: normal;
+            // width: 100%;
+            // line-height: normal;
             flex: 0;
             margin-bottom: u.rem(20);
             padding-top: 0;
@@ -90,7 +88,7 @@
     .form-field {
         display: flex;
         flex: 1;
-        min-width: 0;
+        // min-width: 0;
         flex-wrap: wrap;
         // flex-direction: column;
         gap: u.rem(20);
@@ -98,31 +96,31 @@
 
         @include u.responsive('medium') {
             width: 100%;
-            flex: 1;
+            // flex: 1;
         }
 
 
         .day-group {
             // @include u.flex(start, center);
-            gap: 0;
-            flex-wrap: wrap;
-            align-items: center;
-            width: 100%;
-            flex: 1;
+            // gap: 0;
+            // flex-wrap: wrap;
+            // align-items: center;
+            // width: 100%;
+            // flex: 1;
 
             input {
-                width: auto;
-                @include u.defineFont(u.rem(16));
-                margin-right: u.rem(30);
-                margin-left: u.rem(10);
+                // width: auto;
+                // @include u.defineFont(u.rem(16));
+                // margin-right: u.rem(30);
+                // margin-left: u.rem(10);
 
-                &:first-child {
-                    margin-left: 0;
-                }
+                // &:first-child {
+                    // margin-left: 0;
+                // }
 
-                &:last-child {
-                    margin-right: 0;
-                }
+                // &:last-child {
+                    // margin-right: 0;
+                //}
             }
 
 
@@ -131,8 +129,8 @@
         input:not([type="radio"], [type="checkbox"]),
         textarea {
             width: 100%;
-            min-width: 0;
-            max-width: none;
+            // min-width: 0;
+            // max-width: none;
         }
 
         select {
@@ -147,13 +145,10 @@
                 width: 100%;
             }
         }
-
-
     }
 
-
     .address-field {
-        display: flex;
+        // display: flex;
         flex-direction: column;
         gap: u.rem(30);
 
@@ -164,8 +159,7 @@
 
     &__address-btn {
         background-color: u.$neutral-900;
-        color: u.$neutral-50;
-        display: inline-block;
+        // display: inline-block;
         padding: u.rem(20);
         // margin-left: u.rem(20);
         border-radius: u.rem(10);
@@ -173,18 +167,18 @@
         @include u.reportBody02;
 
         // =============================
-        background-color: u.$neutral-900;
+        // background-color: u.$neutral-900;
         color: u.$neutral-50;
-        white-space: nowrap; // 줄바꿈 방지
-        flex-shrink: 0;
+        // white-space: nowrap; // 줄바꿈 방지
+        // flex-shrink: 0;
         // ================================
     }
 
     .address-row {
         display: flex;
         gap: u.rem(20);
-        width: 100%;
-        align-items: center;
+        // width: 100%;
+        // align-items: center;
 
         input:first-child {
             flex: 0 0 u.rem(410);
@@ -194,9 +188,9 @@
             }
         }
 
-        .address-row input {
-            flex: 1;
-        }
+        //input {
+            // flex: 1;
+        //}
     }
 
     .checkbox {
